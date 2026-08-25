@@ -1,0 +1,17 @@
+{
+  "name": "RepuestosPro - Catalogo de Repuestos",
+  "short_name": "RepuestosPro",
+  "description": "Catalogo offline de repuestos automotrices con compatibilidad cruzada",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#1b2a4a",
+  "theme_color": "#e63946",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231b2a4a'/><text x='50' y='65' font-size='40' text-anchor='middle' fill='%23e63946' font-family='sans-serif' font-weight='bold'>RP</text></svg>",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
