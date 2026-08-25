@@ -15,9 +15,9 @@
 
 ## Flujo: insertar en sqlite → python export_db.py → git add db.json → git commit → git push
 
-## Estado: 132 vehiculos, 522 componentes (bloques 1-13 listos)
+## Estado: 226 vehiculos, 920 componentes (bloques 1-27 listos)
 
-## Pendiente: ~148 vehiculos, empezar bloque 14
+## Pendiente: bloque 28 (~54 vehiculos restantes del plan original)
 
 ## Bloques pendientes (13-28):
 - 13: Chevrolet Optra, D-Max, Onix, Cavalier, Tahoe, Suburban, Montana, Spin, Prisma + VW Virtus
