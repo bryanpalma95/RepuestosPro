@@ -40,25 +40,34 @@
 .ref-chip.ref-verify{background:#fee2e2;color:#991b1b;border:1px solid #fca5a5}
 .ref-chip .chip-label{font-size:.6rem;text-transform:uppercase;opacity:.8}
 /* Welcome Hero */
-.welcome-hero{text-align:center;padding:2rem 1rem 1.5rem;border-bottom:1px solid var(--border,#e0e0e0);margin-bottom:1.5rem}
-.welcome-hero h2{font-size:2rem;margin-bottom:.3rem;color:#1b2a4a}
-.hero-subtitle{color:#666;font-size:1rem;margin-bottom:1.5rem}
-.hero-stats{display:flex;justify-content:center;gap:2rem;margin-bottom:1rem}
-.stat-box{text-align:center}
-.stat-num{display:block;font-size:1.8rem;font-weight:800;color:#e63946}
-.stat-label{font-size:.75rem;text-transform:uppercase;color:#888;letter-spacing:.5px}
-.hero-tip{color:#999;font-size:.85rem;font-style:italic}
+.welcome-hero{background:linear-gradient(135deg,#1b2a4a 0%,#2d3f66 100%);color:#fff;padding:3rem 2rem;border-radius:12px;margin-bottom:2rem;text-align:center;position:relative;overflow:hidden}
+.welcome-hero::before{content:'';position:absolute;top:-50%;right:-20%;width:300px;height:300px;background:rgba(230,57,70,.1);border-radius:50%}
+.welcome-hero::after{content:'';position:absolute;bottom:-30%;left:-10%;width:200px;height:200px;background:rgba(255,255,255,.03);border-radius:50%}
+.welcome-hero h2{font-size:2.2rem;margin-bottom:.3rem;position:relative;z-index:1}
+.welcome-hero h2 span{color:#e63946}
+.hero-subtitle{color:#c8d6e5;font-size:1.05rem;margin-bottom:2rem;position:relative;z-index:1}
+.hero-stats{display:flex;justify-content:center;gap:3rem;margin-bottom:1.5rem;position:relative;z-index:1}
+.stat-box{text-align:center;padding:.8rem 1.5rem;background:rgba(255,255,255,.08);border-radius:10px;backdrop-filter:blur(4px)}
+.stat-num{display:block;font-size:2rem;font-weight:800;color:#fff}
+.stat-label{font-size:.7rem;text-transform:uppercase;color:#a0b4c8;letter-spacing:1px}
+.hero-tip{color:#8899aa;font-size:.85rem;position:relative;z-index:1}
+.hero-features{display:flex;justify-content:center;gap:1.5rem;margin-top:1.5rem;flex-wrap:wrap;position:relative;z-index:1}
+.hero-feat{display:flex;align-items:center;gap:.4rem;font-size:.8rem;color:#c8d6e5;background:rgba(255,255,255,.06);padding:.4rem .8rem;border-radius:20px}
+.hero-feat-icon{font-size:1rem}
 .section-title{font-size:1.1rem;color:#1b2a4a;margin-bottom:1rem;padding-bottom:.5rem;border-bottom:2px solid #e63946;display:inline-block}
-[data-theme="dark"] .welcome-hero h2{color:var(--text)}
-[data-theme="dark"] .hero-subtitle,[data-theme="dark"] .hero-tip{color:var(--text2)}
-[data-theme="dark"] .section-title{color:var(--text)}</style>
+[data-theme="dark"] .welcome-hero{background:linear-gradient(135deg,#1a1a1a 0%,#2a2a2a 100%)}
+[data-theme="dark"] .welcome-hero h2{color:#fff}
+[data-theme="dark"] .hero-subtitle{color:#999}
+[data-theme="dark"] .hero-tip{color:#777}
+[data-theme="dark"] .section-title{color:var(--text)}
+@media(max-width:600px){.hero-stats{gap:1rem;flex-wrap:wrap}.stat-box{padding:.6rem 1rem}.stat-num{font-size:1.5rem}.welcome-hero{padding:2rem 1rem}.hero-features{gap:.8rem}}</style>
 </head>
 <body>
 <div class="topbar">Mi Catalogo Personal de Repuestos y Componentes <button class="theme-toggle" onclick="toggleDark()" title="Modo oscuro">&#9790;</button></div>
 <header class="header"><div class="logo">Repuestos<span>Pro</span></div><div class="search-box"><input type="text" id="searchInput" placeholder="Buscar vehiculo, repuesto o referencia..." autocomplete="off" onkeyup="handleSearch(event)" onfocus="handleSearch(event)"><div class="search-autocomplete" id="searchAutocomplete"></div></div></header>
 <div class="breadcrumb"><a href="#" onclick="showWelcome()">Inicio</a> / <span id="bc-text">Selecciona un vehiculo</span></div>
 <div class="main-layout"><aside class="sidebar" id="sidebar"><div class="vehicle-selector"><label>Marca</label><select id="brandSelect" onchange="changeBrand()"><option value="">-- Todas las marcas --</option></select><label>Modelo</label><select id="vehicleSelect" onchange="changeVehicle()"><option value="">-- Seleccionar modelo --</option></select></div><div id="sidebar-categories"></div></aside>
-<section class="content"><div class="welcome" id="welcome"><div class="welcome-hero"><h2>Repuestos<span style="color:#e63946">Pro</span></h2><p class="hero-subtitle">Catalogo de repuestos automotrices con compatibilidad cruzada</p><div class="hero-stats"><div class="stat-box"><span class="stat-num" id="vehicle-count">0</span><span class="stat-label">Vehiculos</span></div><div class="stat-box"><span class="stat-num" id="parts-count">0</span><span class="stat-label">Componentes</span></div><div class="stat-box"><span class="stat-num" id="brands-count">0</span><span class="stat-label">Marcas</span></div></div><p class="hero-tip">Busca por codigo OEM, nombre de repuesto o vehiculo. Funciona offline.</p></div><h3 class="section-title">Selecciona un vehiculo</h3><div class="vehicle-cards" id="vehicle-grid"></div></div><div id="parts-content" style="display:none"></div></section></div>
+<section class="content"><div class="welcome" id="welcome"><div class="welcome-hero"><h2>Repuestos<span>Pro</span></h2><p class="hero-subtitle">Tu catalogo de repuestos automotrices con compatibilidad cruzada entre vehiculos</p><div class="hero-stats"><div class="stat-box"><span class="stat-num" id="vehicle-count">0</span><span class="stat-label">Vehiculos</span></div><div class="stat-box"><span class="stat-num" id="parts-count">0</span><span class="stat-label">Componentes</span></div><div class="stat-box"><span class="stat-num" id="brands-count">0</span><span class="stat-label">Marcas</span></div></div><p class="hero-tip">Busca por codigo OEM, nombre de repuesto o modelo de vehiculo</p><div class="hero-features"><span class="hero-feat"><span class="hero-feat-icon">&#9889;</span> Funciona offline</span><span class="hero-feat"><span class="hero-feat-icon">&#128260;</span> Cruces entre modelos</span><span class="hero-feat"><span class="hero-feat-icon">&#128722;</span> Links de compra</span></div></div><h3 class="section-title">Selecciona un vehiculo</h3><div class="vehicle-cards" id="vehicle-grid"></div></div><div id="parts-content" style="display:none"></div></section></div>
 <footer class="footer"><p>Catalogo personal — Fuentes: opinautos.com, mundorepuestos.com, parts.mitsubishicars.com, Amazon, MercadoLibre</p><p>Agosto 2026 | Verificar compatibilidad antes de comprar</p></footer>
 <script>
 let DATA={};
