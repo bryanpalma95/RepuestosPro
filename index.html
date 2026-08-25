@@ -76,6 +76,10 @@ populateModelSelect('');
 
 // Render vehicle grid
 renderVehicleGrid(keys);
+
+// Restaurar estado desde hash URL
+const hash=window.location.hash.slice(1);
+if(hash&&DATA[hash]){setTimeout(()=>selectVehicle(hash),100)}
 }
 
 function populateModelSelect(brand){
@@ -112,7 +116,7 @@ populateModelSelect(brand);
 document.getElementById('vehicleSelect').value=v;
 changeVehicle()}
 
-function changeVehicle(){const v=document.getElementById('vehicleSelect').value;if(!v){showWelcome();return}currentVehicle=v;renderSidebar();showAllParts()}
+function changeVehicle(){const v=document.getElementById('vehicleSelect').value;if(!v){showWelcome();return}currentVehicle=v;window.location.hash=v;renderSidebar();showAllParts()}
 
 function renderSidebar(){const d=DATA[currentVehicle];let h='<div style="padding:1rem 1.5rem;border-bottom:1px solid #e0e0e0"><p style="font-size:.82rem;color:#666">'+d.info+'</p></div><h3 style="margin-top:1rem">Sistemas</h3>';for(const cat in d.categories){h+='<details class="sidebar-section" open><summary>'+cat+'</summary><ul>';const subs=[...new Set(d.categories[cat].map(p=>p.cat))];subs.forEach(s=>{h+='<li onclick="filterBySubcat(\''+cat+'\',\''+s+'\')" id="sub-'+s.replace(/[^a-z0-9]/gi,'')+'">'+s+'</li>'});h+='</ul></details>'}document.getElementById('sidebar-categories').innerHTML=h}
 
@@ -166,7 +170,7 @@ if(compat.length>0){h+='<div class="part-compat"><span class="compat-title">Comp
 if(p.links&&p.links.length){h+='<div class="part-links">';p.links.forEach(l=>{h+='<a href="'+l.u+'" target="_blank" rel="noopener">'+l.t+'</a>'});h+='</div>'}
 h+='</div>';return h}
 
-function showWelcome(){document.getElementById('welcome').style.display='block';document.getElementById('parts-content').style.display='none';document.getElementById('bc-text').innerHTML='Selecciona un vehiculo';document.getElementById('sidebar-categories').innerHTML='';document.getElementById('vehicleSelect').value='';currentVehicle=null;currentParts=[];paginationShown=0}
+function showWelcome(){document.getElementById('welcome').style.display='block';document.getElementById('parts-content').style.display='none';document.getElementById('bc-text').innerHTML='Selecciona un vehiculo';document.getElementById('sidebar-categories').innerHTML='';document.getElementById('vehicleSelect').value='';currentVehicle=null;currentParts=[];paginationShown=0;history.replaceState(null,null,' ')}
 
 // === BUSCADOR PREDICTIVO ===
 function handleSearch(e){
