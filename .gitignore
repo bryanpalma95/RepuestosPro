@@ -1,0 +1,6 @@
+db.sqlite
+_debug.txt
+_debug_parse.txt
+_tmp.js
+__pycache__/
+*.pyc
