@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="theme-color" content="#e63946">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="manifest" href="manifest.json">
+    <title>Mi Catálogo de Repuestos</title>
+    <style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f5f5f5;color:#333;line-height:1.5}a{text-decoration:none;color:inherit}.topbar{background:#1b2a4a;color:#fff;padding:.5rem 1rem;font-size:.8rem;text-align:center}.header{background:#fff;border-bottom:1px solid #e0e0e0;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}.logo{font-size:1.6rem;font-weight:800;color:#1b2a4a}.logo span{color:#e63946}.search-box{flex:1;max-width:500px;position:relative}.search-box input{width:100%;padding:.6rem 1rem;border:2px solid #e0e0e0;border-radius:6px;font-size:.9rem;outline:none}.search-box input:focus{border-color:#e63946}.search-autocomplete{position:absolute;top:100%;left:0;right:0;background:#fff;border:1px solid #e0e0e0;border-top:none;border-radius:0 0 6px 6px;max-height:280px;overflow-y:auto;z-index:100;display:none;box-shadow:0 4px 12px rgba(0,0,0,.1)}.search-autocomplete .ac-item{padding:.6rem 1rem;cursor:pointer;font-size:.85rem;border-bottom:1px solid #f5f5f5;display:flex;align-items:center;gap:.5rem}.search-autocomplete .ac-item:hover,.search-autocomplete .ac-item.ac-active{background:#fff3f3;color:#e63946}.search-autocomplete .ac-type{font-size:.7rem;padding:.1rem .4rem;border-radius:3px;font-weight:600;text-transform:uppercase}.search-autocomplete .ac-type.ac-vehicle{background:#eef6ff;color:#2563eb}.search-autocomplete .ac-type.ac-part{background:#ecfdf5;color:#059669}.search-autocomplete .ac-type.ac-ref{background:#fffbeb;color:#b45309}.breadcrumb{background:#fff;padding:.75rem 2rem;border-bottom:1px solid #eee;font-size:.85rem;color:#666}.breadcrumb span{color:#e63946;font-weight:600}.main-layout{display:grid;grid-template-columns:280px 1fr;gap:0;min-height:80vh}@media(max-width:900px){.main-layout{grid-template-columns:1fr}.sidebar{display:none}.sidebar.open{display:block}}.sidebar{background:#fff;border-right:1px solid #e0e0e0;padding:1.5rem 0;overflow-y:auto;max-height:calc(100vh - 140px);position:sticky;top:0}.sidebar h3{padding:0 1.5rem .75rem;font-size:.9rem;text-transform:uppercase;color:#666;letter-spacing:.5px}.sidebar-section{border-top:1px solid #f0f0f0}.sidebar-section summary{padding:.75rem 1.5rem;cursor:pointer;font-weight:600;font-size:.9rem;list-style:none;display:flex;justify-content:space-between;align-items:center}.sidebar-section summary:hover{background:#f9f9f9}.sidebar-section summary::after{content:'\25B8';transition:transform .2s;color:#999}.sidebar-section[open] summary::after{transform:rotate(90deg)}.sidebar-section ul{list-style:none;padding:0 0 .5rem}.sidebar-section ul li{padding:.4rem 1.5rem .4rem 2.5rem;font-size:.85rem;cursor:pointer;transition:all .15s}.sidebar-section ul li:hover{background:#fff3f3;color:#e63946}.sidebar-section ul li.active{background:#fff3f3;color:#e63946;font-weight:600;border-left:3px solid #e63946;padding-left:calc(2.5rem - 3px)}.vehicle-selector{padding:1rem 1.5rem;border-bottom:1px solid #e0e0e0}.vehicle-selector label{display:block;font-size:.8rem;color:#666;margin-bottom:.3rem;font-weight:600;text-transform:uppercase}.vehicle-selector select{width:100%;padding:.5rem;border:1px solid #ddd;border-radius:4px;font-size:.9rem;background:#fff;margin-bottom:.5rem}.content{padding:2rem}.content-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem;flex-wrap:wrap;gap:.5rem}.content-header h2{font-size:1.4rem;color:#1b2a4a}.content-header .count{color:#666;font-size:.9rem}.parts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1rem}.part-card{background:#fff;border:1px solid #e8e8e8;border-radius:8px;padding:1.2rem;transition:box-shadow .25s ease,border-color .25s ease,transform .25s ease}.part-card:hover{box-shadow:0 8px 24px rgba(230,57,70,.12);border-color:#e63946;transform:translateY(-3px)}.part-card .part-category{font-size:.7rem;text-transform:uppercase;color:#e63946;font-weight:700;letter-spacing:.5px;margin-bottom:.4rem}.part-card h4{font-size:.95rem;margin-bottom:.5rem;color:#1b2a4a}.part-card .part-details{font-size:.82rem;color:#555}.part-card .part-ref{display:inline-block;padding:.15rem .5rem;border-radius:4px;font-size:.78rem;font-weight:600;margin-top:.5rem;margin-right:.3rem}.part-card .part-ref.confirmed{background:#ecfdf5;color:#059669}.part-card .part-ref.verify{background:#fffbeb;color:#b45309}.part-card .part-brands{margin-top:.6rem;font-size:.8rem;color:#666}.part-card .part-interval{margin-top:.5rem;font-size:.78rem;color:#888;font-style:italic}.part-card .part-links{margin-top:.7rem;padding-top:.7rem;border-top:1px solid #f0f0f0;display:flex;flex-wrap:wrap;gap:.4rem}.part-card .part-links a{display:inline-block;padding:.25rem .6rem;background:#f0f4ff;color:#2563eb;border-radius:4px;font-size:.75rem;font-weight:600;transition:background .2s}.part-card .part-links a:hover{background:#dbeafe}.part-compat{margin-top:.7rem;padding-top:.7rem;border-top:1px solid #e8f5e9}.part-compat .compat-title{display:block;font-size:.72rem;text-transform:uppercase;color:#059669;font-weight:700;margin-bottom:.4rem;letter-spacing:.3px}.part-compat .compat-tag{display:inline-block;padding:.2rem .5rem;background:#ecfdf5;color:#065f46;border-radius:4px;font-size:.73rem;font-weight:500;margin:.2rem .3rem .2rem 0;cursor:pointer;transition:background .2s,transform .15s;border:1px solid #d1fae5}.part-compat .compat-tag:hover{background:#a7f3d0;transform:scale(1.03)}.info-banner{background:#fef3c7;border:1px solid #f59e0b;border-radius:8px;padding:1rem 1.5rem;margin-bottom:1.5rem;font-size:.88rem;color:#92400e}.info-banner strong{color:#b45309}.welcome{padding:2rem 1rem}.welcome h2{font-size:1.6rem;color:#1b2a4a;margin-bottom:.5rem}.welcome p{color:#666;font-size:.95rem;margin-bottom:1rem}.vehicle-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem}.v-card{background:#fff;border:2px solid #e8e8e8;border-radius:10px;padding:1.2rem;cursor:pointer;transition:all .25s ease;display:flex;flex-direction:column}.v-card:hover{border-color:#e63946;transform:translateY(-3px);box-shadow:0 8px 24px rgba(230,57,70,.12)}.v-card h3{color:#1b2a4a;margin-bottom:.5rem;font-size:.95rem}.v-card p{color:#666;font-size:.85rem;flex:1}.v-card .v-tag{display:inline-block;background:#f0f0f0;padding:.2rem .6rem;border-radius:4px;font-size:.75rem;font-weight:600;margin-top:.75rem;color:#555}.v-card .v-btn{display:inline-block;margin-top:.8rem;padding:.45rem .9rem;background:#e63946;color:#fff;border-radius:5px;font-size:.8rem;font-weight:600;text-align:center;transition:background .2s}.v-card .v-btn:hover{background:#c62d3a}.load-more-wrap{text-align:center;padding:2rem 0}.load-more-btn{padding:.7rem 2rem;background:#1b2a4a;color:#fff;border:none;border-radius:6px;font-size:.9rem;font-weight:600;cursor:pointer;transition:background .2s}.load-more-btn:hover{background:#2d3f66}.footer{background:#1b2a4a;color:#aab;padding:2rem;text-align:center;font-size:.85rem}
+/* Dark Mode */
+:root{--bg:#f5f5f5;--card:#fff;--text:#333;--text2:#666;--border:#e0e0e0;--sidebar-bg:#fff;--topbar:#1b2a4a}
+[data-theme="dark"]{--bg:#121212;--card:#1e1e1e;--text:#e0e0e0;--text2:#a0a0a0;--border:#333;--sidebar-bg:#1a1a1a;--topbar:#1a1a1a}
+[data-theme="dark"] body{background:var(--bg);color:var(--text)}
+[data-theme="dark"] .header,[data-theme="dark"] .sidebar,[data-theme="dark"] .part-card,[data-theme="dark"] .v-card,[data-theme="dark"] .breadcrumb{background:var(--card);border-color:var(--border)}
+[data-theme="dark"] .topbar,[data-theme="dark"] .footer{background:var(--topbar)}
+[data-theme="dark"] .part-card h4,[data-theme="dark"] .v-card h3,[data-theme="dark"] .content-header h2{color:var(--text)}
+[data-theme="dark"] .search-box input{background:#2a2a2a;border-color:var(--border);color:var(--text)}
+[data-theme="dark"] .search-autocomplete{background:var(--card);border-color:var(--border)}
+[data-theme="dark"] .vehicle-selector select{background:#2a2a2a;border-color:var(--border);color:var(--text)}
+[data-theme="dark"] .sidebar-section summary{color:var(--text)}
+[data-theme="dark"] .sidebar-section ul li:hover{background:#2a2a2a}
+[data-theme="dark"] .info-banner{background:#2a2200;border-color:#a16207;color:#fbbf24}
+[data-theme="dark"] .part-card:hover{box-shadow:0 8px 24px rgba(0,0,0,.4)}
+[data-theme="dark"] .v-card:hover{box-shadow:0 8px 24px rgba(0,0,0,.4);border-color:#e63946}
+[data-theme="dark"] .part-links a{background:#2a2a2a;color:#93c5fd}
+[data-theme="dark"] .logo{color:var(--text)}
+[data-theme="dark"] .logo span{color:#e63946}
+[data-theme="dark"] .breadcrumb{color:var(--text2)}
+[data-theme="dark"] .part-details,[data-theme="dark"] .part-brands,[data-theme="dark"] .part-interval{color:var(--text2)}
+[data-theme="dark"] .welcome h2,[data-theme="dark"] .welcome p{color:var(--text)}
+.theme-toggle{cursor:pointer;font-size:1.3rem;padding:.4rem;border-radius:50%;background:transparent;border:none;color:#fff;line-height:1}
+/* Mobile-First */
+@media(max-width:600px){.header{padding:.75rem 1rem}.logo{font-size:1.2rem}.search-box input{padding:.8rem 1rem;font-size:1rem}.parts-grid{grid-template-columns:1fr}.part-card{padding:1rem}.part-card .part-links a{padding:.4rem .8rem;font-size:.82rem;min-height:44px;display:inline-flex;align-items:center}.vehicle-selector select{padding:.7rem;font-size:1rem;min-height:44px}.sidebar-section ul li{padding:.7rem 1.5rem .7rem 2.5rem;min-height:44px;display:flex;align-items:center}.v-card .v-btn{padding:.6rem 1.2rem;font-size:.9rem;min-height:44px}.content{padding:1rem}.breadcrumb{padding:.5rem 1rem}}
+/* Chips tipo */
+.ref-chip{display:inline-flex;align-items:center;gap:.25rem;padding:.2rem .5rem;border-radius:4px;font-size:.75rem;font-weight:600;margin:.25rem .3rem .25rem 0}
+.ref-chip.ref-oem{background:#dcfce7;color:#166534;border:1px solid #86efac}
+.ref-chip.ref-alt{background:#fef3c7;color:#92400e;border:1px solid #fcd34d}
+.ref-chip.ref-verify{background:#fee2e2;color:#991b1b;border:1px solid #fca5a5}
+.ref-chip .chip-label{font-size:.6rem;text-transform:uppercase;opacity:.8}
+/* Welcome Hero */
+.welcome-hero{background:linear-gradient(135deg,#1b2a4a 0%,#2d3f66 100%);color:#fff;padding:3rem 2rem;border-radius:12px;margin-bottom:2rem;text-align:center;position:relative;overflow:hidden}
+.welcome-hero::before{content:'';position:absolute;top:-50%;right:-20%;width:300px;height:300px;background:rgba(230,57,70,.1);border-radius:50%}
+.welcome-hero::after{content:'';position:absolute;bottom:-30%;left:-10%;width:200px;height:200px;background:rgba(255,255,255,.03);border-radius:50%}
+.welcome-hero h2{font-size:2.2rem;margin-bottom:.3rem;position:relative;z-index:1}
+.welcome-hero h2 span{color:#e63946}
+.hero-subtitle{color:#c8d6e5;font-size:1.05rem;margin-bottom:2rem;position:relative;z-index:1}
+.hero-stats{display:flex;justify-content:center;gap:3rem;margin-bottom:1.5rem;position:relative;z-index:1}
+.stat-box{text-align:center;padding:.8rem 1.5rem;background:rgba(255,255,255,.08);border-radius:10px;backdrop-filter:blur(4px)}
+.stat-num{display:block;font-size:2rem;font-weight:800;color:#fff}
+.stat-label{font-size:.7rem;text-transform:uppercase;color:#a0b4c8;letter-spacing:1px}
+.hero-tip{color:#8899aa;font-size:.85rem;position:relative;z-index:1}
+.hero-features{display:flex;justify-content:center;gap:1.5rem;margin-top:1.5rem;flex-wrap:wrap;position:relative;z-index:1}
+.hero-feat{display:flex;align-items:center;gap:.4rem;font-size:.8rem;color:#c8d6e5;background:rgba(255,255,255,.06);padding:.4rem .8rem;border-radius:20px}
+.hero-feat-icon{font-size:1rem}
+.section-title{font-size:1.1rem;color:#1b2a4a;margin-bottom:1rem;padding-bottom:.5rem;border-bottom:2px solid #e63946;display:inline-block}
+[data-theme="dark"] .welcome-hero{background:linear-gradient(135deg,#1a1a1a 0%,#2a2a2a 100%)}
+[data-theme="dark"] .welcome-hero h2{color:#fff}
+[data-theme="dark"] .hero-subtitle{color:#999}
+[data-theme="dark"] .hero-tip{color:#777}
+[data-theme="dark"] .section-title{color:var(--text)}
+@media(max-width:600px){.hero-stats{gap:1rem;flex-wrap:wrap}.stat-box{padding:.6rem 1rem}.stat-num{font-size:1.5rem}.welcome-hero{padding:2rem 1rem}.hero-features{gap:.8rem}}</style>
+</head>
+<body>
+<div class="topbar">Mi Catalogo Personal de Repuestos y Componentes <button class="theme-toggle" onclick="toggleDark()" title="Modo oscuro">&#9790;</button></div>
+<header class="header"><div class="logo">Repuestos<span>Pro</span></div><div class="search-box"><input type="text" id="searchInput" placeholder="Buscar vehiculo, repuesto o referencia..." autocomplete="off" onkeyup="handleSearch(event)" onfocus="handleSearch(event)"><div class="search-autocomplete" id="searchAutocomplete"></div></div></header>
+<div class="breadcrumb"><a href="#" onclick="showWelcome()">Inicio</a> / <span id="bc-text">Selecciona un vehiculo</span></div>
+<div class="main-layout"><aside class="sidebar" id="sidebar"><div class="vehicle-selector"><label>Marca</label><select id="brandSelect" onchange="changeBrand()"><option value="">-- Todas las marcas --</option></select><label>Modelo</label><select id="vehicleSelect" onchange="changeVehicle()"><option value="">-- Seleccionar modelo --</option></select></div><div id="sidebar-categories"></div></aside>
+<section class="content"><div class="welcome" id="welcome"><div class="welcome-hero"><h2>Repuestos<span>Pro</span></h2><p class="hero-subtitle">Tu catalogo de repuestos automotrices con compatibilidad cruzada entre vehiculos</p><div class="hero-stats"><div class="stat-box"><span class="stat-num" id="vehicle-count">0</span><span class="stat-label">Vehiculos</span></div><div class="stat-box"><span class="stat-num" id="parts-count">0</span><span class="stat-label">Componentes</span></div><div class="stat-box"><span class="stat-num" id="brands-count">0</span><span class="stat-label">Marcas</span></div></div><p class="hero-tip">Busca por codigo OEM, nombre de repuesto o modelo de vehiculo</p><div class="hero-features"><span class="hero-feat"><span class="hero-feat-icon">&#9889;</span> Funciona offline</span><span class="hero-feat"><span class="hero-feat-icon">&#128260;</span> Cruces entre modelos</span><span class="hero-feat"><span class="hero-feat-icon">&#128722;</span> Links de compra</span></div></div><h3 class="section-title">Selecciona un vehiculo</h3><div class="vehicle-cards" id="vehicle-grid"></div></div><div id="parts-content" style="display:none"></div></section></div>
+<footer class="footer"><p>Catalogo personal — Fuentes: opinautos.com, mundorepuestos.com, parts.mitsubishicars.com, Amazon, MercadoLibre</p><p>Agosto 2026 | Verificar compatibilidad antes de comprar</p></footer>
+<script>
+let DATA={};
+let currentVehicle=null;
+let currentParts=[];
+let paginationLimit=20;
+let paginationShown=0;
+let acIndex=-1;
+
+(async function(){
+try{const r=await fetch('db.json');if(r.ok){DATA=await r.json()}else{throw new Error('no db.json')}}
+catch(e){const s=document.createElement('script');s.src='data.js';s.onload=function(){initUI()};document.head.appendChild(s);return}
+initUI()})();
+
+function extractBrand(name){
+const parts=name.split(' ');
+if(parts.length>=2){
+let brand=parts[0];
+if(brand==='DFM'||brand==='DFSK'||brand==='GWM'||brand==='JAC'||brand==='MG'||brand==='BMW'||brand==='BAIC')return brand;
+return brand.charAt(0).toUpperCase()+brand.slice(1).toLowerCase();
+}return name}
+
+function initUI(){
+const keys=Object.keys(DATA);
+document.getElementById('vehicle-count').textContent=keys.length;
+
+// Contar componentes totales
+let totalParts=0;
+keys.forEach(k=>{for(const cat in DATA[k].categories)totalParts+=DATA[k].categories[cat].length});
+document.getElementById('parts-count').textContent=totalParts;
+
+// Extraer marcas unicas
+const brandsSet=new Set();
+keys.forEach(k=>{brandsSet.add(extractBrand(DATA[k].name))});
+document.getElementById('brands-count').textContent=brandsSet.size;
+const brands=[...brandsSet].sort();
+const brandSel=document.getElementById('brandSelect');
+brands.forEach(b=>{const o=document.createElement('option');o.value=b;o.textContent=b;brandSel.appendChild(o)});
+
+// Poblar modelo select con todos
+populateModelSelect('');
+
+// Render vehicle grid
+renderVehicleGrid(keys);
+
+// Restaurar estado desde hash URL
+const hash=window.location.hash.slice(1);
+if(hash&&DATA[hash]){setTimeout(()=>selectVehicle(hash),100)}
+}
+
+function populateModelSelect(brand){
+const sel=document.getElementById('vehicleSelect');
+sel.innerHTML='<option value="">-- Seleccionar modelo --</option>';
+const keys=Object.keys(DATA);
+keys.forEach(k=>{
+const d=DATA[k];
+if(!brand||extractBrand(d.name)===brand){
+const opt=document.createElement('option');opt.value=k;opt.textContent=d.name;sel.appendChild(opt)}});}
+
+function changeBrand(){
+const brand=document.getElementById('brandSelect').value;
+populateModelSelect(brand);
+// Filtrar vehicle grid
+const keys=Object.keys(DATA);
+const filtered=brand?keys.filter(k=>extractBrand(DATA[k].name)===brand):keys;
+renderVehicleGrid(filtered);
+document.getElementById('vehicleSelect').value='';
+showWelcome();
+}
+
+function renderVehicleGrid(keys){
+const grid=document.getElementById('vehicle-grid');
+grid.innerHTML='';
+keys.forEach(k=>{const d=DATA[k];
+grid.innerHTML+='<div class="v-card" onclick="selectVehicle(\''+k+'\')"><h3>'+d.name+'</h3><p>'+d.info+'</p>'+(d.crossNote?'<span class="v-tag">'+d.crossNote.substring(0,50)+(d.crossNote.length>50?'...':'')+'</span>':'')+'<div class="v-btn">Ver Repuestos</div></div>'})}
+
+function selectVehicle(v){
+document.getElementById('vehicleSelect').value=v;
+const brand=extractBrand(DATA[v].name);
+document.getElementById('brandSelect').value=brand;
+populateModelSelect(brand);
+document.getElementById('vehicleSelect').value=v;
+changeVehicle()}
+
+function changeVehicle(){const v=document.getElementById('vehicleSelect').value;if(!v){showWelcome();return}currentVehicle=v;window.location.hash=v;renderSidebar();showAllParts()}
+
+function renderSidebar(){const d=DATA[currentVehicle];let h='<div style="padding:1rem 1.5rem;border-bottom:1px solid #e0e0e0"><p style="font-size:.82rem;color:#666">'+d.info+'</p></div><h3 style="margin-top:1rem">Sistemas</h3>';for(const cat in d.categories){h+='<details class="sidebar-section" open><summary>'+cat+'</summary><ul>';const subs=[...new Set(d.categories[cat].map(p=>p.cat))];subs.forEach(s=>{h+='<li onclick="filterBySubcat(\''+cat+'\',\''+s+'\')" id="sub-'+s.replace(/[^a-z0-9]/gi,'')+'">'+s+'</li>'});h+='</ul></details>'}document.getElementById('sidebar-categories').innerHTML=h}
+
+function showAllParts(){const d=DATA[currentVehicle];document.getElementById('welcome').style.display='none';document.getElementById('parts-content').style.display='block';document.getElementById('bc-text').innerHTML=d.name;let parts=[];for(const cat in d.categories)parts=parts.concat(d.categories[cat]);currentParts=parts;paginationShown=0;renderPartsPaginated("Todos los componentes")}
+
+function filterBySubcat(cat,sub){const d=DATA[currentVehicle];document.querySelectorAll('.sidebar-section ul li').forEach(l=>l.classList.remove('active'));const el=document.getElementById('sub-'+sub.replace(/[^a-z0-9]/gi,''));if(el)el.classList.add('active');const parts=d.categories[cat].filter(p=>p.cat===sub);document.getElementById('bc-text').innerHTML=d.name+' / '+cat+' / <span>'+sub+'</span>';currentParts=parts;paginationShown=0;renderPartsPaginated(sub)}
+
+function renderPartsPaginated(title){
+paginationShown+=paginationLimit;
+const visible=currentParts.slice(0,paginationShown);
+const total=currentParts.length;
+let h='<div class="content-header"><h2>'+title+'</h2><span class="count">'+total+' componente'+(total!==1?'s':'')+'</span></div>';
+if(currentVehicle&&DATA[currentVehicle].crossNote)h+='<div class="info-banner"><strong>Compatibilidad cruzada:</strong> '+DATA[currentVehicle].crossNote+'</div>';
+h+='<div class="parts-grid">';
+visible.forEach(p=>{h+=renderCard(p)});
+h+='</div>';
+if(paginationShown<total){h+='<div class="load-more-wrap"><button class="load-more-btn" onclick="loadMore()">Cargar mas ('+Math.min(paginationLimit,total-paginationShown)+' de '+(total-paginationShown)+' restantes)</button></div>'}
+document.getElementById('parts-content').innerHTML=h}
+
+function loadMore(){
+const title=document.querySelector('.content-header h2');
+const titleText=title?title.textContent:'';
+renderPartsPaginated(titleText)}
+
+function findCompatible(refs){
+const refSet=new Set(refs.filter(r=>r.s==='confirmed'&&r.r.length>4&&!r.r.startsWith('Verificar')&&!r.r.startsWith('Comp.')&&!r.r.startsWith('Cadena')&&!r.r.includes('API')&&!r.r.includes('DOT')&&!r.r.includes('OAT')&&!r.r.includes('Dexos')&&!r.r.includes('VW 5')&&!r.r.includes('BMW')&&!r.r.includes('MB 2')&&!r.r.includes('PSA')&&!r.r.includes('RN0')&&!r.r.includes('R1')&&!r.r.includes('R2')&&!r.r.includes('/6')&&!r.r.includes('/7')&&!r.r.includes('/5')&&!r.r.includes('/4')).map(r=>r.r));
+if(refSet.size===0)return[];
+const compat=[];
+Object.keys(DATA).forEach(vid=>{
+if(vid===currentVehicle)return;
+const d=DATA[vid];
+for(const cat in d.categories){
+for(const part of d.categories[cat]){
+for(const r of part.refs){
+if(refSet.has(r.r)){compat.push({name:d.name,ref:r.r,vid:vid});return}}}}});
+return compat.slice(0,8)}
+
+function renderCard(p){
+let h='<div class="part-card" data-search="'+[p.name,p.details,p.brands,...p.refs.map(r=>r.r)].join(' ').toLowerCase()+'">';
+h+='<div class="part-category">'+p.cat+'</div><h4>'+p.name+'</h4>';
+h+='<div class="part-details"><p>'+p.details+'</p></div><div style="margin-top:.5rem">';
+p.refs.forEach(r=>{
+const chipClass=r.r.toLowerCase().includes('oem')?'ref-oem':r.s==='confirmed'?'ref-alt':'ref-verify';
+const label=r.r.toLowerCase().includes('oem')?'OEM':r.s==='confirmed'?'ALT':'VERIFICAR';
+h+='<span class="ref-chip '+chipClass+'"><span class="chip-label">'+label+'</span> '+r.r+'</span>'});
+h+='</div>';
+if(p.brands)h+='<div class="part-brands">Marcas: '+p.brands+'</div>';
+if(p.interval)h+='<div class="part-interval">Cambio: '+p.interval+'</div>';
+const compat=findCompatible(p.refs);
+if(compat.length>0){h+='<div class="part-compat"><span class="compat-title">Compatible con:</span>';compat.forEach(c=>{h+='<span class="compat-tag" onclick="selectVehicle(\''+c.vid+'\')">'+c.name.split('\u2014')[0].trim()+'</span>'});h+='</div>'}
+if(p.links&&p.links.length){h+='<div class="part-links">';p.links.forEach(l=>{h+='<a href="'+l.u+'" target="_blank" rel="noopener">'+l.t+'</a>'});h+='</div>'}
+h+='</div>';return h}
+
+function showWelcome(){document.getElementById('welcome').style.display='block';document.getElementById('parts-content').style.display='none';document.getElementById('bc-text').innerHTML='Selecciona un vehiculo';document.getElementById('sidebar-categories').innerHTML='';document.getElementById('vehicleSelect').value='';currentVehicle=null;currentParts=[];paginationShown=0;history.replaceState(null,null,' ')}
+
+// === BUSCADOR PREDICTIVO ===
+function handleSearch(e){
+const q=document.getElementById('searchInput').value.toLowerCase().trim();
+const ac=document.getElementById('searchAutocomplete');
+if(!q||q.length<2){ac.style.display='none';acIndex=-1;filterPartsLive('');return}
+if(e&&e.key==='ArrowDown'){acIndex++;highlightAc();return}
+if(e&&e.key==='ArrowUp'){acIndex--;highlightAc();return}
+if(e&&e.key==='Enter'){selectAc();return}
+if(e&&e.key==='Escape'){ac.style.display='none';acIndex=-1;return}
+
+const results=[];
+// Buscar vehiculos
+Object.keys(DATA).forEach(k=>{if(DATA[k].name.toLowerCase().includes(q))results.push({type:'vehicle',text:DATA[k].name,key:k})});
+// Buscar repuestos y refs
+Object.keys(DATA).forEach(k=>{const d=DATA[k];for(const cat in d.categories){d.categories[cat].forEach(p=>{
+if(p.name.toLowerCase().includes(q)&&results.length<15)results.push({type:'part',text:p.name+' ('+d.name+')',key:k});
+p.refs.forEach(r=>{if(r.r.toLowerCase().includes(q)&&results.length<15)results.push({type:'ref',text:r.r+' — '+p.name+' ('+d.name+')',key:k})})
+})}});
+
+if(results.length===0){ac.style.display='none';acIndex=-1;filterPartsLive(q);return}
+let html='';
+results.slice(0,10).forEach((r,i)=>{
+const cls=r.type==='vehicle'?'ac-vehicle':r.type==='part'?'ac-part':'ac-ref';
+html+='<div class="ac-item" data-key="'+r.key+'" data-type="'+r.type+'" onclick="clickAcItem(this)"><span class="ac-type '+cls+'">'+r.type+'</span><span>'+r.text+'</span></div>'});
+ac.innerHTML=html;ac.style.display='block';acIndex=-1;
+filterPartsLive(q)}
+
+function highlightAc(){
+const items=document.querySelectorAll('.ac-item');
+if(items.length===0)return;
+if(acIndex>=items.length)acIndex=0;
+if(acIndex<0)acIndex=items.length-1;
+items.forEach(i=>i.classList.remove('ac-active'));
+items[acIndex].classList.add('ac-active')}
+
+function selectAc(){
+const items=document.querySelectorAll('.ac-item');
+if(acIndex>=0&&acIndex<items.length){clickAcItem(items[acIndex])}
+else{const ac=document.getElementById('searchAutocomplete');ac.style.display='none';const q=document.getElementById('searchInput').value.trim();if(q.length>=3)searchByRef(q);else filterPartsLive(q.toLowerCase())}}
+
+function clickAcItem(el){
+const key=el.dataset.key;
+const ac=document.getElementById('searchAutocomplete');
+ac.style.display='none';acIndex=-1;
+document.getElementById('searchInput').value='';
+selectVehicle(key)}
+
+function filterPartsLive(q){
+if(!q){document.querySelectorAll('.part-card').forEach(c=>c.style.display='');return}
+document.querySelectorAll('.part-card').forEach(c=>{c.style.display=c.dataset.search&&c.dataset.search.includes(q)?'':'none'})}
+
+// Cerrar autocomplete al hacer click fuera
+document.addEventListener('click',function(e){if(!e.target.closest('.search-box')){document.getElementById('searchAutocomplete').style.display='none';acIndex=-1}});
+
+// === DARK MODE ===
+function toggleDark(){
+const html=document.documentElement;
+const current=html.getAttribute('data-theme');
+const next=current==='dark'?'light':'dark';
+html.setAttribute('data-theme',next);
+localStorage.setItem('rp-theme',next)}
+(function(){const t=localStorage.getItem('rp-theme');if(t)document.documentElement.setAttribute('data-theme',t);
+else if(window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches)document.documentElement.setAttribute('data-theme','dark')})();
+
+// === SERVICE WORKER (PWA OFFLINE) ===
+if('serviceWorker' in navigator){navigator.serviceWorker.register('./sw.js').catch(()=>{})}
+
+// === BUSQUEDA INVERSA POR REFERENCIA ===
+function searchByRef(query){
+const q=query.toLowerCase().trim();
+if(q.length<3)return;
+const results=[];
+Object.keys(DATA).forEach(vid=>{const d=DATA[vid];
+for(const cat in d.categories){d.categories[cat].forEach(p=>{
+p.refs.forEach(r=>{if(r.r.toLowerCase().includes(q)){
+results.push({vid,vname:d.name,part:p,ref:r.r})}})
+})}});
+if(results.length===0)return;
+document.getElementById('welcome').style.display='none';
+document.getElementById('parts-content').style.display='block';
+document.getElementById('bc-text').innerHTML='Busqueda: <span>'+query+'</span>';
+let h='<div class="content-header"><h2>Resultados para: '+query+'</h2><span class="count">'+results.length+' coincidencia'+(results.length>1?'s':'')+'</span></div>';
+h+='<div class="parts-grid">';
+results.slice(0,30).forEach(r=>{
+h+='<div class="part-card"><div class="part-category">'+r.part.cat+'</div><h4>'+r.part.name+'</h4>';
+h+='<div class="part-details"><p>'+r.part.details+'</p></div>';
+h+='<div style="margin-top:.5rem">';
+r.part.refs.forEach(ref=>{
+const isMatch=ref.r.toLowerCase().includes(q);
+const chipClass=ref.r.toLowerCase().includes('oem')?'ref-oem':ref.s==='confirmed'?'ref-alt':'ref-verify';
+const label=ref.r.toLowerCase().includes('oem')?'OEM':ref.s==='confirmed'?'ALT':'VERIFICAR';
+h+='<span class="ref-chip '+chipClass+'"'+(isMatch?' style="box-shadow:0 0 0 2px #e63946"':'')+'><span class="chip-label">'+label+'</span> '+ref.r+'</span>'});
+h+='</div>';
+h+='<div class="part-compat"><span class="compat-title">Vehiculo:</span><span class="compat-tag" onclick="selectVehicle(\''+r.vid+'\')">'+r.vname.split('\u2014')[0].trim()+'</span></div>';
+if(r.part.links&&r.part.links.length){h+='<div class="part-links">';r.part.links.forEach(l=>{h+='<a href="'+l.u+'" target="_blank" rel="noopener">'+l.t+'</a>'});h+='</div>'}
+h+='</div>'});
+h+='</div>';
+document.getElementById('parts-content').innerHTML=h;
+currentVehicle=null}
+</script>
+</body>
+</html>
