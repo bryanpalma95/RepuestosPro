@@ -1,4 +1,4 @@
-const CACHE_NAME = 'repuestospro-v2';
+const CACHE_NAME = 'repuestospro-v090';
 const ASSETS = ['./index.html', './catalogo.html', './db.json', './manifest.json'];
 
 self.addEventListener('install', e => {
