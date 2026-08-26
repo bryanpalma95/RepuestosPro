@@ -158,7 +158,6 @@ function findCompatibleVehiclesForPart(currentKey, currentVehicle, part){
     return [...matched.values()]
         .map(entry => ({...entry, reason: [...new Set(entry.reason)].slice(0, 2)}))
         .sort((a, b) => a.vehicleName.localeCompare(b.vehicleName))
-        .slice(0, 6)
 }
 function showDetail(v){
     const currentKey = Object.keys(DATA).find(key => DATA[key] === v) || ''
