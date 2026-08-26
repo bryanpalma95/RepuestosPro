@@ -103,11 +103,12 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.28;ba
 </main>
 <footer class="footer">RepuestosPro v0.9.1 — Datos OEM verificados</footer>
 <script>
-let NAV={},DATA={},dataLoaded=false,gridPage=0;const PS=30;
-fetch('db-nav.json').then(r=>r.json()).then(d=>{NAV=d;initUI()}).catch(()=>{fetch('db.json').then(r=>r.json()).then(d=>{DATA=d;dataLoaded=true;buildNav();initUI()})});
+let NAV={},DATA={},REF_INDEX=new Map(),dataLoaded=false,gridPage=0;const PS=30;
+fetch('db-nav.json').then(r=>r.json()).then(d=>{NAV=d;initUI()}).catch(()=>{fetch('db.json').then(r=>r.json()).then(d=>{DATA=d;dataLoaded=true;buildNav();buildReferenceIndex();initUI()})});
 function buildNav(){NAV={};for(const[k,v]of Object.entries(DATA)){const match=String(v.name||'').match(/^(.*?)\s*[—-]\s*(\d{4})$/);const title=match?match[1].trim():String(v.name||'').trim();const y=match?match[2]:'';const w=title.split(/\s+/);const m=w[0]||'';const mo=w.slice(1).join(' ');if(!NAV[m])NAV[m]={};if(!NAV[m][mo])NAV[m][mo]=[];if(y&&!NAV[m][mo].includes(y))NAV[m][mo].push(y)}}
 function initUI(){const s=document.getElementById('selMarca');Object.keys(NAV).sort().forEach(m=>{const o=document.createElement('option');o.value=m;o.textContent=m;s.appendChild(o)});populateCompareOptions();renderFeatured();renderGrid()}
-async function ensureDataLoaded(){if(dataLoaded)return;const r=await fetch('db.json');DATA=await r.json();dataLoaded=true;buildNav();populateCompareOptions();}
+function buildReferenceIndex(){REF_INDEX=new Map();for(const[key,vehicle]of Object.entries(DATA)){for(const cat in vehicle.categories){for(const part of vehicle.categories[cat]||[]){for(const ref of part.refs||[]){const normalized=normalizeRef(ref.r);if(!normalized)continue;if(!REF_INDEX.has(normalized))REF_INDEX.set(normalized,new Map());REF_INDEX.get(normalized).set(key,vehicle.name)}}}}}
+async function ensureDataLoaded(){if(dataLoaded)return;const r=await fetch('db.json');DATA=await r.json();dataLoaded=true;buildNav();buildReferenceIndex();populateCompareOptions();}
 function getAllPartsAcrossVehicles(){const set=new Map();for(const [key,vehicle] of Object.entries(DATA)){for(const cat in vehicle.categories){for(const part of vehicle.categories[cat]||[]){const name=(part.name||'').trim();if(name){const clean=name.toLowerCase();if(!set.has(clean))set.set(clean,name)}}}}return [...set.values()].sort((a,b)=>a.localeCompare(b))}
 function populateCompareOptions(){const compSel=document.getElementById('compareComponent');const vehicleA=document.getElementById('compareVehicleA');const vehicleB=document.getElementById('compareVehicleB');if(!compSel||!vehicleA||!vehicleB)return;const parts=getAllPartsAcrossVehicles();compSel.innerHTML='<option value="">— Seleccionar pieza —</option>';parts.forEach(name=>{const o=document.createElement('option');o.value=name;o.textContent=name;compSel.appendChild(o)});vehicleA.innerHTML='<option value="">— Vehículo A —</option>';vehicleB.innerHTML='<option value="">— Vehículo B —</option>';for(const [key,vehicle] of Object.entries(DATA||{})){const o1=document.createElement('option');const o2=document.createElement('option');o1.value=key;o1.textContent=vehicle.name;o2.value=key;o2.textContent=vehicle.name;vehicleA.appendChild(o1);vehicleB.appendChild(o2)}}
 function normalizeText(value){return String(value||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,' ').trim()}
@@ -124,7 +125,7 @@ function onMarca(){const m=document.getElementById('selMarca').value;const s=doc
 function onModelo(){const m=document.getElementById('selMarca').value;const mo=document.getElementById('selModelo').value;const s=document.getElementById('selYear');s.innerHTML='<option value="">— Año —</option>';s.disabled=!mo;if(!m||!mo){gridPage=0;renderGrid(m);return}const years=NAV[m][mo]||[];if(years.length>3){const start=years[0];const end=years[years.length-1];const o=document.createElement('option');o.value=years[0];o.textContent=start+'-'+end+' ('+years.length+' años)';s.appendChild(o)}else{years.forEach(y=>{const o=document.createElement('option');o.value=y;o.textContent=y;s.appendChild(o)})}gridPage=0;renderGrid(m+' '+mo)}
 function onYear(){const m=document.getElementById('selMarca').value;const mo=document.getElementById('selModelo').value;const y=document.getElementById('selYear').value;if(!m||!mo||!y)return;loadVehicle(m.toLowerCase()+'-'+mo.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/-+/g,'-').replace(/^-|-$/g,'')+'-'+y)}
 function selectModel(m,mo){document.getElementById('selMarca').value=m;onMarca();document.getElementById('selModelo').value=mo;onModelo();const ys=NAV[m][mo]||[];if(ys.length){document.getElementById('selYear').value=ys[0];onYear()}}
-async function loadVehicle(vid){if(!dataLoaded){document.getElementById('detailHeader').innerHTML='<p style="color:#888">Cargando datos...</p>';document.getElementById('homeView').style.display='none';document.getElementById('detailView').style.display='block';const r=await fetch('db.json');DATA=await r.json();dataLoaded=true}let v=DATA[vid];if(!v){for(const[k,d]of Object.entries(DATA)){if(k.includes(vid)||vid.includes(k)){v=d;vid=k;break}}}if(!v){const m=document.getElementById('selMarca').value;const mo=document.getElementById('selModelo').value;const y=document.getElementById('selYear').value;for(const[k,d]of Object.entries(DATA)){if(d.name.toLowerCase().includes(m.toLowerCase())&&d.name.toLowerCase().includes(mo.toLowerCase())&&d.name.includes(y)){v=d;break}}}if(!v){document.getElementById('detailHeader').innerHTML='<p style="color:#e63946">Vehiculo no encontrado</p>';return}showDetail(v)}
+async function loadVehicle(vid){if(!dataLoaded){document.getElementById('detailHeader').innerHTML='<p style="color:#888">Cargando datos...</p>';document.getElementById('homeView').style.display='none';document.getElementById('detailView').style.display='block';const r=await fetch('db.json');DATA=await r.json();dataLoaded=true;buildReferenceIndex()}let v=DATA[vid];if(!v){for(const[k,d]of Object.entries(DATA)){if(k.includes(vid)||vid.includes(k)){v=d;vid=k;break}}}if(!v){const m=document.getElementById('selMarca').value;const mo=document.getElementById('selModelo').value;const y=document.getElementById('selYear').value;for(const[k,d]of Object.entries(DATA)){if(d.name.toLowerCase().includes(m.toLowerCase())&&d.name.toLowerCase().includes(mo.toLowerCase())&&d.name.includes(y)){v=d;break}}}if(!v){document.getElementById('detailHeader').innerHTML='<p style="color:#e63946">Vehiculo no encontrado</p>';return}showDetail(v)}
 function normalizeText(value){return String(value||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,' ').trim()}
 function normalizeRef(value){const ref=String(value||'').trim().toUpperCase().replace(/\s+/g,'');return ref==='W610/3'?'W610/82':ref}
 function findCompatibleVehiclesForPart(currentKey, currentVehicle, part){
@@ -132,29 +133,16 @@ function findCompatibleVehiclesForPart(currentKey, currentVehicle, part){
     const matched = new Map()
     if (!baseRefs.length) return []
 
-    for (const [key, vehicle] of Object.entries(DATA)) {
-        if (key === currentKey || vehicle.name === currentVehicle.name) continue
-        for (const cat in vehicle.categories) {
-            const items = vehicle.categories[cat] || []
-            for (const item of items) {
-                let score = 0
-                const itemRefs = (item.refs || []).map(r => normalizeRef(r.r)).filter(Boolean)
-                if (baseRefs.length && itemRefs.length) {
-                    for (const ref of baseRefs) {
-                        if (itemRefs.includes(ref)) score += 10
-                    }
-                }
-                if (score > 0) {
-                    if (!matched.has(key)) matched.set(key, {key, vehicleName: vehicle.name, reason: []})
-                    const entry = matched.get(key)
-                    entry.reason.push('misma referencia')
-                }
-            }
+    for (const ref of baseRefs) {
+        for (const [key, vehicleName] of REF_INDEX.get(ref) || []) {
+            if (key === currentKey || vehicleName === currentVehicle.name) continue
+            if (!matched.has(key)) matched.set(key, {key, vehicleName, reason: []})
+            matched.get(key).reason.push(ref)
         }
     }
 
     return [...matched.values()]
-        .map(entry => ({...entry, reason: [...new Set(entry.reason)].slice(0, 2)}))
+        .map(entry => ({...entry, reason: ['misma referencia: '+[...new Set(entry.reason)].join(', ')]}))
         .sort((a, b) => a.vehicleName.localeCompare(b.vehicleName))
 }
 function showDetail(v){
