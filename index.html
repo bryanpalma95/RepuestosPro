@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#e63946">
-    <link rel="manifest" href="manifest.json">
     <title>RepuestosPro — Catalogo de Repuestos Automotrices</title>
     <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -131,7 +130,8 @@ body{background:#121212;color:#e0e0e0}
 </footer>
 
 <script>
-if('serviceWorker' in navigator){navigator.serviceWorker.register('./sw.js').catch(()=>{})}
+// SW removido - sin funcion offline
+if('serviceWorker' in navigator){navigator.serviceWorker.getRegistrations().then(function(regs){regs.forEach(function(r){r.unregister()})})}
 </script>
 </body>
 </html>
