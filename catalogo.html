@@ -100,7 +100,7 @@ a{text-decoration:none;color:inherit}
 <script>
 let NAV={},DATA={},dataLoaded=false,gridPage=0;const PS=30;
 fetch('db-nav.json').then(r=>r.json()).then(d=>{NAV=d;initUI()}).catch(()=>{fetch('db.json').then(r=>r.json()).then(d=>{DATA=d;dataLoaded=true;buildNav();initUI()})});
-function buildNav(){NAV={};for(const[k,v]of Object.entries(DATA)){const p=v.name.split(' — ');const w=(p[0]||'').split(' ');const m=w[0]||'';const mo=w.slice(1).join(' ');const y=p[1]||'';if(!NAV[m])NAV[m]={};if(!NAV[m][mo])NAV[m][mo]=[];if(y)NAV[m][mo].push(y)}}
+function buildNav(){NAV={};for(const[k,v]of Object.entries(DATA)){const match=String(v.name||'').match(/^(.*?)\s*[—-]\s*(\d{4})$/);const title=match?match[1].trim():String(v.name||'').trim();const y=match?match[2]:'';const w=title.split(/\s+/);const m=w[0]||'';const mo=w.slice(1).join(' ');if(!NAV[m])NAV[m]={};if(!NAV[m][mo])NAV[m][mo]=[];if(y&&!NAV[m][mo].includes(y))NAV[m][mo].push(y)}}
 function initUI(){const s=document.getElementById('selMarca');Object.keys(NAV).sort().forEach(m=>{const o=document.createElement('option');o.value=m;o.textContent=m;s.appendChild(o)});populateCompareOptions();renderFeatured();renderGrid()}
 async function ensureDataLoaded(){if(dataLoaded)return;const r=await fetch('db.json');DATA=await r.json();dataLoaded=true;buildNav();populateCompareOptions();}
 function getAllPartsAcrossVehicles(){const set=new Map();for(const [key,vehicle] of Object.entries(DATA)){for(const cat in vehicle.categories){for(const part of vehicle.categories[cat]||[]){const name=(part.name||'').trim();if(name){const clean=name.toLowerCase();if(!set.has(clean))set.set(clean,name)}}}}return [...set.values()].sort((a,b)=>a.localeCompare(b))}
