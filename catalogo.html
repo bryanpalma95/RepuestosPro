@@ -129,8 +129,8 @@ function normalizeText(value){return String(value||'').toLowerCase().normalize('
 function normalizeRef(value){return String(value||'').trim().toUpperCase().replace(/\s+/g,'')}
 function findCompatibleVehiclesForPart(currentKey, currentVehicle, part){
     const baseRefs = (part.refs || []).map(r => normalizeRef(r.r)).filter(Boolean)
-    const baseName = normalizeText(part.name)
     const matched = new Map()
+    if (!baseRefs.length) return []
 
     for (const [key, vehicle] of Object.entries(DATA)) {
         if (key === currentKey || vehicle.name === currentVehicle.name) continue
@@ -138,9 +138,7 @@ function findCompatibleVehiclesForPart(currentKey, currentVehicle, part){
             const items = vehicle.categories[cat] || []
             for (const item of items) {
                 let score = 0
-                const itemName = normalizeText(item.name)
                 const itemRefs = (item.refs || []).map(r => normalizeRef(r.r)).filter(Boolean)
-                if (baseName && itemName && baseName === itemName) score += 7
                 if (baseRefs.length && itemRefs.length) {
                     for (const ref of baseRefs) {
                         if (itemRefs.includes(ref)) score += 10
@@ -149,7 +147,7 @@ function findCompatibleVehiclesForPart(currentKey, currentVehicle, part){
                 if (score > 0) {
                     if (!matched.has(key)) matched.set(key, {key, vehicleName: vehicle.name, reason: []})
                     const entry = matched.get(key)
-                    entry.reason.push(score >= 10 ? 'misma referencia' : 'mismo componente')
+                    entry.reason.push('misma referencia')
                 }
             }
         }
