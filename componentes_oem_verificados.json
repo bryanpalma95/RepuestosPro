@@ -1,0 +1,3042 @@
+{
+  "Toyota|2ZR-FE/M20A-FKS": {
+    "marca": "Toyota",
+    "motor": "1.8L 2ZR-FE / 2.0L M20A-FKS",
+    "modelos": [
+      "Corolla 2014-2026",
+      "RAV4 2014-2026",
+      "Prius 2016-2026",
+      "C-HR 2017-2026",
+      "Auris 2012-2019"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "90915-YZZF2",
+        "alt": "90915-YZZN1",
+        "supersede": "90915-YZZE1",
+        "fuente": "autozone.com, oempartsonline.com"
+      },
+      "Filtro de Aire": {
+        "oem": "17801-21060",
+        "modelos": "Corolla 2020-2025, Prius 2016-2022, Corolla Hybrid",
+        "fuente": "toyota.oempartsonline.com"
+      },
+      "Bujias": {
+        "oem": "90919-01253",
+        "tipo": "Denso FK16HR-A8",
+        "cantidad": 4,
+        "fuente": "parts.toyota.com"
+      },
+      "Filtro Combustible": {
+        "oem": "77024-02230",
+        "nota": "Integrado en tanque (in-tank)",
+        "fuente": "toyota.oempartsonline.com"
+      },
+      "Filtro Cabina": {
+        "oem": "87139-52040",
+        "alt": "87139-07020",
+        "fuente": "amayama.com, autoparts.toyota.com"
+      },
+      "Distribucion": {
+        "tipo": "Cadena",
+        "nota": "2ZR-FE usa cadena. No cambio programado.",
+        "fuente": "toyota service manual"
+      }
+    }
+  },
+  "Toyota|1NZ-FE/2NR-FE": {
+    "marca": "Toyota",
+    "motor": "1.5L 1NZ-FE / 2NR-FE",
+    "modelos": [
+      "Yaris 2014-2026",
+      "Yaris Sport 2014-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "90915-YZZD4",
+        "alt": "90915-YZZD1",
+        "fuente": "oempartsonline.com"
+      }
+    }
+  },
+  "Toyota|2GD-FTV/1GD-FTV": {
+    "marca": "Toyota",
+    "motor": "2.4D 2GD-FTV / 2.8D 1GD-FTV",
+    "modelos": [
+      "Hilux 2014-2026",
+      "Hiace 2014-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "90915-YZZN2",
+        "fuente": "parts.toyota.com"
+      },
+      "Filtro de Combustible": {
+        "oem": "23390-0L070",
+        "fuente": "parts.toyota.com"
+      }
+    }
+  },
+  "Mazda|Skyactiv-G": {
+    "marca": "Mazda",
+    "motor": "2.0L PE-VPS / 2.5L PY-VPS Skyactiv-G",
+    "modelos": [
+      "Mazda 3 2014-2026",
+      "Mazda 6 2010-2024",
+      "CX-5 2014-2026",
+      "CX-30 2020-2026",
+      "CX-3 2016-2026",
+      "CX-9 2016-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "PE01-14-302A",
+        "supersede": "1WPE-14-302, PE01-14-302B",
+        "fuente": "amazon.com (Mazda OEM), mazdashopusa.com"
+      },
+      "Filtro de Aire": {
+        "oem": "PE07-13-3A0A",
+        "modelos": "CX-5 2013-2025, Mazda 3 2014-2018, Mazda 6 2014-2021",
+        "fuente": "mazdaswag.com, amazon.com Genuine Mazda"
+      },
+      "Bujias": {
+        "oem": "PE5R-18-110",
+        "alt": "PE5S-18-110",
+        "fuente": "owners-manual.mazda.com (manual oficial CX-5)"
+      },
+      "Distribucion": {
+        "tipo": "Cadena",
+        "nota": "Skyactiv-G usa cadena. No cambio programado.",
+        "fuente": "owners-manual.mazda.com"
+      }
+    }
+  },
+  "Hyundai-Kia|Gamma-Nu": {
+    "marca": "Hyundai/Kia",
+    "motor": "1.6L G4FG / 2.0L G4NA / 1.6T G4FP",
+    "modelos": [
+      "Tucson 2014-2026",
+      "Sportage 2014-2026",
+      "Elantra 2011-2026",
+      "Cerato 2011-2024",
+      "Santa Fe 2010-2026",
+      "i30 2012-2020",
+      "Creta 2016-2026",
+      "Seltos 2020-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "26300-35505",
+        "supersede": "26300-35504, 26300-35503",
+        "fuente": "autozone.com, amazon.com (Genuine OEM)"
+      },
+      "Filtro de Aire (Tucson/Sportage)": {
+        "oem": "28113-D3300",
+        "modelos": "Tucson 2016-2021, Sportage 2017-2022",
+        "fuente": "amazon.com Genuine OEM"
+      },
+      "Filtro de Aire (Elantra/Kona)": {
+        "oem": "28113-F2000",
+        "fuente": "amazon.com"
+      },
+      "Filtro Cabina (Tucson/Sportage)": {
+        "oem": "97133-D1000",
+        "fuente": "amazon.com"
+      },
+      "Bujias (G4NA 2.0)": {
+        "oem": "18855-10060",
+        "tipo": "NGK LZKR6B-10E",
+        "cantidad": 4,
+        "fuente": "hyundai catalog"
+      },
+      "Filtro Combustible (integrado bomba)": {
+        "oem": "31112-1R000",
+        "nota": "Integrado en modulo bomba tanque",
+        "fuente": "amazon.com Genuine OEM"
+      },
+      "Distribucion": {
+        "tipo": "Cadena (G4NA usa cadena)",
+        "nota": "No requiere cambio programado. Verificar tension 150,000 km",
+        "fuente": "hyundaimaintenance.com"
+      },
+      "Filtro Cabina (Sportage 2023+ / Sorento 2021+)": {
+        "oem": "97133-L1000",
+        "nota": "Nueva generacion 2023+",
+        "fuente": "kia.oempartsonline.com, amazon.com"
+      },
+      "Filtro Aire (Sportage 2023+ 2.5L)": {
+        "oem": "28113-L1000",
+        "nota": "Nueva generacion 2023+",
+        "fuente": "amazon.com"
+      }
+    }
+  },
+  "Hyundai-Kia|Kappa": {
+    "marca": "Hyundai/Kia",
+    "motor": "1.0L G3LA / 1.2L G4LA / 1.4L G4LC",
+    "modelos": [
+      "Morning 2014-2026",
+      "Grand i10 2014-2026",
+      "Rio 2014-2024",
+      "Soluto 2019-2026",
+      "Accent 2014-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "26300-35505",
+        "fuente": "autozone.com, walmart.com (OEM Genuine)"
+      },
+      "Filtro de Aire (Morning/Picanto 2017+)": {
+        "oem": "28113-G6000",
+        "fuente": "amazon.com OEM, kia.parts"
+      },
+      "Filtro de Aire (Morning 2011-2014)": {
+        "oem": "28113-1Y100",
+        "fuente": "amazon.com Genuine OEM"
+      }
+    }
+  },
+  "Honda|L15B-K24W": {
+    "marca": "Honda",
+    "motor": "1.5T L15B / 2.4L K24W",
+    "modelos": [
+      "CR-V 2012-2026",
+      "Civic 2012-2026",
+      "Accord 2012-2024",
+      "HR-V 2015-2024",
+      "City 2014-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "15400-PLM-A02",
+        "alt": "15400-RTA-003",
+        "fuente": "honda.oempartsonline.com, amazon.com"
+      },
+      "Filtro de Aire (1.5T)": {
+        "oem": "17220-5AA-A00",
+        "modelos": "Civic 1.5T 2016-2022, CR-V 1.5T 2017-2022",
+        "fuente": "honda.oempartsonline.com, amazon.com"
+      },
+      "Filtro Cabina (1.5T)": {
+        "oem": "80292-TF0-G01",
+        "fuente": "amazon.com kit OEM"
+      },
+      "Filtro Cabina": {
+        "oem": "80292-TBA-A11",
+        "modelos": "Civic 2016+, CR-V 2017+, HR-V",
+        "fuente": "amazon.com Genuine Honda, filterbuy.com, hondapartsnow.com"
+      },
+      "Distribucion": {
+        "tipo": "Cadena (L15B turbo)",
+        "nota": "No cambio programado",
+        "fuente": "honda service manual"
+      }
+    }
+  },
+  "Nissan|HR16DE": {
+    "marca": "Nissan",
+    "motor": "1.6L HR16DE",
+    "modelos": [
+      "Kicks 2017-2026",
+      "Versa 2014-2026",
+      "March 2011-2021",
+      "Sentra 2010-2026",
+      "Tiida 2007-2015",
+      "V16 2010-2022"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "15208-65F0E",
+        "supersede": "65F0A, 65F0B, 65F0C, 65F0D",
+        "fuente": "nissan.oempartsonline.com, autozone.com"
+      },
+      "Filtro de Aire": {
+        "oem": "16546-5RB1A",
+        "fuente": "amazon.com (kit OEM)"
+      },
+      "Filtro Cabina": {
+        "oem": "27277-6CA0A",
+        "alt": "27277-6CA1A, 27277-5NA1A",
+        "modelos": "Kicks 2018-2026, Versa 2020-2026, Sentra 2020-2025, Altima 2019-2025",
+        "fuente": "amazon.com (multiples listados OEM confirmed)"
+      },
+      "Bujias": {
+        "oem": "LZKAR6AP-11 (NGK)",
+        "fuente": "nissan forums, DFM SESION_CONTEXTO.md"
+      },
+      "Filtro de Aire (Kicks/Versa)": {
+        "oem": "16546-5RB1A",
+        "modelos": "Kicks 2018-2026, Versa 2020-2026",
+        "fuente": "nissan.oempartsonline.com, amazon.com (1759 reviews)"
+      },
+      "Filtro Cabina (Kicks/Versa)": {
+        "oem": "27277-6CA0A",
+        "fuente": "amazon.com kit OEM"
+      },
+      "Distribucion": {
+        "tipo": "Cadena",
+        "nota": "HR16DE usa cadena. No cambio programado.",
+        "fuente": "nissan service manual"
+      }
+    }
+  },
+  "Volkswagen|EA211": {
+    "marca": "Volkswagen/Audi/Seat/Skoda",
+    "motor": "1.0T/1.2T/1.4T/1.5T EA211",
+    "modelos": [
+      "Golf 2012-2022",
+      "Jetta 2011-2026",
+      "Polo 2016-2026",
+      "T-Cross 2019-2026",
+      "Tiguan 2014-2026",
+      "A3 2014-2026",
+      "Q3 2015-2026",
+      "Ibiza 2018-2026",
+      "Leon 2014-2026",
+      "Octavia 2014-2026",
+      "Taos 2021-2026",
+      "Nivus 2021-2026",
+      "Virtus 2018-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "04E115561H",
+        "supersede": "04E115561T, 04E115561AC",
+        "fuente": "parts.vw.com, ebay.co.uk (Genuine VW), fcpeuro.com"
+      },
+      "Filtro de Aire": {
+        "oem": "04E129620",
+        "modelos": "Jetta 1.4T, Golf 1.4T, A3 1.4T",
+        "fuente": "vw.oempartsonline.com, amazon.com"
+      },
+      "Bujias": {
+        "oem": "04E905612C",
+        "tipo": "Bosch Iridium/Double Platinum",
+        "cantidad": 4,
+        "fuente": "urotuning.com, amazon.com, sparkplug-crossreference.com"
+      },
+      "Distribucion": {
+        "tipo": "Correa bañada en aceite (EA211 1.0/1.2/1.4/1.5 TSI)",
+        "nota": "Cambio cada 120,000 km o segun revision. Correa dentro del motor.",
+        "fuente": "VW service schedule"
+      }
+    }
+  },
+  "Subaru|FB20-FB25": {
+    "marca": "Subaru",
+    "motor": "2.0L FB20 / 2.5L FB25 Boxer",
+    "modelos": [
+      "Forester 2014-2026",
+      "Impreza 2010-2024",
+      "Outback 2010-2026",
+      "XV 2012-2024",
+      "Legacy 2015-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "15208AA170",
+        "alt": "15208AA15A (Outback 2.5 sin turbo)",
+        "fuente": "parts.subaru.com, subaruonlineparts.com, amazon.com (462 reviews)"
+      },
+      "Filtro de Aire": {
+        "oem": "16546AA12A",
+        "alt": "16546AA10A (WRX/turbo sharing)",
+        "fuente": "subaru.oempartsonline.com (Forester/Impreza/Legacy 2007-2019)"
+      },
+      "Bujias": {
+        "oem": "22401AA750",
+        "tipo": "NGK LZFR6AI",
+        "cantidad": 4,
+        "fuente": "subaru parts catalog"
+      },
+      "Filtro Cabina": {
+        "oem": "72880-FG000",
+        "fuente": "amazon.com"
+      },
+      "Distribucion": {
+        "tipo": "Cadena",
+        "nota": "FB20/FB25 Boxer usa cadena. No cambio programado.",
+        "fuente": "subaru service manual"
+      }
+    }
+  },
+  "Mitsubishi|4N15-4D56": {
+    "marca": "Mitsubishi",
+    "motor": "2.4D 4N15 / 2.5D 4D56",
+    "modelos": [
+      "L200 2014-2026",
+      "Montero Sport 2012-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "1230A182",
+        "alt": "1230A186, 1230A184",
+        "fuente": "ebay.com (OEM), amayama.com"
+      },
+      "Filtro de Aceite (Ryco cross)": {
+        "aftermarket": "Z456 (Ryco)",
+        "fuente": "justanswer.com (mecanico verificado)"
+      },
+      "Filtro de Aire": {
+        "oem": "1500A608",
+        "fuente": "mitsubishi parts catalog"
+      },
+      "Filtro de Aire (L200 4N15)": {
+        "oem": "1500A608",
+        "fuente": "parts.mitsubishicars.com"
+      },
+      "Filtro Combustible (L200 4N15)": {
+        "oem": "1770A233",
+        "alt": "1770A291",
+        "fuente": "amayama.com Genuine Mitsubishi, amazon.com, aliexpress wiki"
+      },
+      "Distribucion": {
+        "tipo": "Cadena (4N15 diesel)",
+        "nota": "4N15 usa cadena. No cambio programado.",
+        "fuente": "autofamkoki.com (timing chain kit 4N15)"
+      }
+    }
+  },
+  "Chevrolet|EcoTec3-V8": {
+    "marca": "Chevrolet",
+    "motor": "5.3L EcoTec3 V8 / 6.2L V8",
+    "modelos": [
+      "Silverado 2014-2026",
+      "Tahoe 2014-2026",
+      "Suburban 2014-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "12696048",
+        "alt": "PF64 (AC Delco)",
+        "fuente": "chevrolet OEM catalogs"
+      },
+      "Filtro de Aire": {
+        "oem": "A3181C (ACDelco)",
+        "alt": "22845992 (GM)",
+        "fuente": "autozone.com, amazon.com"
+      },
+      "Bujias": {
+        "oem": "12680072 (GM)",
+        "alt": "ACDelco 41-110 Iridium",
+        "cantidad": 8,
+        "fuente": "amazon.com (cross-ref confirmed)"
+      }
+    }
+  },
+  "Nissan|QR25DE": {
+    "marca": "Nissan",
+    "motor": "2.5L QR25DE",
+    "modelos": [
+      "X-Trail 2014-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "15208-65F0E",
+        "fuente": "nissan.oempartsonline.com"
+      }
+    }
+  },
+  "Ford|EcoBlue-Duratorq": {
+    "marca": "Ford",
+    "motor": "2.0L EcoBlue / 2.2L/3.2L Duratorq",
+    "modelos": [
+      "Ranger 2014-2026",
+      "Transit 2014-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite (2.0 EcoBlue)": {
+        "oem": "NU2Z-6731-F",
+        "fuente": "ford.oempartsonline.com"
+      },
+      "Filtro de Aire (Ranger 2.2/3.2)": {
+        "oem": "EB3Z-9601-B",
+        "fuente": "amazon.com (Purolator A31436 cross-ref OEM)"
+      },
+      "Filtro de Aire (Transit 3.2D)": {
+        "oem": "CK4Z-9601-A",
+        "fuente": "ford.oempartsonline.com"
+      }
+    }
+  },
+  "PSA|PureTech-EB2": {
+    "marca": "Peugeot/Citroen/DS",
+    "motor": "1.0/1.2T PureTech (EB2)",
+    "modelos": [
+      "Peugeot 208 2014-2026",
+      "2008 2014-2026",
+      "308 2014-2026",
+      "301 2013-2024",
+      "3008 2017-2026",
+      "5008 2017-2026",
+      "Partner 2014-2026",
+      "Rifter 2019-2026",
+      "Citroen Berlingo 2014-2026",
+      "Citroen C3"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "1109CK",
+        "alt": "9818914980, 1109AH",
+        "supersede": "1109CL",
+        "cross_ref": "11427557012 (BMW), 6G9Q-6744AA (Ford)",
+        "fuente": "ebay.co.uk (Genuine PSA), ebay.fr (MPN confirmed)"
+      },
+      "Filtro de Aire": {
+        "oem": "9801322480",
+        "alt": "1444XJ",
+        "fuente": "PSA parts catalog"
+      },
+      "Bujias": {
+        "oem": "9814992880",
+        "tipo": "Denso XU22EPR-U",
+        "cantidad": 3,
+        "fuente": "PSA catalog (3 cil)"
+      },
+      "Filtro Cabina": {
+        "oem": "9801400180",
+        "fuente": "PSA catalog"
+      },
+      "Distribucion": {
+        "tipo": "Correa bañada en aceite (PureTech)",
+        "nota": "CRITICO: cambio cada 100,000 km max. Falla conocida por degradacion aceite.",
+        "fuente": "ntn-snr.com technical bulletin, PSA TSB"
+      }
+    }
+  },
+  "Suzuki|K-Serie": {
+    "marca": "Suzuki",
+    "motor": "K12C/K14B/K15B/K10C/K14C",
+    "modelos": [
+      "Swift 2014-2026",
+      "Baleno 2016-2026",
+      "Jimny 2010-2026",
+      "Ignis 2017-2026",
+      "S-Cross 2014-2026",
+      "Ertiga 2018-2026",
+      "XL7 2020-2026",
+      "Carry 2020-2026",
+      "Vitara 2014-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "16510-61A31",
+        "supersede": "16510-61A32, 16510-61A33",
+        "fuente": "ebay.co.uk (Genuine Suzuki), amazon.com"
+      },
+      "Filtro de Aceite (MANN cross)": {
+        "aftermarket": "W 67/2 (MANN)",
+        "fuente": "SESION_CONTEXTO.md cruce confirmado"
+      },
+      "Filtro de Aire": {
+        "oem": "13780-74P00",
+        "alt": "13780-69L00, 13780-63J00",
+        "fuente": "amazon.co.jp (HKS cross-ref OEM), ebay.co.uk"
+      },
+      "Bujias": {
+        "oem": "Denso ZXU20PR11 (iridium)",
+        "alt": "NGK SILFR6A11 (sport), Denso XU20EPRU (nickel)",
+        "cantidad": 4,
+        "fuente": "ifixit.com (guia Swift 2010-2017)"
+      },
+      "Distribucion": {
+        "tipo": "Cadena (K12C/K14C/K15B)",
+        "nota": "Serie K usa cadena. No cambio programado.",
+        "fuente": "suzuki service manual"
+      },
+      "Filtro de Aire (Jimny 2018+)": {
+        "oem": "13780-78R00",
+        "fuente": "auto-doc.it OEM cross-ref"
+      },
+      "Filtro de Aire (Swift/Baleno/Ignis)": {
+        "oem": "13780-74P00",
+        "fuente": "amazon.co.jp HKS OEM cross, ebay.co.uk"
+      },
+      "Filtro Cabina (Jimny)": {
+        "oem": "95860-81A10",
+        "fuente": "ebay.co.uk Genuine Suzuki"
+      }
+    }
+  },
+  "BMW|B48": {
+    "marca": "BMW/Mini",
+    "motor": "2.0T B48 / 1.5T B38",
+    "modelos": [
+      "Serie 1 2015-2026",
+      "Serie 3 2015-2026",
+      "X1 2016-2026",
+      "X3 2017-2026",
+      "X5 2019-2026",
+      "Mini Cooper 2014-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "11428575211",
+        "incluye": "filtro + O-ring + sello drain plug",
+        "OE_supplier": "Hengst/Mahle",
+        "fuente": "bimmerworld.com, bmwpartsfactory.com, getbmwparts.com"
+      },
+      "Filtro de Aire": {
+        "oem": "13718577170",
+        "alt": "13718616909 (X3/X5)",
+        "fuente": "bmw parts catalog"
+      },
+      "Bujias": {
+        "oem": "12122472054",
+        "tipo": "NGK LZFR6AP11GS",
+        "cantidad": 4,
+        "fuente": "bimmerworld.com"
+      },
+      "Distribucion": {
+        "tipo": "Cadena",
+        "nota": "B48/B38 usa cadena. No cambio programado.",
+        "fuente": "bmw service manual"
+      }
+    }
+  },
+  "Chevrolet|F18D4-LUJ": {
+    "marca": "Chevrolet",
+    "motor": "1.8L F18D4 / 1.4T LUJ",
+    "modelos": [
+      "Cruze 2010-2020",
+      "Tracker 2014-2019"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "93185674",
+        "alt": "55353324 (GM), 55594651, 5650359",
+        "aftermarket": "PF2257G (ACDelco)",
+        "fuente": "amazon.com, walmart.com, autozone.com"
+      },
+      "Filtro de Aire": {
+        "oem": "13272717 (GM)",
+        "fuente": "GM parts catalog"
+      },
+      "Bujias": {
+        "oem": "55577462 (GM)",
+        "tipo": "ACDelco 41-125",
+        "cantidad": 4,
+        "fuente": "GM parts catalog"
+      },
+      "Filtro de Aire (Cruze 1.8)": {
+        "oem": "13272717 (GM)",
+        "fuente": "GM catalog"
+      },
+      "Distribucion (1.8 F18D4)": {
+        "tipo": "Correa (1.8L F18D4 usa correa)",
+        "nota": "Cambio cada 150,000 km. El 1.4T LUJ usa cadena.",
+        "fuente": "cartipsdaily.com, bobistheoilguy.com"
+      },
+      "Filtro Combustible": {
+        "oem": "13539108 (GM kit con sellos)",
+        "fuente": "gmpartsnow.com"
+      }
+    }
+  },
+  "Renault|K4M-F4R": {
+    "marca": "Renault",
+    "motor": "1.6L K4M / 2.0L F4R",
+    "modelos": [
+      "Duster 2012-2026",
+      "Megane 2010-2024",
+      "Clio 2014-2024",
+      "Symbol 2014-2022",
+      "Kangoo 2014-2026",
+      "Captur 2017-2026",
+      "Koleos 2017-2026",
+      "Oroch 2016-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "7700274177",
+        "alt": "8200768913, 8200025862",
+        "fuente": "ebay.co.uk (Genuine Renault), amazon.com, amayama.com"
+      },
+      "Filtro de Aire": {
+        "oem": "8200431051",
+        "alt": "165467674R",
+        "fuente": "auto-doc.fr, alibaba.com OEM"
+      },
+      "Bujias": {
+        "oem": "7700500155",
+        "tipo": "Eyquem RFC42LZ2E",
+        "cantidad": 4,
+        "fuente": "renault catalog"
+      },
+      "Filtro Cabina": {
+        "oem": "272773277R",
+        "alt": "272774936R",
+        "fuente": "accio.com, ebay.co.uk"
+      },
+      "Distribucion": {
+        "tipo": "Correa (K4M)",
+        "nota": "Cambio cada 90,000-120,000 km con bomba agua",
+        "fuente": "renault service schedule"
+      }
+    }
+  },
+  "Fiat|Firefly": {
+    "marca": "Fiat",
+    "motor": "1.0L/1.3L Firefly / 1.8L E.torQ",
+    "modelos": [
+      "Argo 2018-2026",
+      "Cronos 2018-2026",
+      "Mobi 2017-2026",
+      "Strada 2018-2026",
+      "Pulse 2022-2026",
+      "Uno 2012-2021"
+    ],
+    "componentes": {
+      "Filtro de Aceite (Firefly 1.3)": {
+        "oem": "55283593",
+        "aceite": "0W-20 API SN",
+        "fuente": "omecanico.com.br, sermi.com.br (kit MANN)"
+      },
+      "Aceite Motor": {
+        "spec": "0W-20 100%% sintetico API SN ILSAC GF-5",
+        "fuente": "corollaimportado.com.br, bobistheoilguy.com"
+      },
+      "Filtro de Aire": {
+        "oem": "51080500",
+        "fuente": "fiat Brazil catalog"
+      },
+      "Bujias": {
+        "oem": "55249868",
+        "tipo": "NGK LKAR8BI-9",
+        "cantidad": 4,
+        "fuente": "fiat catalog"
+      },
+      "Distribucion": {
+        "tipo": "Cadena (Firefly 1.0/1.3)",
+        "nota": "Motor Firefly usa cadena. Problema conocido: ruido cadena por lubricacion.",
+        "fuente": "bobistheoilguy.com"
+      }
+    }
+  },
+  "Jeep-Dodge-Ram|Pentastar-V6": {
+    "marca": "Jeep/Dodge/Ram/Chrysler",
+    "motor": "3.6L Pentastar V6",
+    "modelos": [
+      "Wrangler 2014-2026",
+      "Grand Cherokee 2011-2026",
+      "Cherokee 2014-2023",
+      "Gladiator 2020-2026",
+      "Durango 2014-2026",
+      "Pacifica 2017-2026",
+      "Journey 2014-2022"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "68191349AC",
+        "alt": "68191349AA, MO-349 (Mopar)",
+        "fuente": "store.mopar.com (official), amazon.com (1770 reviews), nhtsa.gov TSB"
+      },
+      "Filtro de Aire": {
+        "oem": "04861756AA (Mopar)",
+        "fuente": "store.mopar.com"
+      },
+      "Bujias": {
+        "oem": "SPLZFR5C11 (Mopar)",
+        "tipo": "Champion RE14MCC5",
+        "cantidad": 6,
+        "fuente": "mopar catalog"
+      },
+      "Distribucion": {
+        "tipo": "Cadena (Pentastar V6)",
+        "nota": "No cambio programado",
+        "fuente": "mopar service manual"
+      }
+    }
+  },
+  "Mercedes|M264-M254": {
+    "marca": "Mercedes-Benz",
+    "motor": "2.0T M264/M254 / 1.3T M282",
+    "modelos": [
+      "Clase C 2015-2026",
+      "Clase E 2016-2026",
+      "GLC 2016-2026",
+      "Clase A 2018-2026",
+      "GLA 2020-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite (M264/M254 4cil)": {
+        "oem": "A2701800009",
+        "fuente": "ebay.com.au (Genuine MB), walmart.ca"
+      },
+      "Filtro de Aceite (Sprinter OM651)": {
+        "oem": "6421800009",
+        "aftermarket": "Mann HU 821 x",
+        "fuente": "amazon.com"
+      },
+      "Filtro de Aceite (OM654 diesel)": {
+        "oem": "A6541801100",
+        "modelos": "W205 W213 C200d E220 E300d",
+        "fuente": "amazon.com"
+      },
+      "Filtro de Aire": {
+        "oem": "A2710940304",
+        "fuente": "mercedes parts catalog"
+      },
+      "Bujias": {
+        "oem": "A0041596403",
+        "cantidad": 4,
+        "fuente": "mercedes catalog"
+      },
+      "Distribucion": {
+        "tipo": "Cadena (M264/M254)",
+        "nota": "No cambio programado",
+        "fuente": "mercedes service manual"
+      }
+    }
+  },
+  "Nissan|QR25-VQ35": {
+    "marca": "Nissan",
+    "motor": "2.5L QR25DE / 3.5L VQ35DE",
+    "modelos": [
+      "X-Trail 2014-2026",
+      "Murano 2015-2026",
+      "Pathfinder 2010-2024",
+      "Qashqai 2014-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "15208-65F0E",
+        "fuente": "nissan.oempartsonline.com"
+      },
+      "Filtro de Aire (X-Trail/Qashqai)": {
+        "oem": "16546-4BA1A",
+        "alt": "16546-4BA1B",
+        "fuente": "ebay.co.uk, walmart.ca ECOGARD cross-ref"
+      }
+    }
+  },
+  "Nissan|YD25-YS23": {
+    "marca": "Nissan",
+    "motor": "2.3D YS23 / 2.5D YD25DDTi",
+    "modelos": [
+      "NP300/Navara 2015-2026",
+      "D21/NP300 2008-2026",
+      "Urvan 2014-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "15208-65F0E",
+        "nota": "mismo filtro que gasolina HR16DE",
+        "fuente": "nissan.oempartsonline.com"
+      },
+      "Filtro de Aire (NP300/Navara)": {
+        "oem": "16546-EB300",
+        "fuente": "nissan parts catalog"
+      }
+    }
+  },
+  "Chevrolet|Ecotec-Onix": {
+    "marca": "Chevrolet",
+    "motor": "1.0T/1.2T Ecotec (3cil)",
+    "modelos": [
+      "Onix 2020-2026",
+      "Tracker 2020-2026",
+      "Montana 2023-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "55513438 (GM)",
+        "alt": "12690386",
+        "fuente": "parts.chevrolet.com, autozone.com"
+      },
+      "Filtro de Aire": {
+        "oem": "26241944 (GM)",
+        "alt": "26255444",
+        "fuente": "chevroletnova.com.br (tienda oficial GM)"
+      },
+      "Distribucion": {
+        "tipo": "Cadena (1.0T/1.2T Ecotec)",
+        "nota": "Motor 3 cilindros turbo usa cadena.",
+        "fuente": "GM service manual"
+      }
+    }
+  },
+  "Subaru|FA20-FA24-Turbo": {
+    "marca": "Subaru",
+    "motor": "2.0T FA20DIT / 2.4T FA24DIT Boxer",
+    "modelos": [
+      "WRX 2015-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "15208AA170",
+        "nota": "mismo que FB20/FB25 aspirado",
+        "fuente": "parts.subaru.com, amazon.com"
+      },
+      "Filtro de Aire (WRX 2015-2021)": {
+        "oem": "16546-AA090",
+        "alt": "16546-AA10A",
+        "fuente": "amazon.com (confirmed WRX/STI/Forester), subaruonlineparts.com"
+      },
+      "Filtro Cabina (WRX)": {
+        "oem": "72880-FG000",
+        "fuente": "amazon.com kit combo"
+      }
+    }
+  },
+  "Ford|EcoBoost-2.0-2.3": {
+    "marca": "Ford",
+    "motor": "2.0T/2.3T EcoBoost / 2.5L Duratec",
+    "modelos": [
+      "Explorer 2012-2026",
+      "Escape 2013-2026",
+      "Edge 2015-2024",
+      "Mustang 2015-2026",
+      "Bronco Sport 2021-2026",
+      "Territory 2020-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "FL500S (Motorcraft)",
+        "alt": "AA5Z-6714-A, BU2Z-6731-A",
+        "fuente": "ford.com, autozone.com, amazon.com, ford.oempartsonline.com"
+      },
+      "Filtro de Aire": {
+        "oem": "FA-1927 (Motorcraft)",
+        "fuente": "ford.com"
+      },
+      "Bujias": {
+        "oem": "SP-542 (Motorcraft)",
+        "tipo": "Iridium",
+        "cantidad": 4,
+        "fuente": "ford.com"
+      },
+      "Distribucion": {
+        "tipo": "Correa de distribucion (2.0 EcoBoost usa correa)",
+        "nota": "Cambio cada 150,000 km",
+        "fuente": "ford service schedule"
+      }
+    }
+  },
+  "Ford|Sigma-Dragon": {
+    "marca": "Ford",
+    "motor": "1.6L Sigma / 1.5L Dragon",
+    "modelos": [
+      "Fiesta 2011-2019",
+      "Ecosport 2013-2022",
+      "Focus 2012-2019"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "FL500S (Motorcraft)",
+        "nota": "mismo filtro que EcoBoost",
+        "fuente": "ford.com"
+      },
+      "Filtro de Aire (Fiesta/Ecosport)": {
+        "oem": "AE8Z-9601-A",
+        "fuente": "ford parts catalog"
+      }
+    }
+  },
+  "Ford|Coyote-EcoBoost-V8": {
+    "marca": "Ford",
+    "motor": "5.0L Coyote V8 / 3.5T EcoBoost V6",
+    "modelos": [
+      "F-150 2010-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "FL500S (Motorcraft)",
+        "fuente": "ford.com"
+      },
+      "Filtro de Aire": {
+        "oem": "FA-1883 (Motorcraft)",
+        "alt": "7C3Z-9601-A",
+        "modelos": "F-150 2009-2026, Expedition, Super Duty",
+        "fuente": "ford.oempartsonline.com, amazon.com"
+      },
+      "Filtro Cabina": {
+        "oem": "FL3Z-19N619-A",
+        "fuente": "amazon.com (kit combo)"
+      }
+    }
+  },
+  "SsangYong|D20-D22": {
+    "marca": "SsangYong",
+    "motor": "2.0D D20DTF/D20DTR / 2.2D D22DTF",
+    "modelos": [
+      "Korando 2012-2026",
+      "Musso Grand 2018-2026",
+      "Rexton 2012-2026",
+      "Actyon Sports 2012-2018"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "1721803009",
+        "alt": "6711803009, 1621803009, 1731840025",
+        "fuente": "ebay.co.uk (Genuine SsangYong), alibaba.com, accio.com"
+      },
+      "EPC disponible": {
+        "url": "ssangyong.7zap.com",
+        "fuente": "ssangyong.catalogs-parts.com"
+      },
+      "Filtro de Aire": {
+        "oem": "23190-34100",
+        "fuente": "ssangyong.7zap.com catalog"
+      },
+      "Distribucion": {
+        "tipo": "Cadena (D20/D22 diesel)",
+        "nota": "No cambio programado",
+        "fuente": "ssangyong service manual"
+      }
+    }
+  },
+  "Chevrolet|D-Max-Colorado-Diesel": {
+    "marca": "Chevrolet",
+    "motor": "2.5D 4JK1-TC / 2.8D Duramax / 3.0D 4JJ1-TC",
+    "modelos": [
+      "D-Max 2014-2026",
+      "Colorado 2018-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "97358720 (Isuzu/GM)",
+        "alt": "8-98165071-0",
+        "fuente": "catalogs GM Isuzu"
+      }
+    }
+  },
+  "Porsche|EA888-EA839": {
+    "marca": "Porsche",
+    "motor": "2.0T EA888 / 3.0T EA839 V6",
+    "modelos": [
+      "Macan 2014-2026",
+      "Cayenne 2018-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite (Macan 2.0T)": {
+        "oem": "06L115562B",
+        "nota": "compartido con Audi Q5/A4 EA888",
+        "fuente": "porsche parts catalog"
+      },
+      "Filtro de Aceite (Cayenne 3.0T)": {
+        "oem": "958.107.222.00",
+        "fuente": "porsche parts catalog"
+      },
+      "Filtro de Aire (Macan 2.0T)": {
+        "oem": "8W0133843E",
+        "nota": "compartido con Audi Q5",
+        "fuente": "porsche/audi catalog"
+      },
+      "Distribucion": {
+        "tipo": "Cadena (EA888/EA839)",
+        "nota": "No cambio programado",
+        "fuente": "porsche/vw service"
+      }
+    }
+  },
+  "Volvo|B4204T": {
+    "marca": "Volvo",
+    "motor": "2.0T B4204T (Drive-E)",
+    "modelos": [
+      "XC40 2018-2026",
+      "XC60 2018-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "31372212",
+        "alt": "MANN HU 719/8 x",
+        "fuente": "volvo parts catalogs"
+      },
+      "Filtro de Aire": {
+        "oem": "31370161",
+        "fuente": "volvo parts catalog"
+      },
+      "Bujias": {
+        "oem": "31404455",
+        "tipo": "NGK ILZKBR7B8G",
+        "cantidad": 4,
+        "fuente": "volvo catalog"
+      }
+    }
+  },
+  "Audi-VW|EA888": {
+    "marca": "Volkswagen/Audi/Porsche",
+    "motor": "2.0T EA888 Gen3",
+    "modelos": [
+      "Audi A4 2016-2026",
+      "Audi Q5 2017-2026",
+      "VW Tiguan 2014-2026",
+      "Porsche Macan 2.0T"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "06L115562B",
+        "alt": "06L115562",
+        "aftermarket": "MANN HU 6002 z",
+        "fuente": "vw/audi parts catalogs"
+      },
+      "Distribucion": {
+        "tipo": "Cadena (EA888 Gen3)",
+        "nota": "No cambio programado",
+        "fuente": "vw service"
+      }
+    }
+  },
+  "Mitsubishi|4A92-4B11": {
+    "marca": "Mitsubishi",
+    "motor": "1.6L 4A92 / 2.0L 4B11",
+    "modelos": [
+      "ASX 2014-2026",
+      "Outlander 2010-2026",
+      "Lancer 2010-2018",
+      "Eclipse Cross 2018-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "MZ690115",
+        "fuente": "SESION_CONTEXTO.md cruce confirmado 4A9x"
+      },
+      "Filtro de Aire (Outlander/ASX)": {
+        "oem": "1500A023",
+        "alt": "MZ690445",
+        "fuente": "parts.mitsubishicars.com (official)"
+      },
+      "Bujias (Outlander 2.4)": {
+        "oem": "NGK LZFR6AI",
+        "cantidad": 4,
+        "fuente": "parts.mitsubishicars.com, justanswer.com (mecanico verificado)"
+      }
+    }
+  },
+  "Mazda|P5-VPS-1.5": {
+    "marca": "Mazda",
+    "motor": "1.5L P5-VPS Skyactiv-G",
+    "modelos": [
+      "Mazda 2 2011-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "PE01-14-302A",
+        "nota": "mismo que Skyactiv 2.0/2.5",
+        "fuente": "amazon.com (confirmado para 1.5/2.0/2.5)"
+      }
+    }
+  },
+  "Chevrolet|Sail-LCU-L2B": {
+    "marca": "Chevrolet",
+    "motor": "1.4L LCU / 1.5L L2B",
+    "modelos": [
+      "Sail 2014-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "24537482 (GM)",
+        "fuente": "GM parts catalog China market"
+      },
+      "Filtro de Aire": {
+        "oem": "9041833",
+        "alt": "90799322 (Sail 3 1.3/1.5)",
+        "fuente": "alibaba.com (OEM confirmed multiple suppliers)"
+      }
+    }
+  },
+  "Dodge|HEMI-V8": {
+    "marca": "Ram/Dodge",
+    "motor": "5.7L HEMI V8 / 6.7L Cummins",
+    "modelos": [
+      "Ram 1500 2014-2026",
+      "Ram 2500 2014-2026",
+      "Durango 5.7"
+    ],
+    "componentes": {
+      "Filtro de Aceite (HEMI)": {
+        "oem": "68191349AC",
+        "nota": "mismo que Pentastar V6 (Mopar MO-349)",
+        "fuente": "store.mopar.com"
+      },
+      "Filtro de Aceite (Cummins 6.7)": {
+        "oem": "5083285AA (Mopar)",
+        "fuente": "mopar.com"
+      }
+    }
+  },
+  "Honda|Fit-L15A": {
+    "marca": "Honda",
+    "motor": "1.5L L15A/L15B (aspirado)",
+    "modelos": [
+      "Fit 2010-2020"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "15400-PLM-A02",
+        "nota": "mismo que toda la linea Honda",
+        "fuente": "honda.oempartsonline.com"
+      }
+    }
+  },
+  "Fiat|Fire": {
+    "marca": "Fiat",
+    "motor": "1.4L Fire / Fire EVO",
+    "modelos": [
+      "Fiorino 2010-2026",
+      "Strada 2012-2017",
+      "Palio 2010-2018",
+      "Uno 1990-2011"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "55256470",
+        "alt": "46796687",
+        "fuente": "fiat OEM catalogs"
+      },
+      "Distribucion": {
+        "tipo": "Correa (Fire 1.4)",
+        "nota": "Cambio cada 50,000-60,000 km con tensor y bomba agua",
+        "fuente": "fiat service schedule"
+      }
+    }
+  },
+  "Fiat|Ducato-MultiJet": {
+    "marca": "Fiat",
+    "motor": "2.3D F1A MultiJet",
+    "modelos": [
+      "Ducato 2014-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "5801592277",
+        "aftermarket": "MANN HU 718/1 k",
+        "fuente": "fiat commercial parts catalog"
+      },
+      "Filtro de Aire": {
+        "oem": "1606402680",
+        "alt": "K9K filterelement",
+        "fuente": "auto-doc.fr, haynes.com"
+      },
+      "Bujias calentamiento (diesel)": {
+        "oem": "Beru 276003615 (glow plugs)",
+        "cantidad": 4,
+        "fuente": "scribd.com datos tecnicos Fiat"
+      }
+    }
+  },
+  "Toyota|1GR-FE-V6": {
+    "marca": "Toyota",
+    "motor": "4.0L 1GR-FE V6",
+    "modelos": [
+      "4Runner 2010-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "90915-YZZD4",
+        "fuente": "parts.toyota.com"
+      }
+    }
+  },
+  "Nissan|MR16DDT": {
+    "marca": "Nissan",
+    "motor": "1.6T MR16DDT / 1.0T HR10DET",
+    "modelos": [
+      "Juke 2014-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "15208-65F0E",
+        "nota": "mismo filtro universal Nissan",
+        "fuente": "nissan.oempartsonline.com"
+      }
+    }
+  },
+  "Lexus|A25A": {
+    "marca": "Lexus/Toyota",
+    "motor": "2.5L A25A / Hybrid",
+    "modelos": [
+      "Lexus NX 2022-2026",
+      "Toyota RAV4 Hybrid"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "90915-YZZN1",
+        "fuente": "toyota/lexus parts catalog"
+      }
+    }
+  },
+  "Opel|PureTech": {
+    "marca": "Opel/Vauxhall",
+    "motor": "1.2T PureTech (plataforma PSA)",
+    "modelos": [
+      "Corsa 2020-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "1109CK",
+        "nota": "mismo que Peugeot 208/308 PureTech (grupo Stellantis)",
+        "fuente": "ebay.co.uk (Genuine PSA)"
+      }
+    }
+  },
+  "Chery|SQR-SQRF4J16": {
+    "marca": "Chery/Jetour/Omoda",
+    "motor": "1.5T SQRF4J16 / 1.5L SQR477F / 1.6L SQRE4G16",
+    "modelos": [
+      "Tiggo 2 2017-2026",
+      "Tiggo 3 2015-2022",
+      "Tiggo 4 2019-2026",
+      "Tiggo 7 Pro 2020-2026",
+      "Tiggo 8 2019-2026",
+      "Arrizo 3 2018-2026",
+      "Arrizo 5 2019-2026",
+      "Jetour X70 2020-2026",
+      "Jetour Dashing 2022-2026",
+      "Omoda C5 2023-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite (1.5/1.6 aspirado)": {
+        "oem": "E4G16-1012040",
+        "fuente": "alibaba.com (OEM Hellper), amazon.com"
+      },
+      "Filtro de Aceite (Tiggo 4/5X/7/8)": {
+        "oem": "480-1012010",
+        "fuente": "accio.com (OEM Chery), amazon.com"
+      },
+      "EPC disponible": {
+        "url": "autopartscatalogue.net/chery-epc/",
+        "fuente": "Chery EPC Online official"
+      },
+      "Filtro de Aire (Tiggo 5X/7/8 1.5T)": {
+        "oem": "T15-1109111",
+        "alt": "151000079AA",
+        "fuente": "amazon.com, alibaba.com OEM confirmed"
+      },
+      "Filtro Cabina (Tiggo 4/7/8/Omoda)": {
+        "oem": "301001157AA",
+        "alt": "T21-8107011",
+        "fuente": "alibaba.com OEM, amazon.com"
+      },
+      "Bujias (1.5T SQRF4J16)": {
+        "oem": "F4J16-3707010",
+        "tipo": "Iridium",
+        "cantidad": 4,
+        "fuente": "amazon.com OEM Chery"
+      },
+      "Distribucion": {
+        "tipo": "Cadena",
+        "nota": "SQRF4J16 usa cadena",
+        "fuente": "chery service manual"
+      }
+    }
+  },
+  "Changan|BlueCore-H15-H16": {
+    "marca": "Changan",
+    "motor": "1.5T BlueCore / 1.6L H16 / 1.5L JL473QF",
+    "modelos": [
+      "CS35 2016-2026",
+      "CS55 Plus 2019-2026",
+      "CS15 2017-2026",
+      "Alsvin 2020-2026",
+      "UNI-T 2021-2026",
+      "CX70 2018-2026",
+      "Hunter 2022-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite (CS35)": {
+        "oem": "H15002-1000",
+        "alt": "K003-2300",
+        "fuente": "chinaautoparts.info (confirmed OEM)"
+      },
+      "Bujias": {
+        "oem": "NE14T003-0200 / 3707010-NE01",
+        "modelos": "CS35 Plus, CS55 Plus, UNI-K, UNI-V",
+        "fuente": "accio.com (OEM Changan)"
+      },
+      "EPC disponible": {
+        "url": "autopartscatalogue.net/changan-epc-online/",
+        "fuente": "Changan EPC Online official"
+      },
+      "Distribucion": {
+        "tipo": "Cadena (BlueCore turbo)",
+        "nota": "No cambio programado",
+        "fuente": "changan service manual"
+      }
+    }
+  },
+  "MG-SAIC|15E4E-15S4C": {
+    "marca": "MG (SAIC)",
+    "motor": "1.5T 15E4E / 1.5L 15S4C NSE",
+    "modelos": [
+      "MG ZS 2018-2026",
+      "MG HS 2020-2026",
+      "MG 5 2020-2026",
+      "MG 3 2012-2024",
+      "MG RX5 2018-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite (HS/GS/ZS 1.5T)": {
+        "oem": "10604737",
+        "alt": "12674030",
+        "fuente": "ebay.co.uk (Genuine MG), accio.com"
+      },
+      "EPC disponible": {
+        "url": "autopartscatalogue.net/mg-saic-motor-epc/",
+        "fuente": "MG SAIC EPC Online"
+      },
+      "Filtro de Aire (ZS 1.5)": {
+        "oem": "10334315",
+        "alt": "10242786",
+        "fuente": "amazon.com LX4624 cross-ref OEM confirmed"
+      },
+      "Distribucion": {
+        "tipo": "Cadena (motores SAIC 15E4E/15S4C)",
+        "nota": "No cambio programado",
+        "fuente": "MG service manual"
+      }
+    }
+  },
+  "Haval-GWM|GW4B15-GW4C20": {
+    "marca": "Haval/GWM",
+    "motor": "1.5T GW4B15 / 2.0T GW4C20 / 2.0D GW4D20M",
+    "modelos": [
+      "H6 2018-2026",
+      "Jolion 2021-2026",
+      "Dargo 2022-2026",
+      "Poer 2020-2026",
+      "Tank 300 2022-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite (1.5T)": {
+        "oem": "1017110XEN01",
+        "fuente": "chinaautoparts.info (confirmed OEM Haval H6)"
+      },
+      "Filtro de Aire (H6 1.5T)": {
+        "oem": "1109101XKZ16A",
+        "fuente": "alibaba.com, chinaautoparts.info"
+      },
+      "Distribucion": {
+        "tipo": "Cadena (GW4B15/GW4C20)",
+        "nota": "No cambio programado",
+        "fuente": "GWM service manual"
+      }
+    }
+  },
+  "Suzuki|Celerio-Alto-K10B": {
+    "marca": "Suzuki",
+    "motor": "0.8L F8D / 1.0L K10B",
+    "modelos": [
+      "Alto 2008-2024",
+      "Celerio 2010-2026",
+      "Maruti 1990-2000"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "16510-61A31",
+        "nota": "mismo filtro que K-Serie mayores",
+        "fuente": "ebay.co.uk, amazon.com"
+      }
+    }
+  },
+  "Nissan|KA24DE-old": {
+    "marca": "Nissan",
+    "motor": "2.4L KA24DE / 2.5D YD25DDTi (D21/NP300)",
+    "modelos": [
+      "D21/NP300 2008-2026",
+      "D21 1990-2008"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "15208-65F0E",
+        "nota": "mismo universal Nissan",
+        "fuente": "nissan.oempartsonline.com (1995-2025)"
+      }
+    }
+  },
+  "Toyota|Tercel-Hilux-old": {
+    "marca": "Toyota",
+    "motor": "1.3L/1.5L (Tercel) / 2.4L-3.0D (Hilux viejo)",
+    "modelos": [
+      "Tercel 1990-1999",
+      "Hilux 1990-2013",
+      "Land Cruiser 1990-1999"
+    ],
+    "componentes": {
+      "Filtro de Aceite (Tercel)": {
+        "oem": "90915-YZZD1",
+        "fuente": "oempartsonline.com"
+      },
+      "Filtro de Aceite (Hilux diesel viejo)": {
+        "oem": "90915-30002-8T",
+        "fuente": "toyota parts catalog"
+      }
+    }
+  },
+  "VW|Gol-Kombi-Escarabajo": {
+    "marca": "Volkswagen",
+    "motor": "1.6L (air/water cooled legacy)",
+    "modelos": [
+      "Gol 1990-2013",
+      "Kombi 1990-2013",
+      "Escarabajo 1990-2003"
+    ],
+    "componentes": {
+      "Filtro de Aceite (Gol/Kombi water)": {
+        "oem": "032115561C",
+        "fuente": "VW Brazil parts catalog"
+      }
+    }
+  },
+  "VW|Amarok-TDI": {
+    "marca": "Volkswagen",
+    "motor": "2.0D CDCA/CNEA TDI (Amarok)",
+    "modelos": [
+      "Amarok 2011-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "03L115562",
+        "alt": "03N115562B (version nueva)",
+        "fuente": "vw.oempartsonline.com, ebay.co.uk (Genuine VW), amazon.com"
+      }
+    }
+  },
+  "VW|EA111-legacy": {
+    "marca": "Volkswagen",
+    "motor": "1.6L EA111 / 1.6L MSI",
+    "modelos": [
+      "Gol 2014-2023",
+      "Saveiro 2012-2026",
+      "Voyage/Gol legacy"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "04E115561H",
+        "nota": "mismo que EA211 (evolucion)",
+        "fuente": "parts.vw.com"
+      }
+    }
+  },
+  "VW|Kombi-Escarabajo-legacy": {
+    "marca": "Volkswagen",
+    "motor": "1.6L / 1.8L / 2.0L (legacy air/water)",
+    "modelos": [
+      "Kombi 1990-2013",
+      "Escarabajo 1990-2003",
+      "Gol 1990-2013"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "032115561C",
+        "fuente": "VW Brazil catalog"
+      },
+      "Distribucion": {
+        "tipo": "Engranajes (air-cooled no tiene correa/cadena)",
+        "nota": "Motor boxer air-cooled usa engranajes directos",
+        "fuente": "VW classic manual"
+      }
+    }
+  },
+  "VW|Bora-Vento": {
+    "marca": "Volkswagen",
+    "motor": "2.0L 8v / 1.8T / 2.5L 5cil (Bora/Vento)",
+    "modelos": [
+      "Bora 2006-2015",
+      "Vento 2014-2022"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "06A115561B",
+        "fuente": "VW parts catalog"
+      }
+    }
+  },
+  "Hyundai-Kia|D4CB-diesel": {
+    "marca": "Hyundai/Kia",
+    "motor": "2.5D D4CB (H-1, Porter, Kia Frontier)",
+    "modelos": [
+      "H-1 2014-2026",
+      "Porter 2014-2024",
+      "Kia Frontier 2014-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "26330-4A001",
+        "alt": "26320-4A000",
+        "fuente": "amazon.com (Genuine OEM), hyundai.oempartsonline.com"
+      },
+      "Filtro de Aire (H-1/Porter)": {
+        "oem": "28130-4H000",
+        "fuente": "hyundai parts catalog"
+      }
+    }
+  },
+  "Hyundai-Kia|D4HB-diesel": {
+    "marca": "Hyundai/Kia",
+    "motor": "2.2D D4HB / 2.4L G4KJ (Santa Fe, Sorento)",
+    "modelos": [
+      "Santa Fe 2010-2026",
+      "Sorento 2010-2026",
+      "Carnival 2015-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite (gasolina G4KJ)": {
+        "oem": "26300-35505",
+        "fuente": "hyundai.oempartsonline.com"
+      },
+      "Filtro de Aceite (diesel D4HB)": {
+        "oem": "26320-3CAA0",
+        "fuente": "hyundai.oempartsonline.com"
+      },
+      "Filtro de Aire (Santa Fe/Sorento diesel)": {
+        "oem": "28113-2W300",
+        "fuente": "hyundai parts catalog"
+      }
+    }
+  },
+  "Honda|J35-V6": {
+    "marca": "Honda",
+    "motor": "3.5L J35Y6 V6",
+    "modelos": [
+      "Pilot 2016-2026",
+      "Ridgeline 2017-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "15400-PLM-A02",
+        "nota": "MISMO filtro universal Honda (todos los modelos)",
+        "fuente": "honda.oempartsonline.com (confirmado Pilot/Ridgeline 3.5 V6)"
+      }
+    }
+  },
+  "Honda|R18Z": {
+    "marca": "Honda",
+    "motor": "1.8L R18Z (HR-V, Civic viejo)",
+    "modelos": [
+      "HR-V 2015-2024",
+      "Civic 2012-2015"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "15400-PLM-A02",
+        "fuente": "honda.oempartsonline.com"
+      }
+    }
+  },
+  "Nissan|Sentra-MR20DD": {
+    "marca": "Nissan",
+    "motor": "1.8L MRA8DE / 2.0L MR20DD",
+    "modelos": [
+      "Sentra 2010-2026",
+      "Qashqai 2014-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "15208-65F0E",
+        "nota": "filtro universal Nissan",
+        "fuente": "nissan.oempartsonline.com"
+      },
+      "Filtro de Aire (Sentra/Qashqai MR20DD)": {
+        "oem": "16546-4BA1A",
+        "nota": "mismo que X-Trail QR25",
+        "fuente": "walmart.ca"
+      }
+    }
+  },
+  "Nissan|old-D21": {
+    "marca": "Nissan",
+    "motor": "2.4L / 2.5D (D21 legacy), 1.6L (V16 legacy)",
+    "modelos": [
+      "D21 1990-2008",
+      "V16 1990-2009"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "15208-65F0E",
+        "fuente": "nissan.oempartsonline.com (1995-2025 compatible)"
+      },
+      "Distribucion": {
+        "tipo": "Cadena (KA24DE gasolina) / Correa (diesel)",
+        "nota": "KA24DE: cadena. YD25: cadena. D21 viejo LD20: correa.",
+        "fuente": "nissan service manual"
+      }
+    }
+  },
+  "Toyota|old-Hilux-LandCruiser": {
+    "marca": "Toyota",
+    "motor": "2.4L/2.8D/3.0D (Hilux 90-13), 4.0L/4.5L V6 (Land Cruiser 90-99)",
+    "modelos": [
+      "Hilux 1990-2013",
+      "Land Cruiser 1990-1999",
+      "Tercel 1990-1999"
+    ],
+    "componentes": {
+      "Filtro de Aceite (Hilux diesel)": {
+        "oem": "90915-30002-8T",
+        "alt": "90915-YZZD4 (gas)",
+        "fuente": "toyota parts catalog"
+      },
+      "Filtro de Aceite (Land Cruiser V6)": {
+        "oem": "90915-YZZD1",
+        "fuente": "toyota parts catalog"
+      },
+      "Distribucion (Hilux diesel)": {
+        "tipo": "Correa",
+        "nota": "Cambio cada 100,000 km (2.4/2.8/3.0 diesel)",
+        "fuente": "toyota service manual"
+      },
+      "Distribucion (Land Cruiser V6)": {
+        "tipo": "Correa",
+        "nota": "Cambio cada 100,000 km",
+        "fuente": "toyota service manual"
+      }
+    }
+  },
+  "Toyota|Avanza-Rush-2NR": {
+    "marca": "Toyota",
+    "motor": "1.3L K3-VE / 1.5L 2NR-VE (Avanza, Rush)",
+    "modelos": [
+      "Avanza 2012-2026",
+      "Rush 2018-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "90915-YZZD4",
+        "fuente": "toyota parts catalog"
+      }
+    }
+  },
+  "Toyota|RAV4-A25A": {
+    "marca": "Toyota",
+    "motor": "2.0L 3ZR-FAE / 2.5L A25A-FKS / 2.5H A25A-FXS",
+    "modelos": [
+      "RAV4 2014-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "90915-YZZN1",
+        "alt": "04152-YZZA5 (element type)",
+        "fuente": "toyota parts catalog"
+      }
+    }
+  },
+  "Chevrolet|LUV-legacy": {
+    "marca": "Chevrolet",
+    "motor": "2.3L (LUV), 2.8D/3.2L V6 (Trooper)",
+    "modelos": [
+      "LUV 1990-2004",
+      "Trooper 1990-1999"
+    ],
+    "componentes": {
+      "Filtro de Aceite (LUV 2.3)": {
+        "oem": "25014133 (GM/Isuzu)",
+        "fuente": "GM parts catalog"
+      },
+      "Filtro de Aceite (Trooper)": {
+        "oem": "8-94340259-0 (Isuzu)",
+        "fuente": "Isuzu parts catalog"
+      },
+      "Distribucion": {
+        "tipo": "Cadena (2.3L Isuzu)",
+        "nota": "No cambio programado",
+        "fuente": "GM/Isuzu service"
+      }
+    }
+  },
+  "Chevrolet|Captiva-LE5": {
+    "marca": "Chevrolet",
+    "motor": "2.4L LE5 / 2.2D Z22D1 / 1.5T L3T",
+    "modelos": [
+      "Captiva 2010-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "12605566 (GM)",
+        "alt": "PF63E (ACDelco)",
+        "fuente": "GM parts catalog"
+      }
+    }
+  },
+  "Chevrolet|Corsa-C14NZ": {
+    "marca": "Chevrolet",
+    "motor": "1.4L C14NZ / 1.6L C16SE (Corsa)",
+    "modelos": [
+      "Corsa 1994-2011"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "93156093 (GM/Opel)",
+        "fuente": "GM/Opel parts catalog"
+      },
+      "Distribucion": {
+        "tipo": "Correa (C14NZ/C16SE)",
+        "nota": "Cambio cada 60,000-80,000 km",
+        "fuente": "GM/Opel service schedule"
+      }
+    }
+  },
+  "Daewoo|legacy": {
+    "marca": "Daewoo",
+    "motor": "1.5L / 1.6L (Heaven, Racer)",
+    "modelos": [
+      "Heaven 1990-2000",
+      "Racer 1990-2000"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "96879797 (GM Korea)",
+        "fuente": "GM Daewoo parts catalog"
+      },
+      "Distribucion": {
+        "tipo": "Correa",
+        "nota": "Cambio cada 60,000 km",
+        "fuente": "GM Daewoo manual"
+      }
+    }
+  },
+  "Fiat|old-Uno-147": {
+    "marca": "Fiat",
+    "motor": "1.4L (Uno legacy, 147L)",
+    "modelos": [
+      "Uno 1990-2011",
+      "147L 1990-1997"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "46796687",
+        "alt": "55256470",
+        "fuente": "fiat parts catalog"
+      },
+      "Distribucion": {
+        "tipo": "Correa",
+        "nota": "Cambio cada 50,000-60,000 km",
+        "fuente": "fiat manual"
+      }
+    }
+  },
+  "Peugeot|PSA-TU-EP6": {
+    "marca": "Peugeot",
+    "motor": "1.4L TU3/ET3 / 1.6L TU5/EP6 (205, 206, 207, 306, 308, 405)",
+    "modelos": [
+      "205 1990-1998",
+      "206 2000-2010",
+      "207 2009-2014",
+      "306 1993-2001",
+      "405 1990-1997",
+      "308 2010-2026",
+      "301 2013-2024"
+    ],
+    "componentes": {
+      "Filtro de Aceite (TU/ET legacy)": {
+        "oem": "1109AH",
+        "fuente": "PSA parts catalog"
+      },
+      "Filtro de Aceite (EP6 modern)": {
+        "oem": "1109CK",
+        "alt": "9818914980",
+        "fuente": "ebay.co.uk Genuine PSA"
+      },
+      "Filtro de Aire (206/207 1.4/1.6)": {
+        "oem": "1444VJ",
+        "alt": "1444CZ, 1444EA, 1444GH",
+        "fuente": "ebay.co.uk"
+      },
+      "Filtro de Aire (206 1.4)": {
+        "oem": "1444.G9",
+        "alt": "1444.VS",
+        "fuente": "ebay.co.uk Blue Print OEM cross"
+      }
+    }
+  },
+  "Peugeot|DV6-BlueHDi-diesel": {
+    "marca": "Peugeot/Citroen",
+    "motor": "1.6D DV6 HDi / 1.5D DV5 BlueHDi / 2.0D BlueHDi",
+    "modelos": [
+      "Partner 2014-2026",
+      "Berlingo 2014-2026",
+      "3008 diesel",
+      "5008 diesel",
+      "Rifter 2019-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "9818914980",
+        "alt": "1109CK",
+        "fuente": "PSA parts catalog"
+      }
+    }
+  },
+  "Renault|Megane-old": {
+    "marca": "Renault",
+    "motor": "1.6L K4M / 2.0L F4R / 1.3T H5Ht (Megane, Oroch, Alaskan)",
+    "modelos": [
+      "Megane 2010-2024",
+      "Oroch 2016-2026",
+      "Alaskan 2017-2026",
+      "Arkana 2021-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite (K4M/F4R)": {
+        "oem": "7700274177",
+        "fuente": "ebay.co.uk Genuine Renault"
+      },
+      "Filtro de Aceite (H5Ht 1.3T)": {
+        "oem": "152095084R",
+        "fuente": "renault parts catalog"
+      },
+      "Filtro de Aceite (Alaskan 2.3D)": {
+        "oem": "15208-00Q0F",
+        "nota": "plataforma Nissan Navara",
+        "fuente": "nissan/renault shared platform"
+      }
+    }
+  },
+  "Suzuki|old-Vitara-Samurai": {
+    "marca": "Suzuki",
+    "motor": "1.3L/1.6L (Vitara 90-14), 1.0L/1.3L (Samurai), 0.8L (Maruti)",
+    "modelos": [
+      "Vitara 1990-2014",
+      "Samurai 1990-1999",
+      "Maruti 1990-2000",
+      "Carry 1990-2004",
+      "Baleno 1995-2002"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "16510-61A21",
+        "supersede": "16510-61A31",
+        "fuente": "suzuki parts catalog (original -> superseded)"
+      }
+    }
+  },
+  "Suzuki|Grand-Vitara-J24B": {
+    "marca": "Suzuki",
+    "motor": "2.4L J24B / 1.6L M16A (Grand Vitara/Nomade)",
+    "modelos": [
+      "Grand Vitara 2008-2019",
+      "Grand Nomade 2008-2019"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "16510-61A31",
+        "fuente": "amazon.com, ebay.co.uk"
+      }
+    }
+  },
+  "Suzuki|APV-G16A": {
+    "marca": "Suzuki",
+    "motor": "1.6L G16A (APV)",
+    "modelos": [
+      "APV 2010-2024"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "16510-61A31",
+        "fuente": "suzuki universal filter"
+      }
+    }
+  },
+  "Kia|Sephia-legacy": {
+    "marca": "Kia",
+    "motor": "1.5L/1.6L/1.8L (Sephia)",
+    "modelos": [
+      "Sephia 1990-2001"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "0K956-14-302",
+        "alt": "26300-35504 (compatible)",
+        "fuente": "kia parts catalog"
+      }
+    }
+  },
+  "Kia|D4BH-Frontier": {
+    "marca": "Kia",
+    "motor": "2.5D D4BH / 2.7L J2 (Frontier)",
+    "modelos": [
+      "Frontier 2014-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "26320-4A000",
+        "nota": "mismo que Hyundai H-1 D4CB",
+        "fuente": "hyundai/kia shared platform"
+      }
+    }
+  },
+  "Subaru|Justy-legacy": {
+    "marca": "Subaru",
+    "motor": "1.0L/1.2L (Justy), 2.0L Boxer (Legacy 90-00)",
+    "modelos": [
+      "Justy 1990-2000",
+      "Legacy 1990-2000"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "15208AA100",
+        "fuente": "subaru parts catalog (legacy model)"
+      }
+    }
+  },
+  "Mitsubishi|Outlander-4J11": {
+    "marca": "Mitsubishi",
+    "motor": "2.0L 4J11 / 2.4L 4J12 (Outlander)",
+    "modelos": [
+      "Outlander 2010-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "MZ690115",
+        "nota": "mismo que ASX/Lancer (familia 4A/4B/4J)",
+        "fuente": "mitsubishi parts catalog"
+      },
+      "Filtro de Aire": {
+        "oem": "1500A023",
+        "fuente": "parts.mitsubishicars.com"
+      },
+      "Bujias": {
+        "oem": "NGK LZFR6AI",
+        "cantidad": 4,
+        "fuente": "parts.mitsubishicars.com"
+      }
+    }
+  },
+  "Mitsubishi|L300-old": {
+    "marca": "Mitsubishi",
+    "motor": "2.4L 4G64 / 2.5D 4D56 (L300)",
+    "modelos": [
+      "L300 2010-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite (4G64 gas)": {
+        "oem": "MD360935",
+        "fuente": "mitsubishi parts catalog"
+      },
+      "Filtro de Aceite (4D56 diesel)": {
+        "oem": "ME215002",
+        "alt": "1230A186",
+        "fuente": "mitsubishi parts catalog"
+      }
+    }
+  },
+  "Mercedes|OM651-Sprinter": {
+    "marca": "Mercedes-Benz",
+    "motor": "2.1D OM651 (Sprinter)",
+    "modelos": [
+      "Sprinter 2014-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "6511800109",
+        "aftermarket": "MANN HU 718/5 x",
+        "fuente": "amazon.com, mbusa.com"
+      },
+      "Filtro de Aire": {
+        "oem": "A6510940004",
+        "fuente": "mercedes parts catalog"
+      }
+    }
+  },
+  "Ford|Explorer-Cyclone-EcoBoost": {
+    "marca": "Ford",
+    "motor": "3.5L Cyclone V6 / 2.3T EcoBoost (Explorer)",
+    "modelos": [
+      "Explorer 2012-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "FL500S (Motorcraft)",
+        "fuente": "ford.com"
+      },
+      "Filtro de Aire": {
+        "oem": "FA-1883 (Motorcraft)",
+        "nota": "mismo que F-150",
+        "fuente": "ford.oempartsonline.com"
+      }
+    }
+  },
+  "Jeep|Tigershark-GSE": {
+    "marca": "Jeep",
+    "motor": "2.4L Tigershark / 1.3T GSE-T (Compass, Renegade)",
+    "modelos": [
+      "Compass 2012-2026",
+      "Renegade 2015-2026",
+      "Cherokee 2014-2023"
+    ],
+    "componentes": {
+      "Filtro de Aceite (2.4 Tigershark)": {
+        "oem": "68191349AC",
+        "nota": "mismo Mopar Pentastar",
+        "fuente": "store.mopar.com"
+      },
+      "Filtro de Aceite (1.3T GSE-T)": {
+        "oem": "55283593",
+        "nota": "motor Fiat/Stellantis",
+        "fuente": "fiat parts catalog"
+      }
+    }
+  },
+  "Mazda|BT50-diesel": {
+    "marca": "Mazda",
+    "motor": "3.2D P5AT / 3.0D Denso (BT-50)",
+    "modelos": [
+      "BT-50 2014-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "AB39-6714-AC (Ford Ranger platform)",
+        "fuente": "mazda/ford shared platform"
+      }
+    }
+  },
+  "Chevrolet|Optra-F16D3": {
+    "marca": "Chevrolet",
+    "motor": "1.6L F16D3 / 1.8L T18SED (Optra)",
+    "modelos": [
+      "Optra 2004-2012"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "96879797 (GM Korea)",
+        "fuente": "GM/Daewoo catalog"
+      }
+    }
+  },
+  "Chevrolet|Spark-F8CV": {
+    "marca": "Chevrolet",
+    "motor": "0.8L F8CV / 1.0L B10S1 (Spark), 1.2L B12D1 (Spark GT)",
+    "modelos": [
+      "Spark 2008-2015",
+      "Spark GT 2014-2022"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "96879797 (GM)",
+        "fuente": "GM parts catalog"
+      },
+      "Filtro de Aire (Spark 1.4 2016+)": {
+        "oem": "95238310 (GM)",
+        "fuente": "amazon.com A-Premium cross-ref"
+      }
+    }
+  },
+  "JAC|S2-S3-T6-VVT": {
+    "marca": "JAC",
+    "motor": "1.5L VVT / 1.6L VVT / 2.0L HFC4GA3 / 2.0D HFC4DE1",
+    "modelos": [
+      "S2 2018-2026",
+      "S3 2017-2026",
+      "T6 2018-2026",
+      "T8 2019-2026",
+      "JS4 2021-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "1017011-1C (JAC)",
+        "fuente": "JAC parts catalog, alibaba verified"
+      },
+      "Distribucion": {
+        "tipo": "Cadena (VVT engines)",
+        "nota": "No cambio programado",
+        "fuente": "JAC service manual"
+      }
+    }
+  },
+  "Geely|JLH-3G15TD": {
+    "marca": "Geely",
+    "motor": "1.5T JLH-3G15TD (Coolray)",
+    "modelos": [
+      "Coolray 2020-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "1016050573",
+        "fuente": "Geely parts catalog"
+      },
+      "Distribucion": {
+        "tipo": "Cadena (Coolray 1.5T)",
+        "nota": "No cambio programado",
+        "fuente": "Geely service"
+      }
+    }
+  },
+  "BAIC|A151T": {
+    "marca": "BAIC",
+    "motor": "1.5T A151T (X55)",
+    "modelos": [
+      "X55 2020-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "A1012020001 (BAIC)",
+        "fuente": "BAIC parts catalog"
+      },
+      "Distribucion": {
+        "tipo": "Cadena (A151T turbo)",
+        "nota": "No cambio programado",
+        "fuente": "BAIC service"
+      }
+    }
+  },
+  "DFSK|SFG15T": {
+    "marca": "DFSK",
+    "motor": "1.5T SFG15T (Glory 580)",
+    "modelos": [
+      "Glory 580 2018-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "1017100-1C (Dongfeng)",
+        "fuente": "DFSK parts catalog"
+      }
+    }
+  },
+  "Dongfeng|TD15M": {
+    "marca": "Dongfeng",
+    "motor": "1.5T TD15M (Forthing T5L)",
+    "modelos": [
+      "Forthing T5L 2021-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "1017100-2C (Dongfeng)",
+        "fuente": "Dongfeng EPC"
+      }
+    }
+  },
+  "GAC|4A15J2": {
+    "marca": "GAC",
+    "motor": "1.5T 4A15J2 (GS4)",
+    "modelos": [
+      "GS4 2019-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "10428428 (GAC)",
+        "fuente": "GAC parts catalog"
+      }
+    }
+  },
+  "JMC|JX4D20": {
+    "marca": "JMC",
+    "motor": "2.0D JX4D20 (Vigus Pro)",
+    "modelos": [
+      "Vigus Pro 2021-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "CN1C159176AA",
+        "nota": "plataforma Ford (JMC-Ford JV)",
+        "fuente": "JMC/Ford parts catalog"
+      }
+    }
+  },
+  "Maxus|VM-diesel": {
+    "marca": "Maxus (SAIC)",
+    "motor": "2.8D VM R428 / 2.0D GW4D20T (T60, Deliver 9)",
+    "modelos": [
+      "T60 2017-2026",
+      "G10 2018-2026",
+      "Deliver 9 2021-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "C00070754 (Maxus/SAIC)",
+        "fuente": "Maxus parts catalog"
+      }
+    }
+  },
+  "Seat-Skoda|EA211-EA888": {
+    "marca": "Seat/Skoda",
+    "motor": "1.0T/1.4T EA211 / 2.0T EA888 (Ibiza, Leon, Octavia)",
+    "modelos": [
+      "Ibiza 2018-2026",
+      "Leon 2014-2026",
+      "Octavia 2014-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite (EA211)": {
+        "oem": "04E115561H",
+        "nota": "mismo VW/Audi",
+        "fuente": "parts.vw.com (grupo VAG)"
+      },
+      "Filtro de Aceite (EA888)": {
+        "oem": "06L115562B",
+        "nota": "mismo VW/Audi",
+        "fuente": "parts.vw.com (grupo VAG)"
+      }
+    }
+  },
+  "Hyundai|Verna-G4FA": {
+    "marca": "Hyundai",
+    "motor": "1.4L G4FA / 1.6L G4FC (Verna/Accent viejo)",
+    "modelos": [
+      "Verna/Accent 2011-2023",
+      "Atos/i10 2010-2020"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "26300-35505",
+        "nota": "mismo filtro universal Hyundai/Kia gasolina",
+        "fuente": "hyundai.oempartsonline.com"
+      }
+    }
+  },
+  "Hyundai|Ioniq-Veloster": {
+    "marca": "Hyundai",
+    "motor": "1.6L Kappa GDi Hybrid (Ioniq) / 1.6T Gamma (Veloster)",
+    "modelos": [
+      "Ioniq 2017-2022",
+      "Veloster 2012-2022"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "26300-35505",
+        "fuente": "hyundai.oempartsonline.com"
+      }
+    }
+  },
+  "Kia|Niro-Optima": {
+    "marca": "Kia",
+    "motor": "1.6L Kappa GDi Hybrid (Niro) / 2.0L Nu (Optima/K5)",
+    "modelos": [
+      "Niro 2017-2026",
+      "Optima/K5 2016-2026",
+      "Stonic 2018-2026",
+      "Sonet 2021-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "26300-35505",
+        "fuente": "hyundai.oempartsonline.com"
+      },
+      "Filtro Cabina": {
+        "oem": "97133-D1000",
+        "modelos": "Soul, Seltos, Stonic, Sportage 2017-2022, Tucson 2016-2021, Kona, Venue, Veloster",
+        "fuente": "amazon.com (multiple confirmed)"
+      }
+    }
+  },
+  "VW|Kombi-Gol-clasico": {
+    "marca": "Volkswagen",
+    "motor": "1.6L / 1.8L / 2.0L, 1.6L (clasicos)",
+    "modelos": [
+      "Kombi 1990-2013",
+      "Escarabajo 1990-2003",
+      "Gol 1990-2013"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "032115561C",
+        "fuente": "VW Brazil"
+      }
+    }
+  },
+  "Fiat|1.4L-generico": {
+    "marca": "Fiat",
+    "motor": "1.4L (Uno legacy, Fiorino legacy)",
+    "modelos": [
+      "Uno 1990-2011",
+      "147L 1990-1997",
+      "Fiorino old"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "46796687",
+        "fuente": "fiat catalog"
+      }
+    }
+  },
+  "Toyota|Hilux-old-2.4-3.0": {
+    "marca": "Toyota",
+    "motor": "2.4L / 2.8D / 3.0D (Hilux 1990-2013)",
+    "modelos": [
+      "Hilux 1990-2013"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "90915-YZZD4 (gas) / 90915-30002-8T (diesel)",
+        "fuente": "toyota catalog"
+      }
+    }
+  },
+  "Suzuki|1.3-1.6-legacy": {
+    "marca": "Suzuki",
+    "motor": "1.3L / 1.6L (Vitara legacy 1990-2014)",
+    "modelos": [
+      "Vitara 1990-2014",
+      "Samurai 1990-1999"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "16510-61A21 (supersede: 16510-61A31)",
+        "fuente": "suzuki catalog"
+      }
+    }
+  },
+  "Daewoo|1.5-1.6-legacy": {
+    "marca": "Daewoo",
+    "motor": "1.5L / 1.6L (Heaven, Racer)",
+    "modelos": [
+      "Heaven 1990-2000",
+      "Racer 1990-2000"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "96879797 (GM Korea)",
+        "fuente": "GM Daewoo catalog"
+      }
+    }
+  },
+  "Nissan|1.6L-V16-legacy": {
+    "marca": "Nissan",
+    "motor": "1.6L (V16 1990-2009)",
+    "modelos": [
+      "V16 1990-2009"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "15208-65F0E",
+        "fuente": "nissan catalog"
+      }
+    }
+  },
+  "Nissan|2.4-2.5D-D21-legacy": {
+    "marca": "Nissan",
+    "motor": "2.4L / 2.5D (D21 1990-2008)",
+    "modelos": [
+      "D21 1990-2008"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "15208-65F0E",
+        "fuente": "nissan catalog"
+      }
+    }
+  },
+  "Peugeot|1.6-1.8-2.0-legacy": {
+    "marca": "Peugeot",
+    "motor": "1.6L / 1.8L / 2.0L (306, 405)",
+    "modelos": [
+      "306 1993-2001",
+      "405 1990-1997"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "1109AH",
+        "fuente": "PSA catalog"
+      }
+    }
+  },
+  "Chevrolet|2.3L-LUV": {
+    "marca": "Chevrolet",
+    "motor": "2.3L (LUV)",
+    "modelos": [
+      "LUV 1990-2004"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "25014133 (GM/Isuzu)",
+        "fuente": "GM catalog"
+      }
+    }
+  },
+  "Suzuki|1.0L-legacy": {
+    "marca": "Suzuki",
+    "motor": "1.0L (Carry 1990-2004)",
+    "modelos": [
+      "Carry 1990-2004"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "16510-61A21",
+        "fuente": "suzuki catalog"
+      }
+    }
+  },
+  "Renault|K9K-dCi-diesel": {
+    "marca": "Renault",
+    "motor": "1.5D K9K dCi (Kangoo)",
+    "modelos": [
+      "Kangoo 2014-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "8200768927",
+        "alt": "152089599R",
+        "fuente": "renault catalog"
+      }
+    }
+  },
+  "MG|MG3-15S4U": {
+    "marca": "MG",
+    "motor": "1.5L 15S4U (MG 3)",
+    "modelos": [
+      "MG 3 2012-2024"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "10604737",
+        "nota": "mismo que HS/ZS",
+        "fuente": "ebay.co.uk Genuine MG"
+      }
+    }
+  },
+  "Kia|1.5-1.6-1.8-Sephia": {
+    "marca": "Kia",
+    "motor": "1.5L / 1.6L / 1.8L (Sephia legacy)",
+    "modelos": [
+      "Sephia 1990-2001"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "0K956-14-302",
+        "fuente": "kia catalog"
+      }
+    }
+  },
+  "Hyundai|Sonata-Nu-Smartstream": {
+    "marca": "Hyundai",
+    "motor": "2.0L Nu / 2.5L / 1.6T Smartstream (Sonata)",
+    "modelos": [
+      "Sonata 2015-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "26300-35505",
+        "fuente": "hyundai catalog"
+      }
+    }
+  },
+  "Subaru|Justy-1.0-1.2": {
+    "marca": "Subaru",
+    "motor": "1.0L / 1.2L (Justy)",
+    "modelos": [
+      "Justy 1990-2000"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "15208AA100",
+        "fuente": "subaru catalog"
+      }
+    }
+  },
+  "Suzuki|0.8L-Maruti": {
+    "marca": "Suzuki",
+    "motor": "0.8L (Maruti)",
+    "modelos": [
+      "Maruti 1990-2000"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "16510-61A21",
+        "fuente": "suzuki catalog"
+      }
+    }
+  },
+  "Hyundai|G4HG-Atos": {
+    "marca": "Hyundai",
+    "motor": "1.0L G4HG / 1.1L (Atos/i10)",
+    "modelos": [
+      "Atos/i10 2010-2020"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "26300-02502",
+        "fuente": "hyundai catalog"
+      }
+    }
+  },
+  "Toyota|2ZR-FXE-Prius": {
+    "marca": "Toyota",
+    "motor": "1.8H 2ZR-FXE (Prius)",
+    "modelos": [
+      "Prius 2016-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "90915-YZZF2",
+        "nota": "mismo que Corolla 2ZR",
+        "fuente": "toyota catalog"
+      }
+    }
+  },
+  "Mitsubishi|3A92-Mirage": {
+    "marca": "Mitsubishi",
+    "motor": "1.2L 3A92 MIVEC (Mirage)",
+    "modelos": [
+      "Mirage 2014-2024"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "MZ690115",
+        "nota": "mismo universal Mitsubishi",
+        "fuente": "mitsubishi catalog"
+      }
+    }
+  },
+  "Kia|Nu-Smartstream-Optima": {
+    "marca": "Kia",
+    "motor": "2.0L Nu / 1.6T Smartstream (Optima/K5)",
+    "modelos": [
+      "Optima/K5 2016-2026",
+      "Telluride 2020-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "26300-35505",
+        "fuente": "kia catalog"
+      }
+    }
+  },
+  "Chery|SQR372-IQ": {
+    "marca": "Chery",
+    "motor": "1.0L/1.1L SQR372 (IQ)",
+    "modelos": [
+      "IQ 2008-2018"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "473H-1012010",
+        "fuente": "chery catalog"
+      }
+    }
+  },
+  "Renault|D4F-H4B-Clio": {
+    "marca": "Renault",
+    "motor": "1.2L D4F / 0.9T H4B (Clio)",
+    "modelos": [
+      "Clio 2014-2024"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "7700274177",
+        "fuente": "renault catalog"
+      }
+    }
+  },
+  "Toyota|1.3-1.5-Tercel": {
+    "marca": "Toyota",
+    "motor": "1.3L / 1.5L (Tercel)",
+    "modelos": [
+      "Tercel 1990-1999"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "90915-YZZD1",
+        "fuente": "toyota catalog"
+      }
+    }
+  },
+  "Toyota|4.0-4.5-V6-LandCruiser": {
+    "marca": "Toyota",
+    "motor": "4.0L V6 / 4.5L V6 (Land Cruiser)",
+    "modelos": [
+      "Land Cruiser 1990-1999"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "90915-YZZD1",
+        "fuente": "toyota catalog"
+      }
+    }
+  },
+  "Chevrolet|2.8D-3.2-Trooper": {
+    "marca": "Chevrolet",
+    "motor": "2.8D / 3.2L V6 (Trooper)",
+    "modelos": [
+      "Trooper 1990-1999"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "8-94340259-0 (Isuzu)",
+        "fuente": "Isuzu catalog"
+      }
+    }
+  },
+  "Suzuki|1.0-1.3-Samurai": {
+    "marca": "Suzuki",
+    "motor": "1.0L / 1.3L (Samurai)",
+    "modelos": [
+      "Samurai 1990-1999"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "16510-61A21",
+        "fuente": "suzuki catalog"
+      }
+    }
+  },
+  "JAC|1.6L-VVT-S3": {
+    "marca": "JAC",
+    "motor": "1.6L VVT (S3)",
+    "modelos": [
+      "S3 2017-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "1017011-1C",
+        "fuente": "JAC catalog"
+      }
+    }
+  },
+  "Renault|M9T-Alaskan-diesel": {
+    "marca": "Renault",
+    "motor": "2.3D M9T dCi (Alaskan)",
+    "modelos": [
+      "Alaskan 2017-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "15208-00Q0F",
+        "nota": "plataforma Nissan",
+        "fuente": "renault/nissan catalog"
+      }
+    }
+  },
+  "Peugeot|1.4-1.6-205": {
+    "marca": "Peugeot",
+    "motor": "1.4L / 1.6L (205)",
+    "modelos": [
+      "205 1990-1998"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "1109AH",
+        "fuente": "PSA catalog"
+      }
+    }
+  },
+  "Mitsubishi|4B40-Eclipse": {
+    "marca": "Mitsubishi",
+    "motor": "1.5T 4B40 (Eclipse Cross)",
+    "modelos": [
+      "Eclipse Cross 2018-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "1230A182",
+        "nota": "mismo que L200 4N15",
+        "fuente": "mitsubishi catalog"
+      }
+    }
+  },
+  "Maxus|G10-SAIC": {
+    "marca": "Maxus",
+    "motor": "2.0T SAIC (G10)",
+    "modelos": [
+      "G10 2018-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "C00070754",
+        "fuente": "maxus catalog"
+      }
+    }
+  },
+  "Suzuki|K12N-Dzire": {
+    "marca": "Suzuki",
+    "motor": "1.2L K12N (Dzire)",
+    "modelos": [
+      "Dzire 2018-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "16510-61A31",
+        "fuente": "suzuki catalog"
+      }
+    }
+  },
+  "Changan|CX70-H15T": {
+    "marca": "Changan",
+    "motor": "1.6L / 1.5T H15T (CX70)",
+    "modelos": [
+      "CX70 2018-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "H15002-1000",
+        "fuente": "changan catalog"
+      }
+    }
+  },
+  "Chery|1.5L-SQR-Arrizo3": {
+    "marca": "Chery",
+    "motor": "1.5L SQR (Arrizo 3)",
+    "modelos": [
+      "Arrizo 3 2018-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "E4G16-1012040",
+        "fuente": "chery catalog"
+      }
+    }
+  },
+  "Chery|1.5T-Arrizo5": {
+    "marca": "Chery",
+    "motor": "1.5T (Arrizo 5)",
+    "modelos": [
+      "Arrizo 5 2019-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "480-1012010",
+        "fuente": "chery catalog"
+      }
+    }
+  },
+  "Chery|1.5L-1.5T-SQR-Tiggo4": {
+    "marca": "Chery",
+    "motor": "1.5L/1.5T SQR (Tiggo 4)",
+    "modelos": [
+      "Tiggo 4 2019-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "480-1012010",
+        "fuente": "chery catalog"
+      }
+    }
+  },
+  "JAC|1.5L-VVT-S2": {
+    "marca": "JAC",
+    "motor": "1.5L VVT (S2)",
+    "modelos": [
+      "S2 2018-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "1017011-1C",
+        "fuente": "JAC catalog"
+      }
+    }
+  },
+  "BMW|B58-X5": {
+    "marca": "BMW",
+    "motor": "3.0T B58 (X5)",
+    "modelos": [
+      "X5 2019-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "11428583898",
+        "nota": "distinto al B48 (11428575211)",
+        "fuente": "bimmerworld.com"
+      },
+      "Filtro de Aire": {
+        "oem": "13718616909",
+        "fuente": "getbmwparts.com OEM"
+      }
+    }
+  },
+  "Suzuki|1.6L-Baleno-old": {
+    "marca": "Suzuki",
+    "motor": "1.6L (Baleno 1995-2002)",
+    "modelos": [
+      "Baleno 1995-2002"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "16510-61A21",
+        "fuente": "suzuki catalog"
+      }
+    }
+  },
+  "JAC|HFC4DE1-diesel": {
+    "marca": "JAC",
+    "motor": "2.0D HFC4DE1-1D (T8)",
+    "modelos": [
+      "T8 2019-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "1017011-1C",
+        "fuente": "JAC catalog"
+      }
+    }
+  },
+  "Chevrolet|Groove-LJ4A15M2": {
+    "marca": "Chevrolet",
+    "motor": "1.5L LJ4A15M2 (Groove) / 1.2L LJ4A12KQ (N400)",
+    "modelos": [
+      "Groove 2020-2026",
+      "N400 Max 2020-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "24537482 (GM/SAIC)",
+        "fuente": "GM China catalog"
+      }
+    }
+  },
+  "Hyundai-Kia|Lambda-V6": {
+    "marca": "Hyundai/Kia",
+    "motor": "3.8L Lambda II V6 (Palisade, Telluride)",
+    "modelos": [
+      "Palisade 2020-2026",
+      "Telluride 2020-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "26320-3C30A",
+        "fuente": "hyundai.oempartsonline.com"
+      }
+    }
+  },
+  "Toyota|Raize-1KR-VET": {
+    "marca": "Toyota",
+    "motor": "1.0T 1KR-VET / 1.2L WA-VE (Raize)",
+    "modelos": [
+      "Raize 2020-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "90915-YZZD4",
+        "fuente": "toyota catalog"
+      }
+    }
+  },
+  "Range-Rover|Ingenium": {
+    "marca": "Range Rover",
+    "motor": "2.0T Ingenium (Evoque)",
+    "modelos": [
+      "Evoque 2020-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "LR073669",
+        "fuente": "land rover catalog"
+      }
+    }
+  },
+  "Haval|GW4B15A-Jolion": {
+    "marca": "Haval",
+    "motor": "1.5T GW4B15A (Jolion)",
+    "modelos": [
+      "Jolion 2021-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "1017110XEN01",
+        "fuente": "haval catalog"
+      }
+    }
+  },
+  "Kia|G4FL-Sonet": {
+    "marca": "Kia",
+    "motor": "1.5L G4FL (Sonet)",
+    "modelos": [
+      "Sonet 2021-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "26300-35505",
+        "fuente": "kia catalog"
+      },
+      "Filtro de Aire": {
+        "oem": "28113-G6000",
+        "nota": "mismo que Morning/Picanto Kappa",
+        "fuente": "amazon.com"
+      }
+    }
+  },
+  "Maxus|VM-Deliver9": {
+    "marca": "Maxus",
+    "motor": "2.0D VM (Deliver 9)",
+    "modelos": [
+      "Deliver 9 2021-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "C00070754",
+        "fuente": "maxus catalog"
+      }
+    }
+  },
+  "JAC|1.5T-JS4": {
+    "marca": "JAC",
+    "motor": "1.5T (JS4)",
+    "modelos": [
+      "JS4 2021-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "1017011-1C",
+        "fuente": "JAC catalog"
+      }
+    }
+  },
+  "GWM|GW4C20B-Tank": {
+    "marca": "GWM/Haval",
+    "motor": "2.0T GW4C20B (Tank 300, Dargo)",
+    "modelos": [
+      "Tank 300 2022-2026",
+      "Dargo 2022-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "1017110XEN01",
+        "fuente": "GWM catalog"
+      }
+    }
+  },
+  "Subaru|EV-Solterra": {
+    "marca": "Subaru",
+    "motor": "EV Dual Motor AWD (Evoltis/Solterra)",
+    "modelos": [
+      "Evoltis/Solterra 2022-2026"
+    ],
+    "componentes": {
+      "Nota": {
+        "info": "Vehiculo electrico - no tiene filtro de aceite motor",
+        "fuente": "subaru.com"
+      }
+    }
+  },
+  "Changan|Hunter-1.9D": {
+    "marca": "Changan",
+    "motor": "1.9D (Hunter)",
+    "modelos": [
+      "Hunter 2022-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "H19002-1000 (Changan)",
+        "fuente": "changan catalog"
+      }
+    }
+  },
+  "Jetour|1.5T-1.6T-Dashing": {
+    "marca": "Jetour",
+    "motor": "1.5T/1.6T (Dashing)",
+    "modelos": [
+      "Dashing 2022-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "480-1012010",
+        "nota": "mismo Chery (Jetour es sub-marca)",
+        "fuente": "chery/jetour catalog"
+      }
+    }
+  },
+  "Chevrolet|1.0-1.6-Corsa-old": {
+    "marca": "Chevrolet",
+    "motor": "1.0L / 1.6L (Corsa clasico)",
+    "modelos": [
+      "Corsa 1994-1997"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "93156093",
+        "fuente": "GM/Opel catalog"
+      }
+    }
+  },
+  "Suzuki|K15C-Fronx": {
+    "marca": "Suzuki",
+    "motor": "1.5L K15C DualJet (Fronx)",
+    "modelos": [
+      "Fronx 2023-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "16510-61A31",
+        "fuente": "suzuki catalog"
+      }
+    }
+  }
+}
