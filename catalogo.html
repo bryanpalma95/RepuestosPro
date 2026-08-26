@@ -182,23 +182,27 @@ function showDetail(v){
     for(const cat in v.categories){
         v.categories[cat].forEach(p=>{
             const compatible = findCompatibleVehiclesForPart(currentKey, v, p)
-            const hasMore = p.details || p.brands || (p.links && p.links.length) || (p.refs && p.refs.length > 1)
+            const hasDetails = p.details || p.brands || (p.links && p.links.length) || (p.refs && p.refs.length > 1)
+            const hasExpand = compatible.length || hasDetails
             c += '<div class="part-card"><div class="part-cat">'+p.cat+'</div><h4>'+p.name+'</h4>'
             if(p.refs && p.refs.length) c += '<span class="part-ref">'+p.refs[0].r+'</span>'
-            if(compatible.length){
-                c += '<div class="compat-list"><span class="label">Compatible con</span><div class="compat-tags">'
-                compatible.forEach(item => {
-                    c += '<span class="compat-tag" onclick="event.stopPropagation(); loadVehicle(\''+item.key+'\')">'+item.vehicleName+'</span>'
-                })
-                c += '</div></div>'
-            }
-            if(hasMore){
+            if(hasExpand){
                 c += '<div class="part-expand" style="display:none;margin-top:.8rem;padding-top:.8rem;border-top:1px solid #333">';
-                if(p.details)c += '<div class="det">'+p.details+'</div>';
+                if(compatible.length){
+                    c += '<div class="compat-list"><span class="label">Compatible con ('+compatible.length+')</span><div class="compat-tags">'
+                    compatible.forEach(item => {
+                        c += '<span class="compat-tag" onclick="event.stopPropagation(); loadVehicle(\''+item.key+'\')">'+item.vehicleName+'</span>'
+                    })
+                    c += '</div></div>'
+                }
+                if(p.details)c += '<div class="det"'+(compatible.length?' style="margin-top:.8rem"':'')+'>'+p.details+'</div>';
                 if(p.refs && p.refs.length>1){c += '<div style="margin-top:.4rem">';p.refs.slice(1).forEach(r=>{c += '<span class="part-ref" style="opacity:.7">'+r.r+'</span>'});c += '</div>'}
                 if(p.brands)c += '<div class="part-brands">Marcas: '+p.brands+'</div>';
                 if(p.links && p.links.length){c += '<div style="margin-top:.5rem">';p.links.forEach(l=>{c += '<a href="'+l.u+'" target="_blank" style="color:#93c5fd;font-size:.75rem;margin-right:.8rem">'+l.t+'</a>'});c += '</div>'}
-                c += '</div><div style="text-align:right;margin-top:.5rem;font-size:.7rem;color:#666;cursor:pointer" onclick="event.stopPropagation();const x=this.previousElementSibling;x.style.display=x.style.display===\'none\'?\'block\':\'none\';this.textContent=x.style.display===\'none\'?\'Ver mas ▼\':\'Ocultar ▲\'">Ver mas ▼</div>'
+                c += '</div>';
+                const btnLabel = compatible.length ? 'Ver compatibilidad ▼' : 'Ver mas ▼';
+                const btnHide = 'Ocultar ▲';
+                c += '<div class="expand-toggle" style="margin-top:.5rem;font-size:.72rem;color:var(--teal);cursor:pointer;font-weight:600" onclick="event.stopPropagation();const x=this.previousElementSibling;const open=x.style.display===\'none\';x.style.display=open?\'block\':\'none\';this.textContent=open?\''+btnHide+'\':\''+btnLabel+'\'">'+btnLabel+'</div>'
             }
             c += '</div>'
         })
