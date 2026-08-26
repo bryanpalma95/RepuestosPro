@@ -3661,5 +3661,2753 @@
         "fuente": "audi guide"
       }
     }
+  },
+  "Audi|EA888-2.0T": {
+    "marca": "Audi",
+    "motor": "Motor 2.0 TSI EA888 (Gen2/Gen3). Compartido A3/A4/A5/A6/Q3/Q5/Q7 + VW/Seat/Skoda/Porsche Macan",
+    "modelos": [
+      "EA888-2.0T"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "06L115562B (Gen3 1.8/2.0T) / 06E115562C (V6)",
+        "estado": "confirmed",
+        "fuente": "https://eurozonetuning.com/products/vw-mk8-gti-2022-2025-2-0t-tsi-oil-filter, https://skoda-acc.com/VW-AUDI-SKODA-seat-OIL-FILTER-06L115562B-Plastic-Drain-Plug-06L103801"
+      },
+      "carcasa_filtro_aceite": {
+        "oem": "06L115678Q (tapa/adaptador)",
+        "estado": "confirmed",
+        "fuente": "https://www.amazon.com/YVDYDVY-06L115678Q-Housing-Adapter-Compatible/dp/B0DHH1MHF6, https://store.ngpracing.com/pages/audi-vw-2-0t-ea888-gen-3-tsi-ultimate-maintenance-guide"
+      },
+      "filtro_aire": {
+        "oem": "verify (panel MQB/MLB)",
+        "estado": "verify",
+        "fuente": "https://store.ngpracing.com/pages/audi-vw-2-0t-ea888-gen-3-tsi-ultimate-maintenance-guide, https://www.fcpeuro.com/Audi-parts/"
+      },
+      "filtro_combustible": {
+        "oem": "verify (en-tanque + alta presion)",
+        "estado": "verify",
+        "fuente": "https://audi.oempartsonline.com/, https://www.fcpeuro.com/Audi-parts/"
+      },
+      "filtro_habitaculo": {
+        "oem": "verify (filtro polen MQB)",
+        "estado": "verify",
+        "fuente": "https://audi.oempartsonline.com/, https://www.fcpeuro.com/Audi-parts/"
+      },
+      "bujia": {
+        "oem": "06K905601B (EA888 Gen3, NGK) / heat range 8",
+        "estado": "confirmed",
+        "fuente": "https://www.goapr.com/products/engine_hardware/ignition/iridium_pro_spark_plugs/parts/Z1003100, https://store.goapr.com/products/engine_hardware/ignition/parts/kt100040/"
+      },
+      "bobina_encendido": {
+        "oem": "06L905110 / 06C905115",
+        "estado": "verify",
+        "fuente": "https://store.goapr.com/products/engine_hardware/ignition/parts/kt100040/, https://www.fcpeuro.com/Audi-parts/"
+      },
+      "sensor_maf": {
+        "oem": "06F906461A",
+        "estado": "confirmed",
+        "fuente": "https://www.vag-autosport.fr/produit/debitmetre-maf-pour-moteur-2-0-tsi-ea888-2-pieces-100-origine-vw-audi/, https://audi.oempartsonline.com/"
+      },
+      "bomba_agua": {
+        "oem": "06L121111H (bomba+termostato modulo EA888 Gen3)",
+        "estado": "verify",
+        "fuente": "https://store.ngpracing.com/pages/audi-vw-2-0t-ea888-gen-3-tsi-ultimate-maintenance-guide, https://www.fcpeuro.com/Audi-parts/"
+      },
+      "tapon_drenaje": {
+        "oem": "N90813202 / 06L103801 (plastico)",
+        "estado": "confirmed",
+        "fuente": "https://www.ebay.co.uk/p/556663426, https://skoda-acc.com/VW-AUDI-SKODA-seat-OIL-FILTER-06L115562B-Plastic-Drain-Plug-06L103801"
+      }
+    }
+  },
+  "Audi|EA211-1.4T": {
+    "marca": "Audi",
+    "motor": "Motor 1.4 TSI EA211 (MQB). Compartido A1/A3/Q2/Q3 + VW Golf/Polo/Jetta/T-Cross + Seat + Skoda",
+    "modelos": [
+      "EA211-1.4T"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "04E115561H (supersede 04E115561T/AC/B)",
+        "estado": "confirmed",
+        "fuente": "https://www.fcpeuro.com/products/vw-engine-oil-filter-jetta-vag-04e115561h, https://audi.oempartsonline.com/oem-parts/audi-oil-filter-4e115561t"
+      },
+      "bujia": {
+        "oem": "04E905612C (Iridium PKER7A8EGS)",
+        "estado": "confirmed",
+        "fuente": "https://www.amazon.com/Genuine-Spark-Plug-Audi-04E905612C/dp/B08RBT18L4, https://www.fcpeuro.com/products/vw-engine-oil-filter-jetta-vag-04e115561h"
+      },
+      "filtro_aire": {
+        "oem": "verify (panel MQB)",
+        "estado": "verify",
+        "fuente": "https://audi.oempartsonline.com/, https://www.fcpeuro.com/Audi-parts/"
+      },
+      "filtro_habitaculo": {
+        "oem": "verify (compartido MQB con EA888)",
+        "estado": "verify",
+        "fuente": "https://audi.oempartsonline.com/, https://www.fcpeuro.com/Audi-parts/"
+      },
+      "distribucion": {
+        "oem": "04E109119 (correa) - EA211 usa correa dentada",
+        "estado": "verify",
+        "fuente": "https://www.fcpeuro.com/Audi-parts/, https://audi.oempartsonline.com/"
+      },
+      "tapon_drenaje_junta": {
+        "oem": "N0138157 (junta) / N90288901 (tapon)",
+        "estado": "confirmed",
+        "fuente": "https://www.fcpeuro.com/products/vw-engine-oil-filter-jetta-vag-04e115561h, https://audi.oempartsonline.com/"
+      }
+    }
+  },
+  "Audi|frenos_suspension_MQB_MLB": {
+    "marca": "Audi",
+    "motor": "Frenos/suspension compartidos por plataforma MQB (A3/Q3) y MLB (A4/Q5). PN varian por diametro de disco (ver contexto: A3-8V 312mm, A3-8Y 340mm, A4-B9 338mm)",
+    "modelos": [
+      "frenos_suspension_MQB_MLB"
+    ],
+    "componentes": {
+      "disco_del_A3_8V": {
+        "oem": "verify (312mm 8V)",
+        "estado": "verify",
+        "fuente": "https://www.fcpeuro.com/Audi-parts/, https://audi.oempartsonline.com/"
+      },
+      "disco_del_A4_B9": {
+        "oem": "verify (338mm B9)",
+        "estado": "verify",
+        "fuente": "https://www.fcpeuro.com/Audi-parts/, https://audi.oempartsonline.com/"
+      },
+      "pastillas_del": {
+        "oem": "verify (MQB/MLB por diametro)",
+        "estado": "verify",
+        "fuente": "https://www.fcpeuro.com/Audi-parts/, https://audi.oempartsonline.com/"
+      },
+      "brazo_control_del": {
+        "oem": "verify (aluminio MQB 5Q0407151 aprox)",
+        "estado": "verify",
+        "fuente": "https://www.fcpeuro.com/Audi-parts/, https://audi.oempartsonline.com/"
+      },
+      "bieleta_estabilizadora": {
+        "oem": "verify (compartida MQB)",
+        "estado": "verify",
+        "fuente": "https://www.fcpeuro.com/Audi-parts/, https://audi.oempartsonline.com/"
+      }
+    }
+  },
+  "BMW|B38-B48-B58_motor_comun": {
+    "marca": "BMW",
+    "motor": "Componentes de motor/encendido compartidos por la familia modular B38/B46/B48/B58",
+    "modelos": [
+      "B38-B48-B58_motor_comun"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "11428583898 / 11427953129",
+        "estado": "confirmed",
+        "fuente": "https://www.bimmerworld.com/Engine/Engine-Maintenance/OEM-Oil-Filter-Kit-11428583898.html, https://www.amazon.com/BMW-11428583898-Set-Filter-Element/dp/B01JEFZXAS"
+      },
+      "filtro_aire": {
+        "oem": "13718699812 (B58 6cil) / 13718513944 (B48P U11)",
+        "estado": "confirmed",
+        "fuente": "https://oembimmerparts.com/products/bmw-750ixdrive-air-filter-13718699811-13718699812, https://bmw.oempartsonline.com/oem-parts/bmw-air-filter-13718699811"
+      },
+      "filtro_combustible": {
+        "oem": "verify (integrado en modulo bomba en tanque)",
+        "estado": "verify",
+        "fuente": "https://bmw.oempartsonline.com/, https://www.getbmwparts.com/filters"
+      },
+      "filtro_habitaculo": {
+        "oem": "64119237555 (carbon activado)",
+        "estado": "confirmed",
+        "fuente": "https://bmw.oempartsonline.com/oem-parts/bmw-cabin-air-filter-64119237555, https://www.amazon.com/BMW-64-11-9-237-555-Microfilter-Activated-Carbon/dp/B0196VVQDI"
+      },
+      "bujia": {
+        "oem": "12120040551 (NGK/Champion)",
+        "estado": "confirmed",
+        "fuente": "https://www.bimmerworld.com/About-Us/BMW-2-Series-Parts/Spark-Plug-NGK-B46-B58-12120040551.html, https://www.bmwpartshub.com/oem-parts/mini-spark-plug-12120040551"
+      },
+      "bobina_encendido": {
+        "oem": "12138616153 (Delphi, supersede 12137594937 Bosch)",
+        "estado": "confirmed",
+        "fuente": "https://www.getbmwparts.com/oem-parts/bmw-ignition-coil-delphi-12138616153, https://bmw.oempartsonline.com/oem-parts/bmw-ignition-coil-12138616153"
+      },
+      "sensor_ckp": {
+        "oem": "13628644376 (B46/B48/B58TU/S58) / 13627806782 (B46A/B58A/N57)",
+        "estado": "confirmed",
+        "fuente": "http://bimmerworld.com/About-Us/BMW-2-Series-Parts/Genuine-BMW-Engine-Crankshaft-Sensor-G20-G12-F39-G05-G07-G29.html, https://www.bimmerworld.com/Engine/Engine-Sensors/Genuine-BMW-Crankshaft-Sensor-B46-B48-B58.html"
+      },
+      "sensor_cmp": {
+        "oem": "verify (sensor Hall arbol de levas B-series)",
+        "estado": "verify",
+        "fuente": "https://www.bimmerworld.com/Engine/Engine-Sensors/, https://bmw.oempartsonline.com/"
+      },
+      "bomba_agua": {
+        "oem": "11518635089 (bomba electrica B-series)",
+        "estado": "verify",
+        "fuente": "https://www.fcpeuro.com/BMW-parts/, https://bmw.oempartsonline.com/"
+      },
+      "termostato": {
+        "oem": "verify (termostato mapa electrico B-series)",
+        "estado": "verify",
+        "fuente": "https://bmw.oempartsonline.com/, https://www.fcpeuro.com/BMW-parts/"
+      },
+      "inyector": {
+        "oem": "13538616079 (inyector directo B-series)",
+        "estado": "verify",
+        "fuente": "https://bmw.oempartsonline.com/, https://www.fcpeuro.com/BMW-parts/"
+      },
+      "sonda_lambda": {
+        "oem": "verify (sonda O2 pre/post catalizador B-series)",
+        "estado": "verify",
+        "fuente": "https://bmw.oempartsonline.com/, https://www.fcpeuro.com/BMW-parts/"
+      },
+      "correa_accesorios": {
+        "oem": "verify (correa poly-V + tensor)",
+        "estado": "verify",
+        "fuente": "https://www.fcpeuro.com/BMW-parts/, https://bmw.oempartsonline.com/"
+      }
+    }
+  },
+  "BAIC|A151T-MagicCore_1.5T": {
+    "marca": "BAIC",
+    "motor": "Motor Magic Core 1.5T turbo (A156T2H/A151T). 138kW/305Nm. PN OEM de baja disponibilidad publica - mayoria 'verify', requiere catalogo despiece BAIC",
+    "modelos": [
+      "A151T-MagicCore_1.5T"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (rosca, tipo spin-on 1.5T)",
+        "estado": "verify",
+        "fuente": "https://www.opinautos.com/baic/x55/guias, https://www.baicglobal.com/es/models/26"
+      },
+      "filtro_aire": {
+        "oem": "verify",
+        "estado": "verify",
+        "fuente": "https://www.opinautos.com/baic/x55/guias, https://www.baicglobal.com/es/models/26"
+      },
+      "filtro_combustible": {
+        "oem": "verify (en-tanque)",
+        "estado": "verify",
+        "fuente": "https://www.opinautos.com/baic/x55/guias, https://www.baicglobal.com/es/models/26"
+      },
+      "filtro_habitaculo": {
+        "oem": "verify",
+        "estado": "verify",
+        "fuente": "https://www.opinautos.com/baic/x55/guias, https://www.baicglobal.com/es/models/26"
+      },
+      "bujia": {
+        "oem": "verify (bujia iridio 1.5T)",
+        "estado": "verify",
+        "fuente": "https://www.opinautos.com/baic/x55/guias, https://www.baicglobal.com/es/models/26"
+      },
+      "frenos_del": {
+        "oem": "verify (discos ventilados)",
+        "estado": "verify",
+        "fuente": "https://baiclong.com.ar/x55-ii/especificaciones/, https://www.baicglobal.com/es/models/26"
+      },
+      "frenos_tras": {
+        "oem": "verify (disco solido)",
+        "estado": "verify",
+        "fuente": "https://baiclong.com.ar/x55-ii/especificaciones/, https://www.baicglobal.com/es/models/26"
+      }
+    }
+  },
+  "Chevrolet_GM|F18D4_1.8_Ecotec": {
+    "marca": "Chevrolet_GM",
+    "motor": "Motor 1.8L Ecotec F18D4. Cruze/Tracker/Captiva 2.4. Familia GM Small-Block Ecotec",
+    "modelos": [
+      "Cruze 1.8L",
+      "Tracker 1.8L",
+      "Spin 1.8L"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "93185674 / 5650359 (cartucho HU6018z)",
+        "estado": "confirmed",
+        "fuente": "https://business.walmart.com/ip/4pcs-Oil-Filter-5650359-For-Chevrolet-Cruze-Aveo-Malibu-Trax-For-Buick-Encore-US/18658757713, https://www.amazon.com/S5839-Cartridge-Synthetic-Oil-Premium-Replacement/dp/B07NDVSXNN"
+      },
+      "filtro_aire": {
+        "oem": "verify (panel GM Ecotec)",
+        "estado": "verify",
+        "fuente": "https://parts.chevrolet.com/, https://www.autozone.com/"
+      },
+      "filtro_habitaculo": {
+        "oem": "verify",
+        "estado": "verify",
+        "fuente": "https://parts.chevrolet.com/, https://www.autozone.com/"
+      },
+      "bujia": {
+        "oem": "55577231 (iridio GM)",
+        "estado": "verify",
+        "fuente": "https://parts.chevrolet.com/, https://www.gmpartscenter.net/"
+      },
+      "bobina_encendido": {
+        "oem": "verify (modulo bobina GM 1.8 Ecotec)",
+        "estado": "verify",
+        "fuente": "https://parts.chevrolet.com/, https://www.autozone.com/"
+      },
+      "sensor_ckp": {
+        "oem": "12574323 / 25199130",
+        "estado": "confirmed",
+        "fuente": "https://parts.chevrolet.com/product/gm-genuine-parts-engine-crankshaft-position-sensor-12574323, https://parts.chevrolet.com/product/gm-genuine-parts-engine-crankshaft-position-sensor-25199130"
+      },
+      "distribucion": {
+        "oem": "verify",
+        "estado": "verify"
+      },
+      "bomba_agua": {
+        "oem": "verify (GM Ecotec 1.8)",
+        "estado": "verify"
+      },
+      "termostato": {
+        "oem": "verify",
+        "estado": "verify"
+      }
+    }
+  },
+  "Chevrolet_GM|LUJ_1.4T_Ecotec": {
+    "marca": "Chevrolet_GM",
+    "motor": "Motor 1.4 Turbo Ecotec LUJ/LUV. Cruze/Tracker 1.4T",
+    "modelos": [
+      "Cruze 1.4T",
+      "Tracker 1.2T L3T"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "25195785 (PF2263G ACDelco, con O-ring, cap UFI)",
+        "estado": "confirmed",
+        "fuente": "https://parts.chevrolet.com/product/acdelco-gm-original-equipment-engine-oil-filter-and-cap-seal-(o-ring)-(use-with-cap-marked-ufi)-25195785, https://www.autozone.com/filters-and-pcv/oil-filter/chevrolet/cruze/2014"
+      },
+      "bujia": {
+        "oem": "25186681 (ACDelco Iridium)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Chevrolet_GM|EcoTec3_V8_5.3_6.2": {
+    "marca": "Chevrolet_GM",
+    "motor": "Motor V8 EcoTec3 5.3L/6.2L. Silverado/Suburban/Tahoe",
+    "modelos": [
+      "Silverado 5.3/6.2L",
+      "Suburban 5.3L",
+      "Tahoe 5.3L"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "12731173 / 12690386 (ACDelco PF66)",
+        "estado": "confirmed",
+        "fuente": "https://parts.chevrolet.com/product/acdelco-gm-original-equipment-oil-filter-12731173, https://parts.chevrolet.com/product/acdelco-gm-original-equipment-engine-oil-filter-12690386"
+      },
+      "bujia": {
+        "oem": "verify (ACDelco Iridium V8)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Chevrolet_GM|Duramax_2.8D": {
+    "marca": "Chevrolet_GM",
+    "motor": "Motor 2.8L Duramax Diesel LWH. Colorado/S10",
+    "modelos": [
+      "Colorado 2.8D"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (ACDelco diesel)",
+        "estado": "verify"
+      },
+      "filtro_combustible": {
+        "oem": "verify (filtro trampa agua diesel)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Chevrolet_GM|B12D1_1.2_Spark": {
+    "marca": "Chevrolet_GM",
+    "motor": "Motor 1.2L B12D1. Spark GT",
+    "modelos": [
+      "Spark GT 1.2L"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (spin-on GM small)",
+        "estado": "verify"
+      },
+      "bujia": {
+        "oem": "verify (NGK iridio 1.2L)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Chevrolet_GM|F8CV_1.0_Spark_antiguo": {
+    "marca": "Chevrolet_GM",
+    "motor": "Motor 0.8L F8CV / 1.0L B10S1. Spark/Matiz clasico",
+    "modelos": [
+      "Spark 0.8L/1.0L"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (spin-on Daewoo/GM)",
+        "estado": "verify"
+      },
+      "bujia": {
+        "oem": "verify (3 cilindros F8CV / 4cil B10S1)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Chevrolet_GM|4JK1_4JJ1_DMax": {
+    "marca": "Chevrolet_GM",
+    "motor": "Motor Isuzu 2.5D 4JK1-TC / 3.0D 4JJ1-TC. D-Max/LUV D-Max",
+    "modelos": [
+      "D-Max 2.5D/3.0D"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (Isuzu 8-97049708-0 o equiv)",
+        "estado": "verify"
+      },
+      "filtro_combustible": {
+        "oem": "verify (filtro diesel con trampa agua)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Chevrolet_GM|Corsa_1.4_1.6_C14NZ_C16SE": {
+    "marca": "Chevrolet_GM",
+    "motor": "Motor Opel/GM 1.4 C14NZ / 1.6 C16SE. Corsa Classic Sudamerica",
+    "modelos": [
+      "Corsa 1.0/1.4/1.6L"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (tipo Opel/GM Corsa B/C spin-on)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Chrysler_Mopar|Pentastar_3.6_V6": {
+    "marca": "Chrysler_Mopar",
+    "motor": "Motor Pentastar 3.6L V6. Compartido Chrysler/Dodge/Jeep/Ram",
+    "modelos": [
+      "Pacifica 3.6L",
+      "NOTA: reutilizar en Dodge Durango/Journey, Jeep Grand Cherokee/Wrangler/Gladiator/Compass, Ram 1000"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "68191349AC (supersede AA/AB)",
+        "estado": "confirmed",
+        "fuente": "https://store.mopar.com/oem-parts/mopar-engine-oil-filter-kit-68191349ac, https://www.amazon.com/Mopar-68191349AC-Engines-Oil-Filter/dp/B00ED2I8KK"
+      },
+      "bujia": {
+        "oem": "verify (MOPAR SP104867AA / NGK LZFR5C-11)",
+        "estado": "verify"
+      },
+      "bobina_encendido": {
+        "oem": "verify (UF648 / 5149168AH)",
+        "estado": "verify"
+      },
+      "filtro_aire": {
+        "oem": "verify (Mopar panel)",
+        "estado": "verify"
+      },
+      "filtro_habitaculo": {
+        "oem": "verify (Mopar cabin)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Citroen_PSA|DV6_1.6_HDi": {
+    "marca": "Citroen_PSA",
+    "motor": "Motor PSA 1.6 HDi DV6 (diesel comun rail). Compartido Citroen/Peugeot",
+    "modelos": [
+      "Berlingo 1.6D",
+      "NOTA: reutilizar en Peugeot Partner/208/308/301/2008"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "1109AY / 1109CK (PSA)",
+        "estado": "verify",
+        "fuente": "https://www.fcpeuro.com/, https://parts.peugeot.com/"
+      },
+      "filtro_combustible": {
+        "oem": "verify (filtro diesel DV6 con trampa agua)",
+        "estado": "verify"
+      },
+      "bujia_precalentamiento": {
+        "oem": "verify (bujia glow diesel DV6)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Citroen_PSA|DV5_1.5_BlueHDi": {
+    "marca": "Citroen_PSA",
+    "motor": "Motor PSA 1.5 BlueHDi DV5. Evolucion del DV6, Euro 6d",
+    "modelos": [
+      "Berlingo 1.5D BlueHDi"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (PSA 1.5 BlueHDi)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Changan|BlueCore_1.5T": {
+    "marca": "Changan",
+    "motor": "Motor Changan BlueCore 1.5T. CS55 Plus, UNI-T",
+    "modelos": [
+      "CS55 Plus 1.5T",
+      "UNI-T 1.5T"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (Changan EPC)",
+        "nota": "PN disponibles solo via catalogo EPC Changan",
+        "estado": "verify"
+      },
+      "bujia": {
+        "oem": "verify (iridio GDI)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Changan|JL473QF_1.5_NA": {
+    "marca": "Changan",
+    "motor": "Motor Changan 1.5L NA JL473QF. CS15, Alsvin",
+    "modelos": [
+      "CS15 1.5L",
+      "Alsvin 1.5L"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify",
+        "estado": "verify"
+      },
+      "bujia": {
+        "oem": "verify (4 cil NA)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Changan|H16_1.6": {
+    "marca": "Changan",
+    "motor": "Motor Changan H16 1.6L NA / H14T 1.4 Turbo. CS35",
+    "modelos": [
+      "CS35 1.6L/1.4T"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify",
+        "estado": "verify"
+      }
+    }
+  },
+  "Changan|CX70_1.5T_H15T": {
+    "marca": "Changan",
+    "motor": "Motor Changan 1.5T H15T / 1.6L. CX70",
+    "modelos": [
+      "CX70 1.6L/1.5T"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify",
+        "estado": "verify"
+      }
+    }
+  },
+  "Changan|Hunter_1.9D": {
+    "marca": "Changan",
+    "motor": "Motor diesel 1.9D. Hunter (pickup)",
+    "modelos": [
+      "Hunter 1.9D"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify",
+        "estado": "verify"
+      },
+      "filtro_combustible": {
+        "oem": "verify (diesel)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Chery|SQRF4J16_1.5T": {
+    "marca": "Chery",
+    "motor": "Motor Chery SQRF4J16 1.5T GDI. Tiggo 7 Pro, Tiggo 8, Jetour X70, Omoda C5",
+    "modelos": [
+      "Tiggo 7 Pro 1.5T",
+      "Tiggo 8 1.5T",
+      "NOTA: reutilizar en Jetour X70, Omoda C5"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (kit Chery F4J16)",
+        "estado": "verify",
+        "fuente": "https://www.eliteparts.org/fr/products/chery-tiggo-7-series-f4j16-original-maintenance-filter-set-oil-air-ac, https://autopartscatalogue.net/chery-epc/"
+      },
+      "filtro_aire": {
+        "oem": "verify (kit F4J16)",
+        "estado": "verify",
+        "fuente": "https://www.eliteparts.org/fr/products/chery-tiggo-7-series-f4j16-original-maintenance-filter-set-oil-air-ac, https://autopartscatalogue.net/chery-epc/"
+      },
+      "filtro_habitaculo": {
+        "oem": "verify (kit F4J16)",
+        "estado": "verify",
+        "fuente": "https://www.eliteparts.org/fr/products/chery-tiggo-7-series-f4j16-original-maintenance-filter-set-oil-air-ac, https://autopartscatalogue.net/chery-epc/"
+      },
+      "bujia": {
+        "oem": "verify (iridio GDI)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Chery|F4J20_2.0T": {
+    "marca": "Chery",
+    "motor": "Motor Chery F4J20 2.0T. Tiggo 8 version 2.0",
+    "modelos": [
+      "Tiggo 8 2.0T"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify",
+        "estado": "verify"
+      }
+    }
+  },
+  "Chery|SQR477F_1.5_Tiggo2": {
+    "marca": "Chery",
+    "motor": "Motor Chery 1.5L SQR477F / 1.0T SQRE4T10. Tiggo 2",
+    "modelos": [
+      "Tiggo 2 1.5L/1.0T"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify",
+        "estado": "verify"
+      }
+    }
+  },
+  "Chery|SQRE4G16_1.6": {
+    "marca": "Chery",
+    "motor": "Motor Chery 1.6L SQRE4G16. Tiggo 3",
+    "modelos": [
+      "Tiggo 3 1.6L"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify",
+        "estado": "verify"
+      }
+    }
+  },
+  "Chery|SQR372_1.0_1.1_IQ": {
+    "marca": "Chery",
+    "motor": "Motor Chery SQR372 1.0/1.1L. IQ/QQ (city car)",
+    "modelos": [
+      "IQ/QQ 1.0/1.1L"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify",
+        "estado": "verify"
+      }
+    }
+  },
+  "Chery|SQR_1.5_Arrizo": {
+    "marca": "Chery",
+    "motor": "Motor Chery 1.5L SQR NA / 1.5T. Arrizo 3/5",
+    "modelos": [
+      "Arrizo 3 1.5L",
+      "Arrizo 5 1.5T"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify",
+        "estado": "verify"
+      }
+    }
+  },
+  "Daewoo_GM|G15MF_1.5_1.6_Heaven_Racer": {
+    "marca": "Daewoo_GM",
+    "motor": "Motor Daewoo G15MF/C16SE 1.5/1.6L. Heaven/Racer (fabricados por GM-Daewoo, compartidos con Opel Corsa antiguo)",
+    "modelos": [
+      "Heaven 1.5/1.6L",
+      "Racer 1.5/1.6L"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (spin-on GM-Daewoo, equiv. MANN W712/22)",
+        "estado": "verify"
+      },
+      "filtro_aire": {
+        "oem": "verify (panel Daewoo)",
+        "estado": "verify"
+      },
+      "bujia": {
+        "oem": "verify (convencional o platino 1.5/1.6)",
+        "estado": "verify"
+      },
+      "distribucion": {
+        "nota": "Cambio 60.000km",
+        "estado": "confirmed"
+      },
+      "bomba_agua": {
+        "oem": "verify",
+        "estado": "verify"
+      },
+      "termostato": {
+        "oem": "verify (82°C tipico)",
+        "estado": "verify"
+      }
+    }
+  },
+  "DFM|PSA_DF1_1.6_AX4": {
+    "marca": "DFM",
+    "motor": "Motor PSA 1.6L (plataforma DFM/PSA) para AX4 Luxury. CLAVE: comparte componentes con PSA DV6/EP6 segun variante. Tu auto personal.",
+    "modelos": [
+      "AX4 Luxury 1.6L"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "1109CK (PSA)",
+        "estado": "verify"
+      },
+      "filtro_aire": {
+        "oem": "verify (panel PSA EP6/DF1)",
+        "estado": "verify"
+      },
+      "bujia": {
+        "oem": "verify (gasolina 1.6 NA PSA)",
+        "estado": "verify"
+      },
+      "nota_personal": {
+        "oem": "Motor LCVT13, Motor J0247199. Verificar si es EP6 (gasolina cadena) o TU5 (correa)"
+      }
+    }
+  },
+  "DFSK|SFG15T_1.5T_Glory580": {
+    "marca": "DFSK",
+    "motor": "Motor Dongfeng SFG15T 1.5 Turbo. Glory 580 / Fengon 580",
+    "modelos": [
+      "Glory 580 1.5T"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (DFSK OEM SFG15T)",
+        "estado": "verify",
+        "fuente": "https://red-dragon-parts.com/products/original-luftfilter-fur-dfsk-glory-580, https://autopart.alibaba.com/product/dfsk-spare-parts"
+      },
+      "filtro_aire": {
+        "oem": "verify (DFSK Glory 580 panel)",
+        "estado": "verify",
+        "fuente": "https://red-dragon-parts.com/products/original-luftfilter-fur-dfsk-glory-580, https://autopart.alibaba.com/product/dfsk-spare-parts"
+      },
+      "bomba_agua": {
+        "oem": "1307100F0000D (SFG15T)",
+        "estado": "confirmed",
+        "fuente": "https://qishiautoparts.en.made-in-china.com/, https://autopart.alibaba.com/product/glory-auto-parts"
+      },
+      "catalizador": {
+        "oem": "1205100-SA11",
+        "estado": "verify",
+        "fuente": "https://qishiautoparts.en.made-in-china.com/, https://autopart.alibaba.com/product/glory-auto-parts"
+      },
+      "bujia": {
+        "oem": "verify (iridio 1.5T)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Dodge_Mopar|HEMI_5.7_V8": {
+    "marca": "Dodge_Mopar",
+    "motor": "Motor HEMI 5.7L V8. Durango 5.7 / Ram 1500. 16 bujias (2 por cilindro)",
+    "modelos": [
+      "Durango 5.7L HEMI",
+      "NOTA: reutilizar en Ram 1500 5.7L"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "MO-090 / 5281090AB (HEMI V8 rosca)",
+        "estado": "confirmed",
+        "fuente": "https://carssimplified.com/x/dodge/oil-filter-mo090-cross-reference.php, https://www.allmoparparts.com/cat/2023-dodge-challenger-tuneup-and-maintenance-parts.html"
+      },
+      "bujia": {
+        "oem": "SP196724AA (Mopar 16 bujias HEMI)",
+        "nota": "HEMI usa 2 bujias por cilindro = 16 totales",
+        "estado": "confirmed",
+        "fuente": "https://www.allmoparparts.com/cat/2023-dodge-challenger-tuneup-and-maintenance-parts.html, https://store.mopar.com/"
+      },
+      "filtro_habitaculo": {
+        "oem": "68575487AA",
+        "estado": "confirmed"
+      }
+    }
+  },
+  "Dodge_Mopar|Tigershark_2.4": {
+    "marca": "Dodge_Mopar",
+    "motor": "Motor Chrysler Tigershark 2.4L. Journey 2.4 / Jeep Compass/Cherokee/Renegade",
+    "modelos": [
+      "Journey 2.4L",
+      "NOTA: reutilizar en Jeep Compass/Cherokee 2.4"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (Mopar cartucho Tigershark 2.4)",
+        "estado": "verify"
+      },
+      "bujia": {
+        "oem": "SP143877AB (Mopar)",
+        "estado": "confirmed",
+        "fuente": "https://www.allmoparparts.com/cat/2023-dodge-challenger-tuneup-and-maintenance-parts.html, https://store.mopar.com/"
+      }
+    }
+  },
+  "Dongfeng|TD15M_1.5T_Forthing": {
+    "marca": "Dongfeng",
+    "motor": "Motor Dongfeng TD15M 1.5T. Forthing T5L",
+    "modelos": [
+      "Forthing T5L 1.5T"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (Dongfeng EPC)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Fiat|Fire_1.4_EVO": {
+    "marca": "Fiat",
+    "motor": "Motor Fiat Fire 1.4L 8v/EVO. Columna vertebral de Fiat Sudamerica: Uno/Palio/Fiorino/Strada/Siena",
+    "modelos": [
+      "Uno 1.4L",
+      "Palio 1.4L",
+      "Fiorino 1.4L",
+      "Strada 1.4L",
+      "147L 1.4L"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "55594651 / 71771758 (cartucho Fire EVO)",
+        "estado": "verify",
+        "fuente": "https://fiat.catalogs-parts.com/, https://store.mopar.com/v-fiat"
+      },
+      "filtro_aire": {
+        "oem": "verify (panel Fire)",
+        "estado": "verify"
+      },
+      "bujia": {
+        "oem": "55249868 / NGK DCPR7E (Fire 1.4)",
+        "estado": "verify"
+      },
+      "distribucion": {
+        "oem": "71775905 (kit distribucion)",
+        "estado": "verify"
+      },
+      "bomba_agua": {
+        "oem": "verify (Fire 1.4 EVO)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Fiat|Firefly_1.0_1.3": {
+    "marca": "Fiat",
+    "motor": "Motor Fiat Firefly 1.0L 3cil / 1.0T 3cil turbo / 1.3L 4cil. Nueva gen: Argo/Cronos/Mobi/Pulse/Strada nueva",
+    "modelos": [
+      "Mobi 1.0",
+      "Argo 1.0/1.3",
+      "Cronos 1.3",
+      "Pulse 1.0T/1.3",
+      "Strada 1.3 Firefly"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (cartucho Firefly)",
+        "estado": "verify"
+      },
+      "bujia": {
+        "oem": "verify (iridio Firefly)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Fiat|E_torQ_1.8": {
+    "marca": "Fiat",
+    "motor": "Motor Fiat E.torQ 1.8L. Argo/Cronos 1.8, compartido con Jeep Renegade 1.8",
+    "modelos": [
+      "Argo 1.8L",
+      "Cronos 1.8L",
+      "NOTA: reutilizar en Jeep Renegade 1.8, Ram 700/1000 1.8"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (E.torQ 1.8)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Fiat|TwinAir_0.9T": {
+    "marca": "Fiat",
+    "motor": "Motor Fiat TwinAir 0.9T 2 cilindros turbo. 500",
+    "modelos": [
+      "500 0.9T TwinAir"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (TwinAir 2cil)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Fiat|Fire_1.2_500": {
+    "marca": "Fiat",
+    "motor": "Motor Fire 1.2L 8v. 500 (2007+)",
+    "modelos": [
+      "500 1.2L"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (Fire 1.2 spin-on)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Fiat|MultiJet_2.3D_Ducato": {
+    "marca": "Fiat",
+    "motor": "Motor FCA F1A 2.3 MultiJet diesel. Ducato (compartido con Ram ProMaster / Iveco Daily)",
+    "modelos": [
+      "Ducato 2.3D"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (F1A MultiJet cartucho)",
+        "estado": "verify"
+      },
+      "filtro_combustible": {
+        "oem": "verify (diesel con separador agua)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Ford|EcoBoost_2.0T": {
+    "marca": "Ford",
+    "motor": "Motor Ford EcoBoost 2.0L Turbo GDI. Escape/Edge/Explorer/Focus ST/Territory (gen anterior). Amplio uso global.",
+    "modelos": [
+      "Escape 2.0T",
+      "Edge 2.0T",
+      "Explorer 2.3T (variante)",
+      "Focus 2.0L GDI",
+      "Territory 1.5T YVDA"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "FL-910S (Motorcraft EcoBoost 2.0/2.3T spin-on)",
+        "estado": "confirmed",
+        "fuente": "https://www.americanmuscle.com/ford-mustang-motorcraft-oil-filter-fl-910s.html, https://ford.oempartsonline.com/"
+      },
+      "filtro_aire": {
+        "oem": "verify (panel Motorcraft FA-series)",
+        "estado": "verify",
+        "fuente": "https://ford.oempartsonline.com/, https://www.autozone.com/"
+      },
+      "filtro_habitaculo": {
+        "oem": "verify (CF12772 / FP-78 segun modelo)",
+        "estado": "verify",
+        "fuente": "https://www.amazon.com/EPAuto-Activated-Compatible-2021-2024-2020-2024/dp/B0DFS4BFV3, https://www.americanmuscle.com/ford-cabin-air-filter-1516.html"
+      },
+      "bujia": {
+        "oem": "CYFS-12Y-PCT (EcoBoost 2.0/2.3T iridio Motorcraft)",
+        "estado": "confirmed",
+        "fuente": "https://www.maperformance.com/collections/OEM-Ford/spark-plugs, https://www.americanmuscle.com/"
+      }
+    }
+  },
+  "Ford|Coyote_5.0_V8": {
+    "marca": "Ford",
+    "motor": "Motor Ford Coyote 5.0L V8 DOHC. Mustang GT / F-150 5.0",
+    "modelos": [
+      "Mustang 5.0L",
+      "F-150 5.0L"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (Motorcraft FL-500S Coyote V8)",
+        "estado": "verify"
+      },
+      "filtro_habitaculo": {
+        "oem": "FP-78 (Mustang S550 2015+)",
+        "estado": "confirmed",
+        "fuente": "https://www.americanmuscle.com/ford-cabin-air-filter-1516.html"
+      },
+      "bujia": {
+        "oem": "CYFS-12F-1X (Motorcraft Platinum Coyote, 8 bujias)",
+        "estado": "confirmed",
+        "fuente": "https://www.americanmuscle.com/ford-mustang-motorcraft-platinum-spark-plug-sp548.html, https://www.fordoempartsoutlet.com/spark-plugs"
+      }
+    }
+  },
+  "Ford|EcoBoost_3.5T_V6": {
+    "marca": "Ford",
+    "motor": "Motor Ford EcoBoost 3.5L V6 Twin Turbo. F-150 / Explorer (gen anterior)",
+    "modelos": [
+      "F-150 3.5T",
+      "Explorer 3.5L V6"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (Motorcraft FL-500S o FL-910S segun gen)",
+        "estado": "verify"
+      },
+      "bujia": {
+        "oem": "verify (CYFS-12F-5 iridio V6 3.5T)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Ford|Duratorq_2.2_3.2_Ranger": {
+    "marca": "Ford",
+    "motor": "Motor Ford Duratorq 2.2L/3.2L 5cil diesel. Ranger (T6)/Transit/Everest",
+    "modelos": [
+      "Ranger 2.2/3.2D",
+      "Transit 2.2D"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (Motorcraft diesel Ranger)",
+        "estado": "verify"
+      },
+      "filtro_combustible": {
+        "oem": "verify (diesel separador agua Duratorq)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Ford|EcoBlue_2.0D": {
+    "marca": "Ford",
+    "motor": "Motor Ford EcoBlue 2.0D diesel. Ranger (nueva gen) / Transit (nueva gen)",
+    "modelos": [
+      "Ranger 2.0D EcoBlue",
+      "Transit 2.0D EcoBlue"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (Motorcraft EcoBlue)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Ford|Sigma_Duratec_1.6_Ecosport_Fiesta": {
+    "marca": "Ford",
+    "motor": "Motor Ford Sigma/Duratec 1.6L NA. Ecosport/Fiesta (Sudamerica)",
+    "modelos": [
+      "Ecosport 1.6L",
+      "Fiesta 1.6L"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (Motorcraft Sigma 1.6 spin-on)",
+        "estado": "verify"
+      }
+    }
+  },
+  "GAC|4A15J2_1.5T": {
+    "marca": "GAC",
+    "motor": "Motor GAC 4A15J2 1.5T. GS4",
+    "modelos": [
+      "GS4 1.5T"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (GAC EPC 4A15J2)",
+        "estado": "verify"
+      },
+      "bujia": {
+        "oem": "verify (iridio GDI)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Geely|JLH_3G15TD_1.5T_Coolray": {
+    "marca": "Geely",
+    "motor": "Motor Geely/Volvo 1.5T JLH-3G15TD (plataforma BMA, derivado Volvo Drive-E 3cil). Coolray / Proton X50",
+    "modelos": [
+      "Coolray 1.5T"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (Geely/Volvo BMA 1.5T)",
+        "nota": "Puede compartir con Volvo XC40 T3 (verificar)",
+        "estado": "verify"
+      },
+      "bujia": {
+        "oem": "verify (iridio 3 cilindros turbo)",
+        "estado": "verify"
+      }
+    }
+  },
+  "GWM|GW4C20B_2.0T": {
+    "marca": "GWM",
+    "motor": "Motor GWM GW4C20B 2.0T gasolina. Tank 300 / Haval Dargo. Compartido en toda la gama GWM/Haval de gama alta",
+    "modelos": [
+      "Tank 300 2.0T",
+      "NOTA: reutilizar en Haval Dargo 2.0T, Haval H6 2.0T"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (GWM EPC GW4C20B)",
+        "estado": "verify"
+      },
+      "bujia": {
+        "oem": "verify (iridio GDI)",
+        "estado": "verify"
+      }
+    }
+  },
+  "GWM|GW4D20M_2.0D_Poer": {
+    "marca": "GWM",
+    "motor": "Motor GWM GW4D20M 2.0D diesel. Poer pickup / Haval H6 diesel",
+    "modelos": [
+      "Poer 2.0D"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (GWM diesel)",
+        "estado": "verify"
+      },
+      "filtro_combustible": {
+        "oem": "verify (diesel con separador agua)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Haval_GWM|GW4B15_1.5T": {
+    "marca": "Haval_GWM",
+    "motor": "Motor GWM GW4B15/A 1.5T. Haval H6 1.5T / Jolion. Motor gasolina turbo",
+    "modelos": [
+      "H6 1.5T",
+      "Jolion 1.5T"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (GWM EPC GW4B15)",
+        "estado": "verify"
+      },
+      "bujia": {
+        "oem": "verify (iridio GDI)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Honda|L15B_1.5T_VTEC_Turbo": {
+    "marca": "Honda",
+    "motor": "Motor Honda L15B 1.5T VTEC Turbo. La familia MAS usada en Honda moderno: Civic/CR-V/Accord/City (turbo)",
+    "modelos": [
+      "Civic 1.5T (2016+)",
+      "CR-V 1.5T (2017+)",
+      "Accord 1.5T (2018+)",
+      "City 1.5L turbo"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "15400-PLM-A02 (Toyo Roki, spin-on universal Honda)",
+        "estado": "confirmed",
+        "fuente": "https://www.autozone.com/filters-and-pcv/oil-filter/p/original-equipment-honda-engine-oil-filter-15400-plm-a02/86660_0_0, https://honda.oempartsonline.com/v-2026-honda-cr-v--lx--1-5l-l4-gas/engine--filters?assembly=15"
+      },
+      "filtro_aire": {
+        "oem": "verify (panel Honda L15B, varia por chasis)",
+        "estado": "verify"
+      },
+      "filtro_habitaculo": {
+        "oem": "verify (Honda cabin, varia por chasis)",
+        "estado": "verify"
+      },
+      "bujia": {
+        "oem": "ILZFR6D11 (NGK Iridium L15B turbo) / 12290-5A2-A01",
+        "estado": "verify"
+      },
+      "bobina_encendido": {
+        "oem": "verify (Honda 30520-5A2-A01 o equiv)",
+        "estado": "verify"
+      },
+      "bomba_agua": {
+        "oem": "verify (L15B)",
+        "estado": "verify"
+      },
+      "sensor_ckp": {
+        "oem": "verify (Honda L15B)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Honda|R18Z_1.8_NA": {
+    "marca": "Honda",
+    "motor": "Motor Honda R18Z 1.8L SOHC i-VTEC. Civic (gen 9) / HR-V",
+    "modelos": [
+      "Civic 1.8L (2012-2015)",
+      "HR-V 1.8L"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "15400-PLM-A02 (mismo filtro universal Honda)",
+        "estado": "confirmed"
+      }
+    }
+  },
+  "Honda|K24W_2.4_NA": {
+    "marca": "Honda",
+    "motor": "Motor Honda K24W 2.4L i-VTEC direct inject. Accord (gen9) / CR-V (gen4)",
+    "modelos": [
+      "Accord 2.4L",
+      "CR-V 2.4L"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "15400-PLM-A02 (mismo filtro universal Honda)",
+        "estado": "confirmed"
+      }
+    }
+  },
+  "Honda|L15A_L15B_1.5_NA": {
+    "marca": "Honda",
+    "motor": "Motor Honda L15A/L15B 1.5L NA (sin turbo). Fit/City/Civic gen anterior",
+    "modelos": [
+      "Fit 1.5L",
+      "City 1.5L NA"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "15400-PLM-A02",
+        "estado": "confirmed"
+      }
+    }
+  },
+  "Honda|J35Y6_3.5_V6": {
+    "marca": "Honda",
+    "motor": "Motor Honda J35Y6 3.5L V6. Pilot/Ridgeline/Odyssey/Passport",
+    "modelos": [
+      "Pilot 3.5L V6",
+      "Ridgeline 3.5L V6"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "15400-PLM-A02 (mismo filtro universal Honda 4/6cil)",
+        "estado": "confirmed"
+      }
+    }
+  },
+  "Hyundai_Kia|Gamma_G4FG_1.6": {
+    "marca": "Hyundai_Kia",
+    "motor": "Motor Gamma 1.6L G4FG (MPI). La familia MAS usada en Hyundai/Kia compactos",
+    "modelos": [
+      "Accent 1.6L",
+      "Creta 1.6L",
+      "Elantra 1.6L",
+      "i30 1.6L",
+      "Verna 1.6L G4FC",
+      "NOTA: Kia Cerato/Rio/Soluto usan G4FG/G4FC/G4LC"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "26300-35504 (supersede 26300-35505)",
+        "estado": "confirmed",
+        "fuente": "https://www.amazon.com/HYUNDAI-26300-35504-Oil-Filter/dp/B01EMA3XVG, https://www.amazon.com/Genuine-Hyundai-Filter-26300-35504-21513-23001/dp/B07C19SV73"
+      },
+      "junta_tapon_drenaje": {
+        "oem": "21513-23001",
+        "estado": "confirmed",
+        "fuente": "https://www.amazon.com/Genuine-Hyundai-Filter-26300-35504-21513-23001/dp/B07C19SV73"
+      },
+      "bujia": {
+        "oem": "18846-11070 (Iridium HMG)",
+        "estado": "confirmed",
+        "fuente": "https://hyundai.oempartsonline.com/oem-parts/hyundai-spark-plug-1884611070, https://www.amazon.com/"
+      }
+    }
+  },
+  "Hyundai_Kia|Nu_G4NA_2.0": {
+    "marca": "Hyundai_Kia",
+    "motor": "Motor Nu 2.0L G4NA (MPI/GDI). Elantra/Tucson/Sonata/Veloster/i30. Compartido Kia Cerato/Sportage/Optima",
+    "modelos": [
+      "Elantra 2.0L",
+      "Tucson 2.0L",
+      "Sonata 2.0L",
+      "Veloster 2.0L"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "26300-35504 (mismo filtro Gamma/Nu)",
+        "estado": "confirmed"
+      },
+      "bujia": {
+        "oem": "18846-11070 (mismo)",
+        "estado": "confirmed"
+      }
+    }
+  },
+  "Hyundai_Kia|Smartstream_G4FP_1.6T": {
+    "marca": "Hyundai_Kia",
+    "motor": "Motor Smartstream 1.6T G4FP (GDI Turbo). Tucson NX4 / Sonata DN8. Nueva gen",
+    "modelos": [
+      "Tucson 1.6T",
+      "Sonata 1.6T"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (cartucho Smartstream 1.6T, diferente al spin-on Gamma)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Hyundai_Kia|Kappa_G3LA_G4LA_1.0_1.2": {
+    "marca": "Hyundai_Kia",
+    "motor": "Motor Kappa 1.0L G3LA / 1.2L G4LA. Grand i10 / Morning / Picanto / Atos",
+    "modelos": [
+      "Grand i10 1.0/1.2L",
+      "Atos/i10 1.0L",
+      "NOTA: reutilizar en Kia Morning/Picanto"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "26300-35504 (mismo filtro universal HMG spin-on)",
+        "estado": "confirmed"
+      },
+      "bujia": {
+        "oem": "18846-11070 (mismo)",
+        "estado": "confirmed"
+      }
+    }
+  },
+  "Hyundai_Kia|Kappa_G4LC_1.4": {
+    "marca": "Hyundai_Kia",
+    "motor": "Motor Kappa 1.4L G4LC (MPI). Accent HB20 / Rio / Soluto",
+    "modelos": [
+      "Accent 1.4L G4LC",
+      "NOTA: reutilizar en Kia Rio 1.4, Kia Soluto 1.4"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "26300-35504",
+        "estado": "confirmed"
+      },
+      "bujia": {
+        "oem": "18846-11070",
+        "estado": "confirmed"
+      }
+    }
+  },
+  "Hyundai_Kia|Lambda_3.8_V6": {
+    "marca": "Hyundai_Kia",
+    "motor": "Motor Lambda II 3.8L V6. Palisade / Genesis. Compartido Kia Telluride",
+    "modelos": [
+      "Palisade 3.8L V6",
+      "NOTA: reutilizar en Kia Telluride 3.8L"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (Lambda V6 cartucho)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Hyundai_Kia|D4CB_2.5D": {
+    "marca": "Hyundai_Kia",
+    "motor": "Motor diesel D4CB 2.5L CRDi. H-1 / Porter / Kia Frontier",
+    "modelos": [
+      "H-1 2.5D",
+      "Porter 2.5D",
+      "NOTA: reutilizar en Kia Frontier 2.5D"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (D4CB diesel cartucho)",
+        "estado": "verify"
+      },
+      "filtro_combustible": {
+        "oem": "verify (diesel CRDi con trampa agua)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Hyundai_Kia|D4HB_2.2D": {
+    "marca": "Hyundai_Kia",
+    "motor": "Motor diesel D4HB 2.2L CRDi. Santa Fe / Kia Sorento",
+    "modelos": [
+      "Santa Fe 2.2D",
+      "NOTA: reutilizar en Kia Sorento 2.2D, Kia Carnival 2.2D"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (D4HB diesel)",
+        "estado": "verify"
+      },
+      "filtro_combustible": {
+        "oem": "verify",
+        "estado": "verify"
+      }
+    }
+  },
+  "Hyundai_Kia|G4KJ_2.4_Theta": {
+    "marca": "Hyundai_Kia",
+    "motor": "Motor Theta II 2.4L G4KJ/G4KE. Santa Fe / Kia Sorento gasolina",
+    "modelos": [
+      "Santa Fe 2.4L"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "26300-35504 (mismo filtro universal)",
+        "estado": "confirmed"
+      },
+      "bujia": {
+        "oem": "18846-11070",
+        "estado": "confirmed"
+      }
+    }
+  },
+  "Hyundai_Kia|Kappa_Hybrid_1.6_GDi": {
+    "marca": "Hyundai_Kia",
+    "motor": "Motor Kappa 1.6L GDi Hibrido. Ioniq / Niro",
+    "modelos": [
+      "Ioniq 1.6 Hybrid",
+      "NOTA: reutilizar en Kia Niro 1.6 Hybrid"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (hibrido, posible cartucho)",
+        "estado": "verify"
+      }
+    }
+  },
+  "JAC|1.5_VVT_S2": {
+    "marca": "JAC",
+    "motor": "Motor JAC 1.5L VVT NA. S2",
+    "modelos": [
+      "S2 1.5L"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (JAC EPC)",
+        "estado": "verify"
+      }
+    }
+  },
+  "JAC|1.6_VVT_S3": {
+    "marca": "JAC",
+    "motor": "Motor JAC 1.6L VVT. S3",
+    "modelos": [
+      "S3 1.6L"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify",
+        "estado": "verify"
+      }
+    }
+  },
+  "JAC|1.5T_JS4": {
+    "marca": "JAC",
+    "motor": "Motor JAC 1.5T turbo. JS4",
+    "modelos": [
+      "JS4 1.5T"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify",
+        "estado": "verify"
+      }
+    }
+  },
+  "JAC|HFC4GA3_2.0_2.4_T6": {
+    "marca": "JAC",
+    "motor": "Motor JAC HFC4GA3 2.0/2.4L. T6 pickup",
+    "modelos": [
+      "T6 2.0/2.4L"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify",
+        "estado": "verify"
+      }
+    }
+  },
+  "JAC|HFC4DE1_2.0D_T8": {
+    "marca": "JAC",
+    "motor": "Motor JAC HFC4DE1-1D 2.0D diesel. T8 pickup",
+    "modelos": [
+      "T8 2.0D"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify",
+        "estado": "verify"
+      },
+      "filtro_combustible": {
+        "oem": "verify (diesel)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Jeep_Mopar|GSE_T_1.3T_Firefly": {
+    "marca": "Jeep_Mopar",
+    "motor": "Motor FCA GSE-T4 1.3T (Firefly Turbo). Compass nueva gen / Renegade",
+    "modelos": [
+      "Compass 1.3T",
+      "Renegade 1.3T"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (GSE-T Firefly turbo)",
+        "estado": "verify"
+      },
+      "nota": {
+        "oem": "Compartido con Fiat Pulse 1.0T/1.3T Firefly turbo"
+      }
+    }
+  },
+  "Jeep_Mopar|Hurricane_2.0T": {
+    "marca": "Jeep_Mopar",
+    "motor": "Motor Hurricane 2.0T inline-4 turbo. Wrangler 4xe / Grand Cherokee nueva gen",
+    "modelos": [
+      "Wrangler 2.0T"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (Mopar Hurricane 2.0T)",
+        "estado": "verify"
+      }
+    }
+  },
+  "JMC|JX4D20_2.0D_VigusPro": {
+    "marca": "JMC",
+    "motor": "Motor JMC JX4D20 2.0D diesel. Vigus Pro pickup",
+    "modelos": [
+      "Vigus Pro 2.0D"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (JMC EPC)",
+        "estado": "verify"
+      },
+      "filtro_combustible": {
+        "oem": "verify (diesel)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Kia_mapeo_HMG|Sephia_antiguo": {
+    "marca": "Kia_mapeo_HMG",
+    "motor": "Kia Sephia 1.5/1.6/1.8L (1992-2003). Motor Mazda-derived B5/B6/BP",
+    "modelos": [
+      "Sephia_antiguo"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (Mazda-derived, spin-on)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Lexus_Toyota|A25A_2.5_NX": {
+    "marca": "Lexus_Toyota",
+    "motor": "Motor Toyota A25A-FKS 2.5L Dynamic Force (igual que RAV4/Camry). Lexus NX 250/350h",
+    "modelos": [
+      "NX 2.5L / NX Hybrid"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (Toyota/Lexus spin-on A25A, 04152-YZZA1 o 90915-YZZD4)",
+        "estado": "verify"
+      },
+      "bujia": {
+        "oem": "verify (iridio A25A Dynamic Force)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Mazda|Skyactiv_G_2.0_2.5_PE_PY": {
+    "marca": "Mazda",
+    "motor": "Motor Skyactiv-G 2.0L PE-VPS / 2.5L PY-VPS. LA familia principal de Mazda moderno",
+    "modelos": [
+      "Mazda3 2.0/2.5",
+      "CX-5 2.0/2.5",
+      "Mazda6 2.0/2.5",
+      "CX-3 2.0",
+      "CX-30 2.0/2.5"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "SH01-14-302A (cartucho Skyactiv PE/PY)",
+        "estado": "confirmed",
+        "fuente": "https://www.bestpartstore.co.uk/mazda, https://www.mazdausa.com/"
+      },
+      "bujia": {
+        "oem": "PE5R-18-110 (iridio Skyactiv-G)",
+        "estado": "verify"
+      },
+      "filtro_aire": {
+        "oem": "verify (panel Skyactiv, varia por chasis)",
+        "estado": "verify"
+      },
+      "filtro_habitaculo": {
+        "oem": "verify (varia por chasis)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Mazda|Skyactiv_G_2.5T_CX9": {
+    "marca": "Mazda",
+    "motor": "Motor Skyactiv-G 2.5T (turbo). CX-9",
+    "modelos": [
+      "CX-9 2.5T"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "SH01-14-302A (mismo cartucho)",
+        "estado": "confirmed"
+      }
+    }
+  },
+  "Mazda|Skyactiv_G_1.5_P5": {
+    "marca": "Mazda",
+    "motor": "Motor Skyactiv-G 1.5L P5-VPS. Mazda 2",
+    "modelos": [
+      "Mazda2 1.5L"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (P5 1.5L, posible diferente al PE/PY)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Mazda|P5AT_3.2D_BT50": {
+    "marca": "Mazda",
+    "motor": "Motor Ford Duratorq P5AT 3.2D / 3.0D. BT-50 (comparte plataforma Ford Ranger T6)",
+    "modelos": [
+      "BT-50 3.2D/3.0D"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (Ford/Mazda diesel compartido Ranger)",
+        "nota": "REUTILIZA PN de Ford Ranger Duratorq (catalogo_F)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Mercedes|M264_M254_2.0T": {
+    "marca": "Mercedes",
+    "motor": "Motor Mercedes M264/M254 2.0T 4cil turbo. Clase C/E/GLC (W206/W214/X254)",
+    "modelos": [
+      "Clase C 2.0T",
+      "Clase E 2.0T",
+      "GLC 2.0T"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (MB cartucho M264/M254)",
+        "estado": "verify"
+      },
+      "bujia": {
+        "oem": "verify (MB M264/M254 turbo)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Mercedes|M282_1.3T": {
+    "marca": "Mercedes",
+    "motor": "Motor Renault/Daimler M282 1.3T (alianza con Renault). Clase A / GLA",
+    "modelos": [
+      "Clase A 1.3T",
+      "GLA 1.3T"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (M282, base Renault H5Ht)",
+        "nota": "Motor compartido con Renault 1.3 TCe (H5Ht). Posible PN cruzado",
+        "estado": "verify"
+      }
+    }
+  },
+  "Mercedes|OM651_2.1D_Sprinter": {
+    "marca": "Mercedes",
+    "motor": "Motor Mercedes OM651 2.1D diesel. Sprinter",
+    "modelos": [
+      "Sprinter 2.1D"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (MB cartucho diesel OM651)",
+        "estado": "verify"
+      },
+      "filtro_combustible": {
+        "oem": "verify (diesel OM651)",
+        "estado": "verify"
+      }
+    }
+  },
+  "MG_SAIC|15S4U_1.5_MG3": {
+    "marca": "MG_SAIC",
+    "motor": "Motor SAIC 15S4U 1.5L NA. MG3",
+    "modelos": [
+      "MG3 1.5L"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (SAIC 15S4U)",
+        "estado": "verify"
+      }
+    }
+  },
+  "MG_SAIC|15E4E_1.5T_HS_RX5": {
+    "marca": "MG_SAIC",
+    "motor": "Motor SAIC 15E4E 1.5T turbo GDI. MG HS / RX5",
+    "modelos": [
+      "MG HS 1.5T",
+      "MG RX5 1.5T"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (SAIC 15E4E turbo)",
+        "estado": "verify"
+      }
+    }
+  },
+  "MG_SAIC|15S4C_1.5_ZS": {
+    "marca": "MG_SAIC",
+    "motor": "Motor SAIC 15S4C 1.5L NA NSE. MG ZS / MG5",
+    "modelos": [
+      "MG ZS 1.5L",
+      "MG5 1.5L"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify",
+        "estado": "verify"
+      }
+    }
+  },
+  "Mitsubishi|4N15_2.4D_MIVEC": {
+    "marca": "Mitsubishi",
+    "motor": "Motor 4N15 2.4D MIVEC diesel. L200/Montero Sport/Pajero Sport (2015+)",
+    "modelos": [
+      "L200 2.4D",
+      "Montero Sport 2.4D"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "1230A154 (Mitsubishi genuine)",
+        "estado": "confirmed",
+        "fuente": "https://www.amayama.com/en/part/mitsubishi/1230a154, https://parts.mitsubishicars.com/c/filters/oilfilters"
+      },
+      "filtro_combustible": {
+        "oem": "1770A233 / 1770A273",
+        "estado": "verify",
+        "fuente": "https://www.mitsubishidirectparts.com/fuel-filters, https://parts.mitsubishicars.com/c/filters/fuelfilters"
+      }
+    }
+  },
+  "Mitsubishi|4D56_2.5D": {
+    "marca": "Mitsubishi",
+    "motor": "Motor 4D56 2.5D turbo diesel. L200/L300/Montero Sport (gen anterior). Motor legendario Mitsubishi",
+    "modelos": [
+      "L200 2.5D (gen anterior)",
+      "L300 2.5D",
+      "Montero Sport 2.5D"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (4D56 spin-on, MZ690072 o equiv)",
+        "estado": "verify"
+      },
+      "filtro_combustible": {
+        "oem": "verify (diesel 4D56)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Mitsubishi|4G64_2.4_L300": {
+    "marca": "Mitsubishi",
+    "motor": "Motor 4G64 2.4L gasolina. L300 (van/bus)",
+    "modelos": [
+      "L300 2.4L"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (4G64)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Mitsubishi|4A92_1.6_MIVEC": {
+    "marca": "Mitsubishi",
+    "motor": "Motor 4A92 1.6L MIVEC. ASX/Lancer. Compartido Chery/DFM (ver cruces)",
+    "modelos": [
+      "ASX 1.6L",
+      "Lancer 1.6L"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (MZ690115 4A9x)",
+        "estado": "verify"
+      },
+      "nota_personal": {
+        "oem": "Tu Joyear SX5 usa 4A92! Motor S3MP284. Bomba aceite 1300A095, CKP 1865A126"
+      }
+    }
+  },
+  "Mitsubishi|4B11_2.0_MIVEC": {
+    "marca": "Mitsubishi",
+    "motor": "Motor 4B11 2.0L MIVEC. ASX/Lancer/Outlander",
+    "modelos": [
+      "ASX 2.0L",
+      "Lancer 2.0L"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (4B11)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Mitsubishi|3A92_1.2_Mirage": {
+    "marca": "Mitsubishi",
+    "motor": "Motor 3A92 1.2L 3cil MIVEC. Mirage/Space Star",
+    "modelos": [
+      "Mirage 1.2L"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (3A92 3cil)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Mitsubishi|4J11_4J12_Outlander": {
+    "marca": "Mitsubishi",
+    "motor": "Motor 4J11 2.0L / 4J12 2.4L MIVEC. Outlander",
+    "modelos": [
+      "Outlander 2.0L/2.4L"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (4J11/4J12)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Mitsubishi|4B40_1.5T_Eclipse_Cross": {
+    "marca": "Mitsubishi",
+    "motor": "Motor 4B40 1.5T turbo. Eclipse Cross",
+    "modelos": [
+      "Eclipse Cross 1.5T"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (4B40 turbo)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Maxus_SAIC|VM_2.8D_T60": {
+    "marca": "Maxus_SAIC",
+    "motor": "Motor VM Motori R428 2.8D / GW4D20T 2.0D. Maxus T60",
+    "modelos": [
+      "T60 2.8D/2.0D"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (VM 2.8D o GWM 2.0D segun variante)",
+        "nota": "GW4D20T es de GWM, reutilizar catalogo_G",
+        "estado": "verify"
+      }
+    }
+  },
+  "Maxus_SAIC|VM_2.0D_Deliver9": {
+    "marca": "Maxus_SAIC",
+    "motor": "Motor VM Motori 2.0D. Deliver 9 (derivado Fiat Ducato)",
+    "modelos": [
+      "Deliver 9 2.0D"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify",
+        "estado": "verify"
+      },
+      "nota": {
+        "oem": "Plataforma derivada Fiat Ducato, posible compartir PN con MultiJet 2.3D"
+      }
+    }
+  },
+  "Maxus_SAIC|SAIC_2.0T_G10": {
+    "marca": "Maxus_SAIC",
+    "motor": "Motor SAIC 2.0T gasolina. G10 van",
+    "modelos": [
+      "G10 2.0T"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (SAIC 2.0T)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Nissan|HR16DE_1.6": {
+    "marca": "Nissan",
+    "motor": "Motor HR16DE 1.6L. La familia MAS usada en Nissan compactos. CLAVE: cruce con DFM (tu AX4 es PSA pero cruces existen Versa=Tiida=March=Kicks=Qashqai)",
+    "modelos": [
+      "Versa 1.6L",
+      "Tiida 1.6L",
+      "March 1.6L",
+      "Kicks 1.6L",
+      "V16 1.6L HR16DE",
+      "Qashqai (variante)"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "15208-65F0E (universal Nissan spin-on)",
+        "estado": "confirmed",
+        "fuente": "https://nissan.oempartsonline.com/oem-parts/nissan-oil-filter-1520865f0e, https://www.amazon.com/Genuine-Nissan-15208-65F0E-Oil-Filter/dp/B00HKSM1A2"
+      },
+      "filtro_aire": {
+        "oem": "16546-5RB1A (Kicks/Versa moderno)",
+        "estado": "confirmed",
+        "fuente": "https://www.amazon.com/Kefly-16546-5RB1A-15208-65F0E-27277-6CA0A-2017-2024/dp/B0G4CYJLTH, https://nissan.oempartsonline.com/"
+      },
+      "filtro_habitaculo": {
+        "oem": "27277-6CA0A (Kicks/Versa moderno)",
+        "estado": "confirmed",
+        "fuente": "https://www.amazon.com/Kefly-16546-5RB1A-15208-65F0E-27277-6CA0A-2017-2024/dp/B0G4CYJLTH, https://nissan.oempartsonline.com/"
+      },
+      "bujia": {
+        "oem": "LZKAR6AP-11 (NGK iridio HR16DE)",
+        "estado": "confirmed",
+        "fuente": "https://nissan.oempartsonline.com/, https://www.autozone.com/"
+      }
+    }
+  },
+  "Nissan|MR20DD_2.0": {
+    "marca": "Nissan",
+    "motor": "Motor MR20DD 2.0L. Qashqai/Sentra/X-Trail",
+    "modelos": [
+      "Qashqai 2.0L",
+      "Sentra 2.0L",
+      "X-Trail (variante)"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "15208-65F0E (mismo universal)",
+        "estado": "confirmed"
+      }
+    }
+  },
+  "Nissan|QR25DE_2.5": {
+    "marca": "Nissan",
+    "motor": "Motor QR25DE 2.5L. X-Trail/Frontier/Altima",
+    "modelos": [
+      "X-Trail 2.5L"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "15208-65F0E (mismo universal)",
+        "estado": "confirmed"
+      }
+    }
+  },
+  "Nissan|VQ35DE_3.5_V6": {
+    "marca": "Nissan",
+    "motor": "Motor VQ35DE 3.5L V6. Murano/Pathfinder/350Z",
+    "modelos": [
+      "Murano 3.5L V6",
+      "Pathfinder 3.5L V6"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "15208-65F0E (mismo universal, aplica V6 tambien!)",
+        "estado": "confirmed"
+      }
+    }
+  },
+  "Nissan|YD25DDTi_2.5D": {
+    "marca": "Nissan",
+    "motor": "Motor YD25DDTi 2.5D diesel. NP300/Navara/Urvan/D21",
+    "modelos": [
+      "NP300/Navara 2.5D",
+      "Urvan 2.5D",
+      "D21 2.5D"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (YD25 diesel, distinto al gasolina)",
+        "estado": "verify"
+      },
+      "filtro_combustible": {
+        "oem": "verify (diesel YD25 separador agua)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Nissan|YS23_2.3D_Navara": {
+    "marca": "Nissan",
+    "motor": "Motor YS23 2.3D twin-turbo diesel (Renault M9T). NP300 nueva gen",
+    "modelos": [
+      "NP300/Navara 2.3D"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (Renault M9T diesel)",
+        "nota": "Motor Renault M9T = Nissan YS23. Compartido con Renault Alaskan.",
+        "estado": "verify"
+      }
+    }
+  },
+  "Nissan|KA24DE_2.4_D21_antiguo": {
+    "marca": "Nissan",
+    "motor": "Motor KA24DE 2.4L gasolina. D21/NP300 gen anterior",
+    "modelos": [
+      "D21/NP300 2.4L"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "15208-65F0E (aplica KA24 tambien)",
+        "estado": "confirmed"
+      }
+    }
+  },
+  "Nissan|V16_1.6_antiguo": {
+    "marca": "Nissan",
+    "motor": "Nissan V16 1.6L (1990-2010). Motor GA16DE",
+    "modelos": [
+      "V16 1.6L (1990-2010)"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "15208-65F0E (universal Nissan)",
+        "estado": "confirmed"
+      }
+    }
+  },
+  "Nissan|MR16DDT_1.6T_Juke": {
+    "marca": "Nissan",
+    "motor": "Motor MR16DDT 1.6T. Juke turbo",
+    "modelos": [
+      "Juke 1.6T"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "15208-65F0E",
+        "estado": "confirmed"
+      }
+    }
+  },
+  "Opel_PSA|PureTech_1.2T": {
+    "marca": "Opel_PSA",
+    "motor": "Motor PSA PureTech 1.2T 3cil turbo (EB2). Opel Corsa F (plataforma CMP de PSA/Stellantis). REUTILIZA PN de Peugeot 208/2008 PureTech.",
+    "modelos": [
+      "Corsa 1.2T"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (PSA PureTech 1.2T cartucho)",
+        "nota": "Compartido con Peugeot 208/2008 1.2T PureTech. Ver catalogo_P.",
+        "estado": "verify"
+      },
+      "distribucion": {
+        "nota": "ATENCION: PureTech usa correa banhada en aceite. Fallo conocido en gen1.",
+        "estado": "confirmed"
+      },
+      "bujia": {
+        "oem": "verify (3 cilindros turbo PureTech)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Peugeot_PSA|PureTech_1.2T_EB2": {
+    "marca": "Peugeot_PSA",
+    "motor": "Motor PSA PureTech 1.2T 3cil turbo (EB2). Masivo en Peugeot 208/2008/308",
+    "modelos": [
+      "208 1.2T",
+      "2008 1.2T",
+      "308 1.2T",
+      "Rifter 1.2T"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (PSA PureTech cartucho)",
+        "estado": "verify"
+      },
+      "bujia": {
+        "oem": "verify (3cil turbo)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Peugeot_PSA|EP6_1.6_VTi_THP": {
+    "marca": "Peugeot_PSA",
+    "motor": "Motor PSA/BMW EP6 1.6L VTi (NA) / THP (turbo). 207/308/3008 gen anterior. Compartido con Mini Cooper",
+    "modelos": [
+      "207 1.6L",
+      "308 1.6L EP6",
+      "3008 1.6T"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (EP6 cartucho)",
+        "estado": "verify"
+      },
+      "nota": {
+        "oem": "Motor compartido con BMW N12/N13/Mini. Posible cruce PN con BMW."
+      }
+    }
+  },
+  "Peugeot_PSA|TU_1.4_1.6_antiguo": {
+    "marca": "Peugeot_PSA",
+    "motor": "Motor PSA TU3 1.4L / TU5 1.6L. 206/306/405 (antigua generacion)",
+    "modelos": [
+      "205 1.4/1.6",
+      "206 1.4/1.6",
+      "306 1.6/1.8/2.0",
+      "405 1.6/1.8/2.0"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (PSA TU spin-on)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Porsche_VAG|EA839_3.0T_V6_Cayenne_Macan": {
+    "marca": "Porsche_VAG",
+    "motor": "Motor Porsche/Audi EA839 3.0T V6 turbo. Cayenne/Macan S",
+    "modelos": [
+      "Cayenne 3.0T",
+      "Macan 3.0T"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (EA839 V6 cartucho Porsche)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Ram_Mopar|Cummins_6.7_I6_Diesel": {
+    "marca": "Ram_Mopar",
+    "motor": "Motor Cummins 6.7L I6 turbo diesel. Ram 2500/3500 Heavy Duty",
+    "modelos": [
+      "Ram 2500 6.7L Cummins"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (Mopar/Cummins filtro diesel HD)",
+        "estado": "verify"
+      },
+      "filtro_combustible": {
+        "oem": "verify (Mopar diesel separador agua Cummins)",
+        "estado": "verify"
+      }
+    }
+  },
+  "RangeRover|Ingenium_2.0T": {
+    "marca": "RangeRover",
+    "motor": "Motor JLR Ingenium 2.0T gasolina. Evoque",
+    "modelos": [
+      "Evoque 2.0T"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (JLR Ingenium cartucho)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Renault|K4M_1.6_16V": {
+    "marca": "Renault",
+    "motor": "Motor Renault K4M 1.6L 16V. La familia MAS usada en Renault: Megane/Duster/Symbol/Oroch/Captur/Clio gen anterior",
+    "modelos": [
+      "Duster 1.6L",
+      "Megane 1.6L",
+      "Symbol 1.6L",
+      "Oroch 1.6L",
+      "Captur 1.6L"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "7700274177 (supersede 8200768913)",
+        "estado": "confirmed",
+        "fuente": "https://www.amayama.com/en/part/renault/7700274177, https://www.amazon.com/dp/B0GRR8KJMZ"
+      },
+      "bujia": {
+        "oem": "verify (Renault K4M platino/iridio)",
+        "estado": "verify"
+      },
+      "bomba_agua": {
+        "oem": "verify (incluida en kit distribucion K4M)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Renault|F4R_2.0_16V": {
+    "marca": "Renault",
+    "motor": "Motor Renault F4R 2.0L 16V. Duster/Megane turbo",
+    "modelos": [
+      "Duster 2.0L",
+      "Megane 2.0L"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "7700274177 (mismo filtro universal Renault)",
+        "estado": "confirmed"
+      }
+    }
+  },
+  "Renault|H4M_2.0": {
+    "marca": "Renault",
+    "motor": "Motor Nissan HR20DE renombrado H4M. Oroch/Captur/Duster nueva gen",
+    "modelos": [
+      "Oroch 2.0L",
+      "Captur 2.0L"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (H4M = Nissan MR20, posible 15208-65F0E cruzado)",
+        "nota": "Motor Nissan MR20 renombrado Renault H4M. PN Nissan posible.",
+        "estado": "verify"
+      }
+    }
+  },
+  "Renault|H5Ht_1.3T_TCe": {
+    "marca": "Renault",
+    "motor": "Motor Renault/Daimler H5Ht 1.3T TCe. Arkana/Captur/Megane nueva gen. Compartido con Mercedes M282",
+    "modelos": [
+      "Arkana 1.3T",
+      "Captur 1.3T",
+      "Megane 1.3T"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (H5Ht 1.3T TCe)",
+        "nota": "Compartido con Mercedes Clase A/GLA 1.3T M282",
+        "estado": "verify"
+      }
+    }
+  },
+  "Renault|K9K_1.5_dCi": {
+    "marca": "Renault",
+    "motor": "Motor Renault K9K 1.5 dCi diesel. Kangoo/Clio/Megane/Duster diesel",
+    "modelos": [
+      "Kangoo 1.5D"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "7700274177 (mismo filtro, aplica tambien K9K diesel!)",
+        "estado": "confirmed"
+      },
+      "filtro_combustible": {
+        "oem": "verify (diesel K9K dCi)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Renault|M9T_2.3_dCi": {
+    "marca": "Renault",
+    "motor": "Motor Renault M9T 2.3 dCi diesel biturbo. Alaskan / Koleos (= Nissan YS23)",
+    "modelos": [
+      "Alaskan 2.3D"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (M9T diesel)",
+        "estado": "verify"
+      },
+      "nota": {
+        "oem": "Compartido con Nissan NP300/Navara 2.3D (YS23)"
+      }
+    }
+  },
+  "Renault|M9R_2.0D_Koleos": {
+    "marca": "Renault",
+    "motor": "Motor M9R 2.0D diesel. Koleos gen anterior",
+    "modelos": [
+      "Koleos 2.0D"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (M9R diesel)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Renault|D4F_H4B_Clio": {
+    "marca": "Renault",
+    "motor": "Motor D4F 1.2L / H4B 0.9T. Clio gen4",
+    "modelos": [
+      "Clio 1.2L/0.9T"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (Clio pequeño)",
+        "estado": "verify"
+      }
+    }
+  },
+  "SsangYong|D20DTF_D20DTR_2.0D": {
+    "marca": "SsangYong",
+    "motor": "Motor SsangYong D20DTF/DTR 2.0D diesel. Korando/Actyon/Rexton. Motor propio SsangYong",
+    "modelos": [
+      "Korando 2.0D",
+      "Actyon Sports 2.0D",
+      "Rexton 2.0D"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (SsangYong D20 diesel cartucho)",
+        "estado": "verify"
+      },
+      "filtro_combustible": {
+        "oem": "verify (diesel CRDi SsangYong)",
+        "estado": "verify"
+      }
+    }
+  },
+  "SsangYong|D22DTF_2.2D": {
+    "marca": "SsangYong",
+    "motor": "Motor SsangYong D22DTF 2.2D diesel. Musso Grand/Rexton/Korando nueva gen",
+    "modelos": [
+      "Musso Grand 2.2D",
+      "Rexton 2.2D",
+      "Korando 2.2D (variante)"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (D22DTF diesel)",
+        "estado": "verify"
+      }
+    }
+  },
+  "SsangYong|G15DTF_1.5T": {
+    "marca": "SsangYong",
+    "motor": "Motor SsangYong G15DTF 1.5T gasolina turbo. Korando nueva gen",
+    "modelos": [
+      "Korando 1.5T"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (G15DTF turbo)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Subaru|FB20_FB25_Boxer": {
+    "marca": "Subaru",
+    "motor": "Motor Subaru FB20 2.0L / FB25 2.5L Boxer (horizontally-opposed). LA familia principal de Subaru moderno",
+    "modelos": [
+      "Forester 2.0/2.5L",
+      "Impreza 2.0L",
+      "XV/Crosstrek 2.0L",
+      "Legacy 2.5L",
+      "Outback 2.5L"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "15208AA160 (supersede 15208AA15A/AA20A/AA21A)",
+        "estado": "confirmed",
+        "fuente": "https://www.amazon.com/SUBARU-15208AA160-Oil-Filter/dp/B00U0FJBLY, https://subaru.oemdtc.com/6420/genuine-subaru-alternative-engine-oil-filter-replacement"
+      },
+      "bujia": {
+        "oem": "verify (NGK ILKAR7B11 Boxer FB)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Subaru|FB16_1.6_Boxer": {
+    "marca": "Subaru",
+    "motor": "Motor FB16 1.6L Boxer. Impreza/XV base",
+    "modelos": [
+      "Impreza 1.6L",
+      "XV 1.6L"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "15208AA160 (mismo filtro universal Subaru)",
+        "estado": "confirmed"
+      }
+    }
+  },
+  "Subaru|FA20DIT_FA24DIT_Turbo": {
+    "marca": "Subaru",
+    "motor": "Motor FA20DIT 2.0T / FA24DIT 2.4T Boxer turbo. WRX",
+    "modelos": [
+      "WRX 2.0T/2.4T"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "15208AA160 (mismo universal)",
+        "estado": "confirmed"
+      }
+    }
+  },
+  "Subaru|EZ36_3.6_H6": {
+    "marca": "Subaru",
+    "motor": "Motor EZ36 3.6L Boxer H6. Outback 3.6",
+    "modelos": [
+      "Outback 3.6L"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "15208AA160 (mismo universal! aplica H4 y H6)",
+        "estado": "confirmed"
+      }
+    }
+  },
+  "Subaru|Justy_antiguo": {
+    "marca": "Subaru",
+    "motor": "Subaru Justy 1.0/1.2L (antiguo). Motor 3cil/4cil antiguo",
+    "modelos": [
+      "Justy 1.0/1.2L"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (Justy antiguo)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Suzuki|K_series_1.2_1.5": {
+    "marca": "Suzuki",
+    "motor": "Familia K-series Suzuki: K10B(1.0)/K12C(1.2)/K14B(1.4)/K15B(1.5). MASIVA: cubre Swift/Baleno/Ignis/Ertiga/XL7/Jimny(nuevo)/Vitara/S-Cross/Celerio/Dzire/Fronx",
+    "modelos": [
+      "Swift 1.2L K12C",
+      "Baleno 1.4/1.5L",
+      "Ignis 1.2L K12C",
+      "Ertiga 1.5L K15B",
+      "XL7 1.5L K15B",
+      "Jimny 1.5L K15B",
+      "Celerio 1.0L K10B",
+      "Dzire 1.2L K12N",
+      "Carry 1.5L K15B",
+      "Fronx 1.5L K15C"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (Suzuki 16510-61AV0 o equiv K-series spin-on)",
+        "estado": "verify"
+      },
+      "bujia": {
+        "oem": "verify (NGK iridio K-series)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Suzuki|K14C_1.4T_BoosterJet": {
+    "marca": "Suzuki",
+    "motor": "Motor K14C 1.4T BoosterJet (turbo). Swift Sport / Vitara / S-Cross",
+    "modelos": [
+      "Swift 1.4T K14C",
+      "S-Cross 1.4T",
+      "Vitara turbo"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (K14C turbo, posible diferente al NA)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Suzuki|M13A_M16A_1.3_1.6": {
+    "marca": "Suzuki",
+    "motor": "Motor M13A 1.3L / M16A 1.6L. Jimny antiguo / Grand Vitara / Vitara clasico",
+    "modelos": [
+      "Jimny 1.3L M13A",
+      "Grand Vitara 1.6L M16A / 2.4L J24B",
+      "Vitara clasico"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (M-series spin-on Suzuki)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Suzuki|J24B_2.4_GrandVitara": {
+    "marca": "Suzuki",
+    "motor": "Motor J24B 2.4L. Grand Nomade/Vitara 2.4",
+    "modelos": [
+      "Grand Nomade 2.4L",
+      "Grand Vitara 2.4L"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (J24B spin-on)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Suzuki|antiguos_F8D_G16A": {
+    "marca": "Suzuki",
+    "motor": "Motores antiguos: F8D 0.8L (Alto/Maruti), G16A 1.6L (APV/Carry antiguo)",
+    "modelos": [
+      "Alto 0.8L F8D",
+      "Maruti 0.8L",
+      "Samurai 1.0/1.3L",
+      "APV 1.6L G16A",
+      "Carry 1.0L"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (antiguos spin-on)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Toyota|2ZR_FE_1.8": {
+    "marca": "Toyota",
+    "motor": "Motor 2ZR-FE 1.8L (MPI/VVT-i). Corolla/Auris/Prius (hibrido 2ZR-FXE). Motor Toyota mas vendido del mundo",
+    "modelos": [
+      "Corolla 1.8L",
+      "Auris 1.8L",
+      "Prius 1.8H"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "90915-YZZF2 / 90915-YZZN1 (spin-on 4cil)",
+        "estado": "confirmed",
+        "fuente": "https://www.autozone.com/p/toyota-engine-oil-filter-90915-yzzf2/128800, https://www.amazon.com/Kefly-90915-YZZF2-90915-YZZN1-90915-10009-90915-YZZE1/dp/B0DMVPZ69X"
+      },
+      "bujia": {
+        "oem": "90919-01275 (Toyota genuine)",
+        "estado": "confirmed",
+        "fuente": "https://autoparts.toyota.com/products/product/plug-spark-9091901275, https://toyota.oempartsonline.com/"
+      },
+      "filtro_aire": {
+        "oem": "17801-F0020 (panel Toyota moderno)",
+        "estado": "confirmed",
+        "fuente": "https://toyota.oempartsonline.com/"
+      }
+    }
+  },
+  "Toyota|M20A_FKS_2.0": {
+    "marca": "Toyota",
+    "motor": "Motor M20A-FKS 2.0L Dynamic Force. Corolla nueva gen (E210)",
+    "modelos": [
+      "Corolla 2.0L M20A"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "90915-YZZF2 (mismo spin-on) o 04152-YZZA1 (cartucho segun mercado)",
+        "estado": "confirmed"
+      }
+    }
+  },
+  "Toyota|A25A_FKS_2.5": {
+    "marca": "Toyota",
+    "motor": "Motor A25A-FKS 2.5L Dynamic Force. RAV4/Camry/Highlander. Tambien hibrido A25A-FXS",
+    "modelos": [
+      "RAV4 2.5L",
+      "RAV4 Hybrid",
+      "NOTA: reutilizar en Lexus NX"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "04152-YZZA1 (cartucho Dynamic Force) / 90915-YZZF2 (spin-on segun mercado)",
+        "estado": "confirmed",
+        "fuente": "https://toyota.oempartsonline.com/, https://www.amazon.com/Kefly-90915-YZZF2-90915-YZZN1-90915-10009-90915-YZZE1/dp/B0DMVPZ69X"
+      }
+    }
+  },
+  "Toyota|1NZ_FE_1.5": {
+    "marca": "Toyota",
+    "motor": "Motor 1NZ-FE 1.5L. Yaris/Vitz (gen anterior)",
+    "modelos": [
+      "Yaris 1.5L 1NZ-FE",
+      "Yaris Sport 1.5L 1NZ-FE"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "90915-YZZF2 (mismo universal 4cil)",
+        "estado": "confirmed"
+      }
+    }
+  },
+  "Toyota|2NR_FE_1.5": {
+    "marca": "Toyota",
+    "motor": "Motor 2NR-FE/FKE 1.5L (Dual VVT-i). Yaris nueva gen / Avanza / Rush",
+    "modelos": [
+      "Yaris 1.5L 2NR",
+      "Yaris Sport 1.5L 2NR",
+      "Avanza 1.5L",
+      "Rush 1.5L"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "90915-YZZF2 (universal 4cil)",
+        "estado": "confirmed"
+      }
+    }
+  },
+  "Toyota|1GD_FTV_2.8D": {
+    "marca": "Toyota",
+    "motor": "Motor 1GD-FTV 2.8D diesel. Hilux/Hiace/Fortuner (2015+). Diesel moderno Toyota",
+    "modelos": [
+      "Hilux 2.8D",
+      "Hiace 2.8D"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "90915-YZZD3 (V6/diesel/trucks spin-on)",
+        "estado": "confirmed",
+        "fuente": "https://toyota.oempartsonline.com/oem-parts/toyota-oil-filter-90915yzzd3, https://www.amazon.com/Toyota-Genuine-Parts-90915YZZD1-Filter/dp/B0044AVLF0"
+      },
+      "filtro_combustible": {
+        "oem": "verify (diesel 1GD separador agua)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Toyota|2GD_FTV_2.4D": {
+    "marca": "Toyota",
+    "motor": "Motor 2GD-FTV 2.4D diesel. Hilux base / Fortuner base",
+    "modelos": [
+      "Hilux 2.4D"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "90915-YZZD3 (mismo filtro diesel/trucks)",
+        "estado": "confirmed"
+      }
+    }
+  },
+  "Toyota|2TR_FE_2.7G": {
+    "marca": "Toyota",
+    "motor": "Motor 2TR-FE 2.7L gasolina. Hilux gasolina / Hiace gasolina",
+    "modelos": [
+      "Hilux 2.7G",
+      "Hiace 2.7G"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "90915-YZZD3 (trucks)",
+        "estado": "confirmed"
+      }
+    }
+  },
+  "Toyota|1GR_FE_4.0_V6": {
+    "marca": "Toyota",
+    "motor": "Motor 1GR-FE 4.0L V6. 4Runner / Land Cruiser Prado / FJ Cruiser",
+    "modelos": [
+      "4Runner 4.0L V6",
+      "Land Cruiser 4.0L V6"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "90915-YZZD3 (V6/trucks)",
+        "estado": "confirmed"
+      }
+    }
+  },
+  "Toyota|Hilux_antiguo_2.4_2.8_3.0D": {
+    "marca": "Toyota",
+    "motor": "Hilux antigua generacion (1990-2005). Motores 22R 2.4L / 3L 2.8D / 5L 3.0D",
+    "modelos": [
+      "Hilux antiguo 2.4L/2.8D/3.0D",
+      "Tercel 1.3/1.5L"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "90915-YZZD1 (antiguo spin-on Toyota grande)",
+        "estado": "confirmed",
+        "fuente": "https://toyota.oempartsonline.com/oem-parts/toyota-oil-filter-90915yzzd1, https://www.amazon.com/Toyota-Genuine-Parts-90915YZZD1-Filter/dp/B0044AVLF0"
+      }
+    }
+  },
+  "Toyota|3ZR_FAE_2.0_RAV4_antiguo": {
+    "marca": "Toyota",
+    "motor": "Motor 3ZR-FAE 2.0L. RAV4 gen anterior",
+    "modelos": [
+      "RAV4 2.0L 3ZR"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "90915-YZZF2 (4cil universal)",
+        "estado": "confirmed"
+      }
+    }
+  },
+  "Toyota|8NR_FTS_1.2T_CHR": {
+    "marca": "Toyota",
+    "motor": "Motor 8NR-FTS 1.2T turbo. C-HR",
+    "modelos": [
+      "C-HR 1.2T"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (8NR-FTS turbo, posible distinto)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Volkswagen_VAG|TDI_2.0D_Amarok": {
+    "marca": "Volkswagen_VAG",
+    "motor": "Motor VW 2.0 TDI (CDCA/CNEA). Amarok",
+    "modelos": [
+      "Amarok 2.0D TDI"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (cartucho TDI 2.0 Common Rail)",
+        "estado": "verify"
+      },
+      "filtro_combustible": {
+        "oem": "verify (diesel TDI con separador)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Volkswagen_VAG|EA111_1.6_antiguo": {
+    "marca": "Volkswagen_VAG",
+    "motor": "Motor EA111 1.6L (gen anterior a EA211). Gol/Saveiro/Kombi Brasil",
+    "modelos": [
+      "Gol 1.6L EA111",
+      "Saveiro 1.6L EA111",
+      "Kombi 1.6/1.8/2.0L"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (EA111 spin-on, 030115561AN o equiv)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Volkswagen_VAG|Escarabajo_Bora_antiguos": {
+    "marca": "Volkswagen_VAG",
+    "motor": "VW clasicos: Escarabajo aircooled / Bora 2.0/1.8T/2.5. Motores legacy",
+    "modelos": [
+      "Escarabajo 1.6/1.8/2.0L",
+      "Bora 2.0/1.8T/2.5L"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (aircooled vs waterbox, son distintos)",
+        "estado": "verify"
+      }
+    }
+  },
+  "Volvo|B4204T_2.0T_DriveE": {
+    "marca": "Volvo",
+    "motor": "Motor Volvo B4204T 2.0T Drive-E 4cil turbo (T4/T5/T6 con supercharger). XC40/XC60/XC90/S60/V60",
+    "modelos": [
+      "XC40 2.0T",
+      "XC60 2.0T"
+    ],
+    "componentes": {
+      "filtro_aceite": {
+        "oem": "verify (Volvo Drive-E cartucho 31372212 o equiv)",
+        "estado": "verify"
+      },
+      "bujia": {
+        "oem": "verify (Volvo Drive-E iridio)",
+        "estado": "verify"
+      },
+      "nota": {
+        "oem": "Motor Volvo propio (no compartido con Geely directamente, aunque plataforma CMA es conjunta con Geely/Lynk&Co)"
+      }
+    }
   }
 }
