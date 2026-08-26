@@ -1,0 +1,2061 @@
+{
+ "12V55-60AH": {
+  "ref": "12V 55-60Ah",
+  "nombre": "12V 55-60Ah",
+  "categoria": "Bateria",
+  "compatibles": [
+   {
+    "marca": "",
+    "modelos": "Múltiples vehículos compactos, hatchbacks y sedanes: Chevrolet Spark/Sail, Suzuki Swift/Alto, Kia Morning/Rio, Hyundai Accent/Grand i10, Toyota Yaris, Nissan Versa/March"
+   }
+  ],
+  "compat_texto": "Múltiples vehículos compactos, hatchbacks y sedanes: Chevrolet Spark/Sail, Suzuki Swift/Alto, Kia Morning/Rio, Hyundai Accent/Grand i10, Toyota Yaris, Nissan Versa/March",
+  "otras_refs": []
+ },
+ "12V55-65AH": {
+  "ref": "12V 55-65Ah",
+  "nombre": "12V 55-65Ah",
+  "categoria": "Bateria",
+  "compatibles": [
+   {
+    "marca": "",
+    "modelos": "Múltiples vehículos compactos, hatchbacks y sedanes: Chevrolet Spark/Sail, Suzuki Swift/Alto, Kia Morning/Rio, Hyundai Accent/Grand i10, Toyota Yaris, Nissan Versa/March"
+   }
+  ],
+  "compat_texto": "Múltiples vehículos compactos, hatchbacks y sedanes: Chevrolet Spark/Sail, Suzuki Swift/Alto, Kia Morning/Rio, Hyundai Accent/Grand i10, Toyota Yaris, Nissan Versa/March",
+  "otras_refs": []
+ },
+ "50R17": {
+  "ref": "50 R17",
+  "nombre": "215/50 R17 (Luxury)",
+  "categoria": "Neumatico",
+  "compatibles": [
+   {
+    "marca": "",
+    "modelos": "Llantas 17 pulgadas: Honda Civic/CR-V, Mazda 3/CX-5, VW Golf/Jetta, Toyota Corolla, Hyundai Tucson, Kia Sportage, Audi A3/A4, Peugeot 308/3008"
+   }
+  ],
+  "compat_texto": "Llantas 17 pulgadas: Honda Civic/CR-V, Mazda 3/CX-5, VW Golf/Jetta, Toyota Corolla, Hyundai Tucson, Kia Sportage, Audi A3/A4, Peugeot 308/3008",
+  "otras_refs": []
+ },
+ "60R16": {
+  "ref": "60 R16",
+  "nombre": "215/60 R16",
+  "categoria": "Neumatico",
+  "compatibles": [
+   {
+    "marca": "",
+    "modelos": "Llantas 16 pulgadas: Chevrolet Tracker/Cruze, VW Polo/Virtus, Ford Ecosport/Focus, Nissan Sentra, Toyota Yaris/Corolla, Suzuki Vitara"
+   }
+  ],
+  "compat_texto": "Llantas 16 pulgadas: Chevrolet Tracker/Cruze, VW Polo/Virtus, Ford Ecosport/Focus, Nissan Sentra, Toyota Yaris/Corolla, Suzuki Vitara",
+  "otras_refs": []
+ },
+ "75W-80GL-4": {
+  "ref": "75W-80 GL-4",
+  "nombre": "75W-80 GL-4",
+  "categoria": "Componente",
+  "compatibles": [
+   {
+    "marca": "Transmisiones Manuales",
+    "modelos": "Peugeot (208, 308, Partner), Citroen (C3, C4, Berlingo), Renault (Clio, Megane, Kangoo), Nissan (Qashqai manual, Kicks manual)"
+   }
+  ],
+  "compat_texto": "Transmisiones Manuales: Peugeot (208, 308, Partner), Citroen (C3, C4, Berlingo), Renault (Clio, Megane, Kangoo), Nissan (Qashqai manual, Kicks manual)",
+  "otras_refs": []
+ },
+ "5W-30APISN": {
+  "ref": "5W-30 API SN",
+  "nombre": "Aceite 5W-30 sintetico",
+  "categoria": "Aceite Motor",
+  "compatibles": [
+   {
+    "marca": "",
+    "modelos": "Motorizaciones multiválvulas gasolina/diésel modernas (Verificar API/ACEA): Chevrolet, Ford, Toyota, Honda, Mazda, Hyundai, Kia, Nissan, Subaru, etc."
+   }
+  ],
+  "compat_texto": "Motorizaciones multiválvulas gasolina/diésel modernas (Verificar API/ACEA): Chevrolet, Ford, Toyota, Honda, Mazda, Hyundai, Kia, Nissan, Subaru, etc.",
+  "otras_refs": []
+ },
+ "G055529A2": {
+  "ref": "G055529A2",
+  "nombre": "Aceite Transmision DSG",
+  "categoria": "Aceite Transmision",
+  "compatibles": [
+   {
+    "marca": "Audi",
+    "modelos": "A4, A5, Q5, S3"
+   },
+   {
+    "marca": "VW",
+    "modelos": "Tiguan, Golf R/GTI, Passat, Scirocco"
+   },
+   {
+    "marca": "",
+    "modelos": "SEAT/Skoda"
+   }
+  ],
+  "compat_texto": "Transmisiones DSG/S-Tronic 7 y 6 velocidades húmedas (DL382, DQ381, DQ250, DQ500) -> Audi: A4, A5, Q5, S3 | VW: Tiguan, Golf R/GTI, Passat, Scirocco | SEAT/Skoda",
+  "otras_refs": []
+ },
+ "G052182A2": {
+  "ref": "G052182A2",
+  "nombre": "Aceite Transmision DSG (7-speed)",
+  "categoria": "Aceite Transmision",
+  "compatibles": [
+   {
+    "marca": "Audi",
+    "modelos": "A4, A5, Q5, S3"
+   },
+   {
+    "marca": "VW",
+    "modelos": "Tiguan, Golf R/GTI, Passat, Scirocco"
+   },
+   {
+    "marca": "",
+    "modelos": "SEAT/Skoda"
+   }
+  ],
+  "compat_texto": "Transmisiones DSG/S-Tronic 7 y 6 velocidades húmedas (DL382, DQ381, DQ250, DQ500) -> Audi: A4, A5, Q5, S3 | VW: Tiguan, Golf R/GTI, Passat, Scirocco | SEAT/Skoda",
+  "otras_refs": [
+   "G055529A2 (A4 2017+ DSG7"
+  ]
+ },
+ "G055529A2(A42017+DSG7": {
+  "ref": "G055529A2 (A4 2017+ DSG7",
+  "nombre": "Aceite Transmision DSG (7-speed)",
+  "categoria": "Aceite Transmision",
+  "compatibles": [
+   {
+    "marca": "Audi",
+    "modelos": "A4, A5, Q5, S3"
+   },
+   {
+    "marca": "VW",
+    "modelos": "Tiguan, Golf R/GTI, Passat, Scirocco"
+   },
+   {
+    "marca": "",
+    "modelos": "SEAT/Skoda"
+   }
+  ],
+  "compat_texto": "Transmisiones DSG/S-Tronic 7 y 6 velocidades húmedas (DL382, DQ381, DQ250, DQ500) -> Audi: A4, A5, Q5, S3 | VW: Tiguan, Golf R/GTI, Passat, Scirocco | SEAT/Skoda",
+  "otras_refs": [
+   "G052182A2"
+  ]
+ },
+ "04E903024E": {
+  "ref": "04E903024E",
+  "nombre": "Alternador",
+  "categoria": "Alternador",
+  "compatibles": [
+   {
+    "marca": "Volkswagen",
+    "modelos": "Golf MK7, Jetta MK6/MK7, Polo, Virtus, T-Cross, Nivus, Tiguan 1.4T, Taos, Up!"
+   },
+   {
+    "marca": "Audi",
+    "modelos": "A1, A3 (8V), Q2, Q3 1.4T"
+   },
+   {
+    "marca": "SEAT",
+    "modelos": "Leon, Ibiza, Arona, Ateca"
+   },
+   {
+    "marca": "Skoda",
+    "modelos": "Octavia, Fabia, Karoq, Kodiaq"
+   }
+  ],
+  "compat_texto": "Volkswagen: Golf MK7, Jetta MK6/MK7, Polo, Virtus, T-Cross, Nivus, Tiguan 1.4T, Taos, Up! | Audi: A1, A3 (8V), Q2, Q3 1.4T | SEAT: Leon, Ibiza, Arona, Ateca | Skoda: Octavia, Fabia, Karoq, Kodiaq",
+  "otras_refs": []
+ },
+ "06L903024J": {
+  "ref": "06L903024J",
+  "nombre": "Alternador",
+  "categoria": "Alternador",
+  "compatibles": [
+   {
+    "marca": "Volkswagen",
+    "modelos": "Golf GTI MK7/MK8, Golf R, Passat B8, Tiguan 2.0T, Arteon, Teramont"
+   },
+   {
+    "marca": "Audi",
+    "modelos": "A4 (B8/B9), A5, A6, Q5 (8R/FY), TT, Macan 2.0T, S3"
+   },
+   {
+    "marca": "SEAT",
+    "modelos": "Leon Cupra, Tarraco"
+   },
+   {
+    "marca": "Skoda",
+    "modelos": "Octavia RS, Superb"
+   }
+  ],
+  "compat_texto": "Volkswagen: Golf GTI MK7/MK8, Golf R, Passat B8, Tiguan 2.0T, Arteon, Teramont | Audi: A4 (B8/B9), A5, A6, Q5 (8R/FY), TT, Macan 2.0T, S3 | SEAT: Leon Cupra, Tarraco | Skoda: Octavia RS, Superb",
+  "otras_refs": []
+ },
+ "04E905110B": {
+  "ref": "04E905110B",
+  "nombre": "Bobina de Encendido",
+  "categoria": "Bobina Encendido",
+  "compatibles": [
+   {
+    "marca": "Volkswagen",
+    "modelos": "Golf MK7, Jetta MK6/MK7, Polo, Virtus, T-Cross, Nivus, Tiguan 1.4T, Taos, Up!"
+   },
+   {
+    "marca": "Audi",
+    "modelos": "A1, A3 (8V), Q2, Q3 1.4T"
+   },
+   {
+    "marca": "SEAT",
+    "modelos": "Leon, Ibiza, Arona, Ateca"
+   },
+   {
+    "marca": "Skoda",
+    "modelos": "Octavia, Fabia, Karoq, Kodiaq"
+   }
+  ],
+  "compat_texto": "Volkswagen: Golf MK7, Jetta MK6/MK7, Polo, Virtus, T-Cross, Nivus, Tiguan 1.4T, Taos, Up! | Audi: A1, A3 (8V), Q2, Q3 1.4T | SEAT: Leon, Ibiza, Arona, Ateca | Skoda: Octavia, Fabia, Karoq, Kodiaq",
+  "otras_refs": [
+   "04E905110K"
+  ]
+ },
+ "04E905110K": {
+  "ref": "04E905110K",
+  "nombre": "Bobina de Encendido",
+  "categoria": "Bobina Encendido",
+  "compatibles": [
+   {
+    "marca": "Volkswagen",
+    "modelos": "Golf MK7, Jetta MK6/MK7, Polo, Virtus, T-Cross, Nivus, Tiguan 1.4T, Taos, Up!"
+   },
+   {
+    "marca": "Audi",
+    "modelos": "A1, A3 (8V), Q2, Q3 1.4T"
+   },
+   {
+    "marca": "SEAT",
+    "modelos": "Leon, Ibiza, Arona, Ateca"
+   },
+   {
+    "marca": "Skoda",
+    "modelos": "Octavia, Fabia, Karoq, Kodiaq"
+   }
+  ],
+  "compat_texto": "Volkswagen: Golf MK7, Jetta MK6/MK7, Polo, Virtus, T-Cross, Nivus, Tiguan 1.4T, Taos, Up! | Audi: A1, A3 (8V), Q2, Q3 1.4T | SEAT: Leon, Ibiza, Arona, Ateca | Skoda: Octavia, Fabia, Karoq, Kodiaq",
+  "otras_refs": [
+   "04E905110B"
+  ]
+ },
+ "06L905110": {
+  "ref": "06L905110",
+  "nombre": "Bobina de Encendido",
+  "categoria": "Bobina Encendido",
+  "compatibles": [
+   {
+    "marca": "Volkswagen",
+    "modelos": "Golf GTI MK7/MK8, Golf R, Passat B8, Tiguan 2.0T, Arteon, Teramont"
+   },
+   {
+    "marca": "Audi",
+    "modelos": "A4 (B8/B9), A5, A6, Q5 (8R/FY), TT, Macan 2.0T, S3"
+   },
+   {
+    "marca": "SEAT",
+    "modelos": "Leon Cupra, Tarraco"
+   },
+   {
+    "marca": "Skoda",
+    "modelos": "Octavia RS, Superb"
+   }
+  ],
+  "compat_texto": "Volkswagen: Golf GTI MK7/MK8, Golf R, Passat B8, Tiguan 2.0T, Arteon, Teramont | Audi: A4 (B8/B9), A5, A6, Q5 (8R/FY), TT, Macan 2.0T, S3 | SEAT: Leon Cupra, Tarraco | Skoda: Octavia RS, Superb",
+  "otras_refs": [
+   "06H905110P",
+   "06K905110K"
+  ]
+ },
+ "06H905110P": {
+  "ref": "06H905110P",
+  "nombre": "Bobina de Encendido",
+  "categoria": "Bobina Encendido",
+  "compatibles": [
+   {
+    "marca": "Volkswagen",
+    "modelos": "Golf GTI MK7/MK8, Golf R, Passat B8, Tiguan 2.0T, Arteon, Teramont"
+   },
+   {
+    "marca": "Audi",
+    "modelos": "A4 (B8/B9), A5, A6, Q5 (8R/FY), TT, Macan 2.0T, S3"
+   },
+   {
+    "marca": "SEAT",
+    "modelos": "Leon Cupra, Tarraco"
+   },
+   {
+    "marca": "Skoda",
+    "modelos": "Octavia RS, Superb"
+   }
+  ],
+  "compat_texto": "Volkswagen: Golf GTI MK7/MK8, Golf R, Passat B8, Tiguan 2.0T, Arteon, Teramont | Audi: A4 (B8/B9), A5, A6, Q5 (8R/FY), TT, Macan 2.0T, S3 | SEAT: Leon Cupra, Tarraco | Skoda: Octavia RS, Superb",
+  "otras_refs": [
+   "06K905110K",
+   "06L905110"
+  ]
+ },
+ "06K905110K": {
+  "ref": "06K905110K",
+  "nombre": "Bobina de Encendido",
+  "categoria": "Bobina Encendido",
+  "compatibles": [
+   {
+    "marca": "Volkswagen",
+    "modelos": "Golf GTI MK7/MK8, Golf R, Passat B8, Tiguan 2.0T, Arteon, Teramont"
+   },
+   {
+    "marca": "Audi",
+    "modelos": "A4 (B8/B9), A5, A6, Q5 (8R/FY), TT, Macan 2.0T, S3"
+   },
+   {
+    "marca": "SEAT",
+    "modelos": "Leon Cupra, Tarraco"
+   },
+   {
+    "marca": "Skoda",
+    "modelos": "Octavia RS, Superb"
+   }
+  ],
+  "compat_texto": "Volkswagen: Golf GTI MK7/MK8, Golf R, Passat B8, Tiguan 2.0T, Arteon, Teramont | Audi: A4 (B8/B9), A5, A6, Q5 (8R/FY), TT, Macan 2.0T, S3 | SEAT: Leon Cupra, Tarraco | Skoda: Octavia RS, Superb",
+  "otras_refs": [
+   "06H905110P",
+   "06L905110"
+  ]
+ },
+ "04E121600CS": {
+  "ref": "04E121600CS",
+  "nombre": "Bomba Agua",
+  "categoria": "Bomba Agua",
+  "compatibles": [
+   {
+    "marca": "Volkswagen",
+    "modelos": "Golf MK7, Jetta MK6/MK7, Polo, Virtus, T-Cross, Nivus, Tiguan 1.4T, Taos, Up!"
+   },
+   {
+    "marca": "Audi",
+    "modelos": "A1, A3 (8V), Q2, Q3 1.4T"
+   },
+   {
+    "marca": "SEAT",
+    "modelos": "Leon, Ibiza, Arona, Ateca"
+   },
+   {
+    "marca": "Skoda",
+    "modelos": "Octavia, Fabia, Karoq, Kodiaq"
+   }
+  ],
+  "compat_texto": "Volkswagen: Golf MK7, Jetta MK6/MK7, Polo, Virtus, T-Cross, Nivus, Tiguan 1.4T, Taos, Up! | Audi: A1, A3 (8V), Q2, Q3 1.4T | SEAT: Leon, Ibiza, Arona, Ateca | Skoda: Octavia, Fabia, Karoq, Kodiaq",
+  "otras_refs": [
+   "04E121605E (kit correa+bomba"
+  ]
+ },
+ "04E121605E(KITCORREA+BOMBA": {
+  "ref": "04E121605E (kit correa+bomba",
+  "nombre": "Bomba Agua (EA211 timing belt)",
+  "categoria": "Bomba Agua",
+  "compatibles": [
+   {
+    "marca": "Volkswagen",
+    "modelos": "Golf MK7, Jetta MK6/MK7, Polo, Virtus, T-Cross, Nivus, Tiguan 1.4T, Taos, Up!"
+   },
+   {
+    "marca": "Audi",
+    "modelos": "A1, A3 (8V), Q2, Q3 1.4T"
+   },
+   {
+    "marca": "SEAT",
+    "modelos": "Leon, Ibiza, Arona, Ateca"
+   },
+   {
+    "marca": "Skoda",
+    "modelos": "Octavia, Fabia, Karoq, Kodiaq"
+   }
+  ],
+  "compat_texto": "Volkswagen: Golf MK7, Jetta MK6/MK7, Polo, Virtus, T-Cross, Nivus, Tiguan 1.4T, Taos, Up! | Audi: A1, A3 (8V), Q2, Q3 1.4T | SEAT: Leon, Ibiza, Arona, Ateca | Skoda: Octavia, Fabia, Karoq, Kodiaq",
+  "otras_refs": [
+   "04E121600CS"
+  ]
+ },
+ "06L121111H": {
+  "ref": "06L121111H",
+  "nombre": "Bomba Agua + Termostato",
+  "categoria": "Bomba Agua",
+  "compatibles": [
+   {
+    "marca": "Volkswagen",
+    "modelos": "Golf GTI MK7/MK8, Golf R, Passat B8, Tiguan 2.0T, Arteon, Teramont"
+   },
+   {
+    "marca": "Audi",
+    "modelos": "A4 (B8/B9), A5, A6, Q5 (8R/FY), TT, Macan 2.0T, S3"
+   },
+   {
+    "marca": "SEAT",
+    "modelos": "Leon Cupra, Tarraco"
+   },
+   {
+    "marca": "Skoda",
+    "modelos": "Octavia RS, Superb"
+   }
+  ],
+  "compat_texto": "Volkswagen: Golf GTI MK7/MK8, Golf R, Passat B8, Tiguan 2.0T, Arteon, Teramont | Audi: A4 (B8/B9), A5, A6, Q5 (8R/FY), TT, Macan 2.0T, S3 | SEAT: Leon Cupra, Tarraco | Skoda: Octavia RS, Superb",
+  "otras_refs": [
+   "06L121111J",
+   "06L121111P"
+  ]
+ },
+ "06L121111J": {
+  "ref": "06L121111J",
+  "nombre": "Bomba Agua + Termostato (EA888)",
+  "categoria": "Bomba Agua",
+  "compatibles": [
+   {
+    "marca": "Volkswagen",
+    "modelos": "Golf GTI MK7/MK8, Golf R, Passat B8, Tiguan 2.0T, Arteon, Teramont"
+   },
+   {
+    "marca": "Audi",
+    "modelos": "A4 (B8/B9), A5, A6, Q5 (8R/FY), TT, Macan 2.0T, S3"
+   },
+   {
+    "marca": "SEAT",
+    "modelos": "Leon Cupra, Tarraco"
+   },
+   {
+    "marca": "Skoda",
+    "modelos": "Octavia RS, Superb"
+   }
+  ],
+  "compat_texto": "Volkswagen: Golf GTI MK7/MK8, Golf R, Passat B8, Tiguan 2.0T, Arteon, Teramont | Audi: A4 (B8/B9), A5, A6, Q5 (8R/FY), TT, Macan 2.0T, S3 | SEAT: Leon Cupra, Tarraco | Skoda: Octavia RS, Superb",
+  "otras_refs": [
+   "06L121111H",
+   "06L121111P"
+  ]
+ },
+ "06L121111P": {
+  "ref": "06L121111P",
+  "nombre": "Bomba Agua + Termostato (EA888)",
+  "categoria": "Bomba Agua",
+  "compatibles": [
+   {
+    "marca": "Volkswagen",
+    "modelos": "Golf GTI MK7/MK8, Golf R, Passat B8, Tiguan 2.0T, Arteon, Teramont"
+   },
+   {
+    "marca": "Audi",
+    "modelos": "A4 (B8/B9), A5, A6, Q5 (8R/FY), TT, Macan 2.0T, S3"
+   },
+   {
+    "marca": "SEAT",
+    "modelos": "Leon Cupra, Tarraco"
+   },
+   {
+    "marca": "Skoda",
+    "modelos": "Octavia RS, Superb"
+   }
+  ],
+  "compat_texto": "Volkswagen: Golf GTI MK7/MK8, Golf R, Passat B8, Tiguan 2.0T, Arteon, Teramont | Audi: A4 (B8/B9), A5, A6, Q5 (8R/FY), TT, Macan 2.0T, S3 | SEAT: Leon Cupra, Tarraco | Skoda: Octavia RS, Superb",
+  "otras_refs": [
+   "06L121111H",
+   "06L121111J"
+  ]
+ },
+ "04E905612C": {
+  "ref": "04E905612C",
+  "nombre": "Bujias",
+  "categoria": "Bujias",
+  "compatibles": [
+   {
+    "marca": "Volkswagen",
+    "modelos": "Golf MK7, Jetta MK6/MK7, Polo, Virtus, T-Cross, Nivus, Tiguan 1.4T, Taos, Up!"
+   },
+   {
+    "marca": "Audi",
+    "modelos": "A1, A3 (8V), Q2, Q3 1.4T"
+   },
+   {
+    "marca": "SEAT",
+    "modelos": "Leon, Ibiza, Arona, Ateca"
+   },
+   {
+    "marca": "Skoda",
+    "modelos": "Octavia, Fabia, Karoq, Kodiaq"
+   }
+  ],
+  "compat_texto": "Volkswagen: Golf MK7, Jetta MK6/MK7, Polo, Virtus, T-Cross, Nivus, Tiguan 1.4T, Taos, Up! | Audi: A1, A3 (8V), Q2, Q3 1.4T | SEAT: Leon, Ibiza, Arona, Ateca | Skoda: Octavia, Fabia, Karoq, Kodiaq",
+  "otras_refs": []
+ },
+ "06K905601B": {
+  "ref": "06K905601B",
+  "nombre": "Bujias",
+  "categoria": "Bujias",
+  "compatibles": [
+   {
+    "marca": "Volkswagen",
+    "modelos": "Golf GTI MK7/MK8, Golf R, Passat B8, Tiguan 2.0T, Arteon, Teramont"
+   },
+   {
+    "marca": "Audi",
+    "modelos": "A4 (B8/B9), A5, A6, Q5 (8R/FY), TT, Macan 2.0T, S3"
+   },
+   {
+    "marca": "SEAT",
+    "modelos": "Leon Cupra, Tarraco"
+   },
+   {
+    "marca": "Skoda",
+    "modelos": "Octavia RS, Superb"
+   }
+  ],
+  "compat_texto": "Volkswagen: Golf GTI MK7/MK8, Golf R, Passat B8, Tiguan 2.0T, Arteon, Teramont | Audi: A4 (B8/B9), A5, A6, Q5 (8R/FY), TT, Macan 2.0T, S3 | SEAT: Leon Cupra, Tarraco | Skoda: Octavia RS, Superb",
+  "otras_refs": [
+   "06K905601L",
+   "06K905601M"
+  ]
+ },
+ "LZKAR6AP-11(NGK": {
+  "ref": "LZKAR6AP-11 (NGK",
+  "nombre": "Bujias",
+  "categoria": "Bujias",
+  "compatibles": [
+   {
+    "marca": "Nissan",
+    "modelos": "Tiida, March, Versa, Kicks, Note, Sentra, Qashqai"
+   },
+   {
+    "marca": "Renault",
+    "modelos": "Clio, Megane, Fluence, Duster, Kangoo, Captur (Motores HR16DE, MR20DE)"
+   }
+  ],
+  "compat_texto": "Nissan: Tiida, March, Versa, Kicks, Note, Sentra, Qashqai | Renault: Clio, Megane, Fluence, Duster, Kangoo, Captur (Motores HR16DE, MR20DE)",
+  "otras_refs": []
+ },
+ "06K905601L": {
+  "ref": "06K905601L",
+  "nombre": "Bujias (EA888 Gen3)",
+  "categoria": "Bujias",
+  "compatibles": [
+   {
+    "marca": "Volkswagen",
+    "modelos": "Golf GTI MK7/MK8, Golf R, Passat B8, Tiguan 2.0T, Arteon, Teramont"
+   },
+   {
+    "marca": "Audi",
+    "modelos": "A4 (B8/B9), A5, A6, Q5 (8R/FY), TT, Macan 2.0T, S3"
+   },
+   {
+    "marca": "SEAT",
+    "modelos": "Leon Cupra, Tarraco"
+   },
+   {
+    "marca": "Skoda",
+    "modelos": "Octavia RS, Superb"
+   }
+  ],
+  "compat_texto": "Volkswagen: Golf GTI MK7/MK8, Golf R, Passat B8, Tiguan 2.0T, Arteon, Teramont | Audi: A4 (B8/B9), A5, A6, Q5 (8R/FY), TT, Macan 2.0T, S3 | SEAT: Leon Cupra, Tarraco | Skoda: Octavia RS, Superb",
+  "otras_refs": [
+   "06K905601B",
+   "06K905601M"
+  ]
+ },
+ "06K905601M": {
+  "ref": "06K905601M",
+  "nombre": "Bujias (EA888 Gen3)",
+  "categoria": "Bujias",
+  "compatibles": [
+   {
+    "marca": "Volkswagen",
+    "modelos": "Golf GTI MK7/MK8, Golf R, Passat B8, Tiguan 2.0T, Arteon, Teramont"
+   },
+   {
+    "marca": "Audi",
+    "modelos": "A4 (B8/B9), A5, A6, Q5 (8R/FY), TT, Macan 2.0T, S3"
+   },
+   {
+    "marca": "SEAT",
+    "modelos": "Leon Cupra, Tarraco"
+   },
+   {
+    "marca": "Skoda",
+    "modelos": "Octavia RS, Superb"
+   }
+  ],
+  "compat_texto": "Volkswagen: Golf GTI MK7/MK8, Golf R, Passat B8, Tiguan 2.0T, Arteon, Teramont | Audi: A4 (B8/B9), A5, A6, Q5 (8R/FY), TT, Macan 2.0T, S3 | SEAT: Leon Cupra, Tarraco | Skoda: Octavia RS, Superb",
+  "otras_refs": [
+   "06K905601B",
+   "06K905601L"
+  ]
+ },
+ "18855-10060": {
+  "ref": "18855-10060",
+  "nombre": "Bujias (G4NA 2.0)",
+  "categoria": "Bujias",
+  "compatibles": [
+   {
+    "marca": "Hyundai",
+    "modelos": "Tucson, Elantra, Accent, Santa Fe, Sonata, Creta, i30, Kona, Veloster, H-1"
+   },
+   {
+    "marca": "Kia",
+    "modelos": "Sportage, Cerato/Forte, Rio, Sorento, Optima, Seltos, Morning/Picanto, Soul, Carnival"
+   }
+  ],
+  "compat_texto": "Hyundai: Tucson, Elantra, Accent, Santa Fe, Sonata, Creta, i30, Kona, Veloster, H-1 | Kia: Sportage, Cerato/Forte, Rio, Sorento, Optima, Seltos, Morning/Picanto, Soul, Carnival",
+  "otras_refs": []
+ },
+ "LZKAR6AP-11OEM": {
+  "ref": "LZKAR6AP-11 OEM",
+  "nombre": "Bujias x4",
+  "categoria": "Bujias",
+  "compatibles": [
+   {
+    "marca": "Nissan",
+    "modelos": "Tiida, March, Versa, Kicks, Note, Sentra, Qashqai"
+   },
+   {
+    "marca": "Renault",
+    "modelos": "Clio, Megane, Fluence, Duster, Kangoo, Captur (Motores HR16DE, MR20DE)"
+   },
+   {
+    "marca": "Volkswagen",
+    "modelos": "Golf, Vento, Bora, Passat"
+   },
+   {
+    "marca": "Audi",
+    "modelos": "A3, A4"
+   },
+   {
+    "marca": "BMW",
+    "modelos": "Serie 3 (E46, E90), Serie 1, X3, Z4"
+   },
+   {
+    "marca": "",
+    "modelos": "Mercedes-Benz: C-Class, E-Class"
+   }
+  ],
+  "compat_texto": "Nissan: Tiida, March, Versa, Kicks, Note, Sentra, Qashqai | Renault: Clio, Megane, Fluence, Duster, Kangoo, Captur (Motores HR16DE, MR20DE) | Volkswagen: Golf, Vento, Bora, Passat | Audi: A3, A4 | BMW: Serie 3 (E46, E90), Serie 1, X3, Z4 | Mercedes-Benz: C-Class, E-Class",
+  "otras_refs": [
+   "DILKAR6A-11 Iridium",
+   "FR7KPP33U+",
+   "FR7KPP33U+ Bosch",
+   "IXEH20ETT Denso",
+   "PLZKAR6A-11",
+   "PLZKAR6A-11 Platinum"
+  ]
+ },
+ "DILKAR6A-11IRIDIUM": {
+  "ref": "DILKAR6A-11 Iridium",
+  "nombre": "Bujias x4",
+  "categoria": "Bujias",
+  "compatibles": [
+   {
+    "marca": "Nissan",
+    "modelos": "Tiida, March, Versa, Kicks, Note, Sentra, Qashqai"
+   },
+   {
+    "marca": "Renault",
+    "modelos": "Clio, Megane, Fluence, Duster, Kangoo, Captur (Motores HR16DE, MR20DE)"
+   },
+   {
+    "marca": "Volkswagen",
+    "modelos": "Golf, Vento, Bora, Passat"
+   },
+   {
+    "marca": "Audi",
+    "modelos": "A3, A4"
+   },
+   {
+    "marca": "BMW",
+    "modelos": "Serie 3 (E46, E90), Serie 1, X3, Z4"
+   },
+   {
+    "marca": "",
+    "modelos": "Mercedes-Benz: C-Class, E-Class"
+   }
+  ],
+  "compat_texto": "Nissan: Tiida, March, Versa, Kicks, Note, Sentra, Qashqai | Renault: Clio, Megane, Fluence, Duster, Kangoo, Captur (Motores HR16DE, MR20DE) | Volkswagen: Golf, Vento, Bora, Passat | Audi: A3, A4 | BMW: Serie 3 (E46, E90), Serie 1, X3, Z4 | Mercedes-Benz: C-Class, E-Class",
+  "otras_refs": [
+   "FR7KPP33U+",
+   "FR7KPP33U+ Bosch",
+   "IXEH20ETT Denso",
+   "LZKAR6AP-11 OEM",
+   "PLZKAR6A-11",
+   "PLZKAR6A-11 Platinum"
+  ]
+ },
+ "PLZKAR6A-11PLATINUM": {
+  "ref": "PLZKAR6A-11 Platinum",
+  "nombre": "Bujias x4",
+  "categoria": "Bujias",
+  "compatibles": [
+   {
+    "marca": "Nissan",
+    "modelos": "Tiida, March, Versa, Kicks, Note, Sentra, Qashqai"
+   },
+   {
+    "marca": "Renault",
+    "modelos": "Clio, Megane, Fluence, Duster, Kangoo, Captur (Motores HR16DE, MR20DE)"
+   },
+   {
+    "marca": "Volkswagen",
+    "modelos": "Golf, Vento, Bora, Passat"
+   },
+   {
+    "marca": "Audi",
+    "modelos": "A3, A4"
+   },
+   {
+    "marca": "BMW",
+    "modelos": "Serie 3 (E46, E90), Serie 1, X3, Z4"
+   },
+   {
+    "marca": "",
+    "modelos": "Mercedes-Benz: C-Class, E-Class"
+   }
+  ],
+  "compat_texto": "Nissan: Tiida, March, Versa, Kicks, Note, Sentra, Qashqai | Renault: Clio, Megane, Fluence, Duster, Kangoo, Captur (Motores HR16DE, MR20DE) | Volkswagen: Golf, Vento, Bora, Passat | Audi: A3, A4 | BMW: Serie 3 (E46, E90), Serie 1, X3, Z4 | Mercedes-Benz: C-Class, E-Class",
+  "otras_refs": [
+   "DILKAR6A-11 Iridium",
+   "FR7KPP33U+ Bosch",
+   "IXEH20ETT Denso",
+   "LZKAR6AP-11 OEM"
+  ]
+ },
+ "IXEH20ETTDENSO": {
+  "ref": "IXEH20ETT Denso",
+  "nombre": "Bujias x4",
+  "categoria": "Bujias",
+  "compatibles": [
+   {
+    "marca": "Nissan",
+    "modelos": "Tiida, March, Versa, Kicks, Note, Sentra, Qashqai"
+   },
+   {
+    "marca": "Renault",
+    "modelos": "Clio, Megane, Fluence, Duster, Kangoo, Captur (Motores HR16DE, MR20DE)"
+   },
+   {
+    "marca": "Volkswagen",
+    "modelos": "Golf, Vento, Bora, Passat"
+   },
+   {
+    "marca": "Audi",
+    "modelos": "A3, A4"
+   },
+   {
+    "marca": "BMW",
+    "modelos": "Serie 3 (E46, E90), Serie 1, X3, Z4"
+   },
+   {
+    "marca": "",
+    "modelos": "Mercedes-Benz: C-Class, E-Class"
+   }
+  ],
+  "compat_texto": "Nissan: Tiida, March, Versa, Kicks, Note, Sentra, Qashqai | Renault: Clio, Megane, Fluence, Duster, Kangoo, Captur (Motores HR16DE, MR20DE) | Volkswagen: Golf, Vento, Bora, Passat | Audi: A3, A4 | BMW: Serie 3 (E46, E90), Serie 1, X3, Z4 | Mercedes-Benz: C-Class, E-Class",
+  "otras_refs": [
+   "DILKAR6A-11 Iridium",
+   "FR7KPP33U+ Bosch",
+   "LZKAR6AP-11 OEM",
+   "PLZKAR6A-11 Platinum"
+  ]
+ },
+ "FR7KPP33U+BOSCH": {
+  "ref": "FR7KPP33U+ Bosch",
+  "nombre": "Bujias x4",
+  "categoria": "Bujias",
+  "compatibles": [
+   {
+    "marca": "Nissan",
+    "modelos": "Tiida, March, Versa, Kicks, Note, Sentra, Qashqai"
+   },
+   {
+    "marca": "Renault",
+    "modelos": "Clio, Megane, Fluence, Duster, Kangoo, Captur (Motores HR16DE, MR20DE)"
+   },
+   {
+    "marca": "Volkswagen",
+    "modelos": "Golf, Vento, Bora, Passat"
+   },
+   {
+    "marca": "Audi",
+    "modelos": "A3, A4"
+   },
+   {
+    "marca": "BMW",
+    "modelos": "Serie 3 (E46, E90), Serie 1, X3, Z4"
+   },
+   {
+    "marca": "",
+    "modelos": "Mercedes-Benz: C-Class, E-Class"
+   }
+  ],
+  "compat_texto": "Nissan: Tiida, March, Versa, Kicks, Note, Sentra, Qashqai | Renault: Clio, Megane, Fluence, Duster, Kangoo, Captur (Motores HR16DE, MR20DE) | Volkswagen: Golf, Vento, Bora, Passat | Audi: A3, A4 | BMW: Serie 3 (E46, E90), Serie 1, X3, Z4 | Mercedes-Benz: C-Class, E-Class",
+  "otras_refs": [
+   "DILKAR6A-11 Iridium",
+   "IXEH20ETT Denso",
+   "LZKAR6AP-11 OEM",
+   "PLZKAR6A-11 Platinum"
+  ]
+ },
+ "PLZKAR6A-11": {
+  "ref": "PLZKAR6A-11",
+  "nombre": "Bujias x4",
+  "categoria": "Bujias",
+  "compatibles": [
+   {
+    "marca": "Nissan",
+    "modelos": "Tiida, March, Versa, Kicks, Note, Sentra, Qashqai"
+   },
+   {
+    "marca": "Renault",
+    "modelos": "Clio, Megane, Fluence, Duster, Kangoo, Captur (Motores HR16DE, MR20DE)"
+   },
+   {
+    "marca": "Volkswagen",
+    "modelos": "Golf, Vento, Bora, Passat"
+   },
+   {
+    "marca": "Audi",
+    "modelos": "A3, A4"
+   },
+   {
+    "marca": "BMW",
+    "modelos": "Serie 3 (E46, E90), Serie 1, X3, Z4"
+   },
+   {
+    "marca": "",
+    "modelos": "Mercedes-Benz: C-Class, E-Class"
+   }
+  ],
+  "compat_texto": "Nissan: Tiida, March, Versa, Kicks, Note, Sentra, Qashqai | Renault: Clio, Megane, Fluence, Duster, Kangoo, Captur (Motores HR16DE, MR20DE) | Volkswagen: Golf, Vento, Bora, Passat | Audi: A3, A4 | BMW: Serie 3 (E46, E90), Serie 1, X3, Z4 | Mercedes-Benz: C-Class, E-Class",
+  "otras_refs": [
+   "DILKAR6A-11 Iridium",
+   "FR7KPP33U+",
+   "LZKAR6AP-11 OEM"
+  ]
+ },
+ "FR7KPP33U+": {
+  "ref": "FR7KPP33U+",
+  "nombre": "Bujias x4",
+  "categoria": "Bujias",
+  "compatibles": [
+   {
+    "marca": "Nissan",
+    "modelos": "Tiida, March, Versa, Kicks, Note, Sentra, Qashqai"
+   },
+   {
+    "marca": "Renault",
+    "modelos": "Clio, Megane, Fluence, Duster, Kangoo, Captur (Motores HR16DE, MR20DE)"
+   },
+   {
+    "marca": "Volkswagen",
+    "modelos": "Golf, Vento, Bora, Passat"
+   },
+   {
+    "marca": "Audi",
+    "modelos": "A3, A4"
+   },
+   {
+    "marca": "BMW",
+    "modelos": "Serie 3 (E46, E90), Serie 1, X3, Z4"
+   },
+   {
+    "marca": "",
+    "modelos": "Mercedes-Benz: C-Class, E-Class"
+   }
+  ],
+  "compat_texto": "Nissan: Tiida, March, Versa, Kicks, Note, Sentra, Qashqai | Renault: Clio, Megane, Fluence, Duster, Kangoo, Captur (Motores HR16DE, MR20DE) | Volkswagen: Golf, Vento, Bora, Passat | Audi: A3, A4 | BMW: Serie 3 (E46, E90), Serie 1, X3, Z4 | Mercedes-Benz: C-Class, E-Class",
+  "otras_refs": [
+   "DILKAR6A-11 Iridium",
+   "LZKAR6AP-11 OEM",
+   "PLZKAR6A-11"
+  ]
+ },
+ "8V0598625B": {
+  "ref": "8V0598625B",
+  "nombre": "Cojinete Rueda Delantero",
+  "categoria": "Componente",
+  "compatibles": [
+   {
+    "marca": "Audi",
+    "modelos": "A4 (B9 2016+), S4, RS4, A5 (F5), S5, RS5, Q5 (FY 2017+), SQ5"
+   },
+   {
+    "marca": "Porsche",
+    "modelos": "Macan (2019+)"
+   }
+  ],
+  "compat_texto": "Audi: A4 (B9 2016+), S4, RS4, A5 (F5), S5, RS5, Q5 (FY 2017+), SQ5 | Porsche: Macan (2019+)",
+  "otras_refs": [
+   "8W0407625G"
+  ]
+ },
+ "8W0407625G": {
+  "ref": "8W0407625G",
+  "nombre": "Cojinete Rueda Delantero",
+  "categoria": "Componente",
+  "compatibles": [
+   {
+    "marca": "Audi",
+    "modelos": "A4 (B9 2016+), S4, RS4, A5 (F5), S5, RS5, Q5 (FY 2017+), SQ5"
+   },
+   {
+    "marca": "Porsche",
+    "modelos": "Macan (2019+)"
+   }
+  ],
+  "compat_texto": "Audi: A4 (B9 2016+), S4, RS4, A5 (F5), S5, RS5, Q5 (FY 2017+), SQ5 | Porsche: Macan (2019+)",
+  "otras_refs": [
+   "8V0598625B"
+  ]
+ },
+ "8W0615301K": {
+  "ref": "8W0615301K",
+  "nombre": "Disco Freno Delantero (338x30mm)",
+  "categoria": "Frenos",
+  "compatibles": [
+   {
+    "marca": "Audi",
+    "modelos": "A4 (B9 2016+), S4, RS4, A5 (F5), S5, RS5, Q5 (FY 2017+), SQ5"
+   },
+   {
+    "marca": "Porsche",
+    "modelos": "Macan (2019+)"
+   }
+  ],
+  "compat_texto": "Audi: A4 (B9 2016+), S4, RS4, A5 (F5), S5, RS5, Q5 (FY 2017+), SQ5 | Porsche: Macan (2019+)",
+  "otras_refs": []
+ },
+ "8W0615601K": {
+  "ref": "8W0615601K",
+  "nombre": "Disco Freno Trasero (302mm)",
+  "categoria": "Frenos",
+  "compatibles": [
+   {
+    "marca": "Audi",
+    "modelos": "A4 (B9 2016+), S4, RS4, A5 (F5), S5, RS5, Q5 (FY 2017+), SQ5"
+   },
+   {
+    "marca": "Porsche",
+    "modelos": "Macan (2019+)"
+   }
+  ],
+  "compat_texto": "Audi: A4 (B9 2016+), S4, RS4, A5 (F5), S5, RS5, Q5 (FY 2017+), SQ5 | Porsche: Macan (2019+)",
+  "otras_refs": []
+ },
+ "CAMBIO120": {
+  "ref": "Cambio 120",
+  "nombre": "Distribucion",
+  "categoria": "Componente",
+  "compatibles": [
+   {
+    "marca": "Volkswagen",
+    "modelos": "Golf MK7, Jetta MK6/MK7, Polo, Virtus, T-Cross, Nivus, Tiguan 1.4T, Taos, Up!"
+   },
+   {
+    "marca": "Audi",
+    "modelos": "A1, A3 (8V), Q2, Q3 1.4T"
+   },
+   {
+    "marca": "SEAT",
+    "modelos": "Leon, Ibiza, Arona, Ateca"
+   },
+   {
+    "marca": "Skoda",
+    "modelos": "Octavia, Fabia, Karoq, Kodiaq"
+   }
+  ],
+  "compat_texto": "Volkswagen: Golf MK7, Jetta MK6/MK7, Polo, Virtus, T-Cross, Nivus, Tiguan 1.4T, Taos, Up! | Audi: A1, A3 (8V), Q2, Q3 1.4T | SEAT: Leon, Ibiza, Arona, Ateca | Skoda: Octavia, Fabia, Karoq, Kodiaq",
+  "otras_refs": [
+   "000 km. Kit OEM: 04E121605E"
+  ]
+ },
+ "000KM.KITOEM:04E121605E": {
+  "ref": "000 km. Kit OEM: 04E121605E",
+  "nombre": "Distribucion",
+  "categoria": "Componente",
+  "compatibles": [
+   {
+    "marca": "Volkswagen",
+    "modelos": "Golf MK7, Jetta MK6/MK7, Polo, Virtus, T-Cross, Nivus, Tiguan 1.4T, Taos, Up!"
+   },
+   {
+    "marca": "Audi",
+    "modelos": "A1, A3 (8V), Q2, Q3 1.4T"
+   },
+   {
+    "marca": "SEAT",
+    "modelos": "Leon, Ibiza, Arona, Ateca"
+   },
+   {
+    "marca": "Skoda",
+    "modelos": "Octavia, Fabia, Karoq, Kodiaq"
+   }
+  ],
+  "compat_texto": "Volkswagen: Golf MK7, Jetta MK6/MK7, Polo, Virtus, T-Cross, Nivus, Tiguan 1.4T, Taos, Up! | Audi: A1, A3 (8V), Q2, Q3 1.4T | SEAT: Leon, Ibiza, Arona, Ateca | Skoda: Octavia, Fabia, Karoq, Kodiaq",
+  "otras_refs": [
+   "Cambio 120"
+  ]
+ },
+ "HR16DEUSACADENA.NOCAMBIOPROGRAMADO.": {
+  "ref": "HR16DE usa cadena. No cambio programado.",
+  "nombre": "Distribucion",
+  "categoria": "Componente",
+  "compatibles": [
+   {
+    "marca": "",
+    "modelos": "Llantas 16 pulgadas: Chevrolet Tracker/Cruze, VW Polo/Virtus, Ford Ecosport/Focus, Nissan Sentra, Toyota Yaris/Corolla, Suzuki Vitara"
+   }
+  ],
+  "compat_texto": "Llantas 16 pulgadas: Chevrolet Tracker/Cruze, VW Polo/Virtus, Ford Ecosport/Focus, Nissan Sentra, Toyota Yaris/Corolla, Suzuki Vitara",
+  "otras_refs": []
+ },
+ "28113-L1000": {
+  "ref": "28113-L1000",
+  "nombre": "Filtro Aire (Sportage 2023+ 2.5L)",
+  "categoria": "Filtro Aire",
+  "compatibles": [
+   {
+    "marca": "",
+    "modelos": "Hyundai Tucson (JM, LM, TL, NX4), Kia Sportage (JE, SL, QL, NQ5)"
+   }
+  ],
+  "compat_texto": "Hyundai Tucson (JM, LM, TL, NX4), Kia Sportage (JE, SL, QL, NQ5)",
+  "otras_refs": []
+ },
+ "97133-D1000": {
+  "ref": "97133-D1000",
+  "nombre": "Filtro Cabina",
+  "categoria": "Filtro Cabina",
+  "compatibles": [
+   {
+    "marca": "Hyundai",
+    "modelos": "Tucson, Elantra, Accent, Santa Fe, Sonata, Creta, i30, Kona, Veloster, H-1"
+   },
+   {
+    "marca": "Kia",
+    "modelos": "Sportage, Cerato/Forte, Rio, Sorento, Optima, Seltos, Morning/Picanto, Soul, Carnival"
+   }
+  ],
+  "compat_texto": "Hyundai: Tucson, Elantra, Accent, Santa Fe, Sonata, Creta, i30, Kona, Veloster, H-1 | Kia: Sportage, Cerato/Forte, Rio, Sorento, Optima, Seltos, Morning/Picanto, Soul, Carnival",
+  "otras_refs": []
+ },
+ "97133-L1000": {
+  "ref": "97133-L1000",
+  "nombre": "Filtro Cabina (Sportage 2023+ / Sorento 2021+)",
+  "categoria": "Filtro Cabina",
+  "compatibles": [
+   {
+    "marca": "",
+    "modelos": "Hyundai Tucson (JM, LM, TL, NX4), Kia Sportage (JE, SL, QL, NQ5)"
+   },
+   {
+    "marca": "Hyundai",
+    "modelos": "Tucson, Elantra, Accent, Santa Fe, Sonata, Creta, i30, Kona, Veloster, H-1"
+   },
+   {
+    "marca": "Kia",
+    "modelos": "Sportage, Cerato/Forte, Rio, Sorento, Optima, Seltos, Morning/Picanto, Soul, Carnival"
+   }
+  ],
+  "compat_texto": "Hyundai Tucson (JM, LM, TL, NX4), Kia Sportage (JE, SL, QL, NQ5) | Hyundai: Tucson, Elantra, Accent, Santa Fe, Sonata, Creta, i30, Kona, Veloster, H-1 | Kia: Sportage, Cerato/Forte, Rio, Sorento, Optima, Seltos, Morning/Picanto, Soul, Carnival",
+  "otras_refs": []
+ },
+ "04E115561H": {
+  "ref": "04E115561H",
+  "nombre": "Filtro de Aceite",
+  "categoria": "Filtro Aceite",
+  "compatibles": [
+   {
+    "marca": "Volkswagen",
+    "modelos": "Golf MK7, Jetta MK6/MK7, Polo, Virtus, T-Cross, Nivus, Tiguan 1.4T, Taos, Up!"
+   },
+   {
+    "marca": "Audi",
+    "modelos": "A1, A3 (8V), Q2, Q3 1.4T"
+   },
+   {
+    "marca": "SEAT",
+    "modelos": "Leon, Ibiza, Arona, Ateca"
+   },
+   {
+    "marca": "Skoda",
+    "modelos": "Octavia, Fabia, Karoq, Kodiaq"
+   }
+  ],
+  "compat_texto": "Volkswagen: Golf MK7, Jetta MK6/MK7, Polo, Virtus, T-Cross, Nivus, Tiguan 1.4T, Taos, Up! | Audi: A1, A3 (8V), Q2, Q3 1.4T | SEAT: Leon, Ibiza, Arona, Ateca | Skoda: Octavia, Fabia, Karoq, Kodiaq",
+  "otras_refs": [
+   "04E115561AC",
+   "04E115561T"
+  ]
+ },
+ "04E115561T": {
+  "ref": "04E115561T",
+  "nombre": "Filtro de Aceite",
+  "categoria": "Filtro Aceite",
+  "compatibles": [
+   {
+    "marca": "Volkswagen",
+    "modelos": "Golf MK7, Jetta MK6/MK7, Polo, Virtus, T-Cross, Nivus, Tiguan 1.4T, Taos, Up!"
+   },
+   {
+    "marca": "Audi",
+    "modelos": "A1, A3 (8V), Q2, Q3 1.4T"
+   },
+   {
+    "marca": "SEAT",
+    "modelos": "Leon, Ibiza, Arona, Ateca"
+   },
+   {
+    "marca": "Skoda",
+    "modelos": "Octavia, Fabia, Karoq, Kodiaq"
+   }
+  ],
+  "compat_texto": "Volkswagen: Golf MK7, Jetta MK6/MK7, Polo, Virtus, T-Cross, Nivus, Tiguan 1.4T, Taos, Up! | Audi: A1, A3 (8V), Q2, Q3 1.4T | SEAT: Leon, Ibiza, Arona, Ateca | Skoda: Octavia, Fabia, Karoq, Kodiaq",
+  "otras_refs": [
+   "04E115561AC",
+   "04E115561H"
+  ]
+ },
+ "04E115561AC": {
+  "ref": "04E115561AC",
+  "nombre": "Filtro de Aceite",
+  "categoria": "Filtro Aceite",
+  "compatibles": [
+   {
+    "marca": "Volkswagen",
+    "modelos": "Golf MK7, Jetta MK6/MK7, Polo, Virtus, T-Cross, Nivus, Tiguan 1.4T, Taos, Up!"
+   },
+   {
+    "marca": "Audi",
+    "modelos": "A1, A3 (8V), Q2, Q3 1.4T"
+   },
+   {
+    "marca": "SEAT",
+    "modelos": "Leon, Ibiza, Arona, Ateca"
+   },
+   {
+    "marca": "Skoda",
+    "modelos": "Octavia, Fabia, Karoq, Kodiaq"
+   }
+  ],
+  "compat_texto": "Volkswagen: Golf MK7, Jetta MK6/MK7, Polo, Virtus, T-Cross, Nivus, Tiguan 1.4T, Taos, Up! | Audi: A1, A3 (8V), Q2, Q3 1.4T | SEAT: Leon, Ibiza, Arona, Ateca | Skoda: Octavia, Fabia, Karoq, Kodiaq",
+  "otras_refs": [
+   "04E115561H",
+   "04E115561T"
+  ]
+ },
+ "06L115562B": {
+  "ref": "06L115562B",
+  "nombre": "Filtro de Aceite",
+  "categoria": "Filtro Aceite",
+  "compatibles": [
+   {
+    "marca": "Volkswagen",
+    "modelos": "Golf GTI MK7/MK8, Golf R, Passat B8, Tiguan 2.0T, Arteon, Teramont"
+   },
+   {
+    "marca": "Audi",
+    "modelos": "A4 (B8/B9), A5, A6, Q5 (8R/FY), TT, Macan 2.0T, S3"
+   },
+   {
+    "marca": "SEAT",
+    "modelos": "Leon Cupra, Tarraco"
+   },
+   {
+    "marca": "Skoda",
+    "modelos": "Octavia RS, Superb"
+   }
+  ],
+  "compat_texto": "Volkswagen: Golf GTI MK7/MK8, Golf R, Passat B8, Tiguan 2.0T, Arteon, Teramont | Audi: A4 (B8/B9), A5, A6, Q5 (8R/FY), TT, Macan 2.0T, S3 | SEAT: Leon Cupra, Tarraco | Skoda: Octavia RS, Superb",
+  "otras_refs": [
+   "06L115562"
+  ]
+ },
+ "06L115562": {
+  "ref": "06L115562",
+  "nombre": "Filtro de Aceite",
+  "categoria": "Filtro Aceite",
+  "compatibles": [
+   {
+    "marca": "Volkswagen",
+    "modelos": "Golf GTI MK7/MK8, Golf R, Passat B8, Tiguan 2.0T, Arteon, Teramont"
+   },
+   {
+    "marca": "Audi",
+    "modelos": "A4 (B8/B9), A5, A6, Q5 (8R/FY), TT, Macan 2.0T, S3"
+   },
+   {
+    "marca": "SEAT",
+    "modelos": "Leon Cupra, Tarraco"
+   },
+   {
+    "marca": "Skoda",
+    "modelos": "Octavia RS, Superb"
+   }
+  ],
+  "compat_texto": "Volkswagen: Golf GTI MK7/MK8, Golf R, Passat B8, Tiguan 2.0T, Arteon, Teramont | Audi: A4 (B8/B9), A5, A6, Q5 (8R/FY), TT, Macan 2.0T, S3 | SEAT: Leon Cupra, Tarraco | Skoda: Octavia RS, Superb",
+  "otras_refs": [
+   "06L115562B"
+  ]
+ },
+ "0K956-14-302": {
+  "ref": "0K956-14-302",
+  "nombre": "Filtro de Aceite",
+  "categoria": "Filtro Aceite",
+  "compatibles": [
+   {
+    "marca": "Hyundai",
+    "modelos": "Tucson, Elantra, Accent, Santa Fe, Sonata, Creta, i30, Kona, Veloster, H-1"
+   },
+   {
+    "marca": "Kia",
+    "modelos": "Sportage, Cerato/Forte, Rio, Sorento, Optima, Seltos, Morning/Picanto, Soul, Carnival"
+   }
+  ],
+  "compat_texto": "Hyundai: Tucson, Elantra, Accent, Santa Fe, Sonata, Creta, i30, Kona, Veloster, H-1 | Kia: Sportage, Cerato/Forte, Rio, Sorento, Optima, Seltos, Morning/Picanto, Soul, Carnival",
+  "otras_refs": [
+   "26300-35504 (compatible"
+  ]
+ },
+ "26300-35504(COMPATIBLE": {
+  "ref": "26300-35504 (compatible",
+  "nombre": "Filtro de Aceite",
+  "categoria": "Filtro Aceite",
+  "compatibles": [
+   {
+    "marca": "Hyundai",
+    "modelos": "Tucson, Elantra, Accent, Santa Fe, Sonata, Creta, i30, Kona, Veloster, H-1"
+   },
+   {
+    "marca": "Kia",
+    "modelos": "Sportage, Cerato/Forte, Rio, Sorento, Optima, Seltos, Morning/Picanto, Soul, Carnival"
+   }
+  ],
+  "compat_texto": "Hyundai: Tucson, Elantra, Accent, Santa Fe, Sonata, Creta, i30, Kona, Veloster, H-1 | Kia: Sportage, Cerato/Forte, Rio, Sorento, Optima, Seltos, Morning/Picanto, Soul, Carnival",
+  "otras_refs": [
+   "0K956-14-302"
+  ]
+ },
+ "26300-35505": {
+  "ref": "26300-35505",
+  "nombre": "Filtro de Aceite",
+  "categoria": "Filtro Aceite",
+  "compatibles": [
+   {
+    "marca": "Hyundai",
+    "modelos": "Tucson, Elantra, Accent, Santa Fe, Sonata, Creta, i30, Kona, Veloster, H-1"
+   },
+   {
+    "marca": "Kia",
+    "modelos": "Sportage, Cerato/Forte, Rio, Sorento, Optima, Seltos, Morning/Picanto, Soul, Carnival"
+   }
+  ],
+  "compat_texto": "Hyundai: Tucson, Elantra, Accent, Santa Fe, Sonata, Creta, i30, Kona, Veloster, H-1 | Kia: Sportage, Cerato/Forte, Rio, Sorento, Optima, Seltos, Morning/Picanto, Soul, Carnival",
+  "otras_refs": []
+ },
+ "68191349AC": {
+  "ref": "68191349AC",
+  "nombre": "Filtro de Aceite",
+  "categoria": "Filtro Aceite",
+  "compatibles": [
+   {
+    "marca": "Jeep",
+    "modelos": "Compass 2.4, Renegade 2.4, Cherokee 2.4L"
+   },
+   {
+    "marca": "Chrysler",
+    "modelos": "200"
+   },
+   {
+    "marca": "Dodge",
+    "modelos": "Dart, Journey"
+   },
+   {
+    "marca": "Fiat",
+    "modelos": "Toro 2.4, 500X"
+   }
+  ],
+  "compat_texto": "Jeep: Compass 2.4, Renegade 2.4, Cherokee 2.4L | Chrysler: 200 | Dodge: Dart, Journey | Fiat: Toro 2.4, 500X",
+  "otras_refs": [
+   "68191349AA",
+   "MO-349 (Mopar"
+  ]
+ },
+ "68191349AA": {
+  "ref": "68191349AA",
+  "nombre": "Filtro de Aceite",
+  "categoria": "Filtro Aceite",
+  "compatibles": [
+   {
+    "marca": "Jeep",
+    "modelos": "Compass 2.4, Renegade 2.4, Cherokee 2.4L"
+   },
+   {
+    "marca": "Chrysler",
+    "modelos": "200"
+   },
+   {
+    "marca": "Dodge",
+    "modelos": "Dart, Journey"
+   },
+   {
+    "marca": "Fiat",
+    "modelos": "Toro 2.4, 500X"
+   }
+  ],
+  "compat_texto": "Jeep: Compass 2.4, Renegade 2.4, Cherokee 2.4L | Chrysler: 200 | Dodge: Dart, Journey | Fiat: Toro 2.4, 500X",
+  "otras_refs": [
+   "68191349AC",
+   "MO-349 (Mopar"
+  ]
+ },
+ "MO-349(MOPAR": {
+  "ref": "MO-349 (Mopar",
+  "nombre": "Filtro de Aceite",
+  "categoria": "Filtro Aceite",
+  "compatibles": [
+   {
+    "marca": "Jeep",
+    "modelos": "Compass 2.4, Renegade 2.4, Cherokee 2.4L"
+   },
+   {
+    "marca": "Chrysler",
+    "modelos": "200"
+   },
+   {
+    "marca": "Dodge",
+    "modelos": "Dart, Journey"
+   },
+   {
+    "marca": "Fiat",
+    "modelos": "Toro 2.4, 500X"
+   }
+  ],
+  "compat_texto": "Jeep: Compass 2.4, Renegade 2.4, Cherokee 2.4L | Chrysler: 200 | Dodge: Dart, Journey | Fiat: Toro 2.4, 500X",
+  "otras_refs": [
+   "68191349AA",
+   "68191349AC"
+  ]
+ },
+ "90915-YZZD4": {
+  "ref": "90915-YZZD4",
+  "nombre": "Filtro de Aceite",
+  "categoria": "Filtro Aceite",
+  "compatibles": [
+   {
+    "marca": "Toyota",
+    "modelos": "Yaris, Corolla, RAV4, Hilux, Fortuner, Tacoma, Land Cruiser Prado, Camry, Prius, C-HR, 4Runner, Sequoia, Tundra, Avanza, Rush"
+   },
+   {
+    "marca": "Lexus",
+    "modelos": "IS, ES, RX, NX"
+   }
+  ],
+  "compat_texto": "Toyota: Yaris, Corolla, RAV4, Hilux, Fortuner, Tacoma, Land Cruiser Prado, Camry, Prius, C-HR, 4Runner, Sequoia, Tundra, Avanza, Rush | Lexus: IS, ES, RX, NX",
+  "otras_refs": [
+   "90915-YZZD1"
+  ]
+ },
+ "90915-YZZD1": {
+  "ref": "90915-YZZD1",
+  "nombre": "Filtro de Aceite",
+  "categoria": "Filtro Aceite",
+  "compatibles": [
+   {
+    "marca": "Toyota",
+    "modelos": "Yaris, Corolla, RAV4, Hilux, Fortuner, Tacoma, Land Cruiser Prado, Camry, Prius, C-HR, 4Runner, Sequoia, Tundra, Avanza, Rush"
+   },
+   {
+    "marca": "Lexus",
+    "modelos": "IS, ES, RX, NX"
+   }
+  ],
+  "compat_texto": "Toyota: Yaris, Corolla, RAV4, Hilux, Fortuner, Tacoma, Land Cruiser Prado, Camry, Prius, C-HR, 4Runner, Sequoia, Tundra, Avanza, Rush | Lexus: IS, ES, RX, NX",
+  "otras_refs": [
+   "90915-YZZD4"
+  ]
+ },
+ "90915-YZZF2": {
+  "ref": "90915-YZZF2",
+  "nombre": "Filtro de Aceite",
+  "categoria": "Filtro Aceite",
+  "compatibles": [
+   {
+    "marca": "Toyota",
+    "modelos": "Yaris, Corolla, RAV4, Hilux, Fortuner, Tacoma, Land Cruiser Prado, Camry, Prius, C-HR, 4Runner, Sequoia, Tundra, Avanza, Rush"
+   },
+   {
+    "marca": "Lexus",
+    "modelos": "IS, ES, RX, NX"
+   }
+  ],
+  "compat_texto": "Toyota: Yaris, Corolla, RAV4, Hilux, Fortuner, Tacoma, Land Cruiser Prado, Camry, Prius, C-HR, 4Runner, Sequoia, Tundra, Avanza, Rush | Lexus: IS, ES, RX, NX",
+  "otras_refs": [
+   "90915-YZZN1"
+  ]
+ },
+ "90915-YZZN1": {
+  "ref": "90915-YZZN1",
+  "nombre": "Filtro de Aceite",
+  "categoria": "Filtro Aceite",
+  "compatibles": [
+   {
+    "marca": "Toyota",
+    "modelos": "Yaris, Corolla, RAV4, Hilux, Fortuner, Tacoma, Land Cruiser Prado, Camry, Prius, C-HR, 4Runner, Sequoia, Tundra, Avanza, Rush"
+   },
+   {
+    "marca": "Lexus",
+    "modelos": "IS, ES, RX, NX"
+   }
+  ],
+  "compat_texto": "Toyota: Yaris, Corolla, RAV4, Hilux, Fortuner, Tacoma, Land Cruiser Prado, Camry, Prius, C-HR, 4Runner, Sequoia, Tundra, Avanza, Rush | Lexus: IS, ES, RX, NX",
+  "otras_refs": [
+   "90915-YZZF2"
+  ]
+ },
+ "90915-YZZN2": {
+  "ref": "90915-YZZN2",
+  "nombre": "Filtro de Aceite",
+  "categoria": "Filtro Aceite",
+  "compatibles": [
+   {
+    "marca": "Toyota",
+    "modelos": "Yaris, Corolla, RAV4, Hilux, Fortuner, Tacoma, Land Cruiser Prado, Camry, Prius, C-HR, 4Runner, Sequoia, Tundra, Avanza, Rush"
+   },
+   {
+    "marca": "Lexus",
+    "modelos": "IS, ES, RX, NX"
+   }
+  ],
+  "compat_texto": "Toyota: Yaris, Corolla, RAV4, Hilux, Fortuner, Tacoma, Land Cruiser Prado, Camry, Prius, C-HR, 4Runner, Sequoia, Tundra, Avanza, Rush | Lexus: IS, ES, RX, NX",
+  "otras_refs": []
+ },
+ "ME215002": {
+  "ref": "ME215002",
+  "nombre": "Filtro de Aceite (4D56 diesel)",
+  "categoria": "Filtro Aceite",
+  "compatibles": [
+   {
+    "marca": "Mitsubishi",
+    "modelos": "L200 (K74, KB4), Montero (Pajero), Montero Sport, Delica"
+   },
+   {
+    "marca": "Hyundai",
+    "modelos": "H100, Galloper, Terracan"
+   },
+   {
+    "marca": "Kia",
+    "modelos": "Bongo"
+   }
+  ],
+  "compat_texto": "Mitsubishi: L200 (K74, KB4), Montero (Pajero), Montero Sport, Delica | Hyundai: H100, Galloper, Terracan | Kia: Bongo",
+  "otras_refs": [
+   "1230A186"
+  ]
+ },
+ "1230A186": {
+  "ref": "1230A186",
+  "nombre": "Filtro de Aceite (4D56 diesel)",
+  "categoria": "Filtro Aceite",
+  "compatibles": [
+   {
+    "marca": "Mitsubishi",
+    "modelos": "L200 (K74, KB4), Montero (Pajero), Montero Sport, Delica"
+   },
+   {
+    "marca": "Hyundai",
+    "modelos": "H100, Galloper, Terracan"
+   },
+   {
+    "marca": "Kia",
+    "modelos": "Bongo"
+   }
+  ],
+  "compat_texto": "Mitsubishi: L200 (K74, KB4), Montero (Pajero), Montero Sport, Delica | Hyundai: H100, Galloper, Terracan | Kia: Bongo",
+  "otras_refs": [
+   "ME215002"
+  ]
+ },
+ "H15002-1000": {
+  "ref": "H15002-1000",
+  "nombre": "Filtro de Aceite (CS35)",
+  "categoria": "Filtro Aceite",
+  "compatibles": [
+   {
+    "marca": "",
+    "modelos": "Changan CS35, CS35 Plus, Eado, Alsvin"
+   }
+  ],
+  "compat_texto": "Changan CS35, CS35 Plus, Eado, Alsvin",
+  "otras_refs": [
+   "K003-2300"
+  ]
+ },
+ "K003-2300": {
+  "ref": "K003-2300",
+  "nombre": "Filtro de Aceite (CS35)",
+  "categoria": "Filtro Aceite",
+  "compatibles": [
+   {
+    "marca": "",
+    "modelos": "Changan CS35, CS35 Plus, Eado, Alsvin"
+   }
+  ],
+  "compat_texto": "Changan CS35, CS35 Plus, Eado, Alsvin",
+  "otras_refs": [
+   "H15002-1000"
+  ]
+ },
+ "90915-30002-8T": {
+  "ref": "90915-30002-8T",
+  "nombre": "Filtro de Aceite (Hilux diesel viejo)",
+  "categoria": "Filtro Aceite",
+  "compatibles": [
+   {
+    "marca": "Toyota",
+    "modelos": "Yaris, Corolla, RAV4, Hilux, Fortuner, Tacoma, Land Cruiser Prado, Camry, Prius, C-HR, 4Runner, Sequoia, Tundra, Avanza, Rush"
+   },
+   {
+    "marca": "Lexus",
+    "modelos": "IS, ES, RX, NX"
+   }
+  ],
+  "compat_texto": "Toyota: Yaris, Corolla, RAV4, Hilux, Fortuner, Tacoma, Land Cruiser Prado, Camry, Prius, C-HR, 4Runner, Sequoia, Tundra, Avanza, Rush | Lexus: IS, ES, RX, NX",
+  "otras_refs": []
+ },
+ "04E129620": {
+  "ref": "04E129620",
+  "nombre": "Filtro de Aire",
+  "categoria": "Filtro Aire",
+  "compatibles": [
+   {
+    "marca": "Volkswagen",
+    "modelos": "Golf MK7, Jetta MK6/MK7, Polo, Virtus, T-Cross, Nivus, Tiguan 1.4T, Taos, Up!"
+   },
+   {
+    "marca": "Audi",
+    "modelos": "A1, A3 (8V), Q2, Q3 1.4T"
+   },
+   {
+    "marca": "SEAT",
+    "modelos": "Leon, Ibiza, Arona, Ateca"
+   },
+   {
+    "marca": "Skoda",
+    "modelos": "Octavia, Fabia, Karoq, Kodiaq"
+   }
+  ],
+  "compat_texto": "Volkswagen: Golf MK7, Jetta MK6/MK7, Polo, Virtus, T-Cross, Nivus, Tiguan 1.4T, Taos, Up! | Audi: A1, A3 (8V), Q2, Q3 1.4T | SEAT: Leon, Ibiza, Arona, Ateca | Skoda: Octavia, Fabia, Karoq, Kodiaq",
+  "otras_refs": []
+ },
+ "13780-74P00": {
+  "ref": "13780-74P00",
+  "nombre": "Filtro de Aire",
+  "categoria": "Filtro Aire",
+  "compatibles": [
+   {
+    "marca": "Suzuki",
+    "modelos": "Swift (Generaciones 2/3/4), Baleno, Ignis, Vitara, S-Cross, Celerio, Dzire, Ertiga, Jimny, Alto, Ciaz, Grand Nomade/Vitara"
+   }
+  ],
+  "compat_texto": "Suzuki: Swift (Generaciones 2/3/4), Baleno, Ignis, Vitara, S-Cross, Celerio, Dzire, Ertiga, Jimny, Alto, Ciaz, Grand Nomade/Vitara",
+  "otras_refs": [
+   "13780-63J00",
+   "13780-69L00"
+  ]
+ },
+ "13780-69L00": {
+  "ref": "13780-69L00",
+  "nombre": "Filtro de Aire",
+  "categoria": "Filtro Aire",
+  "compatibles": [
+   {
+    "marca": "Suzuki",
+    "modelos": "Swift (Generaciones 2/3/4), Baleno, Ignis, Vitara, S-Cross, Celerio, Dzire, Ertiga, Jimny, Alto, Ciaz, Grand Nomade/Vitara"
+   }
+  ],
+  "compat_texto": "Suzuki: Swift (Generaciones 2/3/4), Baleno, Ignis, Vitara, S-Cross, Celerio, Dzire, Ertiga, Jimny, Alto, Ciaz, Grand Nomade/Vitara",
+  "otras_refs": [
+   "13780-63J00",
+   "13780-74P00"
+  ]
+ },
+ "13780-63J00": {
+  "ref": "13780-63J00",
+  "nombre": "Filtro de Aire",
+  "categoria": "Filtro Aire",
+  "compatibles": [
+   {
+    "marca": "Suzuki",
+    "modelos": "Swift (Generaciones 2/3/4), Baleno, Ignis, Vitara, S-Cross, Celerio, Dzire, Ertiga, Jimny, Alto, Ciaz, Grand Nomade/Vitara"
+   }
+  ],
+  "compat_texto": "Suzuki: Swift (Generaciones 2/3/4), Baleno, Ignis, Vitara, S-Cross, Celerio, Dzire, Ertiga, Jimny, Alto, Ciaz, Grand Nomade/Vitara",
+  "otras_refs": [
+   "13780-69L00",
+   "13780-74P00"
+  ]
+ },
+ "16546-5RB1A": {
+  "ref": "16546-5RB1A",
+  "nombre": "Filtro de Aire",
+  "categoria": "Filtro Aire",
+  "compatibles": [
+   {
+    "marca": "Nissan",
+    "modelos": "X-Trail (T30/T31/T32/T33), Qashqai (J10/J11/J12), Sentra (B16/B17/B18), Navara (D40/D23/NP300), Altima, Kicks, Versa, Pathfinder, Murano, Tiida, March/Micra"
+   }
+  ],
+  "compat_texto": "Nissan: X-Trail (T30/T31/T32/T33), Qashqai (J10/J11/J12), Sentra (B16/B17/B18), Navara (D40/D23/NP300), Altima, Kicks, Versa, Pathfinder, Murano, Tiida, March/Micra",
+  "otras_refs": []
+ },
+ "8200431051": {
+  "ref": "8200431051",
+  "nombre": "Filtro de Aire",
+  "categoria": "Filtro Aire",
+  "compatibles": [
+   {
+    "marca": "Nissan",
+    "modelos": "X-Trail (T30/T31/T32/T33), Qashqai (J10/J11/J12), Sentra (B16/B17/B18), Navara (D40/D23/NP300), Altima, Kicks, Versa, Pathfinder, Murano, Tiida, March/Micra"
+   }
+  ],
+  "compat_texto": "Nissan: X-Trail (T30/T31/T32/T33), Qashqai (J10/J11/J12), Sentra (B16/B17/B18), Navara (D40/D23/NP300), Altima, Kicks, Versa, Pathfinder, Murano, Tiida, March/Micra",
+  "otras_refs": [
+   "165467674R"
+  ]
+ },
+ "165467674R": {
+  "ref": "165467674R",
+  "nombre": "Filtro de Aire",
+  "categoria": "Filtro Aire",
+  "compatibles": [
+   {
+    "marca": "Nissan",
+    "modelos": "X-Trail (T30/T31/T32/T33), Qashqai (J10/J11/J12), Sentra (B16/B17/B18), Navara (D40/D23/NP300), Altima, Kicks, Versa, Pathfinder, Murano, Tiida, March/Micra"
+   }
+  ],
+  "compat_texto": "Nissan: X-Trail (T30/T31/T32/T33), Qashqai (J10/J11/J12), Sentra (B16/B17/B18), Navara (D40/D23/NP300), Altima, Kicks, Versa, Pathfinder, Murano, Tiida, March/Micra",
+  "otras_refs": [
+   "8200431051"
+  ]
+ },
+ "8W0133843C": {
+  "ref": "8W0133843C",
+  "nombre": "Filtro de Aire",
+  "categoria": "Filtro Aire",
+  "compatibles": [
+   {
+    "marca": "Audi",
+    "modelos": "A4 (B9 2016+), S4, RS4, A5 (F5), S5, RS5, Q5 (FY 2017+), SQ5"
+   },
+   {
+    "marca": "Porsche",
+    "modelos": "Macan (2019+)"
+   }
+  ],
+  "compat_texto": "Audi: A4 (B9 2016+), S4, RS4, A5 (F5), S5, RS5, Q5 (FY 2017+), SQ5 | Porsche: Macan (2019+)",
+  "otras_refs": [
+   "8W0133843E"
+  ]
+ },
+ "8W0133843E": {
+  "ref": "8W0133843E",
+  "nombre": "Filtro de Aire",
+  "categoria": "Filtro Aire",
+  "compatibles": [
+   {
+    "marca": "Audi",
+    "modelos": "A4 (B9 2016+), S4, RS4, A5 (F5), S5, RS5, Q5 (FY 2017+), SQ5"
+   },
+   {
+    "marca": "Porsche",
+    "modelos": "Macan (2019+)"
+   }
+  ],
+  "compat_texto": "Audi: A4 (B9 2016+), S4, RS4, A5 (F5), S5, RS5, Q5 (FY 2017+), SQ5 | Porsche: Macan (2019+)",
+  "otras_refs": [
+   "8W0133843C"
+  ]
+ },
+ "13780-78R00": {
+  "ref": "13780-78R00",
+  "nombre": "Filtro de Aire (Jimny 2018+)",
+  "categoria": "Filtro Aire",
+  "compatibles": [
+   {
+    "marca": "Suzuki",
+    "modelos": "Swift (Generaciones 2/3/4), Baleno, Ignis, Vitara, S-Cross, Celerio, Dzire, Ertiga, Jimny, Alto, Ciaz, Grand Nomade/Vitara"
+   }
+  ],
+  "compat_texto": "Suzuki: Swift (Generaciones 2/3/4), Baleno, Ignis, Vitara, S-Cross, Celerio, Dzire, Ertiga, Jimny, Alto, Ciaz, Grand Nomade/Vitara",
+  "otras_refs": []
+ },
+ "16546-EB300": {
+  "ref": "16546-EB300",
+  "nombre": "Filtro de Aire (NP300/Navara)",
+  "categoria": "Filtro Aire",
+  "compatibles": [
+   {
+    "marca": "Nissan",
+    "modelos": "X-Trail (T30/T31/T32/T33), Qashqai (J10/J11/J12), Sentra (B16/B17/B18), Navara (D40/D23/NP300), Altima, Kicks, Versa, Pathfinder, Murano, Tiida, March/Micra"
+   }
+  ],
+  "compat_texto": "Nissan: X-Trail (T30/T31/T32/T33), Qashqai (J10/J11/J12), Sentra (B16/B17/B18), Navara (D40/D23/NP300), Altima, Kicks, Versa, Pathfinder, Murano, Tiida, March/Micra",
+  "otras_refs": []
+ },
+ "28113-D3300": {
+  "ref": "28113-D3300",
+  "nombre": "Filtro de Aire (Tucson/Sportage)",
+  "categoria": "Filtro Aire",
+  "compatibles": [
+   {
+    "marca": "",
+    "modelos": "Hyundai Tucson (JM, LM, TL, NX4), Kia Sportage (JE, SL, QL, NQ5)"
+   }
+  ],
+  "compat_texto": "Hyundai Tucson (JM, LM, TL, NX4), Kia Sportage (JE, SL, QL, NQ5)",
+  "otras_refs": []
+ },
+ "16546-AA090": {
+  "ref": "16546-AA090",
+  "nombre": "Filtro de Aire (WRX 2015-2021)",
+  "categoria": "Filtro Aire",
+  "compatibles": [
+   {
+    "marca": "Nissan",
+    "modelos": "X-Trail (T30/T31/T32/T33), Qashqai (J10/J11/J12), Sentra (B16/B17/B18), Navara (D40/D23/NP300), Altima, Kicks, Versa, Pathfinder, Murano, Tiida, March/Micra"
+   }
+  ],
+  "compat_texto": "Nissan: X-Trail (T30/T31/T32/T33), Qashqai (J10/J11/J12), Sentra (B16/B17/B18), Navara (D40/D23/NP300), Altima, Kicks, Versa, Pathfinder, Murano, Tiida, March/Micra",
+  "otras_refs": [
+   "16546-AA10A"
+  ]
+ },
+ "16546-AA10A": {
+  "ref": "16546-AA10A",
+  "nombre": "Filtro de Aire (WRX 2015-2021)",
+  "categoria": "Filtro Aire",
+  "compatibles": [
+   {
+    "marca": "Nissan",
+    "modelos": "X-Trail (T30/T31/T32/T33), Qashqai (J10/J11/J12), Sentra (B16/B17/B18), Navara (D40/D23/NP300), Altima, Kicks, Versa, Pathfinder, Murano, Tiida, March/Micra"
+   }
+  ],
+  "compat_texto": "Nissan: X-Trail (T30/T31/T32/T33), Qashqai (J10/J11/J12), Sentra (B16/B17/B18), Navara (D40/D23/NP300), Altima, Kicks, Versa, Pathfinder, Murano, Tiida, March/Micra",
+  "otras_refs": [
+   "16546-AA090"
+  ]
+ },
+ "16546-4BA1A": {
+  "ref": "16546-4BA1A",
+  "nombre": "Filtro de Aire (X-Trail/Qashqai)",
+  "categoria": "Filtro Aire",
+  "compatibles": [
+   {
+    "marca": "Nissan",
+    "modelos": "X-Trail (T30/T31/T32/T33), Qashqai (J10/J11/J12), Sentra (B16/B17/B18), Navara (D40/D23/NP300), Altima, Kicks, Versa, Pathfinder, Murano, Tiida, March/Micra"
+   },
+   {
+    "marca": "",
+    "modelos": "Nissan X-Trail (T30, T31, T32), Nissan Qashqai (J10, J11), Renault Koleos, Kadjar"
+   }
+  ],
+  "compat_texto": "Nissan: X-Trail (T30/T31/T32/T33), Qashqai (J10/J11/J12), Sentra (B16/B17/B18), Navara (D40/D23/NP300), Altima, Kicks, Versa, Pathfinder, Murano, Tiida, March/Micra | Nissan X-Trail (T30, T31, T32), Nissan Qashqai (J10, J11), Renault Koleos, Kadjar",
+  "otras_refs": [
+   "16546-4BA1B"
+  ]
+ },
+ "16546-4BA1B": {
+  "ref": "16546-4BA1B",
+  "nombre": "Filtro de Aire (X-Trail/Qashqai)",
+  "categoria": "Filtro Aire",
+  "compatibles": [
+   {
+    "marca": "Nissan",
+    "modelos": "X-Trail (T30/T31/T32/T33), Qashqai (J10/J11/J12), Sentra (B16/B17/B18), Navara (D40/D23/NP300), Altima, Kicks, Versa, Pathfinder, Murano, Tiida, March/Micra"
+   },
+   {
+    "marca": "",
+    "modelos": "Nissan X-Trail (T30, T31, T32), Nissan Qashqai (J10, J11), Renault Koleos, Kadjar"
+   }
+  ],
+  "compat_texto": "Nissan: X-Trail (T30/T31/T32/T33), Qashqai (J10/J11/J12), Sentra (B16/B17/B18), Navara (D40/D23/NP300), Altima, Kicks, Versa, Pathfinder, Murano, Tiida, March/Micra | Nissan X-Trail (T30, T31, T32), Nissan Qashqai (J10, J11), Renault Koleos, Kadjar",
+  "otras_refs": [
+   "16546-4BA1A"
+  ]
+ },
+ "8W0698151BC": {
+  "ref": "8W0698151BC",
+  "nombre": "Pastillas Freno Delanteras (338mm)",
+  "categoria": "Frenos",
+  "compatibles": [
+   {
+    "marca": "Audi",
+    "modelos": "A4 (B9 2016+), S4, RS4, A5 (F5), S5, RS5, Q5 (FY 2017+), SQ5"
+   },
+   {
+    "marca": "Porsche",
+    "modelos": "Macan (2019+)"
+   }
+  ],
+  "compat_texto": "Audi: A4 (B9 2016+), S4, RS4, A5 (F5), S5, RS5, Q5 (FY 2017+), SQ5 | Porsche: Macan (2019+)",
+  "otras_refs": [
+   "3Q0698151B",
+   "5Q0698151AM"
+  ]
+ },
+ "3Q0698151B": {
+  "ref": "3Q0698151B",
+  "nombre": "Pastillas Freno Delanteras (A3/Golf/Jetta 312mm)",
+  "categoria": "Frenos",
+  "compatibles": [
+   {
+    "marca": "Audi",
+    "modelos": "A4 (B9 2016+), S4, RS4, A5 (F5), S5, RS5, Q5 (FY 2017+), SQ5"
+   },
+   {
+    "marca": "Porsche",
+    "modelos": "Macan (2019+)"
+   }
+  ],
+  "compat_texto": "Audi: A4 (B9 2016+), S4, RS4, A5 (F5), S5, RS5, Q5 (FY 2017+), SQ5 | Porsche: Macan (2019+)",
+  "otras_refs": [
+   "5Q0698151AM",
+   "8W0698151BC"
+  ]
+ },
+ "5Q0698151AM": {
+  "ref": "5Q0698151AM",
+  "nombre": "Pastillas Freno Delanteras (A3/Golf/Jetta 312mm)",
+  "categoria": "Frenos",
+  "compatibles": [
+   {
+    "marca": "Audi",
+    "modelos": "A4 (B9 2016+), S4, RS4, A5 (F5), S5, RS5, Q5 (FY 2017+), SQ5"
+   },
+   {
+    "marca": "Porsche",
+    "modelos": "Macan (2019+)"
+   }
+  ],
+  "compat_texto": "Audi: A4 (B9 2016+), S4, RS4, A5 (F5), S5, RS5, Q5 (FY 2017+), SQ5 | Porsche: Macan (2019+)",
+  "otras_refs": [
+   "3Q0698151B",
+   "8W0698151BC"
+  ]
+ },
+ "8W0698451N": {
+  "ref": "8W0698451N",
+  "nombre": "Pastillas Freno Traseras",
+  "categoria": "Frenos",
+  "compatibles": [
+   {
+    "marca": "Audi",
+    "modelos": "A4 (B9 2016+), S4, RS4, A5 (F5), S5, RS5, Q5 (FY 2017+), SQ5"
+   },
+   {
+    "marca": "Porsche",
+    "modelos": "Macan (2019+)"
+   }
+  ],
+  "compat_texto": "Audi: A4 (B9 2016+), S4, RS4, A5 (F5), S5, RS5, Q5 (FY 2017+), SQ5 | Porsche: Macan (2019+)",
+  "otras_refs": []
+ },
+ "8W0121251AB": {
+  "ref": "8W0121251AB",
+  "nombre": "Radiador",
+  "categoria": "Componente",
+  "compatibles": [
+   {
+    "marca": "Audi",
+    "modelos": "A4 (B9 2016+), S4, RS4, A5 (F5), S5, RS5, Q5 (FY 2017+), SQ5"
+   },
+   {
+    "marca": "Porsche",
+    "modelos": "Macan (2019+)"
+   }
+  ],
+  "compat_texto": "Audi: A4 (B9 2016+), S4, RS4, A5 (F5), S5, RS5, Q5 (FY 2017+), SQ5 | Porsche: Macan (2019+)",
+  "otras_refs": []
+ },
+ "1865A069(VERIFICAR": {
+  "ref": "1865A069 (verificar",
+  "nombre": "Sensor arbol levas",
+  "categoria": "Sensor",
+  "compatibles": [
+   {
+    "marca": "Mitsubishi",
+    "modelos": "Lancer (CS/CJ EX), Outlander, ASX, Eclipse Cross, Montero Sport, L200/Triton, Mirage, Grandis"
+   }
+  ],
+  "compat_texto": "Mitsubishi: Lancer (CS/CJ EX), Outlander, ASX, Eclipse Cross, Montero Sport, L200/Triton, Mirage, Grandis",
+  "otras_refs": []
+ },
+ "1865A126": {
+  "ref": "1865A126",
+  "nombre": "Sensor ciguenal 1865A126",
+  "categoria": "Sensor",
+  "compatibles": [
+   {
+    "marca": "Mitsubishi",
+    "modelos": "Lancer (CS/CJ EX), Outlander, ASX, Eclipse Cross, Montero Sport, L200/Triton, Mirage, Grandis"
+   }
+  ],
+  "compat_texto": "Mitsubishi: Lancer (CS/CJ EX), Outlander, ASX, Eclipse Cross, Montero Sport, L200/Triton, Mirage, Grandis",
+  "otras_refs": []
+ },
+ "04E906433A": {
+  "ref": "04E906433A",
+  "nombre": "Sensor Ciguenal CKP",
+  "categoria": "Sensor",
+  "compatibles": [
+   {
+    "marca": "Volkswagen",
+    "modelos": "Golf MK7, Jetta MK6/MK7, Polo, Virtus, T-Cross, Nivus, Tiguan 1.4T, Taos, Up!"
+   },
+   {
+    "marca": "Audi",
+    "modelos": "A1, A3 (8V), Q2, Q3 1.4T"
+   },
+   {
+    "marca": "SEAT",
+    "modelos": "Leon, Ibiza, Arona, Ateca"
+   },
+   {
+    "marca": "Skoda",
+    "modelos": "Octavia, Fabia, Karoq, Kodiaq"
+   }
+  ],
+  "compat_texto": "Volkswagen: Golf MK7, Jetta MK6/MK7, Polo, Virtus, T-Cross, Nivus, Tiguan 1.4T, Taos, Up! | Audi: A1, A3 (8V), Q2, Q3 1.4T | SEAT: Leon, Ibiza, Arona, Ateca | Skoda: Octavia, Fabia, Karoq, Kodiaq",
+  "otras_refs": [
+   "04E906433B"
+  ]
+ },
+ "04E906433B": {
+  "ref": "04E906433B",
+  "nombre": "Sensor Ciguenal CKP (EA211)",
+  "categoria": "Sensor",
+  "compatibles": [
+   {
+    "marca": "Volkswagen",
+    "modelos": "Golf MK7, Jetta MK6/MK7, Polo, Virtus, T-Cross, Nivus, Tiguan 1.4T, Taos, Up!"
+   },
+   {
+    "marca": "Audi",
+    "modelos": "A1, A3 (8V), Q2, Q3 1.4T"
+   },
+   {
+    "marca": "SEAT",
+    "modelos": "Leon, Ibiza, Arona, Ateca"
+   },
+   {
+    "marca": "Skoda",
+    "modelos": "Octavia, Fabia, Karoq, Kodiaq"
+   }
+  ],
+  "compat_texto": "Volkswagen: Golf MK7, Jetta MK6/MK7, Polo, Virtus, T-Cross, Nivus, Tiguan 1.4T, Taos, Up! | Audi: A1, A3 (8V), Q2, Q3 1.4T | SEAT: Leon, Ibiza, Arona, Ateca | Skoda: Octavia, Fabia, Karoq, Kodiaq",
+  "otras_refs": [
+   "04E906433A"
+  ]
+ },
+ "1588A195(VERIFICAR": {
+  "ref": "1588A195 (verificar",
+  "nombre": "Sensor O2 post-cat",
+  "categoria": "Sensor",
+  "compatibles": [
+   {
+    "marca": "Mitsubishi",
+    "modelos": "Lancer (CS/CJ EX), Outlander, ASX, Eclipse Cross, Montero Sport, L200/Triton, Mirage, Grandis"
+   }
+  ],
+  "compat_texto": "Mitsubishi: Lancer (CS/CJ EX), Outlander, ASX, Eclipse Cross, Montero Sport, L200/Triton, Mirage, Grandis",
+  "otras_refs": []
+ },
+ "1588A194(VERIFICAR": {
+  "ref": "1588A194 (verificar",
+  "nombre": "Sensor O2 pre-cat",
+  "categoria": "Sensor",
+  "compatibles": [
+   {
+    "marca": "Mitsubishi",
+    "modelos": "Lancer (CS/CJ EX), Outlander, ASX, Eclipse Cross, Montero Sport, L200/Triton, Mirage, Grandis"
+   }
+  ],
+  "compat_texto": "Mitsubishi: Lancer (CS/CJ EX), Outlander, ASX, Eclipse Cross, Montero Sport, L200/Triton, Mirage, Grandis",
+  "otras_refs": []
+ },
+ "04E906262AK": {
+  "ref": "04E906262AK",
+  "nombre": "Sonda Lambda",
+  "categoria": "Componente",
+  "compatibles": [
+   {
+    "marca": "Volkswagen",
+    "modelos": "Golf MK7, Jetta MK6/MK7, Polo, Virtus, T-Cross, Nivus, Tiguan 1.4T, Taos, Up!"
+   },
+   {
+    "marca": "Audi",
+    "modelos": "A1, A3 (8V), Q2, Q3 1.4T"
+   },
+   {
+    "marca": "SEAT",
+    "modelos": "Leon, Ibiza, Arona, Ateca"
+   },
+   {
+    "marca": "Skoda",
+    "modelos": "Octavia, Fabia, Karoq, Kodiaq"
+   }
+  ],
+  "compat_texto": "Volkswagen: Golf MK7, Jetta MK6/MK7, Polo, Virtus, T-Cross, Nivus, Tiguan 1.4T, Taos, Up! | Audi: A1, A3 (8V), Q2, Q3 1.4T | SEAT: Leon, Ibiza, Arona, Ateca | Skoda: Octavia, Fabia, Karoq, Kodiaq",
+  "otras_refs": []
+ },
+ "06L906262B": {
+  "ref": "06L906262B",
+  "nombre": "Sonda Lambda",
+  "categoria": "Componente",
+  "compatibles": [
+   {
+    "marca": "Volkswagen",
+    "modelos": "Golf GTI MK7/MK8, Golf R, Passat B8, Tiguan 2.0T, Arteon, Teramont"
+   },
+   {
+    "marca": "Audi",
+    "modelos": "A4 (B8/B9), A5, A6, Q5 (8R/FY), TT, Macan 2.0T, S3"
+   },
+   {
+    "marca": "SEAT",
+    "modelos": "Leon Cupra, Tarraco"
+   },
+   {
+    "marca": "Skoda",
+    "modelos": "Octavia RS, Superb"
+   }
+  ],
+  "compat_texto": "Volkswagen: Golf GTI MK7/MK8, Golf R, Passat B8, Tiguan 2.0T, Arteon, Teramont | Audi: A4 (B8/B9), A5, A6, Q5 (8R/FY), TT, Macan 2.0T, S3 | SEAT: Leon Cupra, Tarraco | Skoda: Octavia RS, Superb",
+  "otras_refs": []
+ },
+ "1305A279": {
+  "ref": "1305A279",
+  "nombre": "Termostato 1305A279",
+  "categoria": "Componente",
+  "compatibles": [
+   {
+    "marca": "Mitsubishi",
+    "modelos": "Lancer (CS/CJ EX), Outlander, ASX, Eclipse Cross, Montero Sport, L200/Triton, Mirage, Grandis"
+   }
+  ],
+  "compat_texto": "Mitsubishi: Lancer (CS/CJ EX), Outlander, ASX, Eclipse Cross, Montero Sport, L200/Triton, Mirage, Grandis",
+  "otras_refs": []
+ }
+}
