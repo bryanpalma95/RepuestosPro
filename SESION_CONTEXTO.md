@@ -15,9 +15,9 @@
 
 ## Flujo: insertar en sqlite → python export_db.py → git add db.json → git commit → git push
 
-## Estado: 267 vehiculos, 1043 componentes (bloques 1-28 COMPLETOS)
+## Estado: 278 vehiculos, 1085 componentes (bloques 1-28 + clasicos COMPLETOS)
 
-## Pendiente: CATALOGO COMPLETO. Enriquecer datos existentes (mas refs confirmadas, mas categorias por vehiculo)
+## Pendiente: Enriquecer componentes existentes (agregar mas categorias: Suspension, Sensores, Iluminacion, Refrigeracion, Transmision completa a cada vehiculo - actualmente tienen 2-4 categorias, deberian tener 8-10)
 
 ## Bloques pendientes (13-28):
 - 13: Chevrolet Optra, D-Max, Onix, Cavalier, Tahoe, Suburban, Montana, Spin, Prisma + VW Virtus
