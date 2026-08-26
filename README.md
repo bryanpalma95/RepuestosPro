@@ -1,50 +1,52 @@
 # RepuestosPro
 
-Catalogo de repuestos automotrices con referencias OEM verificadas, compatibilidad cruzada y links de compra.
+Catálogo de repuestos automotrices con referencias OEM, compatibilidad cruzada y enlaces de compra.
 
 **Live:** https://bryanpalma95.github.io/RepuestosPro/
 
-## Estado actual
+## Estado actual (verificado contra db.json)
 
-- 283 vehiculos en catalogo
-- 1,100+ componentes con part numbers OEM
-- 49 marcas cubiertas
-- PWA instalable (funciona offline)
+- 3,246 vehículos en el catálogo
+- 13,536 entradas de componentes
+- 45 marcas cubiertas
+- Base de datos principal: `db.json`
+- Cobertura más fuerte en Hyundai, Suzuki, Nissan, Volkswagen, Chevrolet, Toyota y Peugeot
 
 ## Stack
 
-- HTML/CSS/JS vanilla (sin frameworks)
-- SQLite local (`db.sqlite`) para gestion de datos
-- `db.json` exportado para el frontend (GitHub Pages)
-- Python scripts para insercion y exportacion
+- HTML/CSS/JS vanilla
+- JSON como fuente principal para el frontend
+- SQLite local para gestión interna de datos
+- Python para importación, generación y exportación
 
 ## Flujo de trabajo
 
 ```
-1. Editar/insertar datos en db.sqlite (via scripts Python)
-2. python export_db.py  →  genera db.json
-3. git add db.json && git commit && git push
-4. GitHub Pages sirve el sitio actualizado
+1. Actualizar la fuente de datos o scripts de importación
+2. Reconstruir/normalizar la base local
+3. Exportar a db.json
+4. Publicar el cambio y actualizar el frontend
 ```
 
 ## Scripts principales
 
-| Script | Funcion |
+| Script | Función |
 |--------|---------|
-| `setup_db.py` | Crear estructura BD inicial |
-| `export_db.py` | SQLite → db.json (para frontend) |
-| `insert_lote_oem.py` | Insertar vehiculos con datos OEM verificados |
-| `generar_vins_full.py` | Generar VINs de referencia (3214 modelos) |
-| `setup_componentes_db.py` | BD auxiliar de componentes por familia motor |
+| `setup_db.py` | Crear la estructura base de datos |
+| `export_db.py` | Generar `db.json` desde la base local |
+| `insert_lote_oem.py` | Cargar lotes de vehículos y componentes OEM |
+| `generar_vins_full.py` | Generar VINs de referencia |
+| `setup_componentes_db.py` | Crear la base auxiliar de familias y componentes |
 
 ## Datos verificados
 
-Los part numbers OEM provienen de fuentes oficiales:
-- oempartsonline.com (Toyota, Nissan, Honda, Ford, Hyundai, VW, Subaru)
-- parts.vw.com, parts.subaru.com, parts.toyota.com
-- store.mopar.com (Jeep/Dodge/Ram/Chrysler)
-- amazon.com (listings Genuine OEM)
-- Manuales oficiales del fabricante (mazdausa.com, owners-manual.mazda.com)
+Los números y referencias del catálogo se actualizan desde la base real del proyecto. La información contenida en `db.json` es la fuente de verdad para el sitio publicado.
+
+## Nota sobre la calidad de datos
+
+- La base actual incluye vehículos y componentes con referencias cruzadas
+- El catálogo está orientado a compatibilidad entre modelos y marcas
+- La estructura está diseñada para crecer por familias de motor y generaciones
 
 ## Autor
 
