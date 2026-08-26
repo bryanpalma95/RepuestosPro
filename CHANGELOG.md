@@ -1,5 +1,30 @@
 # Changelog
 
+## [0.9.1] - 2026-08-26
+
+### Agregado
+- 3,280 vehiculos individuales por ano (expansion completa)
+- 348 part numbers OEM verificados en 154 familias de motor
+- Selector cascada Marca → Modelo → Ano
+- Seccion "Los mas buscados" con 12 modelos populares
+- Buscador filtra grid en tiempo real
+- Filtro inmediato al seleccionar marca o modelo
+- Contador de resultados visible
+- Lazy loading: carga inicial 26KB, datos completos solo al ver detalle
+- Boton "Volver" en vista detalle
+- Logo clickeable → volver al inicio
+
+### Eliminado
+- Service Worker / PWA offline (causaba cache problematico)
+- Breadcrumb (innecesario)
+- 341 vehiculos duplicados (entradas agrupadas reemplazadas por individuales)
+
+### Corregido
+- Tiempo de carga: de 2.8MB inicial a 26KB
+- Stats en landing actualizados a datos reales
+
+---
+
 ## [0.9.0] - 2026-08-26
 
 ### Agregado
