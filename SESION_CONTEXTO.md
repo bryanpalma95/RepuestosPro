@@ -15,18 +15,37 @@
 - `export_db.py` = exporta la base a `db.json`
 - `data.js` = fallback legacy
 
-## Estado verificado en la base actual
-- 3,246 vehículos
-- 13,536 componentes
-- 45 marcas
+## Estado verificado en la base actual (actualizado)
+- 3,275 vehículos
+- 16,093 componentes
+- 42 marcas (se eliminaron 3 registros fantasma Chrysler_Mopar/Dodge_Mopar/Ram_Mopar)
 - Segmento más fuerte: Hyundai, Suzuki, Nissan, Volkswagen, Chevrolet, Toyota, Peugeot y Ford
 
-## Flujo actual
-- Actualizar la fuente de datos o scripts de importación
-- Reconstruir/normalizar la base local
-- Exportar a `db.json`
-- Revisar cobertura por marca/modelo
-- Publicar cambios y validar el frontend
+## Progreso de recopilación de componentes (por marca, alfabético)
+Método: componentes de MOTOR por familia (compartidos) + FRENOS/SUSPENSIÓN/NEUMÁTICOS por modelo/generación.
+Refs OEM con fuente pública fiable = "confirmed"; sin PN público = "verify" (regla datos 100% fiables).
+- A: Audi ✓ COMPLETA
+- B: BMW (familia B38/B48, frenos por plataforma F30 vs UKL/G) ✓ · BAIC X55 ✓
+- C: Changan ✓ · Chery (familia SQR) ✓ · Chevrolet (6 familias: Ecotec, F18D4, Sail/Spark, Isuzu diesel, V8, legacy) ✓
+- D: Dongfeng ✓ (AMPLIADA: +8 modelos CIDEF Chile — T5 Evo, SX6, Aeolus GS Cross, Aeolus Y3, Mage PHEV, Mage EV, Huge, Rich 6) · DFSK Glory 580 ✓ · Daewoo Racer/Heaven ✓
+- F: Fiat (Firefly, Fire, MultiJet) ✓ · Ford (Sigma/EcoBoost/Duratorq/Coyote V8) ✓
+- SIGUIENTE: **G** → GAC, Geely, GWM (todas en estado mínimo, ~1 comp)
+- Pendientes tras G: H (Haval, Honda, Hyundai), J, K (Kia casi vacía, 68 veh), L, M, N, O, P, R, S, T, V
+
+## Flujo de build (IMPORTANTE — así llega a la web)
+1. Escribir/ejecutar `insert_<marca>_componentes.py` → inserta en `db.sqlite` (patrón: clear_and_insert por vehículo, categorías→partes→refs→links)
+2. `python export_db.py` → regenera `db.json` desde `db.sqlite`
+3. Regenerar `db-nav.json` con script inline (reconstruye marca→modelo→años desde db.json)
+4. git add db.json db-nav.json insert_*.py → commit → push origin main → GitHub Pages
+NOTA: editar `componentes_oem_verificados.json` NO actualiza la web (solo alimenta componentes.db auxiliar). La fuente real de la web es db.sqlite→db.json.
+Entorno Python: usar `.venv\Scripts\python.exe` (tiene openpyxl instalado).
+
+## Funcionalidad de la web (ya implementada)
+- Búsqueda bidireccional: buscar componente/referencia OEM → ver todos los vehículos compatibles (vista showComponent + db-compat.json con 95 refs del Excel)
+- Tarjetas de componentes COLAPSADAS por defecto con botón "Ver compatibilidad"
+- Carga rápida: db-nav.json (~30KB) instant + lazy load db.json al ver detalle
+- Selector cascada Marca→Modelo→Año, años agrupados si >3
+- Versionado en footer v0.9.1
 
 ## Estructura del catálogo
 - Las entradas están organizadas por vehículo
