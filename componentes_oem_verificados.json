@@ -289,11 +289,6 @@
       "Polo 2016-2026",
       "T-Cross 2019-2026",
       "Tiguan 2014-2026",
-      "A3 2014-2026",
-      "Q3 2015-2026",
-      "Ibiza 2018-2026",
-      "Leon 2014-2026",
-      "Octavia 2014-2026",
       "Taos 2021-2026",
       "Nivus 2021-2026",
       "Virtus 2018-2026"
@@ -319,6 +314,109 @@
         "tipo": "Correa bañada en aceite (EA211 1.0/1.2/1.4/1.5 TSI)",
         "nota": "Cambio cada 120,000 km o segun revision. Correa dentro del motor.",
         "fuente": "VW service schedule"
+      },
+      "Pastillas Freno Delanteras (A3/Golf/Jetta 312mm)": {
+        "oem": "8W0698151BC",
+        "alt": "3Q0698151B, 5Q0698151AM",
+        "fuente": "parts.audiusa.com, audi.oempartsonline.com, fcpeuro.com"
+      },
+      "Pastillas Freno Traseras (A3/Golf)": {
+        "oem": "5Q0698451AK",
+        "alt": "5Q0698451A, 5Q0698451M",
+        "fuente": "getaudiparts.com, amazon.com TRQ cross-ref"
+      },
+      "Filtro Cabina (A3/Golf/Q3)": {
+        "oem": "5Q0819653",
+        "fuente": "3m.com cabin filter checklist, fcpeuro.com"
+      },
+      "Bomba Agua + Termostato (EA211 1.4T)": {
+        "oem": "04E121600CS",
+        "alt": "04E121605E (kit correa+bomba)",
+        "fuente": "parts.audiusa.com, walmart.com"
+      },
+      "Correa Accesorios": {
+        "oem": "6PK1115 (Bando)",
+        "modelos": "A3 2008-2013, Q3 2015-2018, Golf, Jetta, Tiguan",
+        "fuente": "amazon.com Bando OEM"
+      },
+      "Bobina de Encendido": {
+        "oem": "04E905110B",
+        "alt": "04E905110K",
+        "cantidad": 4,
+        "fuente": "audi.oempartsonline.com, ebay.com"
+      },
+      "Bieleta Barra Estabilizadora (delantera)": {
+        "oem": "1K0411303M",
+        "alt": "4M0411317",
+        "modelos": "A3, Q3, Golf, Jetta, Tiguan, Passat, Beetle, TT",
+        "fuente": "parts.audiusa.com, amazon.com (19,212 reviews Detroit Axle), accio.com"
+      },
+      "Cojinete Rueda Delantero (hub assembly)": {
+        "oem": "5Q0498621",
+        "alt": "1K0498621 (gen anterior)",
+        "modelos": "A3, Q3, TT, Golf, Jetta, Beetle, Passat, Tiguan",
+        "fuente": "bestbuy.ca, amazon.com (425 reviews), go-parts.com"
+      },
+      "Bomba Agua (EA211 timing belt)": {
+        "oem": "04E121600CS",
+        "alt": "04E121605E (kit correa+bomba)",
+        "nota": "EA211 tiene correa banada en aceite, bomba agua es accionada por la correa de distribucion",
+        "fuente": "parts.audiusa.com, walmart.com"
+      },
+      "Sensor Ciguenal CKP (EA211)": {
+        "oem": "04E906433A",
+        "alt": "04E906433B",
+        "fuente": "audi.oempartsonline.com"
+      },
+      "Sensor Ciguenal CKP (EA888 en A3 2.0)": {
+        "oem": "06H906433C",
+        "alt": "06H906433D",
+        "fuente": "amazon.com Mteycei confirmed"
+      },
+      "Sonda Lambda (EA211 1.4T)": {
+        "oem": "04E906262AK",
+        "nota": "Sensor upstream (frontal)",
+        "fuente": "audi.oempartsonline.com"
+      },
+      "Disco Freno Delantero (312x25mm)": {
+        "oem": "5Q0615301F",
+        "modelos": "A3, Q3, TT, Golf, Jetta",
+        "fuente": "audi.oempartsonline.com, getaudiparts.com, amazon.com Bosch 14010043"
+      },
+      "Disco Freno Delantero (340x30mm)": {
+        "oem": "5Q0615301G",
+        "nota": "Version sport/Quattro",
+        "fuente": "audi.oempartsonline.com, fcpeuro.com"
+      },
+      "Radiador": {
+        "oem": "5Q0121251GN",
+        "alt": "5Q0121251ES",
+        "fuente": "urotuning.com Genuine VW/Audi"
+      },
+      "Limpiaparabrisas (medidas A3)": {
+        "conductor": "26 pulgadas (660mm)",
+        "pasajero": "18-19 pulgadas (460mm)",
+        "trasero": "13 pulgadas (330mm)",
+        "fuente": "allwipersize.com, wipersized.com, windshieldwipers.com"
+      },
+      "Motor de Arranque (DSG)": {
+        "oem": "02E911023SX",
+        "nota": "1.1 KW, Bosch",
+        "fuente": "audi.oempartsonline.com"
+      },
+      "Alternador (EA211 1.4T A3)": {
+        "oem": "04E903024E",
+        "nota": "110-140A",
+        "fuente": "audi.oempartsonline.com, autozone.com"
+      },
+      "Bateria": {
+        "spec": "12V 60-70Ah 680A CCA",
+        "tipo": "AGM (Start-Stop)",
+        "fuente": "audi manual"
+      },
+      "Disco Freno Trasero (282mm)": {
+        "oem": "5Q0615601F",
+        "fuente": "amazon.com, fcpeuro.com"
       }
     }
   },
@@ -1056,11 +1154,9 @@
     }
   },
   "Audi-VW|EA888": {
-    "marca": "Volkswagen/Audi/Porsche",
+    "marca": "Volkswagen/Porsche",
     "motor": "2.0T EA888 Gen3",
     "modelos": [
-      "Audi A4 2016-2026",
-      "Audi Q5 2017-2026",
       "VW Tiguan 2014-2026",
       "Porsche Macan 2.0T"
     ],
@@ -1075,6 +1171,97 @@
         "tipo": "Cadena (EA888 Gen3)",
         "nota": "No cambio programado",
         "fuente": "vw service"
+      },
+      "Filtro de Aire": {
+        "oem": "8W0133843C",
+        "alt": "8W0133843E",
+        "modelos": "A4 2017-2025, A5 2018-2023, Q5 2018-2025, Q5 Sportback 2021-2026",
+        "fuente": "audi.oempartsonline.com, amazon.com (716 reviews)"
+      },
+      "Bujias (EA888 Gen3)": {
+        "oem": "06K905601B",
+        "alt": "06K905601L, 06K905601M",
+        "tipo": "NGK Iridium",
+        "cantidad": 4,
+        "fuente": "parts.audiusa.com official, audi.oempartsonline.com"
+      },
+      "Pastillas Freno Delanteras (A4/Q5 338mm)": {
+        "oem": "8W0698151BC",
+        "fuente": "parts.audiusa.com"
+      },
+      "Bomba Agua + Termostato (EA888)": {
+        "oem": "06L121111H",
+        "alt": "06L121111J, 06L121111P",
+        "modelos": "A3 2.0T, A4, A5, Q3, Q5, S3, TT, Golf GTI, Jetta, Tiguan, Passat",
+        "fuente": "amazon.com (multiples confirmed), getaudiparts.com"
+      },
+      "Filtro Cabina (A4/Q5 B9)": {
+        "oem": "4M0819439A",
+        "fuente": "audi parts catalog"
+      },
+      "Bobina de Encendido": {
+        "oem": "06L905110",
+        "alt": "06H905110P, 06K905110K",
+        "cantidad": 4,
+        "fuente": "audi.oempartsonline.com, amazon.com, ebay.com"
+      },
+      "Aceite Transmision DSG (7-speed)": {
+        "oem": "G052182A2",
+        "alt": "G055529A2 (A4 2017+ DSG7)",
+        "tipo": "Pentosin/Rowe Full Synthetic",
+        "nota": "Cambio cada 60,000 km. Capacidad: ~5L",
+        "fuente": "amazon.com Pentosin, amayama.com Genuine Audi, blauparts.com, cascadegerman.com"
+      },
+      "Bieleta Barra Estabilizadora": {
+        "oem": "4M0411317",
+        "alt": "1K0411303M",
+        "fuente": "parts.audiusa.com"
+      },
+      "Cojinete Rueda Delantero": {
+        "oem": "8V0598625B",
+        "alt": "8W0407625G",
+        "fuente": "getaudiparts.com"
+      },
+      "Sensor Ciguenal CKP": {
+        "oem": "06H906433C",
+        "alt": "06H906433D",
+        "fuente": "amazon.com, pelicanparts.com"
+      },
+      "Sonda Lambda (EA888 upstream)": {
+        "oem": "06L906262B",
+        "fuente": "audi parts catalog"
+      },
+      "Disco Freno Delantero (A4/Q5 338x30mm)": {
+        "oem": "8W0615301K",
+        "fuente": "parts.audiusa.com"
+      },
+      "Alternador (EA888 2.0T A4)": {
+        "oem": "06L903024J",
+        "nota": "150A Denso",
+        "fuente": "audi.oempartsonline.com"
+      },
+      "Motor de Arranque (EA888)": {
+        "oem": "02E911023SX",
+        "nota": "1.1 KW remanufactured con DSG",
+        "fuente": "audi.oempartsonline.com"
+      },
+      "Bateria (A4/Q5)": {
+        "spec": "12V 68-80Ah 760A CCA",
+        "tipo": "AGM",
+        "fuente": "audi manual"
+      },
+      "Limpiaparabrisas (A4)": {
+        "conductor": "24 pulgadas",
+        "pasajero": "20 pulgadas",
+        "fuente": "audi wiper guides"
+      },
+      "Radiador (A4/Q5)": {
+        "oem": "8W0121251AB",
+        "fuente": "audi parts catalog"
+      },
+      "Disco Freno Trasero (A4/Q5 302mm)": {
+        "oem": "8W0615601K",
+        "fuente": "audi parts catalog"
       }
     }
   },
@@ -3036,6 +3223,442 @@
       "Filtro de Aceite": {
         "oem": "16510-61A31",
         "fuente": "suzuki catalog"
+      }
+    }
+  },
+  "Audi|A3-8V": {
+    "marca": "Audi",
+    "motor": "1.4T EA211 CZEA (A3 8V)",
+    "modelos": [
+      "A3 2014-2020"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "04E115561H",
+        "alt": "04E115561T, 04E115561AC",
+        "fuente": "parts.vw.com, fcpeuro.com"
+      },
+      "Filtro de Aire": {
+        "oem": "04E129620",
+        "fuente": "audi.oempartsonline.com"
+      },
+      "Bujias": {
+        "oem": "04E905612C",
+        "tipo": "Bosch Double Platinum",
+        "cantidad": 4,
+        "fuente": "urotuning.com"
+      },
+      "Filtro Cabina": {
+        "oem": "5Q0819653",
+        "fuente": "3m.com cabin checklist"
+      },
+      "Bobina de Encendido": {
+        "oem": "04E905110B",
+        "cantidad": 4,
+        "fuente": "audi.oempartsonline.com"
+      },
+      "Distribucion": {
+        "tipo": "Correa banada en aceite (EA211)",
+        "nota": "Cambio 120,000 km. Kit OEM: 04E121605E",
+        "fuente": "walmart.com, VW service"
+      },
+      "Bomba Agua + Termostato": {
+        "oem": "04E121600CS",
+        "nota": "Accionada por correa distribucion",
+        "fuente": "parts.audiusa.com"
+      },
+      "Correa Accesorios": {
+        "oem": "6PK1115 (Bando)",
+        "fuente": "amazon.com"
+      },
+      "Pastillas Freno Delanteras (312mm)": {
+        "oem": "8V0698151G",
+        "alt": "5Q0698151AM",
+        "fuente": "getaudiparts.com"
+      },
+      "Pastillas Freno Traseras": {
+        "oem": "5Q0698451AK",
+        "fuente": "getaudiparts.com"
+      },
+      "Disco Freno Delantero (312x25mm)": {
+        "oem": "5Q0615301F",
+        "fuente": "audi.oempartsonline.com"
+      },
+      "Disco Freno Trasero (282mm)": {
+        "oem": "5Q0615601F",
+        "fuente": "fcpeuro.com"
+      },
+      "Sensor Ciguenal CKP": {
+        "oem": "04E906433A",
+        "fuente": "audi.oempartsonline.com"
+      },
+      "Sonda Lambda": {
+        "oem": "04E906262AK",
+        "fuente": "audi.oempartsonline.com"
+      },
+      "Bieleta Estabilizadora": {
+        "oem": "1K0411303M",
+        "fuente": "amazon.com Detroit Axle"
+      },
+      "Cojinete Rueda Delantero": {
+        "oem": "5Q0498621",
+        "fuente": "amazon.com"
+      },
+      "Radiador": {
+        "oem": "5Q0121251GN",
+        "fuente": "urotuning.com"
+      },
+      "Alternador": {
+        "oem": "04E903024E",
+        "nota": "110-140A",
+        "fuente": "audi.oempartsonline.com"
+      },
+      "Motor de Arranque": {
+        "oem": "02E911023SX",
+        "fuente": "audi.oempartsonline.com"
+      },
+      "Bateria": {
+        "spec": "12V 60Ah 680A CCA AGM",
+        "fuente": "audi manual"
+      },
+      "Limpiaparabrisas": {
+        "conductor": "26 pulg",
+        "pasajero": "19 pulg",
+        "trasero": "13 pulg",
+        "fuente": "allwipersize.com"
+      }
+    }
+  },
+  "Audi|A3-8Y": {
+    "marca": "Audi",
+    "motor": "1.5T EA211evo DADA (A3 8Y)",
+    "modelos": [
+      "A3 2021-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "04E115561H",
+        "nota": "Mismo que 8V",
+        "fuente": "parts.vw.com"
+      },
+      "Filtro de Aire": {
+        "oem": "04E129620",
+        "fuente": "audi.oempartsonline.com"
+      },
+      "Bujias": {
+        "oem": "04E905612C",
+        "cantidad": 4,
+        "fuente": "urotuning.com"
+      },
+      "Filtro Cabina": {
+        "oem": "5Q0819653",
+        "fuente": "3m.com"
+      },
+      "Bobina de Encendido": {
+        "oem": "04E905110K",
+        "cantidad": 4,
+        "fuente": "audi.oempartsonline.com"
+      },
+      "Distribucion": {
+        "tipo": "Correa banada en aceite (EA211evo)",
+        "nota": "Cambio 120,000 km",
+        "fuente": "VW service"
+      },
+      "Bomba Agua": {
+        "oem": "04E121600CS",
+        "fuente": "parts.audiusa.com"
+      },
+      "Pastillas Freno Delanteras (340mm)": {
+        "oem": "8W0698151BC",
+        "nota": "Generacion 8Y usa 340mm de serie",
+        "fuente": "parts.audiusa.com"
+      },
+      "Pastillas Freno Traseras": {
+        "oem": "5Q0698451AK",
+        "fuente": "getaudiparts.com"
+      },
+      "Disco Freno Delantero (340x30mm)": {
+        "oem": "5Q0615301G",
+        "fuente": "audi.oempartsonline.com"
+      },
+      "Disco Freno Trasero (282mm)": {
+        "oem": "5Q0615601F",
+        "fuente": "fcpeuro.com"
+      },
+      "Sensor Ciguenal CKP": {
+        "oem": "04E906433A",
+        "fuente": "audi.oempartsonline.com"
+      },
+      "Sonda Lambda": {
+        "oem": "04E906262AK",
+        "fuente": "audi.oempartsonline.com"
+      },
+      "Bieleta Estabilizadora": {
+        "oem": "4M0411317",
+        "nota": "Nueva plataforma MQB evo",
+        "fuente": "parts.audiusa.com"
+      },
+      "Cojinete Rueda Delantero": {
+        "oem": "5Q0498621",
+        "fuente": "amazon.com"
+      },
+      "Radiador": {
+        "oem": "5Q0121251GN",
+        "fuente": "urotuning.com"
+      },
+      "Alternador": {
+        "oem": "04E903024E",
+        "fuente": "audi.oempartsonline.com"
+      },
+      "Bateria": {
+        "spec": "12V 68Ah 760A CCA AGM",
+        "nota": "Mayor capacidad que 8V por mild-hybrid",
+        "fuente": "audi manual"
+      },
+      "Limpiaparabrisas": {
+        "conductor": "26 pulg",
+        "pasajero": "18 pulg",
+        "fuente": "allwipersize.com"
+      }
+    }
+  },
+  "Audi|A4-B9": {
+    "marca": "Audi",
+    "motor": "2.0T EA888 Gen3 DBPA (A4 B9)",
+    "modelos": [
+      "A4 2016-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "06L115562B",
+        "fuente": "audi.oempartsonline.com"
+      },
+      "Filtro de Aire": {
+        "oem": "8W0133843C",
+        "fuente": "audi.oempartsonline.com, amazon.com"
+      },
+      "Bujias": {
+        "oem": "06K905601B",
+        "tipo": "NGK Iridium",
+        "cantidad": 4,
+        "fuente": "parts.audiusa.com"
+      },
+      "Filtro Cabina": {
+        "oem": "4M0819439A",
+        "fuente": "audi parts catalog"
+      },
+      "Bobina de Encendido": {
+        "oem": "06L905110",
+        "cantidad": 4,
+        "fuente": "audi.oempartsonline.com"
+      },
+      "Distribucion": {
+        "tipo": "Cadena (EA888 Gen3)",
+        "nota": "No cambio programado",
+        "fuente": "audi service"
+      },
+      "Bomba Agua + Termostato": {
+        "oem": "06L121111H",
+        "fuente": "amazon.com, getaudiparts.com"
+      },
+      "Pastillas Freno Delanteras (338mm)": {
+        "oem": "8W0698151BC",
+        "fuente": "parts.audiusa.com"
+      },
+      "Pastillas Freno Traseras": {
+        "oem": "8W0698451N",
+        "fuente": "audi parts catalog"
+      },
+      "Disco Freno Delantero (338x30mm)": {
+        "oem": "8W0615301K",
+        "fuente": "parts.audiusa.com"
+      },
+      "Disco Freno Trasero (302mm)": {
+        "oem": "8W0615601K",
+        "fuente": "audi parts catalog"
+      },
+      "Sensor Ciguenal CKP": {
+        "oem": "06H906433C",
+        "fuente": "amazon.com"
+      },
+      "Sonda Lambda": {
+        "oem": "06L906262B",
+        "fuente": "audi catalog"
+      },
+      "Bieleta Estabilizadora": {
+        "oem": "4M0411317",
+        "fuente": "parts.audiusa.com"
+      },
+      "Cojinete Rueda Delantero": {
+        "oem": "8W0407625G",
+        "fuente": "getaudiparts.com"
+      },
+      "Radiador": {
+        "oem": "8W0121251AB",
+        "fuente": "audi parts catalog"
+      },
+      "Alternador": {
+        "oem": "06L903024J",
+        "nota": "150A Denso",
+        "fuente": "audi.oempartsonline.com"
+      },
+      "Motor de Arranque": {
+        "oem": "02E911023SX",
+        "fuente": "audi.oempartsonline.com"
+      },
+      "Bateria": {
+        "spec": "12V 68-80Ah 760A CCA AGM",
+        "fuente": "audi manual"
+      },
+      "Aceite Transmision DSG": {
+        "oem": "G055529A2",
+        "nota": "7-speed DSG, cambio 60,000 km",
+        "fuente": "blauparts.com"
+      },
+      "Limpiaparabrisas": {
+        "conductor": "24 pulg",
+        "pasajero": "20 pulg",
+        "fuente": "audi wiper guide"
+      }
+    }
+  },
+  "Audi|Q5-FY": {
+    "marca": "Audi",
+    "motor": "2.0T EA888 Gen3 (Q5 FY)",
+    "modelos": [
+      "Q5 2017-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "06L115562B",
+        "nota": "Mismo que A4 B9",
+        "fuente": "audi.oempartsonline.com"
+      },
+      "Filtro de Aire": {
+        "oem": "8W0133843C",
+        "nota": "Mismo que A4",
+        "fuente": "amazon.com"
+      },
+      "Bujias": {
+        "oem": "06K905601B",
+        "cantidad": 4,
+        "fuente": "parts.audiusa.com"
+      },
+      "Filtro Cabina": {
+        "oem": "4M0819439A",
+        "fuente": "audi catalog"
+      },
+      "Bobina de Encendido": {
+        "oem": "06L905110",
+        "cantidad": 4,
+        "fuente": "audi.oempartsonline.com"
+      },
+      "Distribucion": {
+        "tipo": "Cadena",
+        "fuente": "audi service"
+      },
+      "Bomba Agua + Termostato": {
+        "oem": "06L121111H",
+        "fuente": "amazon.com"
+      },
+      "Pastillas Freno Delanteras (345mm)": {
+        "oem": "80A698151",
+        "nota": "Q5 usa 345mm (mas grande que A4)",
+        "fuente": "audi catalog"
+      },
+      "Disco Freno Delantero (345x30mm)": {
+        "oem": "80A615301",
+        "fuente": "audi catalog"
+      },
+      "Sensor Ciguenal CKP": {
+        "oem": "06H906433C",
+        "fuente": "amazon.com"
+      },
+      "Sonda Lambda": {
+        "oem": "06L906262B",
+        "fuente": "audi catalog"
+      },
+      "Alternador": {
+        "oem": "06L903024J",
+        "fuente": "audi.oempartsonline.com"
+      },
+      "Bateria": {
+        "spec": "12V 80Ah 800A CCA AGM",
+        "fuente": "audi manual"
+      },
+      "Aceite Transmision DSG": {
+        "oem": "G055529A2",
+        "fuente": "blauparts.com"
+      },
+      "Limpiaparabrisas": {
+        "conductor": "24 pulg",
+        "pasajero": "20 pulg",
+        "fuente": "audi guide"
+      }
+    }
+  },
+  "Audi|Q3": {
+    "marca": "Audi",
+    "motor": "1.4T/2.0T EA211/EA888 (Q3)",
+    "modelos": [
+      "Q3 2015-2026"
+    ],
+    "componentes": {
+      "Filtro de Aceite": {
+        "oem": "04E115561H",
+        "nota": "Mismo EA211 que A3",
+        "fuente": "parts.vw.com"
+      },
+      "Filtro de Aire": {
+        "oem": "04E129620",
+        "fuente": "audi.oempartsonline.com"
+      },
+      "Bujias": {
+        "oem": "04E905612C",
+        "cantidad": 4,
+        "fuente": "urotuning.com"
+      },
+      "Filtro Cabina": {
+        "oem": "5Q0819653",
+        "fuente": "3m.com"
+      },
+      "Bobina de Encendido": {
+        "oem": "04E905110B",
+        "cantidad": 4,
+        "fuente": "audi.oempartsonline.com"
+      },
+      "Distribucion": {
+        "tipo": "Correa banada en aceite",
+        "fuente": "VW service"
+      },
+      "Pastillas Freno Delanteras": {
+        "oem": "5N0698151C",
+        "fuente": "audi.oempartsonline.com"
+      },
+      "Disco Freno Delantero": {
+        "oem": "5Q0615301F",
+        "fuente": "audi.oempartsonline.com"
+      },
+      "Sensor Ciguenal CKP": {
+        "oem": "04E906433A",
+        "fuente": "audi.oempartsonline.com"
+      },
+      "Cojinete Rueda Delantero": {
+        "oem": "5Q0498621",
+        "fuente": "amazon.com"
+      },
+      "Bieleta Estabilizadora": {
+        "oem": "1K0411303M",
+        "fuente": "amazon.com"
+      },
+      "Bateria": {
+        "spec": "12V 60-68Ah AGM",
+        "fuente": "audi manual"
+      },
+      "Limpiaparabrisas": {
+        "conductor": "24 pulg",
+        "pasajero": "20 pulg",
+        "fuente": "audi guide"
       }
     }
   }
