@@ -61,8 +61,7 @@
 </head>
 <body>
 <div class="topbar">Mi Catalogo Personal de Repuestos y Componentes <button class="theme-toggle" onclick="toggleDark()" title="Modo oscuro">&#9790;</button></div>
-<header class="header"><div class="logo">Repuestos<span>Pro</span></div><div style="font-size:.82rem;color:#999">v0.9.0</div></header>
-<div class="breadcrumb"><a href="#" onclick="showWelcome()">Inicio</a> / <span id="bc-text">Selecciona un vehiculo</span></div>
+<header class="header"><div class="logo" onclick="showWelcome()" style="cursor:pointer">Repuestos<span>Pro</span></div><div style="font-size:.82rem;color:#999">v0.9.0</div></header>
 <div class="main-layout"><aside class="sidebar" id="sidebar"><div class="vehicle-selector"><div class="search-box" style="margin-bottom:1rem"><input type="text" id="searchInput" placeholder="Buscar vehiculo, repuesto o ref..." autocomplete="off" onkeyup="handleSearch(event)" onfocus="handleSearch(event)"><div class="search-autocomplete" id="searchAutocomplete"></div></div><label>MARCA</label><select id="brandSelect" onchange="changeBrand()"><option value="">-- Todas las marcas --</option></select><label>MODELO</label><select id="vehicleSelect" onchange="changeVehicle()"><option value="">-- Seleccionar modelo --</option></select></div><div id="sidebar-categories"></div></aside>
 <section class="content"><div class="welcome" id="welcome"><div class="welcome-hero"><h2>Repuestos<span>Pro</span></h2><p class="hero-subtitle">Tu catalogo de repuestos automotrices con compatibilidad cruzada entre vehiculos</p><div class="hero-stats"><div class="stat-box"><span class="stat-num" id="vehicle-count">0</span><span class="stat-label">Vehiculos</span></div><div class="stat-box"><span class="stat-num" id="parts-count">0</span><span class="stat-label">Componentes</span></div><div class="stat-box"><span class="stat-num" id="brands-count">0</span><span class="stat-label">Marcas</span></div></div><p class="hero-tip">Busca por codigo OEM, nombre de repuesto o modelo de vehiculo</p><div class="hero-features"><span class="hero-feat"><span class="hero-feat-icon">&#9889;</span> Funciona offline</span><span class="hero-feat"><span class="hero-feat-icon">&#128260;</span> Cruces entre modelos</span><span class="hero-feat"><span class="hero-feat-icon">&#128722;</span> Links de compra</span></div></div><h3 class="section-title">Selecciona un vehiculo</h3><div class="vehicle-cards" id="vehicle-grid"></div></div><div id="parts-content" style="display:none"></div></section></div>
 <footer class="footer"><p>Catalogo personal — Fuentes: opinautos.com, mundorepuestos.com, parts.mitsubishicars.com, Amazon, MercadoLibre</p><p>Agosto 2026 | Verificar compatibilidad antes de comprar</p></footer>
@@ -153,9 +152,9 @@ function changeVehicle(){const v=document.getElementById('vehicleSelect').value;
 
 function renderSidebar(){const d=DATA[currentVehicle];let h='<div style="padding:1rem 1.5rem;border-bottom:1px solid #e0e0e0"><p style="font-size:.82rem;color:#666">'+d.info+'</p></div><h3 style="margin-top:1rem">Sistemas</h3>';for(const cat in d.categories){h+='<details class="sidebar-section" open><summary>'+cat+'</summary><ul>';const subs=[...new Set(d.categories[cat].map(p=>p.cat))];subs.forEach(s=>{h+='<li onclick="filterBySubcat(\''+cat+'\',\''+s+'\')" id="sub-'+s.replace(/[^a-z0-9]/gi,'')+'">'+s+'</li>'});h+='</ul></details>'}document.getElementById('sidebar-categories').innerHTML=h}
 
-function showAllParts(){const d=DATA[currentVehicle];document.getElementById('welcome').style.display='none';document.getElementById('parts-content').style.display='block';document.getElementById('bc-text').innerHTML=d.name;let parts=[];for(const cat in d.categories)parts=parts.concat(d.categories[cat]);currentParts=parts;paginationShown=0;renderPartsPaginated("Todos los componentes")}
+function showAllParts(){const d=DATA[currentVehicle];document.getElementById('welcome').style.display='none';document.getElementById('parts-content').style.display='block';let parts=[];for(const cat in d.categories)parts=parts.concat(d.categories[cat]);currentParts=parts;paginationShown=0;renderPartsPaginated("Todos los componentes")}
 
-function filterBySubcat(cat,sub){const d=DATA[currentVehicle];document.querySelectorAll('.sidebar-section ul li').forEach(l=>l.classList.remove('active'));const el=document.getElementById('sub-'+sub.replace(/[^a-z0-9]/gi,''));if(el)el.classList.add('active');const parts=d.categories[cat].filter(p=>p.cat===sub);document.getElementById('bc-text').innerHTML=d.name+' / '+cat+' / <span>'+sub+'</span>';currentParts=parts;paginationShown=0;renderPartsPaginated(sub)}
+function filterBySubcat(cat,sub){const d=DATA[currentVehicle];document.querySelectorAll('.sidebar-section ul li').forEach(l=>l.classList.remove('active'));const el=document.getElementById('sub-'+sub.replace(/[^a-z0-9]/gi,''));if(el)el.classList.add('active');const parts=d.categories[cat].filter(p=>p.cat===sub);currentParts=parts;paginationShown=0;renderPartsPaginated(sub)}
 
 function renderPartsPaginated(title){
 paginationShown+=paginationLimit;
@@ -203,7 +202,7 @@ if(compat.length>0){h+='<div class="part-compat"><span class="compat-title">Comp
 if(p.links&&p.links.length){h+='<div class="part-links">';p.links.forEach(l=>{h+='<a href="'+l.u+'" target="_blank" rel="noopener">'+l.t+'</a>'});h+='</div>'}
 h+='</div>';return h}
 
-function showWelcome(){document.getElementById('welcome').style.display='block';document.getElementById('parts-content').style.display='none';document.getElementById('bc-text').innerHTML='Selecciona un vehiculo';document.getElementById('sidebar-categories').innerHTML='';document.getElementById('vehicleSelect').value='';currentVehicle=null;currentParts=[];paginationShown=0;history.replaceState(null,null,' ')}
+function showWelcome(){document.getElementById('welcome').style.display='block';document.getElementById('parts-content').style.display='none';document.getElementById('sidebar-categories').innerHTML='';document.getElementById('vehicleSelect').value='';currentVehicle=null;currentParts=[];paginationShown=0;history.replaceState(null,null,' ')}
 
 // === BUSCADOR PREDICTIVO ===
 function handleSearch(e){
@@ -285,7 +284,7 @@ results.push({vid,vname:d.name,part:p,ref:r.r})}})
 if(results.length===0)return;
 document.getElementById('welcome').style.display='none';
 document.getElementById('parts-content').style.display='block';
-document.getElementById('bc-text').innerHTML='Busqueda: <span>'+query+'</span>';
+
 let h='<div class="content-header"><h2>Resultados para: '+query+'</h2><span class="count">'+results.length+' coincidencia'+(results.length>1?'s':'')+'</span></div>';
 h+='<div class="parts-grid">';
 results.slice(0,30).forEach(r=>{
