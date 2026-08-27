@@ -17,8 +17,9 @@
 
 ## Estado verificado en la base actual (actualizado)
 - 3,275 vehículos
-- 16,260 componentes
+- 16,445 componentes
 - 42 marcas (se eliminaron 3 registros fantasma Chrysler_Mopar/Dodge_Mopar/Ram_Mopar)
+- Avance global: ~50% vehículos completos (>=5 comps). Marcas 100%: 13/42 (A-G + Haval).
 - Segmento más fuerte: Hyundai, Suzuki, Nissan, Volkswagen, Chevrolet, Toyota, Peugeot y Ford
 
 ## Progreso de recopilación de componentes (por marca, alfabético)
@@ -32,9 +33,12 @@ Refs OEM con fuente pública fiable = "confirmed"; sin PN público = "verify" (r
 - G: GAC (GS4 1.5T 4B15J1) ✓ · Geely (Coolray 1.5T JLH-3G15TD, plataforma BMA) ✓ · GWM (Tank 300 + Dargo, motor GW4C20B 2.0T — comparte mecánica con Haval) ✓
   └─ Refs confirmed clave: Geely filtro aceite OEM 1016056847/1056022300, bujía NGK ILKFR8B7G (91602), pastillas OE 4048046400, DCT Shell Spirax S5 DCT10. GAC/GWM PN sin fuente pública = verify.
   └─ Script: insert_g_componentes.py. Resultado: GAC 8 veh, Geely 7 veh, GWM 10 veh actualizados. Totales 16,093 → 16,260 (+167).
-- SIGUIENTE: **H** → Haval (H6/Jolion/Dargo/Poer/Tank 300 — reutilizar familia GW4 del script G), Honda, Hyundai
+- H (por marca, un script cada una):
+  └─ Haval ✓ COMPLETA (32 veh) — familias GW4: GW4C20B 2.0T (H6/Dargo/Tank 300), GW4B15 1.5T (Jolion), GW4D20 2.0D diesel (Poer). Script: insert_haval_componentes.py. Totales 16,260 → 16,445 (+185).
+  └─ SIGUIENTE en H: Honda (98 veh, 8 modelos; Accord/City/Civic/CR-V/HR-V ya en 5 comps, faltan completar + Fit/Pilot/Ridgeline en mínimo). Refs confirmed listas: filtro aceite 15400-PLM-A02 (1.5) / 15400-RTA-003 (2.4-V6).
+  └─ Luego: Hyundai (291 veh, 25 modelos; varios ya en 9 comps). Refs confirmed listas: filtro aceite Hyundai/Kia 26300-35505, aire Elantra 28113-AA100, cabina 97133-L1000. OJO: hay gemelos Kia mezclados (Carnival, Cerato, Morning, Sorento, Sportage, Seltos, Frontier).
 - Pendientes tras H: J, K (Kia casi vacía, 68 veh), L, M, N, O, P, R, S, T, V
-- Nota: `_regen_nav.py` (nuevo) automatiza el paso 3 del build (regenera db-nav.json desde db.json; marca = primera palabra del nombre). Reutilizable en próximas tandas.
+- Nota: `_regen_nav.py` automatiza el paso 3 del build (regenera db-nav.json desde db.json; marca = primera palabra del nombre). Reutilizable en próximas tandas.
 
 ## Flujo de build (IMPORTANTE — así llega a la web)
 1. Escribir/ejecutar `insert_<marca>_componentes.py` → inserta en `db.sqlite` (patrón: clear_and_insert por vehículo, categorías→partes→refs→links)
