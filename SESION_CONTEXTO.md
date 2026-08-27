@@ -17,9 +17,9 @@
 
 ## Estado verificado en la base actual (actualizado)
 - 3,275 vehículos
-- 16,445 componentes
+- 16,867 componentes
 - 42 marcas (se eliminaron 3 registros fantasma Chrysler_Mopar/Dodge_Mopar/Ram_Mopar)
-- Avance global: ~50% vehículos completos (>=5 comps). Marcas 100%: 13/42 (A-G + Haval).
+- Avance global: ~53% vehículos completos (>=5 comps). Marcas 100%: 14/42 (A-G + Haval + Honda).
 - Segmento más fuerte: Hyundai, Suzuki, Nissan, Volkswagen, Chevrolet, Toyota, Peugeot y Ford
 
 ## Progreso de recopilación de componentes (por marca, alfabético)
@@ -35,8 +35,8 @@ Refs OEM con fuente pública fiable = "confirmed"; sin PN público = "verify" (r
   └─ Script: insert_g_componentes.py. Resultado: GAC 8 veh, Geely 7 veh, GWM 10 veh actualizados. Totales 16,093 → 16,260 (+167).
 - H (por marca, un script cada una):
   └─ Haval ✓ COMPLETA (32 veh) — familias GW4: GW4C20B 2.0T (H6/Dargo/Tank 300), GW4B15 1.5T (Jolion), GW4D20 2.0D diesel (Poer). Script: insert_haval_componentes.py. Totales 16,260 → 16,445 (+185).
-  └─ SIGUIENTE en H: Honda (98 veh, 8 modelos; Accord/City/Civic/CR-V/HR-V ya en 5 comps, faltan completar + Fit/Pilot/Ridgeline en mínimo). Refs confirmed listas: filtro aceite 15400-PLM-A02 (1.5) / 15400-RTA-003 (2.4-V6).
-  └─ Luego: Hyundai (291 veh, 25 modelos; varios ya en 9 comps). Refs confirmed listas: filtro aceite Hyundai/Kia 26300-35505, aire Elantra 28113-AA100, cabina 97133-L1000. OJO: hay gemelos Kia mezclados (Carnival, Cerato, Morning, Sorento, Sportage, Seltos, Frontier).
+  └─ Honda ✓ COMPLETA (98 veh, 8 comps c/u) — familias: L15B7 1.5T turbo (Civic/CR-V/Accord), L15 1.5 aspirado (City/Fit/HR-V), J35 3.5 V6 (Pilot/Ridgeline). K24 disponible en script pero no mapeada. Script: insert_honda_componentes.py. Totales 16,445 → 16,867 (+422). Refs confirmed: aceite 15400-PLM-A02 / 15400-RTA-003, aire 17220-5AA-A00 / 17220-R5A-A00, bujia NGK DXE22HCR11S / DILKAR8P8SY, cabina 80292-SDA-407 / 80292-TF0-G01.
+  └─ SIGUIENTE en H: Hyundai (291 veh, 25 modelos; varios ya en 9 comps). Refs confirmed listas: filtro aceite Hyundai/Kia 26300-35505, aire Elantra 28113-AA100, cabina 97133-L1000. OJO: hay gemelos Kia mezclados (Carnival, Cerato, Morning, Sorento, Sportage, Seltos, Frontier) — al hacer Kia (letra K) reutilizar familias.
 - Pendientes tras H: J, K (Kia casi vacía, 68 veh), L, M, N, O, P, R, S, T, V
 - Nota: `_regen_nav.py` automatiza el paso 3 del build (regenera db-nav.json desde db.json; marca = primera palabra del nombre). Reutilizable en próximas tandas.
 
