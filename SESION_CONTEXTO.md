@@ -17,9 +17,9 @@
 
 ## Estado verificado en la base actual (actualizado)
 - 3,275 vehículos
-- 17,893 componentes
+- 18,696 componentes
 - 42 marcas (se eliminaron 3 registros fantasma Chrysler_Mopar/Dodge_Mopar/Ram_Mopar)
-- Avance global: ~62% vehículos completos (>=5 comps). Marcas 100%: 15/42 (A-H completa: A-G + Haval + Honda + Hyundai).
+- Avance global: ~67% vehículos completos (>=5 comps). Marcas 100%: 19/42 (A-J completas).
 - Segmento más fuerte: Hyundai, Suzuki, Nissan, Volkswagen, Chevrolet, Toyota, Peugeot y Ford
 
 ## Progreso de recopilación de componentes (por marca, alfabético)
@@ -42,7 +42,11 @@ Refs OEM con fuente pública fiable = "confirmed"; sin PN público = "verify" (r
      · insert_hyundai_bloque3_componentes.py: diesel D4CB (Porter, H-1, Kia Frontier) + Ioniq HEV/EV
      Refs confirmed: aceite gasolina 26300-35505/35504, aceite diesel D4CB 26330-4A001/4A700, aire 28113-AA100, cabina 97133-L1000. Totales 16,867 → 17,893 (+1,026).
      LECCION: al repartir en bloques, Sorento se escapo inicialmente; se corrigio agregandolo al bloque 2. Verificar SIEMPRE 0 incompletos tras paralelizar.
-- Pendientes: J, K (Kia — REUTILIZAR familias Hyundai: Nu/Theta, Lambda V6, D4CB, ya que muchos son gemelos), L, M, N, O, P, R, S, T, V
+- J ✓ COMPLETA (158 veh, 8 comps c/u) — 2 scripts en paralelo:
+  · insert_jeep_componentes.py: Jeep 105 veh. Familias Tigershark 2.0/2.4 (Compass/Renegade/Cherokee/Journey, aceite Mopar 4892339 confirmed) y Pentastar V6 (Grand Cherokee/Wrangler/Gladiator/Durango/Pacifica, filtro 68191349AC/AB/AA confirmed).
+  · insert_j_chinas_componentes.py: JAC 42 + JMC 6 + Jetour 5. SUV gasolina (JS4/S2/S3/Jetour Dashing) + pickup diesel (JAC T6/T8, JMC Vigus Pro). Solo aceite y DOT4 confirmed; PN chinos = verify (poca fuente publica).
+  Totales 17,893 → 18,696 (+803).
+- Pendientes: K (Kia — REUTILIZAR familias Hyundai: Nu/Theta, Lambda V6, D4CB, ya que muchos son gemelos), L, M, N, O, P, R, S, T, V
 - Nota: `_regen_nav.py` automatiza el paso 3 del build (regenera db-nav.json desde db.json; marca = primera palabra del nombre). Reutilizable en próximas tandas.
 
 ## Flujo de build (IMPORTANTE — así llega a la web)
