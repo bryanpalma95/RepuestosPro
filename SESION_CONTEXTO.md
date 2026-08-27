@@ -17,7 +17,7 @@
 
 ## Estado verificado en la base actual (actualizado)
 - 3,275 vehículos
-- 16,093 componentes
+- 16,260 componentes
 - 42 marcas (se eliminaron 3 registros fantasma Chrysler_Mopar/Dodge_Mopar/Ram_Mopar)
 - Segmento más fuerte: Hyundai, Suzuki, Nissan, Volkswagen, Chevrolet, Toyota, Peugeot y Ford
 
@@ -29,8 +29,12 @@ Refs OEM con fuente pública fiable = "confirmed"; sin PN público = "verify" (r
 - C: Changan ✓ · Chery (familia SQR) ✓ · Chevrolet (6 familias: Ecotec, F18D4, Sail/Spark, Isuzu diesel, V8, legacy) ✓
 - D: Dongfeng ✓ (AMPLIADA: +8 modelos CIDEF Chile — T5 Evo, SX6, Aeolus GS Cross, Aeolus Y3, Mage PHEV, Mage EV, Huge, Rich 6) · DFSK Glory 580 ✓ · Daewoo Racer/Heaven ✓
 - F: Fiat (Firefly, Fire, MultiJet) ✓ · Ford (Sigma/EcoBoost/Duratorq/Coyote V8) ✓
-- SIGUIENTE: **G** → GAC, Geely, GWM (todas en estado mínimo, ~1 comp)
-- Pendientes tras G: H (Haval, Honda, Hyundai), J, K (Kia casi vacía, 68 veh), L, M, N, O, P, R, S, T, V
+- G: GAC (GS4 1.5T 4B15J1) ✓ · Geely (Coolray 1.5T JLH-3G15TD, plataforma BMA) ✓ · GWM (Tank 300 + Dargo, motor GW4C20B 2.0T — comparte mecánica con Haval) ✓
+  └─ Refs confirmed clave: Geely filtro aceite OEM 1016056847/1056022300, bujía NGK ILKFR8B7G (91602), pastillas OE 4048046400, DCT Shell Spirax S5 DCT10. GAC/GWM PN sin fuente pública = verify.
+  └─ Script: insert_g_componentes.py. Resultado: GAC 8 veh, Geely 7 veh, GWM 10 veh actualizados. Totales 16,093 → 16,260 (+167).
+- SIGUIENTE: **H** → Haval (H6/Jolion/Dargo/Poer/Tank 300 — reutilizar familia GW4 del script G), Honda, Hyundai
+- Pendientes tras H: J, K (Kia casi vacía, 68 veh), L, M, N, O, P, R, S, T, V
+- Nota: `_regen_nav.py` (nuevo) automatiza el paso 3 del build (regenera db-nav.json desde db.json; marca = primera palabra del nombre). Reutilizable en próximas tandas.
 
 ## Flujo de build (IMPORTANTE — así llega a la web)
 1. Escribir/ejecutar `insert_<marca>_componentes.py` → inserta en `db.sqlite` (patrón: clear_and_insert por vehículo, categorías→partes→refs→links)
@@ -46,6 +50,14 @@ Entorno Python: usar `.venv\Scripts\python.exe` (tiene openpyxl instalado).
 - Carga rápida: db-nav.json (~30KB) instant + lazy load db.json al ver detalle
 - Selector cascada Marca→Modelo→Año, años agrupados si >3
 - Versionado en footer v0.9.1
+
+## Excel dinámico (SOLO LOCAL, no se sube a git)
+- `RepuestosPro_Catalogo_Dinamico.xlsx` (~870 KB) generado por `generar_excel_dinamico.py`
+- Regenerar: `.venv\Scripts\python.exe generar_excel_dinamico.py` (acepta nombre de salida opcional como arg)
+- Hojas: INICIO (portada/guía, sin fórmulas) · Componentes (20.152 filas, 1 por ref OEM) · Compatibilidad OEM (95) · Indice Referencias (305, cruces >=2 veh) · Resumen por Marca (42)
+- Buscador = AutoFiltro nativo de cada tabla (compatible con todo Excel/LibreOffice/Sheets)
+- IMPORTANTE: NO usar fórmulas FILTER/array dinámico con openpyxl — Excel las marca como corruptas y las elimina (openpyxl no escribe la metadata de spill). Por eso INICIO es texto puro y la búsqueda va por AutoFiltro.
+- Ambos archivos (.xlsx y generador) quedan untracked a propósito.
 
 ## Estructura del catálogo
 - Las entradas están organizadas por vehículo
