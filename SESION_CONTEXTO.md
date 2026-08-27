@@ -17,9 +17,10 @@
 
 ## Estado verificado en la base actual (actualizado)
 - 3,275 vehículos
-- 18,696 componentes
+- 20,868 componentes
 - 42 marcas (se eliminaron 3 registros fantasma Chrysler_Mopar/Dodge_Mopar/Ram_Mopar)
-- Avance global: ~67% vehículos completos (>=5 comps). Marcas 100%: 19/42 (A-J completas).
+- Avance global VERIFICADO: 2377/3275 vehículos completos (72.6%). Marcas 100%: 26/42.
+- Marcas aún NO 100%: Chevrolet, Dongfeng (tienen modelos residuales <5 comps pese a marcarse "completas" antes — revisar), Nissan, Opel, Peugeot, Porsche, Ram, Range, Renault, Seat, SsangYong, Subaru, Suzuki, Toyota, Volkswagen, Volvo.
 - Segmento más fuerte: Hyundai, Suzuki, Nissan, Volkswagen, Chevrolet, Toyota, Peugeot y Ford
 
 ## Progreso de recopilación de componentes (por marca, alfabético)
@@ -46,7 +47,14 @@ Refs OEM con fuente pública fiable = "confirmed"; sin PN público = "verify" (r
   · insert_jeep_componentes.py: Jeep 105 veh. Familias Tigershark 2.0/2.4 (Compass/Renegade/Cherokee/Journey, aceite Mopar 4892339 confirmed) y Pentastar V6 (Grand Cherokee/Wrangler/Gladiator/Durango/Pacifica, filtro 68191349AC/AB/AA confirmed).
   · insert_j_chinas_componentes.py: JAC 42 + JMC 6 + Jetour 5. SUV gasolina (JS4/S2/S3/Jetour Dashing) + pickup diesel (JAC T6/T8, JMC Vigus Pro). Solo aceite y DOT4 confirmed; PN chinos = verify (poca fuente publica).
   Totales 17,893 → 18,696 (+803).
-- Pendientes: K (Kia — REUTILIZAR familias Hyundai: Nu/Theta, Lambda V6, D4CB, ya que muchos son gemelos), L, M, N, O, P, R, S, T, V
+- K, L, M ✓ COMPLETAS (hechas EN PARALELO con 4 sub-scripts):
+  · insert_kia_componentes.py: Kia 68 veh (reutiliza familias Hyundai: D4CB diesel Frontier, Nu/Theta, Lambda V6 Telluride, Niro hibrido). Refs 26300-35505 / 26330-4A001 confirmed.
+  · insert_lexus_mazda_componentes.py: Lexus NX 5 + Mazda 99. Skyactiv-G (filtro PE01-14-302A / 1WPE-14-302 confirmed, aceite 0W-20 GF-6), BT-50 diesel, Lexus NX (aceite Toyota 0W-20).
+  · insert_mg_maxus_componentes.py: MG 58 + Maxus 40 (SAIC). PN chinos = verify, solo aceite/DOT4 confirmed.
+  · insert_mb_mitsubishi_componentes.py: Mercedes-Benz 63 + Mitsubishi 104. MB gasolina/diesel (aceite spec MB 229.5/229.51), Mitsu gasolina/diesel (4B/3A/4N15/4D56).
+  Totales 18,696 → 20,868 (+2,172). Los 7 marcas verificadas 0 incompletos.
+- Pendientes: N (Nissan), O (Opel), P (Peugeot, Porsche), R (Ram, Range, Renault), S (Seat, SsangYong, Subaru, Suzuki), T (Toyota), V (Volkswagen, Volvo).
+- REVISAR aparte: Chevrolet y Dongfeng tienen modelos residuales <5 comps (no quedaron 100% pese a marcarse completas en tandas C/D).
 - Nota: `_regen_nav.py` automatiza el paso 3 del build (regenera db-nav.json desde db.json; marca = primera palabra del nombre). Reutilizable en próximas tandas.
 
 ## Flujo de build (IMPORTANTE — así llega a la web)
