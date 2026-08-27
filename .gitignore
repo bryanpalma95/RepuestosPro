@@ -8,3 +8,33 @@ __pycache__/
 .venv/
 componentes.db
 *.zip
+
+# --- Limpieza: solo se versiona lo esencial para servir la web ---
+# Esencial trackeado: index.html, catalogo.html, db.json, db-nav.json, db-compat.json, README.md
+# Todo lo demas (scripts de generacion, documentacion, datos intermedios) queda solo en local.
+
+# Scripts de generacion / build de la base
+insert_*.py
+setup_*.py
+export_db.py
+_regen_nav.py
+count_vehicles.py
+import_initial.py
+generar_*.py
+
+# Documentacion y notas de trabajo
+*.md
+!README.md
+*.txt
+
+# Datos intermedios / auxiliares (NO son consumidos por la web)
+*.xlsx
+componentes_oem_verificados.json
+vins_catalogo_final.json
+modelos_vehiculos.txt
+manifest.json
+
+# Scripts/artefactos temporales de sesion
+_q.py
+_printer_*.ps1
+_gcode.txt
