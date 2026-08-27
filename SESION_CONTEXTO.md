@@ -17,10 +17,12 @@
 
 ## Estado verificado en la base actual (actualizado)
 - 3,275 vehículos
-- 20,868 componentes
+- 22,100 componentes
 - 42 marcas (se eliminaron 3 registros fantasma Chrysler_Mopar/Dodge_Mopar/Ram_Mopar)
-- Avance global VERIFICADO: 2377/3275 vehículos completos (72.6%). Marcas 100%: 26/42.
-- Marcas aún NO 100%: Chevrolet, Dongfeng (tienen modelos residuales <5 comps pese a marcarse "completas" antes — revisar), Nissan, Opel, Peugeot, Porsche, Ram, Range, Renault, Seat, SsangYong, Subaru, Suzuki, Toyota, Volkswagen, Volvo.
+- Avance global VERIFICADO: 2570/3275 vehículos completos (78.5%). Marcas 100%: 28/42 (Nissan recién cerrada; Chevrolet quedó completa por un sub-agente del turno previo).
+- Marcas aún NO 100%: Dongfeng (residuales forthing-t5l/mage-ev <5 comps — pendiente), Opel, Peugeot, Porsche, Ram, Range, Renault, Seat, SsangYong, Subaru, Suzuki, Toyota, Volkswagen, Volvo.
+- Nissan ✓ COMPLETA (222 veh) — 3 bloques en paralelo: insert_nissan_bloque1 (gasolina compactos versa/tiida/march/sentra/kicks/v16, filtro 15208-65F0E, aire Sentra 16546-17B00), bloque2 (SUV juke/qashqai/x-trail/murano/pathfinder), bloque3 (diesel d21/np300/navara/urvan). Totales 20,868 → 22,100 (+1,232).
+- NOTA build: export_db.py ahora tarda >120s (db.json ~grande); usar timeout amplio o el export se corta a medias.
 - Segmento más fuerte: Hyundai, Suzuki, Nissan, Volkswagen, Chevrolet, Toyota, Peugeot y Ford
 
 ## Progreso de recopilación de componentes (por marca, alfabético)
