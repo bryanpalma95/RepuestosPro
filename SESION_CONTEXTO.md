@@ -17,9 +17,9 @@
 
 ## Estado verificado en la base actual (actualizado)
 - 3,275 vehículos
-- 16,867 componentes
+- 17,893 componentes
 - 42 marcas (se eliminaron 3 registros fantasma Chrysler_Mopar/Dodge_Mopar/Ram_Mopar)
-- Avance global: ~53% vehículos completos (>=5 comps). Marcas 100%: 14/42 (A-G + Haval + Honda).
+- Avance global: ~62% vehículos completos (>=5 comps). Marcas 100%: 15/42 (A-H completa: A-G + Haval + Honda + Hyundai).
 - Segmento más fuerte: Hyundai, Suzuki, Nissan, Volkswagen, Chevrolet, Toyota, Peugeot y Ford
 
 ## Progreso de recopilación de componentes (por marca, alfabético)
@@ -36,8 +36,13 @@ Refs OEM con fuente pública fiable = "confirmed"; sin PN público = "verify" (r
 - H (por marca, un script cada una):
   └─ Haval ✓ COMPLETA (32 veh) — familias GW4: GW4C20B 2.0T (H6/Dargo/Tank 300), GW4B15 1.5T (Jolion), GW4D20 2.0D diesel (Poer). Script: insert_haval_componentes.py. Totales 16,260 → 16,445 (+185).
   └─ Honda ✓ COMPLETA (98 veh, 8 comps c/u) — familias: L15B7 1.5T turbo (Civic/CR-V/Accord), L15 1.5 aspirado (City/Fit/HR-V), J35 3.5 V6 (Pilot/Ridgeline). K24 disponible en script pero no mapeada. Script: insert_honda_componentes.py. Totales 16,445 → 16,867 (+422). Refs confirmed: aceite 15400-PLM-A02 / 15400-RTA-003, aire 17220-5AA-A00 / 17220-R5A-A00, bujia NGK DXE22HCR11S / DILKAR8P8SY, cabina 80292-SDA-407 / 80292-TF0-G01.
-  └─ SIGUIENTE en H: Hyundai (291 veh, 25 modelos; varios ya en 9 comps). Refs confirmed listas: filtro aceite Hyundai/Kia 26300-35505, aire Elantra 28113-AA100, cabina 97133-L1000. OJO: hay gemelos Kia mezclados (Carnival, Cerato, Morning, Sorento, Sportage, Seltos, Frontier) — al hacer Kia (letra K) reutilizar familias.
-- Pendientes tras H: J, K (Kia casi vacía, 68 veh), L, M, N, O, P, R, S, T, V
+  └─ Hyundai ✓ COMPLETA (291 veh, 8 comps c/u) — hecho EN PARALELO con 3 sub-scripts por familia:
+     · insert_hyundai_bloque1_componentes.py: city/compactos Kappa/Gamma (Atos-i10, Grand i10, Accent, Rio, Soluto, Morning, Verna, Elantra, i30, Veloster)
+     · insert_hyundai_bloque2_componentes.py: SUV/medianos Nu/Theta + V6 Lambda (Tucson, Santa Fe, Sonata, Creta, Seltos, Sportage, Cerato, SORENTO, Palisade, Telluride, Carnival)
+     · insert_hyundai_bloque3_componentes.py: diesel D4CB (Porter, H-1, Kia Frontier) + Ioniq HEV/EV
+     Refs confirmed: aceite gasolina 26300-35505/35504, aceite diesel D4CB 26330-4A001/4A700, aire 28113-AA100, cabina 97133-L1000. Totales 16,867 → 17,893 (+1,026).
+     LECCION: al repartir en bloques, Sorento se escapo inicialmente; se corrigio agregandolo al bloque 2. Verificar SIEMPRE 0 incompletos tras paralelizar.
+- Pendientes: J, K (Kia — REUTILIZAR familias Hyundai: Nu/Theta, Lambda V6, D4CB, ya que muchos son gemelos), L, M, N, O, P, R, S, T, V
 - Nota: `_regen_nav.py` automatiza el paso 3 del build (regenera db-nav.json desde db.json; marca = primera palabra del nombre). Reutilizable en próximas tandas.
 
 ## Flujo de build (IMPORTANTE — así llega a la web)
