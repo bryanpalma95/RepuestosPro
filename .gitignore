@@ -16,8 +16,11 @@ componentes.db
 # Scripts de generacion / build de la base
 insert_*.py
 setup_*.py
-export_db.py
+export_db*.py
 _regen_nav.py
+_q.py
+_tmp_*.py
+_check_*.py
 count_vehicles.py
 import_initial.py
 generar_*.py
