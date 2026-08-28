@@ -103,9 +103,9 @@ body{background:#121212;color:#e0e0e0}
             <a href="catalogo.html" class="btn-primary">Ir al Catalogo</a>
         </div>
         <div class="hero-stats">
-            <div class="hero-stat"><span class="hero-stat-num">3,280</span><span class="hero-stat-label">Vehiculos</span></div>
-            <div class="hero-stat"><span class="hero-stat-num">11,249</span><span class="hero-stat-label">Componentes</span></div>
-            <div class="hero-stat"><span class="hero-stat-num">42</span><span class="hero-stat-label">Marcas</span></div>
+            <div class="hero-stat"><span class="hero-stat-num" id="statVeh">3,290</span><span class="hero-stat-label">Vehiculos</span></div>
+            <div class="hero-stat"><span class="hero-stat-num" id="statComp">45,413</span><span class="hero-stat-label">Componentes</span></div>
+            <div class="hero-stat"><span class="hero-stat-num" id="statMarcas">43</span><span class="hero-stat-label">Marcas</span></div>
         </div>
     </div>
 </section>
@@ -133,12 +133,26 @@ body{background:#121212;color:#e0e0e0}
 <footer class="foot">
     <p>RepuestosPro — Catalogo personal de repuestos automotrices</p>
     <p>Fuentes: opinautos.com, mundorepuestos.com, Amazon, MercadoLibre | Agosto 2026</p>
-    <p style="margin-top:.5rem;font-size:.75rem;color:#bbb">v0.9.0</p>
+    <p style="margin-top:.5rem;font-size:.75rem;color:#bbb">v1.0.0</p>
 </footer>
 
 <script>
 // SW removido - sin funcion offline
 if('serviceWorker' in navigator){navigator.serviceWorker.getRegistrations().then(function(regs){regs.forEach(function(r){r.unregister()})})}
+// Stats dinamicas: se calculan del db.json real (no hardcodeadas)
+fetch('db.json').then(function(r){return r.json()}).then(function(d){
+  var keys=Object.keys(d), veh=keys.length, comps=0, marcas={};
+  keys.forEach(function(k){
+    var v=d[k], cats=v.categories||{};
+    for(var c in cats){comps+=(cats[c]||[]).length}
+    var m=String(v.name||'').split(' ')[0]; if(m)marcas[m]=1;
+  });
+  var fmt=function(n){return n.toLocaleString('es-CL')};
+  var setv=function(id,val){var e=document.getElementById(id); if(e)e.textContent=val};
+  setv('statVeh', fmt(veh));
+  setv('statComp', fmt(comps));
+  setv('statMarcas', fmt(Object.keys(marcas).length));
+}).catch(function(){/* deja los valores por defecto del HTML */});
 </script>
 </body>
 </html>
