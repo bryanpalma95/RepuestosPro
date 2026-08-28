@@ -91,7 +91,8 @@ body{background:#121212;color:#e0e0e0}
 <nav class="nav">
     <div class="nav-logo">Repuestos<span>Pro</span></div>
     <div class="nav-links">
-        <a href="catalogo.html" class="nav-cta">Abrir Catalogo</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="taller.html" class="nav-cta">Taller</a>
     </div>
 </nav>
 
@@ -100,11 +101,12 @@ body{background:#121212;color:#e0e0e0}
         <h1>Encuentra el repuesto exacto para <span>tu auto</span></h1>
         <p>Catalogo de componentes automotrices con referencias OEM, alternativas verificadas y compatibilidad cruzada entre vehiculos. Funciona sin internet.</p>
         <div class="hero-buttons">
-            <a href="catalogo.html" class="btn-primary">Ir al Catalogo</a>
+            <a href="catalogo.html" class="btn-primary">Ir al Catálogo</a>
+            <a href="taller.html" class="btn-secondary">Gestionar Taller</a>
         </div>
         <div class="hero-stats">
-            <div class="hero-stat"><span class="hero-stat-num" id="statVeh">3,290</span><span class="hero-stat-label">Vehiculos</span></div>
-            <div class="hero-stat"><span class="hero-stat-num" id="statComp">45,413</span><span class="hero-stat-label">Componentes</span></div>
+            <div class="hero-stat"><span class="hero-stat-num" id="statVeh">3.264</span><span class="hero-stat-label">Vehiculos</span></div>
+            <div class="hero-stat"><span class="hero-stat-num" id="statComp">54.604</span><span class="hero-stat-label">Componentes</span></div>
             <div class="hero-stat"><span class="hero-stat-num" id="statMarcas">43</span><span class="hero-stat-label">Marcas</span></div>
         </div>
     </div>
@@ -133,26 +135,25 @@ body{background:#121212;color:#e0e0e0}
 <footer class="foot">
     <p>RepuestosPro — Catalogo personal de repuestos automotrices</p>
     <p>Fuentes: opinautos.com, mundorepuestos.com, Amazon, MercadoLibre | Agosto 2026</p>
-    <p style="margin-top:.5rem;font-size:.75rem;color:#bbb">v1.0.0</p>
+    <p style="margin-top:.5rem;font-size:.75rem;color:#bbb">v0.9.0</p>
 </footer>
 
 <script>
 // SW removido - sin funcion offline
 if('serviceWorker' in navigator){navigator.serviceWorker.getRegistrations().then(function(regs){regs.forEach(function(r){r.unregister()})})}
-// Stats dinamicas: se calculan del db.json real (no hardcodeadas)
-fetch('db.json').then(function(r){return r.json()}).then(function(d){
-  var keys=Object.keys(d), veh=keys.length, comps=0, marcas={};
-  keys.forEach(function(k){
-    var v=d[k], cats=v.categories||{};
-    for(var c in cats){comps+=(cats[c]||[]).length}
-    var m=String(v.name||'').split(' ')[0]; if(m)marcas[m]=1;
-  });
-  var fmt=function(n){return n.toLocaleString('es-CL')};
-  var setv=function(id,val){var e=document.getElementById(id); if(e)e.textContent=val};
-  setv('statVeh', fmt(veh));
-  setv('statComp', fmt(comps));
-  setv('statMarcas', fmt(Object.keys(marcas).length));
-}).catch(function(){/* deja los valores por defecto del HTML */});
+fetch('db.json').then(function(response){return response.json()}).then(function(data){
+    var keys=Object.keys(data), components=0, brands={};
+    keys.forEach(function(key){
+        var vehicle=data[key], categories=vehicle.categories||{};
+        Object.keys(categories).forEach(function(category){components+=(categories[category]||[]).length});
+        var brand=String(vehicle.name||'').split(' ')[0];
+        if(brand)brands[brand]=true;
+    });
+    var format=function(value){return value.toLocaleString('es-CL')};
+    document.getElementById('statVeh').textContent=format(keys.length);
+    document.getElementById('statComp').textContent=format(components);
+    document.getElementById('statMarcas').textContent=format(Object.keys(brands).length);
+}).catch(function(){/* Conserva los valores de respaldo si el archivo no está disponible. */});
 </script>
 </body>
 </html>

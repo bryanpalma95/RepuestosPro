@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#17211f">
+    <meta name="description" content="Gestión local de clientes, vehículos, servicios y órdenes para el taller RepuestosPro.">
+    <title>RepuestosPro — Taller</title>
+    <link rel="stylesheet" href="taller.css">
+</head>
+<body>
+<header class="app-header">
+    <div class="header-inner">
+        <a href="index.html" class="logo" aria-label="Inicio de RepuestosPro">Repuestos<span>Pro</span></a>
+        <nav class="main-nav" aria-label="Navegación principal">
+            <a href="catalogo.html">Catálogo</a>
+            <a href="taller.html" class="active" aria-current="page">Taller</a>
+        </nav>
+    </div>
+</header>
+
+<main class="page-shell">
+    <section class="intro" aria-labelledby="pageTitle">
+        <div>
+            <span class="eyebrow">TALLER / FASE 1</span>
+            <h1 id="pageTitle">Clientes y vehículos, <em>sin fricción.</em></h1>
+            <p>Encuentra una patente al instante o mantén al día las fichas de quienes llegan al taller.</p>
+        </div>
+        <form class="plate-search" id="plateSearchForm" role="search" novalidate>
+            <label for="plateSearch">Búsqueda rápida por patente</label>
+            <div class="search-line">
+                <input id="plateSearch" name="plate" type="search" maxlength="12" autocomplete="off" placeholder="Ej. ABCD12" aria-describedby="plateSearchHint">
+                <button type="submit" class="button primary">Buscar vehículo</button>
+            </div>
+            <small id="plateSearchHint">No distingue espacios, puntos ni guiones.</small>
+            <p class="field-message" id="plateSearchMessage" aria-live="polite"></p>
+        </form>
+    </section>
+
+    <section class="summary" aria-label="Resumen del taller">
+        <article class="summary-card accent-red">
+            <span>Clientes</span><strong id="clientCount">0</strong>
+            <button type="button" class="text-action" data-action="new-client">+ Crear cliente</button>
+        </article>
+        <article class="summary-card accent-teal">
+            <span>Vehículos</span><strong id="vehicleCount">0</strong>
+            <button type="button" class="text-action" data-action="new-vehicle">+ Registrar vehículo</button>
+        </article>
+        <article class="summary-card accent-yellow">
+            <span>Órdenes</span><strong id="orderCount">0</strong>
+            <button type="button" class="text-action" data-action="new-order">+ Nueva orden</button>
+        </article>
+        <article class="summary-card accent-ink">
+            <span>Servicios activos</span><strong id="serviceCount">0</strong>
+            <button type="button" class="text-action" data-action="new-service">+ Crear servicio</button>
+        </article>
+        <article class="summary-card guide-card">
+            <span>Datos del catálogo</span><strong id="catalogStatus">Conectando…</strong>
+            <small>Las sugerencias de marca, modelo y año vienen de <code>db-nav.json</code>.</small>
+        </article>
+    </section>
+
+    <section class="workspace" aria-labelledby="workspaceTitle">
+        <div class="workspace-tabs" role="tablist" aria-label="Gestión del taller">
+            <button id="clientsTab" type="button" role="tab" aria-selected="true" aria-controls="listView" data-section="clients">Clientes</button>
+            <button id="vehiclesTab" type="button" role="tab" aria-selected="false" aria-controls="listView" data-section="vehicles">Vehículos</button>
+            <button id="ordersTab" type="button" role="tab" aria-selected="false" aria-controls="listView" data-section="orders">Órdenes</button>
+            <button id="servicesTab" type="button" role="tab" aria-selected="false" aria-controls="listView" data-section="services">Servicios</button>
+        </div>
+
+        <div id="listView">
+            <div class="list-toolbar">
+                <div>
+                    <span class="eyebrow" id="workspaceEyebrow">DIRECTORIO</span>
+                    <h2 id="workspaceTitle">Clientes</h2>
+                </div>
+                <button type="button" class="button primary" id="addRecordButton">Nuevo cliente</button>
+            </div>
+            <div class="filter-row">
+                <label class="sr-only" for="recordSearch">Buscar en la lista</label>
+                <input id="recordSearch" type="search" autocomplete="off" placeholder="Buscar por nombre, RUT, teléfono o email…">
+                <span id="resultCount" aria-live="polite"></span>
+            </div>
+            <div class="record-list" id="recordList" aria-live="polite"></div>
+        </div>
+
+        <div id="detailView" hidden>
+            <button class="back-button" type="button" data-action="back-to-list">← Volver a la lista</button>
+            <div id="detailContent"></div>
+        </div>
+    </section>
+</main>
+
+<footer class="app-footer">
+    <span>RepuestosPro Taller · Datos guardados en este dispositivo</span>
+    <a href="catalogo.html">Abrir catálogo de repuestos →</a>
+</footer>
+
+<dialog id="clientDialog" class="record-dialog" aria-labelledby="clientDialogTitle">
+    <form id="clientForm" novalidate>
+        <div class="dialog-header">
+            <div><span class="eyebrow">FICHA DE CONTACTO</span><h2 id="clientDialogTitle">Nuevo cliente</h2></div>
+            <button type="button" class="icon-button" data-close-dialog aria-label="Cerrar">×</button>
+        </div>
+        <input type="hidden" name="id">
+        <div class="form-grid">
+            <label>Nombre <span>*</span><input name="nombre" maxlength="160" required autocomplete="given-name"></label>
+            <label>Apellido <span>*</span><input name="apellido" maxlength="160" required autocomplete="family-name"></label>
+            <label>RUT <span>*</span><input name="rut" maxlength="20" required placeholder="12.345.678-5"></label>
+            <label>Teléfono<input name="telefono" type="tel" maxlength="40" autocomplete="tel"></label>
+            <label>WhatsApp<input name="whatsapp" type="tel" maxlength="40"></label>
+            <label>Email<input name="email" type="email" maxlength="160" autocomplete="email"></label>
+            <label class="full">Dirección<input name="direccion" maxlength="300" autocomplete="street-address"></label>
+            <label class="full">Notas<textarea name="notas" rows="4" maxlength="3000" placeholder="Preferencias, observaciones o contexto útil…"></textarea></label>
+        </div>
+        <p class="form-error" id="clientFormError" aria-live="assertive"></p>
+        <div class="dialog-actions">
+            <button type="button" class="button secondary" data-close-dialog>Cancelar</button>
+            <button type="submit" class="button primary">Guardar cliente</button>
+        </div>
+    </form>
+</dialog>
+
+<dialog id="vehicleDialog" class="record-dialog wide" aria-labelledby="vehicleDialogTitle">
+    <form id="vehicleForm" novalidate>
+        <div class="dialog-header">
+            <div><span class="eyebrow">FICHA DEL VEHÍCULO</span><h2 id="vehicleDialogTitle">Nuevo vehículo</h2></div>
+            <button type="button" class="icon-button" data-close-dialog aria-label="Cerrar">×</button>
+        </div>
+        <input type="hidden" name="id">
+        <div class="form-grid three-columns">
+            <label>Patente <span>*</span><input name="patente" maxlength="12" required placeholder="ABCD12" autocapitalize="characters"></label>
+            <label>VIN<input name="vin" maxlength="17" minlength="17" placeholder="17 caracteres" autocapitalize="characters"></label>
+            <label>Cliente <span>*</span><select name="clienteId" required><option value="">— Seleccionar cliente —</option></select></label>
+            <label>Marca <span>*</span><input name="marca" list="brandOptions" maxlength="80" required autocomplete="off"><datalist id="brandOptions"></datalist></label>
+            <label>Modelo <span>*</span><input name="modelo" list="modelOptions" maxlength="100" required autocomplete="off"><datalist id="modelOptions"></datalist></label>
+            <label>Año <span>*</span><input name="anio" list="yearOptions" type="number" min="1900" max="2100" required><datalist id="yearOptions"></datalist></label>
+            <label>Motor<input name="motor" maxlength="160" placeholder="Campo editable"></label>
+            <label>Cilindrada<input name="cilindrada" maxlength="40" placeholder="Ej. 1.6 L"></label>
+            <label>Combustible<select name="combustible"><option value="">— Sin especificar —</option><option>Bencina</option><option>Diésel</option><option>Híbrido</option><option>Eléctrico</option><option>Gas</option><option>Otro</option></select></label>
+            <label>Transmisión<select name="transmision"><option value="">— Sin especificar —</option><option>Manual</option><option>Automática</option><option>CVT</option><option>Doble embrague</option><option>Otra</option></select></label>
+            <label>Kilometraje<input name="kilometraje" type="number" min="0" step="1" inputmode="numeric"></label>
+            <label>Color<input name="color" maxlength="80"></label>
+            <label class="full">Notas<textarea name="notas" rows="4" maxlength="3000" placeholder="Estado, historial u observaciones…"></textarea></label>
+        </div>
+        <p class="catalog-hint" id="catalogHint">Marca, modelo y año aceptan escritura manual; las sugerencias no inventan datos fuera del catálogo.</p>
+        <p class="form-error" id="vehicleFormError" aria-live="assertive"></p>
+        <div class="dialog-actions">
+            <button type="button" class="button secondary" data-close-dialog>Cancelar</button>
+            <button type="submit" class="button primary">Guardar vehículo</button>
+        </div>
+    </form>
+</dialog>
+
+<dialog id="serviceDialog" class="record-dialog" aria-labelledby="serviceDialogTitle">
+    <form id="serviceForm" novalidate>
+        <div class="dialog-header">
+            <div><span class="eyebrow">CATÁLOGO DEL TALLER</span><h2 id="serviceDialogTitle">Nuevo servicio</h2></div>
+            <button type="button" class="icon-button" data-close-dialog aria-label="Cerrar">×</button>
+        </div>
+        <input type="hidden" name="id">
+        <div class="form-grid">
+            <label class="full">Nombre <span>*</span><input name="nombre" maxlength="160" required placeholder="Ej. Mantención 10.000 km"></label>
+            <label>Precio base <span>*</span><input name="precioBase" type="number" min="0" step="1" required inputmode="numeric"></label>
+            <label>Duración estimada (minutos)<input name="duracionEstimada" type="number" min="0" step="1" inputmode="numeric"></label>
+            <label class="full">Descripción<textarea name="descripcion" rows="4" maxlength="1000"></textarea></label>
+            <label class="checkbox-label full"><input name="activo" type="checkbox" checked> Servicio activo y disponible para nuevas órdenes</label>
+        </div>
+        <p class="form-error" id="serviceFormError" aria-live="assertive"></p>
+        <div class="dialog-actions"><button type="button" class="button secondary" data-close-dialog>Cancelar</button><button type="submit" class="button primary">Guardar servicio</button></div>
+    </form>
+</dialog>
+
+<dialog id="orderDialog" class="record-dialog wide" aria-labelledby="orderDialogTitle">
+    <form id="orderForm" novalidate>
+        <div class="dialog-header">
+            <div><span class="eyebrow">ORDEN DE TRABAJO</span><h2 id="orderDialogTitle">Nueva orden</h2></div>
+            <button type="button" class="icon-button" data-close-dialog aria-label="Cerrar">×</button>
+        </div>
+        <input type="hidden" name="id">
+        <div class="form-grid three-columns">
+            <label>Fecha <span>*</span><input name="fecha" type="date" required></label>
+            <label>Cliente <span>*</span><select name="clienteId" required><option value="">— Seleccionar cliente —</option></select></label>
+            <label>Vehículo <span>*</span><select name="vehiculoId" required><option value="">— Seleccionar vehículo —</option></select></label>
+            <label>Kilometraje<input name="kilometraje" type="number" min="0" step="1" inputmode="numeric"></label>
+            <label>Estado<select name="estado"></select></label>
+            <span class="form-spacer" aria-hidden="true"></span>
+            <label class="full">Problema reportado <span>*</span><textarea name="problemaReportado" rows="3" maxlength="3000" required placeholder="Motivo de ingreso descrito por el cliente…"></textarea></label>
+            <label class="full">Diagnóstico<textarea name="diagnostico" rows="3" maxlength="3000" placeholder="Evaluación técnica inicial o actualizada…"></textarea></label>
+            <label class="full">Notas<textarea name="notas" rows="3" maxlength="3000"></textarea></label>
+        </div>
+        <p class="form-error" id="orderFormError" aria-live="assertive"></p>
+        <div class="dialog-actions"><button type="button" class="button secondary" data-close-dialog>Cancelar</button><button type="submit" class="button primary">Guardar y abrir orden</button></div>
+    </form>
+</dialog>
+
+<dialog id="lineDialog" class="record-dialog" aria-labelledby="lineDialogTitle">
+    <form id="lineForm" novalidate>
+        <div class="dialog-header">
+            <div><span class="eyebrow">PRESUPUESTO</span><h2 id="lineDialogTitle">Añadir línea</h2></div>
+            <button type="button" class="icon-button" data-close-dialog aria-label="Cerrar">×</button>
+        </div>
+        <input type="hidden" name="orderId"><input type="hidden" name="kind"><input type="hidden" name="id">
+        <div class="form-grid">
+            <label class="full" id="servicePickerLabel">Servicio del catálogo<select name="servicioId"><option value="">— Seleccionar servicio —</option></select></label>
+            <label class="full">Descripción <span>*</span><input name="descripcion" maxlength="500" required></label>
+            <label>Cantidad <span>*</span><input name="cantidad" type="number" min="0.01" step="0.01" value="1" required></label>
+            <label>Precio unitario <span>*</span><input name="precioUnitario" type="number" min="0" step="1" required inputmode="numeric"></label>
+        </div>
+        <p class="form-error" id="lineFormError" aria-live="assertive"></p>
+        <div class="dialog-actions"><button type="button" class="button secondary" data-close-dialog>Cancelar</button><button type="submit" class="button primary">Guardar línea</button></div>
+    </form>
+</dialog>
+
+<dialog id="partPickerDialog" class="record-dialog wide catalog-dialog" aria-labelledby="partPickerTitle">
+    <div class="catalog-dialog-inner">
+        <div class="dialog-header">
+            <div><span class="eyebrow">CATÁLOGO TÉCNICO / SOLO LECTURA</span><h2 id="partPickerTitle">Agregar repuesto</h2></div>
+            <button type="button" class="icon-button" data-close-dialog aria-label="Cerrar">×</button>
+        </div>
+        <div class="catalog-context" id="catalogContext" aria-live="polite">
+            <strong>Preparando coincidencia del vehículo…</strong>
+            <span>Los datos pesados se cargan solo al abrir este selector.</span>
+        </div>
+        <div class="catalog-mode" role="group" aria-label="Alcance de búsqueda">
+            <button type="button" class="catalog-mode-button active" data-action="catalog-mode" data-mode="compatible">Compatibles con el vehículo</button>
+            <button type="button" class="catalog-mode-button" data-action="catalog-mode" data-mode="broad">Todo el catálogo</button>
+        </div>
+        <label class="catalog-search-label" for="catalogPartSearch">Buscar por componente, referencia OEM o código</label>
+        <input id="catalogPartSearch" type="search" autocomplete="off" placeholder="Ej. filtro aceite, 90915-YZZF2…">
+        <div class="catalog-result-meta" id="catalogResultMeta" aria-live="polite">Cargando catálogo…</div>
+        <div class="catalog-results" id="catalogResults"></div>
+    </div>
+</dialog>
+
+<dialog id="partLineDialog" class="record-dialog" aria-labelledby="partLineTitle">
+    <form id="partLineForm" novalidate>
+        <div class="dialog-header">
+            <div><span class="eyebrow">REPUESTO EN LA ORDEN</span><h2 id="partLineTitle">Agregar repuesto</h2></div>
+            <button type="button" class="icon-button" data-close-dialog aria-label="Cerrar">×</button>
+        </div>
+        <input type="hidden" name="orderId"><input type="hidden" name="id">
+        <div class="selected-part" id="selectedPartSummary"></div>
+        <div class="form-grid">
+            <label>Cantidad <span>*</span><input name="cantidad" type="number" min="0.01" step="0.01" value="1" required></label>
+            <label>Precio unitario ($)<input name="precioUnitario" type="number" min="0" step="1" inputmode="numeric" placeholder="Ingresar manualmente"></label>
+        </div>
+        <p class="catalog-hint">El catálogo técnico no aporta precios. Si dejas el precio vacío, el subtotal será $0 y la orden indicará que falta ingresarlo.</p>
+        <p class="form-error" id="partLineFormError" aria-live="assertive"></p>
+        <div class="dialog-actions"><button type="button" class="button secondary" data-close-dialog>Cancelar</button><button type="submit" class="button primary">Guardar repuesto</button></div>
+    </form>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="catalog-adapter.js"></script>
+<script src="taller-repository.js"></script>
+<script src="taller-app.js"></script>
+</body>
+</html>
