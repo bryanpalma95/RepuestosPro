@@ -30,6 +30,21 @@
         return String(value || '').toUpperCase().replace(/\s+/g, '');
     }
 
+    function isPlaceholderReference(value) {
+        const reference = normalizeText(value);
+        return !reference
+            || reference.startsWith('verificar ')
+            || reference.includes(' por modelo')
+            || reference.includes(' por motor')
+            || reference.includes(' segun ')
+            || reference === 'segun vin';
+    }
+
+    function referencePriority(reference) {
+        return (isPlaceholderReference(reference.code) ? 20 : 0)
+            + (reference.status === 'confirmed' ? 0 : 1);
+    }
+
     function safeLinks(links) {
         if (!Array.isArray(links)) return [];
         return links.map(function (link) {
@@ -99,7 +114,9 @@
                     (categoryEntry[1] || []).forEach(function (rawPart, partIndex) {
                         const references = (rawPart.refs || []).map(function (reference) {
                             return { code: cleanText(reference.r, 160), status: cleanText(reference.s, 40) };
-                        }).filter(function (reference) { return reference.code; });
+                        }).filter(function (reference) { return reference.code; }).sort(function (a, b) {
+                            return referencePriority(a) - referencePriority(b);
+                        });
                         const compatibilities = [];
                         references.forEach(function (reference) {
                             const entry = this.compatibility[compatibilityKey(reference.code)];

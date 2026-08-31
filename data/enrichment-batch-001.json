@@ -1,0 +1,146 @@
+{
+  "id": "batch-001-toyota-yaris-brakes",
+  "created": "2026-08-31",
+  "method": "additive-json-v1",
+  "canonical_input": "db.json",
+  "scope": {
+    "brand": "Toyota",
+    "model": "Yaris",
+    "generation_rule": "IDs toyota-yaris-AAAA; no incluye Yaris Sport",
+    "engines": ["1NZ-FE", "2NR-FE"],
+    "systems": ["Frenos"],
+    "components": ["Pastillas delanteras", "Pastillas traseras"]
+  },
+  "quality_rules": [
+    "confirmed solo cuando fabricante Tier 1 documenta motor y periodo",
+    "2026 queda verify porque supera el horizonte explícitamente verificable del catálogo fuente",
+    "no se eliminan placeholders ni referencias previas",
+    "la compatibilidad extendida se limita a las aplicaciones declaradas por la fuente"
+  ],
+  "sources": [
+    {
+      "id": "bosch-brake-master-ph-2025",
+      "manufacturer": "Bosch",
+      "kind": "Tier 1 application catalog",
+      "url": "https://ap-ecat.boschaftermarket.com/PH/en_PH/downloads/145/download",
+      "checked": "2026-08-31",
+      "evidence": "Yaris 1.5 1NZ-FE 07/2013–05/2016 y 2NR-FE 05/2016→: delantero 0986AB9420; trasero 0986AB2269. El mismo trasero aparece en Vios 1.5 2NR-FE."
+    }
+  ],
+  "part_operations": [
+    {
+      "selector": {
+        "vehicle_id_regex": "^toyota-yaris-(?P<year>\\d{4})$",
+        "years": [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025],
+        "info_any": ["1NZ-FE", "2NR-FE"],
+        "expected_matches": 12
+      },
+      "part_category": "Pastillas Del.",
+      "reference": {"code": "0986AB9420", "status": "confirmed"},
+      "details": "Bosch Tier 1: Yaris 1.5 1NZ-FE (07/2013–05/2016) y 2NR-FE (05/2016→).",
+      "source_link": {
+        "label": "Fuente Bosch Tier 1",
+        "url": "https://ap-ecat.boschaftermarket.com/PH/en_PH/downloads/145/download"
+      }
+    },
+    {
+      "selector": {
+        "vehicle_id_regex": "^toyota-yaris-(?P<year>\\d{4})$",
+        "years": [2026],
+        "info_any": ["1NZ-FE", "2NR-FE"],
+        "expected_matches": 1
+      },
+      "part_category": "Pastillas Del.",
+      "reference": {"code": "0986AB9420", "status": "verify"},
+      "details": "Aplicación 2026 pendiente de confirmación por VIN; la fuente Bosch consultada cubre la aplicación abierta hasta su edición 2025.",
+      "source_link": {
+        "label": "Fuente Bosch Tier 1",
+        "url": "https://ap-ecat.boschaftermarket.com/PH/en_PH/downloads/145/download"
+      }
+    },
+    {
+      "selector": {
+        "vehicle_id_regex": "^toyota-yaris-(?P<year>\\d{4})$",
+        "years": [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025],
+        "info_any": ["1NZ-FE", "2NR-FE"],
+        "expected_matches": 12
+      },
+      "part_category": "Pastillas Tras.",
+      "reference": {"code": "0986AB2269", "status": "confirmed"},
+      "details": "Bosch Tier 1: Yaris 1.5 1NZ-FE (07/2013–05/2016) y 2NR-FE (05/2016→).",
+      "source_link": {
+        "label": "Fuente Bosch Tier 1",
+        "url": "https://ap-ecat.boschaftermarket.com/PH/en_PH/downloads/145/download"
+      }
+    },
+    {
+      "selector": {
+        "vehicle_id_regex": "^toyota-yaris-(?P<year>\\d{4})$",
+        "years": [2026],
+        "info_any": ["1NZ-FE", "2NR-FE"],
+        "expected_matches": 1
+      },
+      "part_category": "Pastillas Tras.",
+      "reference": {"code": "0986AB2269", "status": "verify"},
+      "details": "Aplicación 2026 pendiente de confirmación por VIN; la fuente Bosch consultada cubre la aplicación abierta hasta su edición 2025.",
+      "source_link": {
+        "label": "Fuente Bosch Tier 1",
+        "url": "https://ap-ecat.boschaftermarket.com/PH/en_PH/downloads/145/download"
+      }
+    }
+  ],
+  "compatibility_entries": [
+    {
+      "key": "0986AB9420",
+      "entry": {
+        "ref": "0986AB9420",
+        "nombre": "Juego de pastillas de freno delanteras Bosch",
+        "categoria": "Pastillas Del.",
+        "compatibles": [
+          {
+            "marca": "Toyota",
+            "modelos": "Yaris 1.3 2NZ-FE (07/2013–05/2016), 1NR-FE (05/2016→); Yaris 1.5 1NZ-FE (07/2013–05/2016), 2NR-FE (05/2016→)"
+          }
+        ],
+        "compat_texto": "Aplicación Bosch por motor y periodo para Toyota Yaris; confirmar VIN/mercado cuando el vehículo quede fuera del periodo fuente.",
+        "otras_refs": [],
+        "confianza": "alta",
+        "alcance_evidencia": "Aplicación exacta Tier 1 por motor y periodo; año catálogo 2026 permanece verify.",
+        "fuentes": [
+          {
+            "fabricante": "Bosch",
+            "tipo": "Catálogo de aplicación Tier 1",
+            "url": "https://ap-ecat.boschaftermarket.com/PH/en_PH/downloads/145/download",
+            "consultado": "2026-08-31"
+          }
+        ]
+      }
+    },
+    {
+      "key": "0986AB2269",
+      "entry": {
+        "ref": "0986AB2269",
+        "nombre": "Juego de pastillas de freno traseras Bosch",
+        "categoria": "Pastillas Tras.",
+        "compatibles": [
+          {
+            "marca": "Toyota",
+            "modelos": "Yaris 1.5 1NZ-FE (07/2013–05/2016), Yaris 1.5 2NR-FE (05/2016→), Vios 1.5 2NR-FE (05/2016→)"
+          }
+        ],
+        "compat_texto": "Compatibilidad cruzada Bosch documentada entre Yaris 1.5 y Vios 1.5 según motor y periodo.",
+        "otras_refs": [],
+        "confianza": "alta",
+        "alcance_evidencia": "Aplicación exacta Tier 1 por motor y periodo; año catálogo 2026 permanece verify.",
+        "fuentes": [
+          {
+            "fabricante": "Bosch",
+            "tipo": "Catálogo de aplicación Tier 1",
+            "url": "https://ap-ecat.boschaftermarket.com/PH/en_PH/downloads/145/download",
+            "consultado": "2026-08-31"
+          }
+        ]
+      }
+    }
+  ]
+}
