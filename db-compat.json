@@ -2057,5 +2057,153 @@
   ],
   "compat_texto": "Mitsubishi: Lancer (CS/CJ EX), Outlander, ASX, Eclipse Cross, Montero Sport, L200/Triton, Mirage, Grandis",
   "otras_refs": []
+ },
+ "0986AB9420": {
+  "ref": "0986AB9420",
+  "nombre": "Juego de pastillas de freno delanteras Bosch",
+  "categoria": "Pastillas Del.",
+  "compatibles": [
+   {
+    "marca": "Toyota",
+    "modelos": "Yaris 1.3 2NZ-FE (07/2013–05/2016), 1NR-FE (05/2016→); Yaris 1.5 1NZ-FE (07/2013–05/2016), 2NR-FE (05/2016→)"
+   }
+  ],
+  "compat_texto": "Aplicación Bosch por motor y periodo para Toyota Yaris; confirmar VIN/mercado cuando el vehículo quede fuera del periodo fuente.",
+  "otras_refs": [],
+  "confianza": "alta",
+  "alcance_evidencia": "Aplicación exacta Tier 1 por motor y periodo; año catálogo 2026 permanece verify.",
+  "fuentes": [
+   {
+    "fabricante": "Bosch",
+    "tipo": "Catálogo de aplicación Tier 1",
+    "url": "https://ap-ecat.boschaftermarket.com/PH/en_PH/downloads/145/download",
+    "consultado": "2026-08-31"
+   }
+  ]
+ },
+ "0986AB2269": {
+  "ref": "0986AB2269",
+  "nombre": "Juego de pastillas de freno traseras Bosch",
+  "categoria": "Pastillas Tras.",
+  "compatibles": [
+   {
+    "marca": "Toyota",
+    "modelos": "Yaris 1.5 1NZ-FE (07/2013–05/2016), Yaris 1.5 2NR-FE (05/2016→), Vios 1.5 2NR-FE (05/2016→)"
+   }
+  ],
+  "compat_texto": "Compatibilidad cruzada Bosch documentada entre Yaris 1.5 y Vios 1.5 según motor y periodo.",
+  "otras_refs": [],
+  "confianza": "alta",
+  "alcance_evidencia": "Aplicación exacta Tier 1 por motor y periodo; año catálogo 2026 permanece verify.",
+  "fuentes": [
+   {
+    "fabricante": "Bosch",
+    "tipo": "Catálogo de aplicación Tier 1",
+    "url": "https://ap-ecat.boschaftermarket.com/PH/en_PH/downloads/145/download",
+    "consultado": "2026-08-31"
+   }
+  ]
+ },
+ "0242129530": {
+  "ref": "0 242 129 530",
+  "nombre": "Bujía Bosch YR8DEU",
+  "categoria": "Bujias",
+  "compatibles": [
+   {
+    "marca": "Suzuki",
+    "modelos": "Swift [AZH] 1.4 K14B (01/2011-12/2017)"
+   }
+  ],
+  "compat_texto": "Aplicación limitada a Swift [AZH] con motor K14B y al periodo Bosch publicado; confirmar variante por VIN.",
+  "otras_refs": [
+   "Suzuki OE 09482B00510N000",
+   "Suzuki OE 0948200618",
+   "Suzuki OE 0948200617",
+   "Suzuki OE 0948200616000"
+  ],
+  "confianza": "alta",
+  "alcance_evidencia": "Aplicación Tier 1 exacta por plataforma, motor y periodo; cruces OE publicados por Bosch.",
+  "fuentes": [
+   {
+    "fabricante": "Bosch",
+    "tipo": "Catálogo de aplicación Tier 1",
+    "url": "https://www.boschaftermarket.com/xrm/media/images/services/downloads/parts_14/spark_plugs_6/sp_glp_combi_catalog_multi_languages_94658.pdf",
+    "consultado": "2026-08-31"
+   },
+   {
+    "fabricante": "Bosch",
+    "tipo": "Catálogo de cruces OE",
+    "url": "https://www.boschaftermarket.com/xrm/media/images/country_specific/in/parts_11/spark_plugs_2/pdf_47/spark_plug_catalogue.pdf",
+    "consultado": "2026-08-31"
+   }
+  ]
+ },
+ "0242129524": {
+  "ref": "0 242 129 524",
+  "nombre": "Bujía Bosch YR 8 SII 33 U",
+  "categoria": "Bujias",
+  "compatibles": [
+   {
+    "marca": "Suzuki",
+    "modelos": "Swift [A2L] 1.2 K12C/K12C SHVS (05/2017 en adelante)"
+   }
+  ],
+  "compat_texto": "Aplicación limitada a Swift [A2L] con K12C/K12C SHVS; el año catálogo 2026 requiere VIN.",
+  "otras_refs": [
+   "Suzuki OE 0948200668",
+   "Suzuki/Maruti OE 09482M00651",
+   "Suzuki OE 0948200647"
+  ],
+  "confianza": "alta",
+  "alcance_evidencia": "Aplicación Tier 1 exacta por plataforma, motor y periodo; cruces OE publicados por Bosch.",
+  "fuentes": [
+   {
+    "fabricante": "Bosch",
+    "tipo": "Catálogo de aplicación Tier 1",
+    "url": "https://www.boschaftermarket.com/xrm/media/images/services/downloads/parts_14/spark_plugs_6/sp_glp_combi_catalog_multi_languages_94658.pdf",
+    "consultado": "2026-08-31"
+   },
+   {
+    "fabricante": "Bosch",
+    "tipo": "Catálogo de cruces OE",
+    "url": "https://www.boschaftermarket.com/xrm/media/images/country_specific/in/parts_11/spark_plugs_2/pdf_47/spark_plug_catalogue.pdf",
+    "consultado": "2026-08-31"
+   }
+  ]
+ },
+ "0242129529": {
+  "ref": "0 242 129 529",
+  "nombre": "Bujía Bosch VR 8 SII 33 X",
+  "categoria": "Bujias",
+  "compatibles": [
+   {
+    "marca": "Toyota",
+    "modelos": "Yaris 1.5 2NR-FE 79 kW (desde 04/2016)"
+   }
+  ],
+  "compat_texto": "Aplicación Yaris documentada por motor, potencia y periodo; confirmar VIN/mercado, especialmente año catálogo 2026.",
+  "otras_refs": [
+   "Toyota OE 9004A91068",
+   "Toyota OE 90919T1014",
+   "Toyota OE 90919C1010",
+   "Toyota/Lexus OE 9091901275",
+   "Toyota/Lexus OE 9091901253"
+  ],
+  "confianza": "alta",
+  "alcance_evidencia": "Aplicación Tier 1 exacta por motor, potencia y periodo; cruces OE publicados por Bosch.",
+  "fuentes": [
+   {
+    "fabricante": "Bosch",
+    "tipo": "Catálogo de aplicación Tier 1",
+    "url": "https://www.boschaftermarket.com/xrm/media/images/services/downloads/parts_14/spark_plugs_6/sp_glp_combi_catalog_multi_languages_94658.pdf",
+    "consultado": "2026-08-31"
+   },
+   {
+    "fabricante": "Bosch",
+    "tipo": "Catálogo de cruces OE",
+    "url": "https://www.boschaftermarket.com/xrm/media/images/country_specific/in/parts_11/spark_plugs_2/pdf_47/spark_plug_catalogue.pdf",
+    "consultado": "2026-08-31"
+   }
+  ]
  }
 }

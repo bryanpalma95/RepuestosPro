@@ -1,0 +1,85 @@
+{
+  "created": "2026-08-31",
+  "status": "review",
+  "purpose": "Candidatos Tier 1 documentados que no deben aplicarse hasta corregir o desambiguar la taxonomía local.",
+  "global_blockers": [
+    "Kia Morning y Kia Rio están almacenados como hyundai-morning-* y hyundai-rio-*.",
+    "Los IDs hyundai-accent-* mezclan G3LA/G4LA/G4LC en todos los años y omiten el G4FA documentado por Bosch para Accent 2013-2019.",
+    "Chevrolet Sail agrupa LCU y L2B en cada año sin distinguir generación, cilindrada ni mercado.",
+    "No se aplicarán referencias a un vehículo agregado cuando la evidencia solo cubra una variante no identificable."
+  ],
+  "candidates": [
+    {
+      "priority": 1,
+      "brand": "Kia",
+      "model": "Morning/Picanto",
+      "local_ids": "hyundai-morning-AAAA",
+      "decision": "review-taxonomy",
+      "documented_applications": [
+        "Picanto/Morning 1.0 G3LA desde 05/2011: Bosch bujía 0 242 129 521 (mercado TW) o 0 242 135 554 según versión/holgura.",
+        "Picanto 1.0 G3LA 05/2011-11/2017: Bosch pastilla delantera 0 986 494 688.",
+        "Picanto 1.0 G3LA desde 05/2011: filtro aceite F 026 407 142, aire F 026 400 291, cabina 1 987 432 164; desde 04/2017 la cabina cambia a 1 987 435 134 según catálogo."
+      ],
+      "sources": [
+        "https://www.boschaftermarket.com/xrm/media/images/services/downloads/parts_14/spark_plugs_6/sp_glp_combi_catalog_multi_languages_94658.pdf",
+        "https://www.boschaftermarket.com/xrm/media/images/country_specific/de/services_6/news_downloads/23_4_filter/bosch_filterkatalog.pdf",
+        "https://ap-ecat.boschaftermarket.com/PH/en_PH/downloads/145/download"
+      ],
+      "next_action": "Renombrar/aliar a Kia, separar generaciones TA/JA y confirmar mercado/VIN antes del lote."
+    },
+    {
+      "priority": 2,
+      "brand": "Kia",
+      "model": "Rio",
+      "local_ids": "hyundai-rio-AAAA",
+      "decision": "review-taxonomy-and-generation",
+      "documented_applications": [
+        "Rio 1.4 G4FA desde 01/2017: Bosch pastillas delanteras 0 986 AB 9421 y traseras 0 986 AB 1174.",
+        "Rio UB G4LA/G4FA/G4FC 2011-2014: bomba de combustible Bosch 1 987 580 011; no extender a años posteriores."
+      ],
+      "sources": [
+        "https://ap-ecat.boschaftermarket.com/PH/en_PH/downloads/145/download",
+        "https://www.boschaftermarket.com/xrm/media/images/services/downloads/parts_14/fuel_supply_ekp_online_version.pdf"
+      ],
+      "next_action": "Corregir marca, separar UB/YB y asignar motores por periodo antes de aplicar."
+    },
+    {
+      "priority": 3,
+      "brand": "Hyundai",
+      "model": "Accent",
+      "local_ids": "hyundai-accent-AAAA / hyundai-verna-accent-AAAA",
+      "decision": "review-engine-map",
+      "documented_applications": [
+        "Accent 1.4 G4FA 03/2013-03/2019: Bosch pastilla delantera 0 986 AB 3556."
+      ],
+      "sources": [
+        "https://ap-ecat.boschaftermarket.com/PH/en_PH/downloads/145/download"
+      ],
+      "next_action": "Resolver cuál familia local corresponde a Accent G4FA/RB y no confundirla con G4LC u otros Kappa."
+    },
+    {
+      "priority": 4,
+      "brand": "Chevrolet",
+      "model": "Sail",
+      "local_ids": "chevrolet-sail-AAAA",
+      "decision": "review-no-sufficient-exact-source",
+      "documented_applications": [],
+      "sources": [],
+      "next_action": "Buscar catálogo oficial Chevrolet/ACDelco o Tier 1 que identifique LCU frente a L2B por generación y periodo chileno; no inferir por cilindrada."
+    },
+    {
+      "priority": 5,
+      "brand": "Toyota",
+      "model": "Yaris",
+      "local_ids": "toyota-yaris-AAAA",
+      "decision": "review-remaining-filters-and-1nz-ignition",
+      "documented_applications": [
+        "Bosch publica varias bujías para 1NZ-FE según potencia, plataforma, mercado y periodo; el registro local no ofrece esos discriminadores."
+      ],
+      "sources": [
+        "https://www.boschaftermarket.com/xrm/media/images/services/downloads/parts_14/spark_plugs_6/sp_glp_combi_catalog_multi_languages_94658.pdf"
+      ],
+      "next_action": "Confirmar plataforma/VIN y mercado para 1NZ-FE; buscar catálogo Bosch de filtros con fila exacta 1NZ-FE/2NR-FE antes de aplicar filtros."
+    }
+  ]
+}

@@ -2,15 +2,26 @@
 
 Catálogo de repuestos automotrices con referencias OEM, compatibilidad cruzada y enlaces de compra.
 
-**Live:** https://bryanpalma95.github.io/RepuestosPro/
+**Sitio publicado:** https://bryanpalma95.github.io/RepuestosPro/
 
 ## Estado actual (verificado contra db.json)
 
-- 3,246 vehículos en el catálogo
-- 13,536 entradas de componentes
-- 45 marcas cubiertas
+- 3.264 vehículos en el catálogo
+- 54.604 entradas de componentes
+- 43 marcas y 293 modelos cubiertos
 - Base de datos principal: `db.json`
+- Índice de navegación: `db-nav.json`
+- Referencias de compatibilidad: `db-compat.json`
 - Cobertura más fuerte en Hyundai, Suzuki, Nissan, Volkswagen, Chevrolet, Toyota y Peugeot
+
+## Módulos disponibles
+
+- **Catálogo técnico:** búsqueda libre, selector marca → modelo → año y consulta de compatibilidades.
+- **Taller — Fase 1:** clientes, vehículos y búsqueda rápida por patente.
+- **Taller — Fase 2:** servicios, órdenes de trabajo, mano de obra, estados, presupuestos e historial del vehículo.
+- **Taller — Fase 3:** selección de repuestos compatibles desde el catálogo y líneas de repuesto con instantánea histórica.
+
+Los datos operativos del Taller se guardan localmente en el navegador mediante una capa de repositorio separada. No se mezclan con los JSON técnicos del catálogo ni generan movimientos de inventario.
 
 ## Stack
 

@@ -91,7 +91,8 @@ body{background:#121212;color:#e0e0e0}
 <nav class="nav">
     <div class="nav-logo">Repuestos<span>Pro</span></div>
     <div class="nav-links">
-        <a href="catalogo.html" class="nav-cta">Abrir Catalogo</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="taller.html" class="nav-cta">Taller</a>
     </div>
 </nav>
 
@@ -100,12 +101,13 @@ body{background:#121212;color:#e0e0e0}
         <h1>Encuentra el repuesto exacto para <span>tu auto</span></h1>
         <p>Catalogo de componentes automotrices con referencias OEM, alternativas verificadas y compatibilidad cruzada entre vehiculos. Funciona sin internet.</p>
         <div class="hero-buttons">
-            <a href="catalogo.html" class="btn-primary">Ir al Catalogo</a>
+            <a href="catalogo.html" class="btn-primary">Ir al Catálogo</a>
+            <a href="taller.html" class="btn-secondary">Gestionar Taller</a>
         </div>
         <div class="hero-stats">
-            <div class="hero-stat"><span class="hero-stat-num">3,280</span><span class="hero-stat-label">Vehiculos</span></div>
-            <div class="hero-stat"><span class="hero-stat-num">11,249</span><span class="hero-stat-label">Componentes</span></div>
-            <div class="hero-stat"><span class="hero-stat-num">42</span><span class="hero-stat-label">Marcas</span></div>
+            <div class="hero-stat"><span class="hero-stat-num" id="statVeh">3.264</span><span class="hero-stat-label">Vehiculos</span></div>
+            <div class="hero-stat"><span class="hero-stat-num" id="statComp">54.604</span><span class="hero-stat-label">Componentes</span></div>
+            <div class="hero-stat"><span class="hero-stat-num" id="statMarcas">43</span><span class="hero-stat-label">Marcas</span></div>
         </div>
     </div>
 </section>
@@ -139,6 +141,19 @@ body{background:#121212;color:#e0e0e0}
 <script>
 // SW removido - sin funcion offline
 if('serviceWorker' in navigator){navigator.serviceWorker.getRegistrations().then(function(regs){regs.forEach(function(r){r.unregister()})})}
+fetch('db.json').then(function(response){return response.json()}).then(function(data){
+    var keys=Object.keys(data), components=0, brands={};
+    keys.forEach(function(key){
+        var vehicle=data[key], categories=vehicle.categories||{};
+        Object.keys(categories).forEach(function(category){components+=(categories[category]||[]).length});
+        var brand=String(vehicle.name||'').split(' ')[0];
+        if(brand)brands[brand]=true;
+    });
+    var format=function(value){return value.toLocaleString('es-CL')};
+    document.getElementById('statVeh').textContent=format(keys.length);
+    document.getElementById('statComp').textContent=format(components);
+    document.getElementById('statMarcas').textContent=format(Object.keys(brands).length);
+}).catch(function(){/* Conserva los valores de respaldo si el archivo no está disponible. */});
 </script>
 </body>
 </html>
