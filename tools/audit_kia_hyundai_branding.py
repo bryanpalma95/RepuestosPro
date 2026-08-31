@@ -76,7 +76,9 @@ def nav_has(nav: dict[str, Any], brand: str, model: str, year: str) -> bool:
 def sqlite_ids(path: Path) -> set[str]:
     if not path.exists():
         return set()
-    connection = sqlite3.connect(f"file:{path.as_posix()}?mode=ro", uri=True)
+    connection = sqlite3.connect(
+        f"file:{path.as_posix()}?mode=ro&immutable=1", uri=True
+    )
     try:
         return {row[0] for row in connection.execute("SELECT id FROM vehicles")}
     finally:
