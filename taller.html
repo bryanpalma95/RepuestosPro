@@ -25,6 +25,7 @@
             <span class="eyebrow">TALLER / FASE 1</span>
             <h1 id="pageTitle">Clientes y vehículos, <em>sin fricción.</em></h1>
             <p>Encuentra una patente al instante o mantén al día las fichas de quienes llegan al taller.</p>
+            <button type="button" class="onboarding-trigger" data-action="show-onboarding">¿Primera vez? Ver guía de inicio</button>
         </div>
         <form class="plate-search" id="plateSearchForm" role="search" novalidate>
             <label for="plateSearch">Búsqueda rápida por patente</label>
@@ -58,6 +59,25 @@
             <span>Datos del catálogo</span><strong id="catalogStatus">Conectando…</strong>
             <small>Las sugerencias de marca, modelo y año vienen de <code>db-nav.json</code>.</small>
         </article>
+    </section>
+
+    <section class="onboarding-panel" id="onboardingPanel" aria-labelledby="onboardingTitle">
+        <div class="onboarding-header">
+            <div>
+                <span class="eyebrow">GUÍA DE INICIO</span>
+                <h2 id="onboardingTitle">Prepara el Taller en cuatro pasos</h2>
+                <p>Completa esta configuración una vez. Después podrás crear órdenes y presupuestos sin encontrarte con listas vacías.</p>
+            </div>
+            <button type="button" class="button secondary" data-action="dismiss-onboarding">Ocultar guía</button>
+        </div>
+        <div class="onboarding-progress" aria-live="polite">
+            <div><strong id="onboardingProgressText">0 de 4 pasos listos</strong><span>Configuración esencial</span></div>
+            <div class="progress-track" aria-hidden="true"><span id="onboardingProgressBar"></span></div>
+        </div>
+        <div class="onboarding-steps" id="onboardingSteps"></div>
+        <aside class="onboarding-note">
+            <strong>Importante:</strong> los servicios del presupuesto se crean en la pestaña <b>Servicios</b>. El catálogo técnico aporta repuestos y compatibilidad, pero no servicios ni precios. Los datos del Taller se guardan en este navegador y dispositivo.
+        </aside>
     </section>
 
     <section class="workspace" aria-labelledby="workspaceTitle">
@@ -203,6 +223,10 @@
         <input type="hidden" name="orderId"><input type="hidden" name="kind"><input type="hidden" name="id">
         <div class="form-grid">
             <label class="full" id="servicePickerLabel">Servicio del catálogo<select name="servicioId"><option value="">— Seleccionar servicio —</option></select></label>
+            <div class="inline-empty-guide full" id="servicePickerEmpty" hidden>
+                <div><strong>Aún no hay servicios disponibles</strong><p>Crea primero un servicio —por ejemplo, “Cambio de aceite”— para poder seleccionarlo en el presupuesto.</p></div>
+                <button type="button" class="button primary" data-action="create-service-from-line">Crear servicio ahora</button>
+            </div>
             <label class="full">Descripción <span>*</span><input name="descripcion" maxlength="500" required></label>
             <label>Cantidad <span>*</span><input name="cantidad" type="number" min="0.01" step="0.01" value="1" required></label>
             <label>Precio unitario <span>*</span><input name="precioUnitario" type="number" min="0" step="1" required inputmode="numeric"></label>

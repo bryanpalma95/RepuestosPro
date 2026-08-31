@@ -2,9 +2,11 @@
     'use strict';
 
     const repo = new TallerData.LocalWorkshopRepository();
+    const ONBOARDING_STORAGE_KEY = 'repuestospro:taller:onboarding-hidden:v1';
     const state = {
         section: 'clients', query: '', catalog: {}, detail: null, pendingVehicle: false,
-        pricingTimer: null, catalogSearchTimer: null, partPicker: null, catalogResults: new Map(), selectedCatalogPart: null
+        pricingTimer: null, catalogSearchTimer: null, partPicker: null, catalogResults: new Map(), selectedCatalogPart: null,
+        summary: null, pendingLineAfterService: null
     };
     const els = {
         clientCount: document.getElementById('clientCount'), vehicleCount: document.getElementById('vehicleCount'),
@@ -30,7 +32,9 @@
         catalogResultMeta: document.getElementById('catalogResultMeta'), catalogResults: document.getElementById('catalogResults'),
         selectedPartSummary: document.getElementById('selectedPartSummary'), plateSearchForm: document.getElementById('plateSearchForm'),
         plateSearch: document.getElementById('plateSearch'), plateSearchMessage: document.getElementById('plateSearchMessage'),
-        toast: document.getElementById('toast')
+        onboardingPanel: document.getElementById('onboardingPanel'), onboardingSteps: document.getElementById('onboardingSteps'),
+        onboardingProgressText: document.getElementById('onboardingProgressText'), onboardingProgressBar: document.getElementById('onboardingProgressBar'),
+        servicePickerEmpty: document.getElementById('servicePickerEmpty'), toast: document.getElementById('toast')
     };
     const tabs = { clients: els.clientsTab, vehicles: els.vehiclesTab, orders: els.ordersTab, services: els.servicesTab };
 
@@ -81,10 +85,42 @@
         const modelKey = brandKey ? findCatalogKey(state.catalog[brandKey], els.vehicleForm.elements.modelo.value) : null;
         setOptions(document.getElementById('yearOptions'), modelKey ? state.catalog[brandKey][modelKey].map(String) : []);
     }
+    function onboardingIsDismissed() {
+        try { return localStorage.getItem(ONBOARDING_STORAGE_KEY) === '1'; } catch (error) { return false; }
+    }
+    function setOnboardingDismissed(dismissed) {
+        try { if (dismissed) localStorage.setItem(ONBOARDING_STORAGE_KEY, '1'); else localStorage.removeItem(ONBOARDING_STORAGE_KEY); } catch (error) { /* La guía sigue funcionando sin persistencia. */ }
+    }
+    function renderOnboarding(summary) {
+        state.summary = summary;
+        const steps = [
+            { title: 'Crea un cliente', copy: 'Guarda sus datos de contacto. Los vehículos y las órdenes necesitan un cliente asociado.', count: summary.clients, action: 'new-client', button: 'Crear cliente' },
+            { title: 'Registra un vehículo', copy: 'Asocia patente, marca, modelo y año al cliente. Esto habilita la compatibilidad de repuestos.', count: summary.vehicles, action: 'new-vehicle', button: 'Registrar vehículo' },
+            { title: 'Define tus servicios', copy: 'Crea trabajos reutilizables con precio base. Sin este paso, el selector de servicios estará vacío.', count: summary.activeServices, action: 'new-service', button: 'Crear servicio' },
+            { title: 'Abre una orden', copy: 'Registra el ingreso y arma el presupuesto con servicios, mano de obra y repuestos.', count: summary.workOrders, action: 'new-order', button: 'Crear orden' }
+        ];
+        const completed = steps.filter(function (step) { return step.count > 0; }).length;
+        els.onboardingProgressText.textContent = completed === steps.length ? 'Configuración esencial completada' : completed + ' de ' + steps.length + ' pasos listos';
+        els.onboardingProgressBar.style.width = String((completed / steps.length) * 100) + '%';
+        els.onboardingSteps.innerHTML = steps.map(function (step, index) {
+            const complete = step.count > 0;
+            return '<article class="onboarding-step" data-complete="' + complete + '">' +
+                '<span class="onboarding-step-number">' + (complete ? '✓' : index + 1) + '</span>' +
+                '<h3>' + step.title + '</h3><p>' + step.copy + '</p>' +
+                '<span class="step-status">' + (complete ? step.count + ' registro' + (step.count === 1 ? ' listo' : 's listos') : 'Pendiente') + '</span>' +
+                '<button type="button" class="button ' + (complete ? 'secondary' : 'primary') + '" data-action="' + step.action + '">' + (complete ? 'Agregar otro' : step.button) + '</button></article>';
+        }).join('');
+        els.onboardingPanel.hidden = onboardingIsDismissed();
+    }
+    function showOnboarding() {
+        setOnboardingDismissed(false); els.onboardingPanel.hidden = false;
+        els.onboardingPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
     async function refreshSummary() {
         const summary = await repo.getSummary();
         els.clientCount.textContent = summary.clients; els.vehicleCount.textContent = summary.vehicles;
         els.orderCount.textContent = summary.workOrders; els.serviceCount.textContent = summary.activeServices;
+        renderOnboarding(summary); return summary;
     }
 
     const sectionCopy = {
@@ -263,19 +299,28 @@
     async function populateLineServices(selectedId) {
         const select = els.lineForm.elements.servicioId, services = await repo.listServices('', true);
         select.innerHTML = '<option value="">— Seleccionar servicio —</option>';
-        services.filter(function (service) { return service.activo || service.id === selectedId; }).forEach(function (service) { const option = document.createElement('option'); option.value = service.id; option.textContent = service.nombre + ' · ' + formatMoney(service.precioBase) + (service.activo ? '' : ' (inactivo)'); select.appendChild(option); });
+        const available = services.filter(function (service) { return service.activo || service.id === selectedId; });
+        available.forEach(function (service) { const option = document.createElement('option'); option.value = service.id; option.textContent = service.nombre + ' · ' + formatMoney(service.precioBase) + (service.activo ? '' : ' (inactivo)'); select.appendChild(option); });
         if (selectedId) select.value = selectedId;
+        return available.length;
     }
-    async function openLineForm(orderId, kind, lineId) {
+    async function openLineForm(orderId, kind, lineId, preferredServiceId) {
         const order = await repo.getWorkOrder(orderId); if (!order) return showToast('Orden no encontrada.');
         els.lineForm.reset(); els.lineForm.elements.orderId.value = orderId; els.lineForm.elements.kind.value = kind;
         els.lineForm.elements.id.value = ''; els.lineForm.elements.cantidad.value = '1'; els.lineFormError.textContent = '';
         const isService = kind === 'servicios'; document.getElementById('servicePickerLabel').hidden = !isService;
         document.getElementById('lineDialogTitle').textContent = (lineId ? 'Editar ' : 'Añadir ') + (isService ? 'servicio' : 'mano de obra');
         const line = lineId ? (order[kind] || []).find(function (item) { return item.id === lineId; }) : null;
-        await populateLineServices(line && line.servicioId);
+        const selectedServiceId = (line && line.servicioId) || preferredServiceId || '';
+        const serviceCount = await populateLineServices(selectedServiceId);
+        els.servicePickerEmpty.hidden = !isService || serviceCount > 0;
+        els.lineForm.elements.servicioId.disabled = isService && serviceCount === 0;
         if (line) ['id', 'servicioId', 'descripcion', 'cantidad', 'precioUnitario'].forEach(function (key) { els.lineForm.elements[key].value = line[key] == null ? '' : line[key]; });
-        openDialog(els.lineDialog); setTimeout(function () { (isService ? els.lineForm.elements.servicioId : els.lineForm.elements.descripcion).focus(); }, 0);
+        if (!line && preferredServiceId) {
+            const service = await repo.getService(preferredServiceId);
+            if (service) { els.lineForm.elements.servicioId.value = service.id; els.lineForm.elements.descripcion.value = service.nombre; els.lineForm.elements.precioUnitario.value = service.precioBase; }
+        }
+        openDialog(els.lineDialog); setTimeout(function () { (isService && serviceCount === 0 ? els.servicePickerEmpty.querySelector('button') : (isService ? els.lineForm.elements.servicioId : els.lineForm.elements.descripcion)).focus(); }, 0);
     }
 
     function renderCatalogContext(result) {
@@ -417,7 +462,17 @@
         if (!data.nombre.trim()) return showError(els.serviceFormError, 'El nombre es obligatorio.');
         if (data.precioBase === '' || Number(data.precioBase) < 0) return showError(els.serviceFormError, 'El precio base debe ser cero o mayor.');
         if (data.duracionEstimada && Number(data.duracionEstimada) < 0) return showError(els.serviceFormError, 'La duración no puede ser negativa.');
-        try { const saved = data.id ? await repo.updateService(data.id, data) : await repo.createService(data); els.serviceDialog.close(); await refreshSummary(); await renderList(); showToast(data.id ? 'Servicio actualizado.' : 'Servicio creado.'); await showServiceDetail(saved.id); } catch (error) { showError(els.serviceFormError, error); }
+        try {
+            const saved = data.id ? await repo.updateService(data.id, data) : await repo.createService(data);
+            const pendingLine = state.pendingLineAfterService; state.pendingLineAfterService = null;
+            els.serviceDialog.close(); await refreshSummary();
+            if (pendingLine) {
+                showToast('Servicio creado y disponible en el presupuesto.');
+                await showOrderDetail(pendingLine.orderId);
+                return openLineForm(pendingLine.orderId, pendingLine.kind, pendingLine.lineId, saved.id);
+            }
+            await renderList(); showToast(data.id ? 'Servicio actualizado.' : 'Servicio creado.'); await showServiceDetail(saved.id);
+        } catch (error) { showError(els.serviceFormError, error); }
     }
     async function saveOrder(event) {
         event.preventDefault(); els.orderFormError.textContent = ''; const data = formObject(els.orderForm);
@@ -458,6 +513,16 @@
     async function deleteLine(target) { if (!window.confirm('¿Eliminar esta línea del presupuesto?')) return; try { await repo.deleteOrderLine(target.dataset.orderId, target.dataset.kind, target.dataset.id); showToast('Línea eliminada.'); await showOrderDetail(target.dataset.orderId); } catch (error) { showToast(error.message); } }
     async function handleAction(action, target) {
         const id = target.dataset.id;
+        if (action === 'show-onboarding') return showOnboarding();
+        if (action === 'dismiss-onboarding') { setOnboardingDismissed(true); els.onboardingPanel.hidden = true; return; }
+        if (action === 'create-service-from-line') {
+            state.pendingLineAfterService = {
+                orderId: els.lineForm.elements.orderId.value,
+                kind: els.lineForm.elements.kind.value,
+                lineId: els.lineForm.elements.id.value || null
+            };
+            els.lineDialog.close(); return openServiceForm();
+        }
         if (action === 'new-client') return openClientForm(); if (action === 'new-vehicle') return openVehicleForm(null, target.dataset.clientId);
         if (action === 'new-service') return openServiceForm(); if (action === 'new-order') return openOrderForm(null, target.dataset.vehicleId);
         if (action === 'new-line') return openLineForm(target.dataset.orderId, target.dataset.kind); if (action === 'edit-client') return openClientForm(id);
@@ -500,6 +565,11 @@
     document.addEventListener('change', function (event) { if (event.target.id === 'orderStatusSelect') handleStatusChange(event.target); });
     document.addEventListener('input', function (event) { if (event.target.id === 'orderDiscount' || event.target.id === 'orderTax') previewAndSavePricing(event.target); });
     [els.clientDialog, els.vehicleDialog, els.serviceDialog, els.orderDialog, els.lineDialog, els.partPickerDialog, els.partLineDialog].forEach(function (dialog) { dialog.addEventListener('click', function (event) { if (event.target === dialog) dialog.close(); }); });
+    els.serviceDialog.addEventListener('close', function () {
+        if (!state.pendingLineAfterService) return;
+        const pendingLine = state.pendingLineAfterService; state.pendingLineAfterService = null;
+        openLineForm(pendingLine.orderId, pendingLine.kind, pendingLine.lineId);
+    });
     Object.keys(tabs).forEach(function (section) { tabs[section].addEventListener('click', function () { setSection(section); }); });
     els.addRecordButton.addEventListener('click', function () { if (state.section === 'clients') openClientForm(); if (state.section === 'vehicles') openVehicleForm(); if (state.section === 'orders') openOrderForm(); if (state.section === 'services') openServiceForm(); });
     els.recordSearch.addEventListener('input', function () { state.query = els.recordSearch.value.trim(); renderList(); });
