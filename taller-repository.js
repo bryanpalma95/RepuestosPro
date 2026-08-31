@@ -205,6 +205,7 @@
                 : cleanText(input[field], 160);
         });
         output.estado = WORK_ORDER_STATUSES.includes(output.estado) ? output.estado : WORK_ORDER_STATUSES[0];
+        output.closedAt = cleanText(input.closedAt, 40);
         output.kilometraje = input.kilometraje === '' || input.kilometraje == null
             ? null
             : Math.round(toNonNegativeNumber(input.kilometraje));
@@ -513,7 +514,20 @@
 
         async setWorkOrderStatus(id, status) {
             if (!WORK_ORDER_STATUSES.includes(status)) throw new Error('Estado de orden no válido.');
-            return this.updateWorkOrder(id, { estado: status });
+            const isClosed = status === 'Entregada' || status === 'Cancelada';
+            const current = await this.getWorkOrder(id);
+            return this.updateWorkOrder(id, {
+                estado: status,
+                closedAt: isClosed ? (current && current.closedAt ? current.closedAt : new Date().toISOString()) : ''
+            });
+        }
+
+        async closeWorkOrder(id) {
+            return this.updateWorkOrder(id, { estado: 'Entregada', closedAt: new Date().toISOString() });
+        }
+
+        async reopenWorkOrder(id) {
+            return this.updateWorkOrder(id, { estado: 'En reparación', closedAt: '' });
         }
 
         async saveOrderLine(orderId, kind, input) {
@@ -521,6 +535,7 @@
             const state = this._read();
             const index = state.workOrders.findIndex(function (item) { return item.id === orderId; });
             if (index < 0) throw new Error('Orden de trabajo no encontrada.');
+            if (state.workOrders[index].estado === 'Entregada' || state.workOrders[index].estado === 'Cancelada') throw new Error('La orden está cerrada. Reábrela antes de modificar sus líneas.');
             const lines = Array.isArray(state.workOrders[index][kind]) ? state.workOrders[index][kind].slice() : [];
             const requestedId = cleanText(input && input.id, 100);
             const lineIndex = lines.findIndex(function (item) { return item.id === requestedId; });
@@ -542,6 +557,7 @@
             const state = this._read();
             const index = state.workOrders.findIndex(function (item) { return item.id === orderId; });
             if (index < 0) throw new Error('Orden de trabajo no encontrada.');
+            if (state.workOrders[index].estado === 'Entregada' || state.workOrders[index].estado === 'Cancelada') throw new Error('La orden está cerrada. Reábrela antes de modificar sus líneas.');
             state.workOrders[index][kind] = (state.workOrders[index][kind] || []).filter(function (line) { return line.id !== lineId; });
             const refreshed = sanitizeOrder(state.workOrders[index]);
             state.workOrders[index] = Object.assign({}, state.workOrders[index], refreshed, { updatedAt: new Date().toISOString() });
@@ -550,6 +566,9 @@
         }
 
         async updateOrderPricing(id, discount, taxPercent) {
+            const current = await this.getWorkOrder(id);
+            if (!current) throw new Error('Orden de trabajo no encontrada.');
+            if (current.estado === 'Entregada' || current.estado === 'Cancelada') throw new Error('La orden está cerrada. Reábrela antes de modificar sus totales.');
             return this.updateWorkOrder(id, { descuento: discount, impuestoPorcentaje: taxPercent });
         }
 
