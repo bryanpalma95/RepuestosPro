@@ -11,7 +11,7 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 let apiServer;
 let store;
 const DESKTOP_PORT = 17873;
-const APP_VERSION = '0.10.0-beta.1';
+const APP_VERSION = '0.10.0-beta.2';
 const desktopDataDirectory = app.isPackaged ? join(dirname(process.execPath), 'data') : join(root, 'var', 'desktop-data');
 mkdirSync(join(desktopDataDirectory, 'profile'), { recursive: true });
 app.setPath('userData', join(desktopDataDirectory, 'profile'));

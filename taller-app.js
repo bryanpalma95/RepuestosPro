@@ -3,6 +3,7 @@
 
     let repo;
     const ONBOARDING_STORAGE_KEY = 'repuestospro:taller:onboarding-hidden:v1';
+    const APPEARANCE_STORAGE_KEY = 'repuestospro:appearance:v1';
     const state = {
         section: 'clients', query: '', catalog: {}, detail: null, pendingVehicle: false,
         pricingTimer: null, catalogSearchTimer: null, partPicker: null, catalogResults: new Map(), selectedCatalogPart: null,
@@ -38,7 +39,12 @@
         onboardingProgressText: document.getElementById('onboardingProgressText'), onboardingProgressBar: document.getElementById('onboardingProgressBar'),
         servicePickerEmpty: document.getElementById('servicePickerEmpty'), toast: document.getElementById('toast'),
         pendingPartsMeta: document.getElementById('pendingPartsMeta'), pendingPartsList: document.getElementById('pendingPartsList'),
-        enrichmentFileInput: document.getElementById('enrichmentFileInput'), manualPartVehicle: document.getElementById('manualPartVehicle')
+        enrichmentFileInput: document.getElementById('enrichmentFileInput'), manualPartVehicle: document.getElementById('manualPartVehicle'),
+        paletteSelect: document.getElementById('paletteSelect'), themeToggle: document.getElementById('themeToggle'),
+        clientSidebarCount: document.getElementById('clientSidebarCount'), vehicleSidebarCount: document.getElementById('vehicleSidebarCount'),
+        orderSidebarCount: document.getElementById('orderSidebarCount'), serviceSidebarCount: document.getElementById('serviceSidebarCount'),
+        dashboardClientCount: document.getElementById('dashboardClientCount'), dashboardVehicleCount: document.getElementById('dashboardVehicleCount'), dashboardOrderCount: document.getElementById('dashboardOrderCount'),
+        compactPlateSearchForm: document.getElementById('compactPlateSearchForm'), compactPlateSearch: document.getElementById('compactPlateSearch'), compactPlateSearchMessage: document.getElementById('compactPlateSearchMessage')
     };
     const tabs = { clients: els.clientsTab, vehicles: els.vehiclesTab, orders: els.ordersTab, services: els.servicesTab };
 
@@ -59,6 +65,28 @@
     function clientName(client) { return client ? [client.nombre, client.apellido].filter(Boolean).join(' ') : 'Cliente no disponible'; }
     function vehicleName(vehicle) { return vehicle ? [vehicle.marca, vehicle.modelo, vehicle.anio].filter(Boolean).join(' ') : 'Vehículo no disponible'; }
     function showToast(message) { els.toast.textContent = message; els.toast.classList.add('visible'); clearTimeout(showToast.timer); showToast.timer = setTimeout(function () { els.toast.classList.remove('visible'); }, 2800); }
+    function readAppearance() {
+        try { return Object.assign({ palette: 'navy', theme: 'light' }, JSON.parse(localStorage.getItem(APPEARANCE_STORAGE_KEY) || '{}')); }
+        catch (error) { return { palette: 'navy', theme: 'light' }; }
+    }
+    function applyAppearance(appearance) {
+        const allowedPalettes = ['navy', 'copper', 'sage', 'wine', 'electric', 'teal', 'amber', 'violet'];
+        const allowedThemes = ['light', 'dark'];
+        const palette = allowedPalettes.includes(appearance.palette) ? appearance.palette : 'navy';
+        const theme = allowedThemes.includes(appearance.theme) ? appearance.theme : 'light';
+        document.documentElement.dataset.palette = palette; document.documentElement.dataset.theme = theme;
+        document.documentElement.dataset.resolvedTheme = theme;
+        els.paletteSelect.value = palette;
+        els.themeToggle.textContent = theme === 'dark' ? '☾' : '☀';
+        const nextThemeLabel = theme === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro';
+        els.themeToggle.setAttribute('aria-label', nextThemeLabel); els.themeToggle.title = nextThemeLabel;
+        try { localStorage.setItem(APPEARANCE_STORAGE_KEY, JSON.stringify({ palette: palette, theme: theme })); } catch (error) { /* La apariencia actual sigue aplicada. */ }
+    }
+    function cycleTheme() {
+        const appearance = readAppearance();
+        appearance.theme = appearance.theme === 'dark' ? 'light' : 'dark';
+        applyAppearance(appearance);
+    }
     function showError(target, error) { target.textContent = error && error.message ? error.message : String(error); }
     function setOptions(datalist, values) { datalist.replaceChildren(); values.forEach(function (value) { const option = document.createElement('option'); option.value = value; datalist.appendChild(option); }); }
     function findCatalogKey(object, input) { const wanted = String(input || '').trim().toLocaleLowerCase('es'); return Object.keys(object || {}).find(function (key) { return key.toLocaleLowerCase('es') === wanted; }); }
@@ -124,6 +152,9 @@
         const summary = await repo.getSummary();
         els.clientCount.textContent = summary.clients; els.vehicleCount.textContent = summary.vehicles;
         els.orderCount.textContent = summary.workOrders; els.serviceCount.textContent = summary.activeServices;
+        els.clientSidebarCount.textContent = summary.clients; els.vehicleSidebarCount.textContent = summary.vehicles;
+        els.orderSidebarCount.textContent = summary.workOrders; els.serviceSidebarCount.textContent = summary.activeServices;
+        els.dashboardClientCount.textContent = summary.clients; els.dashboardVehicleCount.textContent = summary.vehicles; els.dashboardOrderCount.textContent = summary.workOrders;
         renderOnboarding(summary); return summary;
     }
 
@@ -148,13 +179,15 @@
 
     async function renderList() {
         const copy = sectionCopy[state.section];
-        let records = [], clients = [], vehicles = [];
-        if (state.section === 'clients') records = await repo.listClients(state.query);
+        let records = [], clients = [], vehicles = [], orders = [];
+        if (state.section === 'clients') { records = await repo.listClients(state.query); vehicles = await repo.listVehicles(''); orders = await repo.listWorkOrders(''); }
         if (state.section === 'vehicles') { records = await repo.listVehicles(state.query); clients = await repo.listClients(''); }
         if (state.section === 'orders') { records = await repo.listWorkOrders(state.query); clients = await repo.listClients(''); vehicles = await repo.listVehicles(''); }
         if (state.section === 'services') records = await repo.listServices(state.query, true);
         const clientsById = new Map(clients.map(function (client) { return [client.id, client]; }));
         const vehiclesById = new Map(vehicles.map(function (vehicle) { return [vehicle.id, vehicle]; }));
+        const vehicleByClient = new Map(); vehicles.forEach(function (vehicle) { if (!vehicleByClient.has(vehicle.clienteId)) vehicleByClient.set(vehicle.clienteId, vehicle); });
+        const orderByClient = new Map(); orders.forEach(function (order) { if (!orderByClient.has(order.clienteId) && !['Entregada', 'Cancelada'].includes(order.estado)) orderByClient.set(order.clienteId, order); });
         els.workspaceTitle.textContent = copy.title; els.workspaceEyebrow.textContent = copy.eyebrow;
         els.addRecordButton.textContent = copy.add; els.recordSearch.placeholder = copy.placeholder;
         els.resultCount.textContent = records.length + ' registro' + (records.length === 1 ? '' : 's');
@@ -162,7 +195,8 @@
         els.recordList.innerHTML = records.map(function (record) {
             if (state.section === 'clients') {
                 const contact = record.whatsapp || record.telefono || record.email || 'Sin contacto registrado';
-                return '<button type="button" class="record-card" data-kind="client" data-id="' + escapeHtml(record.id) + '"><span class="record-id">' + valueOrDash(record.rut) + '</span><h3>' + escapeHtml(clientName(record)) + '</h3><p>' + escapeHtml(contact) + '</p><p>' + valueOrDash(record.direccion) + '</p></button>';
+                const vehicle = vehicleByClient.get(record.id), order = orderByClient.get(record.id), initials = ((record.nombre || '').charAt(0) + (record.apellido || '').charAt(0)).toUpperCase() || 'CL';
+                return '<button type="button" class="record-card client-record" data-kind="client" data-id="' + escapeHtml(record.id) + '"><span class="client-avatar">' + escapeHtml(initials) + '</span><span class="client-person"><strong>' + escapeHtml(clientName(record)) + '</strong><small>' + valueOrDash(record.rut) + ' · ' + escapeHtml(contact) + '</small></span><span class="client-vehicle"><strong>' + (vehicle ? escapeHtml(vehicle.marca + ' ' + vehicle.modelo) : 'Sin vehículo') + '</strong><small>' + (vehicle ? escapeHtml([vehicle.anio, vehicle.patente].filter(Boolean).join(' · ')) : 'Registra un vehículo') + '</small></span><span class="client-status ' + (order ? 'active' : '') + '">' + (order ? escapeHtml(order.estado || 'Orden activa') : 'Sin orden') + '</span></button>';
             }
             if (state.section === 'vehicles') {
                 const owner = clientsById.get(record.clienteId);
@@ -707,8 +741,12 @@
         state.catalogSearchTimer = setTimeout(runCatalogPartSearch, 180);
     });
     els.plateSearch.addEventListener('input', function () { els.plateSearch.value = els.plateSearch.value.toUpperCase(); els.plateSearchMessage.textContent = ''; });
+    els.paletteSelect.addEventListener('change', function () { const appearance = readAppearance(); appearance.palette = els.paletteSelect.value; applyAppearance(appearance); });
+    els.themeToggle.addEventListener('click', cycleTheme);
     els.plateSearchForm.addEventListener('submit', async function (event) { event.preventDefault(); const plate = TallerData.normalizePlate(els.plateSearch.value); if (!plate) { els.plateSearchMessage.textContent = 'Escribe una patente para buscar.'; return; } const vehicle = await repo.findVehicleByPlate(plate); if (!vehicle) { els.plateSearchMessage.textContent = 'No hay un vehículo registrado con esa patente.'; return; } els.plateSearchMessage.textContent = ''; await showVehicleDetail(vehicle.id); });
+    els.compactPlateSearchForm.addEventListener('submit', async function (event) { event.preventDefault(); const plate = TallerData.normalizePlate(els.compactPlateSearch.value); if (!plate) { els.compactPlateSearchMessage.textContent = 'Escribe una patente.'; return; } const vehicle = await repo.findVehicleByPlate(plate); if (!vehicle) { els.compactPlateSearchMessage.textContent = 'Patente no encontrada.'; return; } els.compactPlateSearchMessage.textContent = ''; await showVehicleDetail(vehicle.id); });
 
+    applyAppearance(readAppearance());
     TallerData.SyncedWorkshopRepository.create().catch(function () {
         return new TallerData.LocalWorkshopRepository();
     }).then(function (repository) {
