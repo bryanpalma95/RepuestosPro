@@ -40,7 +40,7 @@
         servicePickerEmpty: document.getElementById('servicePickerEmpty'), toast: document.getElementById('toast'),
         pendingPartsMeta: document.getElementById('pendingPartsMeta'), pendingPartsList: document.getElementById('pendingPartsList'),
         enrichmentFileInput: document.getElementById('enrichmentFileInput'), manualPartVehicle: document.getElementById('manualPartVehicle'),
-        paletteSelect: document.getElementById('paletteSelect'), themeToggle: document.getElementById('themeToggle'),
+        paletteSelect: document.getElementById('paletteSelect'), paletteButton: document.getElementById('paletteButton'), palettePopover: document.getElementById('palettePopover'), paletteRange: document.getElementById('paletteRange'), themeToggle: document.getElementById('themeToggle'),
         clientSidebarCount: document.getElementById('clientSidebarCount'), vehicleSidebarCount: document.getElementById('vehicleSidebarCount'),
         orderSidebarCount: document.getElementById('orderSidebarCount'), serviceSidebarCount: document.getElementById('serviceSidebarCount'),
         dashboardClientCount: document.getElementById('dashboardClientCount'), dashboardVehicleCount: document.getElementById('dashboardVehicleCount'), dashboardOrderCount: document.getElementById('dashboardOrderCount'),
@@ -77,6 +77,7 @@
         document.documentElement.dataset.palette = palette; document.documentElement.dataset.theme = theme;
         document.documentElement.dataset.resolvedTheme = theme;
         els.paletteSelect.value = palette;
+        els.paletteRange.value = String(allowedPalettes.indexOf(palette));
         els.themeToggle.textContent = theme === 'dark' ? '☾' : '☀';
         const nextThemeLabel = theme === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro';
         els.themeToggle.setAttribute('aria-label', nextThemeLabel); els.themeToggle.title = nextThemeLabel;
@@ -741,7 +742,9 @@
         state.catalogSearchTimer = setTimeout(runCatalogPartSearch, 180);
     });
     els.plateSearch.addEventListener('input', function () { els.plateSearch.value = els.plateSearch.value.toUpperCase(); els.plateSearchMessage.textContent = ''; });
-    els.paletteSelect.addEventListener('change', function () { const appearance = readAppearance(); appearance.palette = els.paletteSelect.value; applyAppearance(appearance); });
+    els.paletteButton.addEventListener('click', function (event) { event.stopPropagation(); const opening = els.palettePopover.hidden; els.palettePopover.hidden = !opening; els.paletteButton.setAttribute('aria-expanded', String(opening)); });
+    els.paletteRange.addEventListener('input', function () { const appearance = readAppearance(); appearance.palette = ['navy','copper','sage','wine','electric','teal','amber','violet'][Number(els.paletteRange.value)]; applyAppearance(appearance); });
+    document.addEventListener('click', function (event) { if (!event.target.closest('.color-picker')) { els.palettePopover.hidden = true; els.paletteButton.setAttribute('aria-expanded', 'false'); } });
     els.themeToggle.addEventListener('click', cycleTheme);
     els.plateSearchForm.addEventListener('submit', async function (event) { event.preventDefault(); const plate = TallerData.normalizePlate(els.plateSearch.value); if (!plate) { els.plateSearchMessage.textContent = 'Escribe una patente para buscar.'; return; } const vehicle = await repo.findVehicleByPlate(plate); if (!vehicle) { els.plateSearchMessage.textContent = 'No hay un vehículo registrado con esa patente.'; return; } els.plateSearchMessage.textContent = ''; await showVehicleDetail(vehicle.id); });
     els.compactPlateSearchForm.addEventListener('submit', async function (event) { event.preventDefault(); const plate = TallerData.normalizePlate(els.compactPlateSearch.value); if (!plate) { els.compactPlateSearchMessage.textContent = 'Escribe una patente.'; return; } const vehicle = await repo.findVehicleByPlate(plate); if (!vehicle) { els.compactPlateSearchMessage.textContent = 'Patente no encontrada.'; return; } els.compactPlateSearchMessage.textContent = ''; await showVehicleDetail(vehicle.id); });
