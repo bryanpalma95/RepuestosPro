@@ -3,9 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#17211f">
+    <meta name="theme-color" content="#14262a">
     <meta name="description" content="Gestión local de clientes, vehículos, servicios y órdenes para el taller RepuestosPro.">
-    <title>RepuestosPro Taller — v0.10.0-beta.1</title>
+    <title>RepuestosPro Taller — v0.10.0-beta.2</title>
+    <script>
+        (function () {
+            try {
+                var appearance = JSON.parse(localStorage.getItem('repuestospro:appearance:v1') || '{}');
+                document.documentElement.dataset.palette = appearance.palette || 'navy';
+                document.documentElement.dataset.theme = appearance.theme === 'dark' ? 'dark' : 'light';
+                document.documentElement.dataset.resolvedTheme = appearance.theme === 'dark' ? 'dark' : 'light';
+            } catch (error) { document.documentElement.dataset.palette = 'navy'; document.documentElement.dataset.theme = 'light'; document.documentElement.dataset.resolvedTheme = 'light'; }
+        })();
+    </script>
     <link rel="stylesheet" href="taller.css">
 </head>
 <body>
@@ -15,13 +25,23 @@
         <nav class="main-nav" aria-label="Navegación principal">
             <a href="catalogo.html">Catálogo</a>
             <a href="taller.html" class="active" aria-current="page">Taller</a>
-            <span class="app-version">v0.10.0-beta.1</span>
+            <a href="#" class="header-action" data-action="new-order">Nueva orden</a>
+            <div class="appearance-controls">
+                <label class="color-icon-control" title="Cambiar color"><span aria-hidden="true">🎨</span><select id="paletteSelect" aria-label="Paleta de colores">
+                    <option value="navy">Azul petróleo</option><option value="copper">Grafito y cobre</option>
+                    <option value="sage">Verde salvia</option><option value="wine">Vino y arena</option>
+                    <option value="electric">Azul eléctrico</option><option value="teal">Turquesa</option>
+                    <option value="amber">Ámbar</option><option value="violet">Violeta</option>
+                </select></label>
+                <button type="button" id="themeToggle" class="theme-toggle" aria-label="Cambiar a modo oscuro" title="Cambiar a modo oscuro">☀</button>
+            </div>
+            <span class="app-version">v0.10.0-beta.2</span>
         </nav>
     </div>
 </header>
 
 <main class="page-shell">
-    <section class="intro" aria-labelledby="pageTitle">
+    <section class="intro legacy-intro" aria-labelledby="pageTitle">
         <div>
             <span class="eyebrow">TALLER / FASE 1</span>
             <h1 id="pageTitle">Clientes y vehículos, <em>sin fricción.</em></h1>
@@ -39,7 +59,7 @@
         </form>
     </section>
 
-    <section class="summary" aria-label="Resumen del taller">
+    <section class="summary legacy-summary" aria-label="Resumen del taller">
         <article class="summary-card accent-red">
             <span>Clientes</span><strong id="clientCount">0</strong>
             <button type="button" class="text-action" data-action="new-client">+ Crear cliente</button>
@@ -62,7 +82,7 @@
         </article>
     </section>
 
-    <section class="onboarding-panel" id="onboardingPanel" aria-labelledby="onboardingTitle">
+    <section class="onboarding-panel" id="onboardingPanel" aria-labelledby="onboardingTitle" hidden>
         <div class="onboarding-header">
             <div>
                 <span class="eyebrow">GUÍA DE INICIO</span>
@@ -83,10 +103,12 @@
 
     <section class="workspace" aria-labelledby="workspaceTitle">
         <div class="workspace-tabs" role="tablist" aria-label="Gestión del taller">
-            <button id="clientsTab" type="button" role="tab" aria-selected="true" aria-controls="listView" data-section="clients">Clientes</button>
-            <button id="vehiclesTab" type="button" role="tab" aria-selected="false" aria-controls="listView" data-section="vehicles">Vehículos</button>
-            <button id="ordersTab" type="button" role="tab" aria-selected="false" aria-controls="listView" data-section="orders">Órdenes</button>
-            <button id="servicesTab" type="button" role="tab" aria-selected="false" aria-controls="listView" data-section="services">Servicios</button>
+            <span class="sidebar-label">Gestión</span>
+            <button id="clientsTab" type="button" role="tab" aria-selected="true" aria-controls="listView" data-section="clients">Clientes <b id="clientSidebarCount">0</b></button>
+            <button id="vehiclesTab" type="button" role="tab" aria-selected="false" aria-controls="listView" data-section="vehicles">Vehículos <b id="vehicleSidebarCount">0</b></button>
+            <button id="ordersTab" type="button" role="tab" aria-selected="false" aria-controls="listView" data-section="orders">Órdenes <b id="orderSidebarCount">0</b></button>
+            <button id="servicesTab" type="button" role="tab" aria-selected="false" aria-controls="listView" data-section="services">Servicios <b id="serviceSidebarCount">0</b></button>
+            <div class="sidebar-tools"><span class="sidebar-label">Herramientas</span><button type="button" data-action="show-onboarding">Guía de inicio</button><button type="button" data-action="open-pending-parts">Repuestos pendientes</button></div>
         </div>
 
         <div id="listView">
@@ -94,9 +116,21 @@
                 <div>
                     <span class="eyebrow" id="workspaceEyebrow">DIRECTORIO</span>
                     <h2 id="workspaceTitle">Clientes</h2>
+                    <p class="workspace-subtitle">Contactos, vehículos e historial de órdenes.</p>
                 </div>
                 <button type="button" class="button primary" id="addRecordButton">Nuevo cliente</button>
             </div>
+            <div class="dashboard-metrics" aria-label="Resumen del taller">
+                <article><span>Clientes</span><strong id="dashboardClientCount">0</strong></article>
+                <article><span>Vehículos</span><strong id="dashboardVehicleCount">0</strong></article>
+                <article><span>Órdenes abiertas</span><strong id="dashboardOrderCount">0</strong></article>
+            </div>
+            <form class="plate-search compact-plate-search" id="compactPlateSearchForm" role="search" novalidate>
+                <label class="sr-only" for="compactPlateSearch">Búsqueda rápida por patente</label>
+                <input id="compactPlateSearch" type="search" maxlength="12" autocomplete="off" placeholder="Buscar rápidamente por patente…">
+                <button type="submit" class="button secondary">Buscar vehículo</button>
+                <p class="field-message" id="compactPlateSearchMessage" aria-live="polite"></p>
+            </form>
             <div class="filter-row">
                 <label class="sr-only" for="recordSearch">Buscar en la lista</label>
                 <input id="recordSearch" type="search" autocomplete="off" placeholder="Buscar por nombre, RUT, teléfono o email…">
