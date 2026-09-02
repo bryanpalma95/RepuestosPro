@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#17211f">
     <meta name="description" content="Gestión local de clientes, vehículos, servicios y órdenes para el taller RepuestosPro.">
-    <title>RepuestosPro — Taller</title>
+    <title>RepuestosPro Taller — v0.10.0-beta.1</title>
     <link rel="stylesheet" href="taller.css">
 </head>
 <body>
@@ -15,6 +15,7 @@
         <nav class="main-nav" aria-label="Navegación principal">
             <a href="catalogo.html">Catálogo</a>
             <a href="taller.html" class="active" aria-current="page">Taller</a>
+            <span class="app-version">v0.10.0-beta.1</span>
         </nav>
     </div>
 </header>
@@ -25,6 +26,7 @@
             <span class="eyebrow">TALLER / FASE 1</span>
             <h1 id="pageTitle">Clientes y vehículos, <em>sin fricción.</em></h1>
             <p>Encuentra una patente al instante o mantén al día las fichas de quienes llegan al taller.</p>
+            <button type="button" class="onboarding-trigger" data-action="show-onboarding">¿Primera vez? Ver guía de inicio</button>
         </div>
         <form class="plate-search" id="plateSearchForm" role="search" novalidate>
             <label for="plateSearch">Búsqueda rápida por patente</label>
@@ -60,6 +62,25 @@
         </article>
     </section>
 
+    <section class="onboarding-panel" id="onboardingPanel" aria-labelledby="onboardingTitle">
+        <div class="onboarding-header">
+            <div>
+                <span class="eyebrow">GUÍA DE INICIO</span>
+                <h2 id="onboardingTitle">Prepara el Taller en cuatro pasos</h2>
+                <p>Completa esta configuración una vez. Después podrás crear órdenes y presupuestos sin encontrarte con listas vacías.</p>
+            </div>
+            <button type="button" class="button secondary" data-action="dismiss-onboarding">Ocultar guía</button>
+        </div>
+        <div class="onboarding-progress" aria-live="polite">
+            <div><strong id="onboardingProgressText">0 de 4 pasos listos</strong><span>Configuración esencial</span></div>
+            <div class="progress-track" aria-hidden="true"><span id="onboardingProgressBar"></span></div>
+        </div>
+        <div class="onboarding-steps" id="onboardingSteps"></div>
+        <aside class="onboarding-note">
+            <strong>Importante:</strong> los servicios del presupuesto se crean en la pestaña <b>Servicios</b>. El catálogo técnico aporta repuestos y compatibilidad, pero no servicios ni precios. Los datos del Taller se guardan en este navegador y dispositivo.
+        </aside>
+    </section>
+
     <section class="workspace" aria-labelledby="workspaceTitle">
         <div class="workspace-tabs" role="tablist" aria-label="Gestión del taller">
             <button id="clientsTab" type="button" role="tab" aria-selected="true" aria-controls="listView" data-section="clients">Clientes</button>
@@ -93,7 +114,7 @@
 
 <footer class="app-footer">
     <span>RepuestosPro Taller · Datos guardados en este dispositivo</span>
-    <a href="catalogo.html">Abrir catálogo de repuestos →</a>
+    <div class="footer-actions"><button type="button" class="footer-action" data-action="export-backup">Descargar respaldo</button><a href="catalogo.html">Abrir catálogo de repuestos →</a></div>
 </footer>
 
 <dialog id="clientDialog" class="record-dialog" aria-labelledby="clientDialogTitle">
@@ -135,7 +156,7 @@
             <label>Marca <span>*</span><input name="marca" list="brandOptions" maxlength="80" required autocomplete="off"><datalist id="brandOptions"></datalist></label>
             <label>Modelo <span>*</span><input name="modelo" list="modelOptions" maxlength="100" required autocomplete="off"><datalist id="modelOptions"></datalist></label>
             <label>Año <span>*</span><input name="anio" list="yearOptions" type="number" min="1900" max="2100" required><datalist id="yearOptions"></datalist></label>
-            <label>Motor<input name="motor" maxlength="160" placeholder="Campo editable"></label>
+            <label>Código o versión del motor<input name="motor" maxlength="160" placeholder="Ej.: 2NR-FE, Kappa 1.4 MPI"></label>
             <label>Cilindrada<input name="cilindrada" maxlength="40" placeholder="Ej. 1.6 L"></label>
             <label>Combustible<select name="combustible"><option value="">— Sin especificar —</option><option>Bencina</option><option>Diésel</option><option>Híbrido</option><option>Eléctrico</option><option>Gas</option><option>Otro</option></select></label>
             <label>Transmisión<select name="transmision"><option value="">— Sin especificar —</option><option>Manual</option><option>Automática</option><option>CVT</option><option>Doble embrague</option><option>Otra</option></select></label>
@@ -203,6 +224,10 @@
         <input type="hidden" name="orderId"><input type="hidden" name="kind"><input type="hidden" name="id">
         <div class="form-grid">
             <label class="full" id="servicePickerLabel">Servicio del catálogo<select name="servicioId"><option value="">— Seleccionar servicio —</option></select></label>
+            <div class="inline-empty-guide full" id="servicePickerEmpty" hidden>
+                <div><strong>Aún no hay servicios disponibles</strong><p>Crea primero un servicio —por ejemplo, “Cambio de aceite”— para poder seleccionarlo en el presupuesto.</p></div>
+                <button type="button" class="button primary" data-action="create-service-from-line">Crear servicio ahora</button>
+            </div>
             <label class="full">Descripción <span>*</span><input name="descripcion" maxlength="500" required></label>
             <label>Cantidad <span>*</span><input name="cantidad" type="number" min="0.01" step="0.01" value="1" required></label>
             <label>Precio unitario <span>*</span><input name="precioUnitario" type="number" min="0" step="1" required inputmode="numeric"></label>
@@ -228,6 +253,10 @@
         </div>
         <label class="catalog-search-label" for="catalogPartSearch">Buscar por componente, referencia OEM o código</label>
         <input id="catalogPartSearch" type="search" autocomplete="off" placeholder="Ej. filtro aceite, 90915-YZZF2…">
+        <div class="dialog-actions catalog-quick-actions">
+            <button type="button" class="button secondary" data-action="open-pending-parts">Ver pendientes</button>
+            <button type="button" class="button primary" data-action="new-manual-part">+ No está en el catálogo</button>
+        </div>
         <div class="catalog-result-meta" id="catalogResultMeta" aria-live="polite">Cargando catálogo…</div>
         <div class="catalog-results" id="catalogResults"></div>
     </div>
@@ -249,6 +278,42 @@
         <p class="form-error" id="partLineFormError" aria-live="assertive"></p>
         <div class="dialog-actions"><button type="button" class="button secondary" data-close-dialog>Cancelar</button><button type="submit" class="button primary">Guardar repuesto</button></div>
     </form>
+</dialog>
+
+<dialog id="manualPartDialog" class="record-dialog" aria-labelledby="manualPartTitle">
+    <form id="manualPartForm" novalidate>
+        <div class="dialog-header">
+            <div><span class="eyebrow">ALTA RÁPIDA</span><h2 id="manualPartTitle">Agregar repuesto nuevo</h2></div>
+            <button type="button" class="icon-button" data-close-dialog aria-label="Cerrar">×</button>
+        </div>
+        <input type="hidden" name="orderId">
+        <p class="catalog-hint" id="manualPartVehicle">El vehículo se asociará automáticamente desde la orden.</p>
+        <div class="form-grid">
+            <label class="full">Nombre del repuesto <span>*</span><input name="name" maxlength="300" required placeholder="Ej. Filtro de aceite"></label>
+            <label>Marca<input name="brand" maxlength="160" placeholder="Opcional"></label>
+            <label>Código o referencia<input name="reference" maxlength="160" placeholder="Opcional"></label>
+            <label class="full">Notas<textarea name="notes" maxlength="3000" rows="3" placeholder="Medidas, envase o información útil"></textarea></label>
+        </div>
+        <p class="form-error" id="manualPartFormError" aria-live="assertive"></p>
+        <div class="dialog-actions"><button type="button" class="button secondary" data-close-dialog>Cancelar</button><button type="submit" class="button primary">Guardar y usar en la orden</button></div>
+    </form>
+</dialog>
+
+<dialog id="pendingPartsDialog" class="record-dialog wide catalog-dialog" aria-labelledby="pendingPartsTitle">
+    <div class="catalog-dialog-inner">
+        <div class="dialog-header">
+            <div><span class="eyebrow">ENRIQUECIMIENTO</span><h2 id="pendingPartsTitle">Artículos pendientes</h2></div>
+            <button type="button" class="icon-button" data-close-dialog aria-label="Cerrar">×</button>
+        </div>
+        <p class="catalog-hint">El lote contiene solamente información técnica del repuesto y del vehículo. No incluye clientes, patentes ni órdenes.</p>
+        <div class="dialog-actions catalog-quick-actions">
+            <button type="button" class="button secondary" data-action="import-enrichment">Importar actualización</button>
+            <button type="button" class="button primary" data-action="export-pending-parts">Exportar pendientes</button>
+            <input id="enrichmentFileInput" type="file" accept="application/json,.json" hidden>
+        </div>
+        <div class="catalog-result-meta" id="pendingPartsMeta"></div>
+        <div class="catalog-results" id="pendingPartsList"></div>
+    </div>
 </dialog>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>

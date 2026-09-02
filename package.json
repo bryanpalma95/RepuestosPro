@@ -1,0 +1,21 @@
+{
+  "name": "repuestospro",
+  "private": true,
+  "version": "0.10.0-beta.1",
+  "type": "module",
+  "main": "desktop/main.js",
+  "engines": { "node": ">=24.7 <25" },
+  "scripts": {
+    "start": "node server/src/main.js",
+    "desktop": "electron .",
+    "desktop:pack": "electron-packager . RepuestosPro --platform=win32 --arch=x64 --out=releases/v0.10.0-beta.1 --overwrite --prune=true --ignore=^/dist-desktop --ignore=^/dist-desktop-next --ignore=^/dist-desktop-fixed --ignore=^/releases --ignore=^/var --ignore=^/[.]git",
+    "test": "node --test server/test/*.test.js tools/backup/*.test.mjs tools/test_pending_parts.mjs",
+    "test:migration": "python tools/test_migrate_workshop.py",
+    "backup": "node tools/backup/backup.mjs",
+    "backup:verify": "node tools/backup/verify.mjs"
+  },
+  "devDependencies": {
+    "@electron/packager": "20.3.0",
+    "electron": "44.1.0"
+  }
+}
