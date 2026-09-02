@@ -749,6 +749,7 @@
     els.plateSearchForm.addEventListener('submit', async function (event) { event.preventDefault(); const plate = TallerData.normalizePlate(els.plateSearch.value); if (!plate) { els.plateSearchMessage.textContent = 'Escribe una patente para buscar.'; return; } const vehicle = await repo.findVehicleByPlate(plate); if (!vehicle) { els.plateSearchMessage.textContent = 'No hay un vehículo registrado con esa patente.'; return; } els.plateSearchMessage.textContent = ''; await showVehicleDetail(vehicle.id); });
     els.compactPlateSearchForm.addEventListener('submit', async function (event) { event.preventDefault(); const plate = TallerData.normalizePlate(els.compactPlateSearch.value); if (!plate) { els.compactPlateSearchMessage.textContent = 'Escribe una patente.'; return; } const vehicle = await repo.findVehicleByPlate(plate); if (!vehicle) { els.compactPlateSearchMessage.textContent = 'Patente no encontrada.'; return; } els.compactPlateSearchMessage.textContent = ''; await showVehicleDetail(vehicle.id); });
 
+    try { if (!localStorage.getItem('repuestospro:palette-reset:original-v1')) { const restoredAppearance = readAppearance(); restoredAppearance.palette = 'navy'; localStorage.setItem(APPEARANCE_STORAGE_KEY, JSON.stringify(restoredAppearance)); localStorage.setItem('repuestospro:palette-reset:original-v1', '1'); } } catch (error) { /* Continúa con la apariencia disponible. */ }
     applyAppearance(readAppearance());
     TallerData.SyncedWorkshopRepository.create().catch(function () {
         return new TallerData.LocalWorkshopRepository();
