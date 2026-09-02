@@ -95,7 +95,7 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.28;ba
 </style>
 </head>
 <body>
-<header class="header"><a href="index.html" class="logo">Repuestos<span>Pro</span></a><nav class="header-nav" aria-label="Navegación principal"><a href="catalogo.html" class="active" aria-current="page">Catálogo</a><a href="taller.html">Taller</a><span class="version">v0.9.1</span></nav></header>
+<header class="header"><a href="index.html" class="logo">Repuestos<span>Pro</span></a><nav class="header-nav" aria-label="Navegación principal"><a href="catalogo.html" class="active" aria-current="page">Catálogo</a><a href="taller.html">Taller</a><span class="version">v0.10.0-beta.1</span></nav></header>
 <main class="main">
 <div class="search-wrap"><input type="text" id="searchInput" placeholder="Buscar: Toyota Corolla 2020, filtro aceite, 90915-YZZF2..." oninput="doSearch(this.value)"><div class="search-results" id="searchResults"></div></div>
 <div class="selectors"><div><label>Marca</label><select id="selMarca" onchange="onMarca()"><option value="">— Seleccionar marca —</option></select></div><div><label>Modelo</label><select id="selModelo" onchange="onModelo()" disabled><option value="">— Seleccionar modelo —</option></select></div><div><label>Año</label><select id="selYear" onchange="onYear()" disabled><option value="">— Seleccionar año —</option></select></div></div>
@@ -103,7 +103,7 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.28;ba
 <div class="detail" id="detailView"><div class="back-btn" onclick="goHome()">← Volver</div><div class="detail-header" id="detailHeader"></div><div class="parts-grid" id="partsGrid"></div></div>
 <div class="detail" id="componentView" style="display:none"><div class="back-btn" onclick="goHome()">← Volver</div><div class="detail-header" id="componentHeader"></div><div id="componentBody"></div></div>
 </main>
-<footer class="footer">RepuestosPro v0.9.1 — Datos OEM verificados</footer>
+<footer class="footer">RepuestosPro v0.10.0-beta.1 — Datos OEM verificados</footer>
 <script>
 let NAV={},DATA={},REF_INDEX=new Map(),dataLoaded=false,gridPage=0;const PS=30;
 let COMPAT={};

@@ -2,7 +2,7 @@
     'use strict';
 
     const STORAGE_KEY = 'repuestospro.taller';
-    const CURRENT_VERSION = 3;
+    const CURRENT_VERSION = 4;
     const WORK_ORDER_STATUSES = [
         'Presupuesto', 'Pendiente', 'Aprobada', 'En reparación',
         'Esperando repuesto', 'Terminada', 'Entregada', 'Cancelada'
@@ -66,8 +66,16 @@
         return JSON.parse(JSON.stringify(value));
     }
 
+    async function sha256(value) {
+        if (!global.crypto || !global.crypto.subtle || typeof global.TextEncoder !== 'function') {
+            throw new Error('Este navegador no permite generar un respaldo verificable.');
+        }
+        const digest = await global.crypto.subtle.digest('SHA-256', new global.TextEncoder().encode(value));
+        return Array.from(new Uint8Array(digest)).map(function (byte) { return byte.toString(16).padStart(2, '0'); }).join('');
+    }
+
     function defaultState() {
-        return { version: CURRENT_VERSION, clients: [], vehicles: [], services: [], workOrders: [] };
+        return { version: CURRENT_VERSION, clients: [], vehicles: [], services: [], workOrders: [], pendingParts: [] };
     }
 
     function toNonNegativeNumber(value, fallback) {
@@ -157,6 +165,7 @@
             matchMode: snapshot.matchMode === 'compatible' ? 'compatible' : 'broad',
             compatibilityConfirmed: snapshot.compatibilityConfirmed === true,
             catalogVehicleMatch: cleanText(snapshot.catalogVehicleMatch, 300),
+            pendingResearchId: cleanText(snapshot.pendingResearchId, 100),
             capturedAt: cleanText(snapshot.capturedAt, 80) || new Date().toISOString()
         };
     }
@@ -244,10 +253,11 @@
             services: Array.isArray(parsed.services) ? parsed.services : [],
             workOrders: Array.isArray(parsed.workOrders) ? parsed.workOrders.map(function (order) {
                 return Object.assign({ repuestos: [] }, order);
-            }) : []
+            }) : [],
+            pendingParts: Array.isArray(parsed.pendingParts) ? parsed.pendingParts : []
         };
 
-        // Migraciones aditivas: v1 añadió operación; v3 agrega repuestos dentro de cada orden.
+        // Migraciones aditivas: v3 agregó repuestos; v4 añade la cola de enriquecimiento.
         state.version = CURRENT_VERSION;
         return state;
     }
@@ -522,6 +532,125 @@
             });
         }
 
+        async queuePendingPart(input) {
+            const state = this._read();
+            const source = input || {};
+            const name = cleanText(source.name, 300);
+            if (!name) throw new Error('El nombre del repuesto es obligatorio.');
+            const vehicle = source.vehicle && typeof source.vehicle === 'object' ? source.vehicle : {};
+            const technicalVehicle = {
+                marca: cleanText(vehicle.marca, 160), modelo: cleanText(vehicle.modelo, 160),
+                anio: vehicle.anio ? Number.parseInt(vehicle.anio, 10) : null,
+                motor: cleanText(vehicle.motor, 160), cilindrada: cleanText(vehicle.cilindrada, 80),
+                combustible: cleanText(vehicle.combustible, 80), transmision: cleanText(vehicle.transmision, 80)
+            };
+            const reference = cleanText(source.reference, 160).toUpperCase();
+            const brand = cleanText(source.brand, 160);
+            const dedupeKey = searchText([name, brand, reference, technicalVehicle.marca, technicalVehicle.modelo,
+                technicalVehicle.anio, technicalVehicle.motor].join('|'));
+            let record = state.pendingParts.find(function (item) { return item.dedupeKey === dedupeKey && item.status !== 'rejected'; });
+            if (record) {
+                record.occurrences = Math.max(1, Number(record.occurrences) || 1) + 1;
+                record.updatedAt = new Date().toISOString();
+            } else {
+                const now = new Date().toISOString();
+                record = {
+                    id: makeId('pendingpart'), status: 'pending', name: name, brand: brand,
+                    reference: reference, notes: cleanNotes(source.notes), vehicle: technicalVehicle,
+                    dedupeKey: dedupeKey, occurrences: 1, createdAt: now, updatedAt: now, enrichment: null
+                };
+                state.pendingParts.push(record);
+            }
+            this._write(state);
+            return clone(record);
+        }
+
+        async listPendingParts() {
+            return clone(this._read().pendingParts).sort(function (a, b) { return b.updatedAt.localeCompare(a.updatedAt); });
+        }
+
+        async searchLocalParts(query, vehicle, mode) {
+            const q = searchText(query);
+            const requestedVehicle = vehicle || {};
+            return clone(this._read().pendingParts).filter(function (item) {
+                if (item.status === 'rejected') return false;
+                const sameVehicle = searchText(item.vehicle.marca) === searchText(requestedVehicle.marca)
+                    && searchText(item.vehicle.modelo) === searchText(requestedVehicle.modelo)
+                    && (!item.vehicle.anio || !requestedVehicle.anio || Number(item.vehicle.anio) === Number(requestedVehicle.anio));
+                if (mode === 'compatible' && !sameVehicle) return false;
+                return !q || searchText([item.name, item.brand, item.reference, item.notes].join(' ')).includes(q);
+            }).map(function (item) {
+                if (item.status === 'enriched' && item.enrichment) return Object.assign({}, item.enrichment, {
+                    id: 'local-' + item.id, pendingResearchId: item.id, category: item.enrichment.category || 'Catálogo local'
+                });
+                return {
+                    id: 'local-' + item.id, pendingResearchId: item.id, category: 'Local · pendiente', name: item.name,
+                    details: item.notes, brands: item.brand ? [item.brand] : [],
+                    references: item.reference ? [{ code: item.reference, status: 'verify' }] : [],
+                    compatibility: [{ marca: item.vehicle.marca, modelos: [item.vehicle.modelo, item.vehicle.anio].filter(Boolean).join(' ') }],
+                    compatibilityConfirmed: false, matchMode: 'broad',
+                    vehicleName: [item.vehicle.marca, item.vehicle.modelo, item.vehicle.anio].filter(Boolean).join(' '),
+                    capturedAt: item.updatedAt
+                };
+            }).slice(0, 100);
+        }
+
+        async exportPendingParts() {
+            const items = this._read().pendingParts.filter(function (item) { return item.status === 'pending'; }).map(function (item) {
+                return {
+                    pendingId: item.id, name: item.name, brand: item.brand, reference: item.reference,
+                    notes: item.notes, vehicle: item.vehicle, occurrences: item.occurrences, firstSeenAt: item.createdAt
+                };
+            });
+            return { format: 'repuestospro-enrichment-batch', version: 1, createdAt: new Date().toISOString(), items: items };
+        }
+
+        async importEnrichmentPackage(document) {
+            if (!document || document.format !== 'repuestospro-enrichment-update' || document.version !== 1 || !Array.isArray(document.items)) {
+                throw new Error('El archivo no es una actualización de enriquecimiento válida.');
+            }
+            const state = this._read();
+            let updated = 0;
+            document.items.forEach(function (source) {
+                const record = state.pendingParts.find(function (item) { return item.id === cleanText(source.pendingId, 100); });
+                if (!record) return;
+                const status = source.status === 'rejected' ? 'rejected' : 'enriched';
+                record.status = status;
+                record.enrichment = status === 'enriched' ? sanitizeCatalogSnapshot({
+                    id: 'local-' + record.id,
+                    name: source.name || record.name,
+                    category: source.category,
+                    details: source.details,
+                    brands: source.brands || (record.brand ? [record.brand] : []),
+                    references: source.references || (record.reference ? [{ code: record.reference, status: 'verify' }] : []),
+                    links: source.links,
+                    compatibility: source.compatibility,
+                    compatibilityConfirmed: source.compatibilityConfirmed === true,
+                    matchMode: source.compatibilityConfirmed === true ? 'compatible' : 'broad',
+                    vehicleName: [record.vehicle.marca, record.vehicle.modelo, record.vehicle.anio].filter(Boolean).join(' '),
+                    capturedAt: new Date().toISOString(),
+                    pendingResearchId: record.id
+                }) : null;
+                record.updatedAt = new Date().toISOString();
+                updated += 1;
+            });
+            this._write(state);
+            return { updated: updated, total: document.items.length };
+        }
+
+        async createBackup() {
+            const state = this._read();
+            const payload = JSON.stringify(state);
+            return {
+                format: 'repuestospro-workshop-backup',
+                backupVersion: 1,
+                createdAt: new Date().toISOString(),
+                schemaVersion: state.version,
+                checksum: { algorithm: 'SHA-256', value: await sha256(payload) },
+                data: clone(state)
+            };
+        }
+
         async closeWorkOrder(id) {
             return this.updateWorkOrder(id, { estado: 'Entregada', closedAt: new Date().toISOString() });
         }
@@ -596,11 +725,65 @@
         }
     }
 
+    class SyncedWorkshopRepository extends LocalWorkshopRepository {
+        constructor(storage) {
+            super(storage);
+            this.syncPromise = Promise.resolve();
+            global.addEventListener('pagehide', () => {
+                const body = JSON.stringify(this._read());
+                global.navigator.sendBeacon('/api/v1/local/workshop-state', new Blob([body], { type: 'application/json' }));
+            });
+        }
+
+        static async create(storage) {
+            const repo = new SyncedWorkshopRepository(storage);
+            const response = await fetch('/api/v1/local/workshop-state', { cache: 'no-store' });
+            if (!response.ok) throw new Error('No fue posible abrir la base SQLite del Taller.');
+            const remote = await response.json();
+            const local = repo._read();
+            const localHasData = local.clients.length || local.vehicles.length || local.services.length || local.workOrders.length || local.pendingParts.length;
+            if (remote.state) {
+                repo.storage.setItem(STORAGE_KEY, JSON.stringify(migrate(remote.state)));
+            } else if (localHasData) {
+                await repo._sync(local);
+            }
+            return repo;
+        }
+
+        _write(state) {
+            const saved = super._write(state);
+            this.syncPromise = this.syncPromise.then(() => this._sync(saved));
+            return saved;
+        }
+
+        async _sync(state) {
+            const response = await fetch('/api/v1/local/workshop-state', {
+                method: 'PUT', headers: { 'content-type': 'application/json' }, body: JSON.stringify(state)
+            });
+            if (!response.ok) throw new Error('No fue posible guardar los cambios en SQLite.');
+            return response.json();
+        }
+
+        async flush() { return this.syncPromise; }
+    }
+
+    ['createClient', 'updateClient', 'deleteClient', 'createVehicle', 'updateVehicle', 'deleteVehicle',
+        'createService', 'updateService', 'deleteService', 'createWorkOrder', 'updateWorkOrder',
+        'queuePendingPart', 'importEnrichmentPackage', 'saveOrderLine', 'deleteOrderLine'].forEach(function (name) {
+        const operation = LocalWorkshopRepository.prototype[name];
+        SyncedWorkshopRepository.prototype[name] = async function (...args) {
+            const result = await operation.apply(this, args);
+            await this.flush();
+            return result;
+        };
+    });
+
     global.TallerData = Object.freeze({
         CURRENT_VERSION: CURRENT_VERSION,
         STORAGE_KEY: STORAGE_KEY,
         WORK_ORDER_STATUSES: WORK_ORDER_STATUSES.slice(),
         LocalWorkshopRepository: LocalWorkshopRepository,
+        SyncedWorkshopRepository: SyncedWorkshopRepository,
         normalizePlate: normalizePlate,
         normalizeRut: normalizeRut,
         normalizeVin: normalizeVin

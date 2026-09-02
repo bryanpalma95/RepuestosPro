@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    const repo = new TallerData.LocalWorkshopRepository();
+    let repo;
     const ONBOARDING_STORAGE_KEY = 'repuestospro:taller:onboarding-hidden:v1';
     const state = {
         section: 'clients', query: '', catalog: {}, detail: null, pendingVehicle: false,
@@ -21,20 +21,24 @@
         clientDialog: document.getElementById('clientDialog'), vehicleDialog: document.getElementById('vehicleDialog'),
         serviceDialog: document.getElementById('serviceDialog'), orderDialog: document.getElementById('orderDialog'),
         lineDialog: document.getElementById('lineDialog'), partPickerDialog: document.getElementById('partPickerDialog'),
-        partLineDialog: document.getElementById('partLineDialog'), clientForm: document.getElementById('clientForm'),
+        partLineDialog: document.getElementById('partLineDialog'), manualPartDialog: document.getElementById('manualPartDialog'),
+        pendingPartsDialog: document.getElementById('pendingPartsDialog'), clientForm: document.getElementById('clientForm'),
         vehicleForm: document.getElementById('vehicleForm'), serviceForm: document.getElementById('serviceForm'),
         orderForm: document.getElementById('orderForm'), lineForm: document.getElementById('lineForm'),
-        partLineForm: document.getElementById('partLineForm'),
+        partLineForm: document.getElementById('partLineForm'), manualPartForm: document.getElementById('manualPartForm'),
         clientFormError: document.getElementById('clientFormError'), vehicleFormError: document.getElementById('vehicleFormError'),
         serviceFormError: document.getElementById('serviceFormError'), orderFormError: document.getElementById('orderFormError'),
         lineFormError: document.getElementById('lineFormError'), partLineFormError: document.getElementById('partLineFormError'),
+        manualPartFormError: document.getElementById('manualPartFormError'),
         catalogContext: document.getElementById('catalogContext'), catalogPartSearch: document.getElementById('catalogPartSearch'),
         catalogResultMeta: document.getElementById('catalogResultMeta'), catalogResults: document.getElementById('catalogResults'),
         selectedPartSummary: document.getElementById('selectedPartSummary'), plateSearchForm: document.getElementById('plateSearchForm'),
         plateSearch: document.getElementById('plateSearch'), plateSearchMessage: document.getElementById('plateSearchMessage'),
         onboardingPanel: document.getElementById('onboardingPanel'), onboardingSteps: document.getElementById('onboardingSteps'),
         onboardingProgressText: document.getElementById('onboardingProgressText'), onboardingProgressBar: document.getElementById('onboardingProgressBar'),
-        servicePickerEmpty: document.getElementById('servicePickerEmpty'), toast: document.getElementById('toast')
+        servicePickerEmpty: document.getElementById('servicePickerEmpty'), toast: document.getElementById('toast'),
+        pendingPartsMeta: document.getElementById('pendingPartsMeta'), pendingPartsList: document.getElementById('pendingPartsList'),
+        enrichmentFileInput: document.getElementById('enrichmentFileInput'), manualPartVehicle: document.getElementById('manualPartVehicle')
     };
     const tabs = { clients: els.clientsTab, vehicles: els.vehiclesTab, orders: els.ordersTab, services: els.servicesTab };
 
@@ -199,7 +203,7 @@
         state.section = 'vehicles'; activateSectionTabs('vehicles'); state.detail = { kind: 'vehicle', id: id };
         els.listView.hidden = true; els.detailView.hidden = false;
         els.detailContent.innerHTML = '<article class="detail-hero"><div><span class="eyebrow">PATENTE · ' + escapeHtml(vehicle.patente) + '</span><h2>' + escapeHtml(vehicleName(vehicle)) + '</h2><p>Cliente: <button type="button" class="text-action" data-action="open-client" data-id="' + escapeHtml(vehicle.clienteId) + '">' + escapeHtml(clientName(client)) + '</button></p></div><div class="detail-actions"><button type="button" class="button primary" data-action="new-order" data-vehicle-id="' + escapeHtml(id) + '">+ Nueva orden</button><button type="button" class="button secondary" data-action="edit-vehicle" data-id="' + escapeHtml(id) + '">Editar</button><button type="button" class="danger-button" data-action="delete-vehicle" data-id="' + escapeHtml(id) + '">Eliminar</button></div></article>' +
-            '<div class="detail-grid">' + detailField('Patente', vehicle.patente) + detailField('VIN', vehicle.vin) + detailField('Cliente', clientName(client)) + detailField('Marca', vehicle.marca) + detailField('Modelo', vehicle.modelo) + detailField('Año', vehicle.anio) + detailField('Motor', vehicle.motor) + detailField('Cilindrada', vehicle.cilindrada) + detailField('Combustible', vehicle.combustible) + detailField('Transmisión', vehicle.transmision) + detailField('Kilometraje', formatKm(vehicle.kilometraje)) + detailField('Color', vehicle.color) + detailField('Notas', vehicle.notas, true) + '</div>' +
+            '<div class="detail-grid">' + detailField('Patente', vehicle.patente) + detailField('VIN', vehicle.vin) + detailField('Cliente', clientName(client)) + detailField('Marca', vehicle.marca) + detailField('Modelo', vehicle.modelo) + detailField('Año', vehicle.anio) + detailField('Código o versión del motor', vehicle.motor) + detailField('Cilindrada', vehicle.cilindrada) + detailField('Combustible', vehicle.combustible) + detailField('Transmisión', vehicle.transmision) + detailField('Kilometraje', formatKm(vehicle.kilometraje)) + detailField('Color', vehicle.color) + detailField('Notas', vehicle.notas, true) + '</div>' +
             '<section class="related-section"><div class="related-heading"><h3>Historial del vehículo (' + orders.length + ')</h3><button type="button" class="button primary" data-action="new-order" data-vehicle-id="' + escapeHtml(id) + '">+ Crear orden</button></div>' + renderOrderHistory(orders) + '</section>';
         els.detailView.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
@@ -368,18 +372,23 @@
     async function runCatalogPartSearch() {
         if (!state.partPicker) return;
         const query = els.catalogPartSearch.value.trim();
-        if (state.partPicker.mode === 'broad' && query.length < 2) {
-            els.catalogResultMeta.textContent = 'Escribe al menos 2 caracteres para buscar en todo el catálogo.';
-            els.catalogResults.innerHTML = '<div class="catalog-empty">La búsqueda amplia no confirma compatibilidad. Busca por componente, referencia OEM o código.</div>';
-            return;
-        }
         els.catalogResultMeta.textContent = 'Buscando…';
         try {
+            const localParts = await repo.searchLocalParts(query, state.partPicker.vehicle, state.partPicker.mode);
+            if (state.partPicker.mode === 'broad' && query.length < 2) {
+                if (localParts.length) return renderCatalogResults({ mode: 'broad', match: state.partPicker.match, total: localParts.length, parts: localParts });
+                els.catalogResultMeta.textContent = 'Escribe al menos 2 caracteres para buscar en todo el catálogo.';
+                els.catalogResults.innerHTML = '<div class="catalog-empty">Los artículos locales aparecen desde el primer carácter. Para el catálogo técnico, escribe al menos 2.</div>';
+                return;
+            }
             const result = await CatalogAdapter.searchParts(query, {
                 vehicle: state.partPicker.vehicle,
                 mode: state.partPicker.mode,
                 limit: 100
             });
+            const seen = new Set(localParts.map(function (part) { return part.id; }));
+            result.parts = localParts.concat(result.parts.filter(function (part) { return !seen.has(part.id); })).slice(0, 100);
+            result.total = result.parts.length;
             state.partPicker.match = result.match;
             state.partPicker.mode = result.mode;
             renderCatalogContext(result);
@@ -439,6 +448,78 @@
         renderSelectedPart(snapshot);
         openDialog(els.partLineDialog);
         setTimeout(function () { els.partLineForm.elements.cantidad.focus(); }, 0);
+    }
+
+    async function openManualPartForm() {
+        if (!state.partPicker) return showToast('Abre una orden y selecciona agregar repuesto.');
+        const vehicle = state.partPicker.vehicle;
+        els.manualPartForm.reset();
+        els.manualPartForm.elements.orderId.value = state.partPicker.orderId;
+        els.manualPartVehicle.textContent = 'Vehículo asociado: ' + vehicleName(vehicle) + (vehicle.motor ? ' · Motor ' + vehicle.motor : '');
+        els.manualPartFormError.textContent = '';
+        els.partPickerDialog.close();
+        openDialog(els.manualPartDialog);
+        setTimeout(function () { els.manualPartForm.elements.name.focus(); }, 0);
+    }
+
+    async function saveManualPart(event) {
+        event.preventDefault();
+        els.manualPartFormError.textContent = '';
+        const data = formObject(els.manualPartForm);
+        if (!data.name.trim()) return showError(els.manualPartFormError, 'El nombre del repuesto es obligatorio.');
+        const order = await repo.getWorkOrder(data.orderId);
+        const vehicle = order ? await repo.getVehicle(order.vehiculoId) : null;
+        if (!order || !vehicle) return showError(els.manualPartFormError, 'La orden o su vehículo ya no están disponibles.');
+        try {
+            const pending = await repo.queuePendingPart({ name: data.name, brand: data.brand, reference: data.reference, notes: data.notes, vehicle: vehicle });
+            const snapshot = {
+                id: 'local-' + pending.id, pendingResearchId: pending.id, name: pending.name,
+                category: 'Repuesto nuevo', details: pending.notes, brands: pending.brand ? [pending.brand] : [],
+                references: pending.reference ? [{ code: pending.reference, status: 'verify' }] : [],
+                compatibility: [{ marca: pending.vehicle.marca, modelos: [pending.vehicle.modelo, pending.vehicle.anio].filter(Boolean).join(' ') }],
+                compatibilityConfirmed: false, matchMode: 'broad',
+                vehicleName: [pending.vehicle.marca, pending.vehicle.modelo, pending.vehicle.anio].filter(Boolean).join(' '),
+                capturedAt: new Date().toISOString()
+            };
+            els.manualPartDialog.close();
+            showToast('Repuesto guardado como pendiente de investigación.');
+            await openPartLineForm(data.orderId, null, snapshot);
+        } catch (error) { showError(els.manualPartFormError, error); }
+    }
+
+    async function openPendingParts() {
+        const items = await repo.listPendingParts();
+        const pending = items.filter(function (item) { return item.status === 'pending'; }).length;
+        const enriched = items.filter(function (item) { return item.status === 'enriched'; }).length;
+        els.pendingPartsMeta.textContent = pending + ' pendiente' + (pending === 1 ? '' : 's') + ' · ' + enriched + ' enriquecido' + (enriched === 1 ? '' : 's');
+        els.pendingPartsList.innerHTML = items.length ? items.map(function (item) {
+            const vehicle = [item.vehicle.marca, item.vehicle.modelo, item.vehicle.anio, item.vehicle.motor].filter(Boolean).join(' · ');
+            const label = item.status === 'enriched' ? 'Enriquecido' : (item.status === 'rejected' ? 'Descartado' : 'Pendiente');
+            return '<article class="catalog-part-card pending-part-card"><span class="catalog-part-category">' + escapeHtml(label) + '</span><h3>' + escapeHtml(item.name) + '</h3><p>' + escapeHtml([item.brand, item.reference].filter(Boolean).join(' · ') || 'Sin marca ni referencia') + '</p><span class="catalog-part-vehicle">' + escapeHtml(vehicle || 'Vehículo sin detalle') + '</span>' + (item.occurrences > 1 ? '<p>Registrado ' + escapeHtml(item.occurrences) + ' veces</p>' : '') + '</article>';
+        }).join('') : '<div class="catalog-empty">Todavía no hay artículos nuevos pendientes.</div>';
+        openDialog(els.pendingPartsDialog);
+    }
+
+    function downloadJson(filename, payload) {
+        const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob), link = document.createElement('a');
+        link.href = url; link.download = filename; document.body.appendChild(link); link.click(); link.remove(); URL.revokeObjectURL(url);
+    }
+
+    async function exportPendingParts() {
+        const batch = await repo.exportPendingParts();
+        if (!batch.items.length) return showToast('No hay artículos pendientes para exportar.');
+        downloadJson('repuestospro-enrichment-batch-' + batch.createdAt.slice(0, 10) + '.json', batch);
+        showToast('Lote técnico exportado sin datos de clientes.');
+    }
+
+    async function importEnrichmentFile(file) {
+        try {
+            const payload = JSON.parse(await file.text());
+            const result = await repo.importEnrichmentPackage(payload);
+            showToast(result.updated + ' artículo' + (result.updated === 1 ? '' : 's') + ' actualizado' + (result.updated === 1 ? '' : 's') + '.');
+            await openPendingParts();
+        } catch (error) { showToast(error.message); }
     }
 
     function formObject(form) { return Object.fromEntries(new FormData(form).entries()); }
@@ -526,6 +607,11 @@
         const id = target.dataset.id;
         if (action === 'show-onboarding') return showOnboarding();
         if (action === 'dismiss-onboarding') { setOnboardingDismissed(true); els.onboardingPanel.hidden = true; return; }
+        if (action === 'export-backup') return exportBackup();
+        if (action === 'new-manual-part') return openManualPartForm();
+        if (action === 'open-pending-parts') return openPendingParts();
+        if (action === 'export-pending-parts') return exportPendingParts();
+        if (action === 'import-enrichment') { els.enrichmentFileInput.value = ''; els.enrichmentFileInput.click(); return; }
         if (action === 'create-service-from-line') {
             state.pendingLineAfterService = {
                 orderId: els.lineForm.elements.orderId.value,
@@ -573,6 +659,17 @@
         window.addEventListener('afterprint', function restoreTitle() { document.title = previousTitle; }, { once: true });
         window.print();
     }
+    async function exportBackup() {
+        try {
+            const backup = await repo.createBackup();
+            const date = backup.createdAt.slice(0, 10);
+            const blob = new Blob([JSON.stringify(backup, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob), link = document.createElement('a');
+            link.href = url; link.download = 'repuestospro-taller-backup-' + date + '.json';
+            document.body.appendChild(link); link.click(); link.remove(); URL.revokeObjectURL(url);
+            showToast('Respaldo verificable descargado. Guárdalo en un lugar seguro.');
+        } catch (error) { showToast(error.message); }
+    }
     async function handleStatusChange(select) { try { await repo.setWorkOrderStatus(select.dataset.orderId, select.value); showToast('Estado actualizado a ' + select.value + '.'); await showOrderDetail(select.dataset.orderId); } catch (error) { showToast(error.message); } }
     async function previewAndSavePricing(input) {
         const orderId = input.dataset.orderId, discountInput = document.getElementById('orderDiscount'), taxInput = document.getElementById('orderTax'); if (!discountInput || !taxInput) return;
@@ -591,7 +688,7 @@
     });
     document.addEventListener('change', function (event) { if (event.target.id === 'orderStatusSelect') handleStatusChange(event.target); });
     document.addEventListener('input', function (event) { if (event.target.id === 'orderDiscount' || event.target.id === 'orderTax') previewAndSavePricing(event.target); });
-    [els.clientDialog, els.vehicleDialog, els.serviceDialog, els.orderDialog, els.lineDialog, els.partPickerDialog, els.partLineDialog].forEach(function (dialog) { dialog.addEventListener('click', function (event) { if (event.target === dialog) dialog.close(); }); });
+    [els.clientDialog, els.vehicleDialog, els.serviceDialog, els.orderDialog, els.lineDialog, els.partPickerDialog, els.partLineDialog, els.manualPartDialog, els.pendingPartsDialog].forEach(function (dialog) { dialog.addEventListener('click', function (event) { if (event.target === dialog) dialog.close(); }); });
     els.serviceDialog.addEventListener('close', function () {
         if (!state.pendingLineAfterService) return;
         const pendingLine = state.pendingLineAfterService; state.pendingLineAfterService = null;
@@ -603,7 +700,8 @@
     els.vehicleForm.elements.marca.addEventListener('input', updateModelSuggestions); els.vehicleForm.elements.modelo.addEventListener('input', updateYearSuggestions);
     els.orderForm.elements.clienteId.addEventListener('change', function () { populateOrderVehicles(els.orderForm.elements.clienteId.value); });
     els.lineForm.elements.servicioId.addEventListener('change', async function () { const service = await repo.getService(els.lineForm.elements.servicioId.value); if (!service) return; els.lineForm.elements.descripcion.value = service.nombre; els.lineForm.elements.precioUnitario.value = service.precioBase; });
-    els.clientForm.addEventListener('submit', saveClient); els.vehicleForm.addEventListener('submit', saveVehicle); els.serviceForm.addEventListener('submit', saveService); els.orderForm.addEventListener('submit', saveOrder); els.lineForm.addEventListener('submit', saveLine); els.partLineForm.addEventListener('submit', savePartLine);
+    els.clientForm.addEventListener('submit', saveClient); els.vehicleForm.addEventListener('submit', saveVehicle); els.serviceForm.addEventListener('submit', saveService); els.orderForm.addEventListener('submit', saveOrder); els.lineForm.addEventListener('submit', saveLine); els.partLineForm.addEventListener('submit', savePartLine); els.manualPartForm.addEventListener('submit', saveManualPart);
+    els.enrichmentFileInput.addEventListener('change', function () { if (els.enrichmentFileInput.files[0]) importEnrichmentFile(els.enrichmentFileInput.files[0]); });
     els.catalogPartSearch.addEventListener('input', function () {
         clearTimeout(state.catalogSearchTimer);
         state.catalogSearchTimer = setTimeout(runCatalogPartSearch, 180);
@@ -611,5 +709,10 @@
     els.plateSearch.addEventListener('input', function () { els.plateSearch.value = els.plateSearch.value.toUpperCase(); els.plateSearchMessage.textContent = ''; });
     els.plateSearchForm.addEventListener('submit', async function (event) { event.preventDefault(); const plate = TallerData.normalizePlate(els.plateSearch.value); if (!plate) { els.plateSearchMessage.textContent = 'Escribe una patente para buscar.'; return; } const vehicle = await repo.findVehicleByPlate(plate); if (!vehicle) { els.plateSearchMessage.textContent = 'No hay un vehículo registrado con esa patente.'; return; } els.plateSearchMessage.textContent = ''; await showVehicleDetail(vehicle.id); });
 
-    Promise.all([loadCatalogNavigation(), refreshSummary()]).then(function () { return renderList(); }).catch(function (error) { els.recordList.innerHTML = '<div class="empty-state"><strong>No pudimos abrir los datos del taller</strong><p>' + escapeHtml(error.message) + '</p></div>'; });
+    TallerData.SyncedWorkshopRepository.create().catch(function () {
+        return new TallerData.LocalWorkshopRepository();
+    }).then(function (repository) {
+        repo = repository;
+        return Promise.all([loadCatalogNavigation(), refreshSummary()]);
+    }).then(function () { return renderList(); }).catch(function (error) { els.recordList.innerHTML = '<div class="empty-state"><strong>No pudimos abrir los datos del taller</strong><p>' + escapeHtml(error.message) + '</p></div>'; });
 })();

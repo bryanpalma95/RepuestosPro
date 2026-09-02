@@ -8,6 +8,14 @@ __pycache__/
 .venv/
 componentes.db
 *.zip
+node_modules/
+releases/
+var/
+dist-desktop*/
+data/profile/
+data/backups/
+*.sqlite-wal
+*.sqlite-shm
 
 # --- Limpieza: solo se versiona lo esencial para servir la web ---
 # Esencial trackeado: index.html, catalogo.html, db.json, db-nav.json, db-compat.json, README.md
@@ -28,6 +36,8 @@ generar_*.py
 # Documentacion y notas de trabajo
 *.md
 !README.md
+!docs/
+!docs/*.md
 *.txt
 
 # Datos intermedios / auxiliares (NO son consumidos por la web)
