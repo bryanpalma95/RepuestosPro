@@ -142,3 +142,13 @@ html[data-resolved-theme="dark"] .intro{background:var(--surface)}
   .main-nav>a{padding:.42rem .4rem!important;font-size:.64rem!important}
   .palette-button,.theme-toggle{width:27px!important;height:27px!important;min-height:27px!important;font-size:.9rem!important}
 }
+
+/* En teléfonos, el nav tiene su propia fila y nunca invade la marca. */
+@media(max-width:430px){
+  .app-header{height:auto!important}
+  .header-inner{display:grid!important;grid-template-columns:1fr!important;grid-template-rows:auto auto!important;padding:.75rem!important;gap:.55rem!important}
+  .logo{grid-row:1!important;display:block!important;font-size:1.15rem!important;line-height:1.2!important}
+  .main-nav{grid-row:2!important;width:100%!important;display:flex!important;justify-content:flex-start!important;overflow:visible!important;gap:.3rem!important}
+  .main-nav>a{flex:0 0 auto!important;padding:.45rem .65rem!important;font-size:.68rem!important}
+  .appearance-controls{margin-left:auto!important}
+}
