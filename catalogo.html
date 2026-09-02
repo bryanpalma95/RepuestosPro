@@ -117,6 +117,7 @@ html[data-resolved-theme="dark"] body:before{opacity:.1}html[data-resolved-theme
 </main>
 <footer class="footer">RepuestosPro v0.10.0-beta.2 — Datos OEM verificados</footer>
 <script>
+document.querySelector('.logo').href='taller.html';
 let NAV={},DATA={},REF_INDEX=new Map(),dataLoaded=false,gridPage=0;const PS=30;
 let COMPAT={};
 fetch('db-nav.json').then(r=>r.json()).then(d=>{NAV=d;initUI()}).catch(()=>{fetch('db.json').then(r=>r.json()).then(d=>{DATA=d;dataLoaded=true;buildNav();buildReferenceIndex();initUI()})});
