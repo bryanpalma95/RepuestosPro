@@ -1,0 +1,263 @@
+{
+  "metadata": {
+    "block": 8,
+    "title": "Citroën: modelos relevantes para el parque chileno",
+    "generatedAt": "2026-09-03",
+    "market": "Chile",
+    "status": "research-unresolved-only",
+    "method": "Auditoría de db-nav.json, db.json y bloques 1 a 5; contraste con la gama, fichas técnicas, manuales y cotizador oficiales de Citroën Chile y con ANAC. Solo se admiten candidatos integrables cuando existe al menos una referencia OEM con aplicabilidad verificable.",
+    "catalogAudit": {
+      "citroenCanonicalBrandPresent": false,
+      "misclassifiedUnderPeugeot": [
+        "Berlingo",
+        "Citroen Berlingo"
+      ],
+      "observations": [
+        "db-nav.json no contiene una clave canónica Citroën ni Citroen.",
+        "Peugeot contiene Berlingo y Citroen Berlingo, además de Partner; los dos primeros registros deben migrarse a Citroën sin asumir que comparten repuestos con Partner.",
+        "Los bloques 1 y 2 ya identificaron C3 y el bloque 3 identificó Jumpy y Jumper; este bloque evita duplicarlos como candidatos integrables.",
+        "Las fuentes oficiales consultadas verifican modelos y algunas motorizaciones, pero no publican números OEM de repuestos con aplicabilidad inequívoca por VIN. Por ello candidates queda vacío."
+      ]
+    },
+    "constraints": [
+      "No modifica db.json, db-nav.json ni db-compat.json.",
+      "No se trasladan referencias de Peugeot a Citroën por plataforma compartida.",
+      "No se extrapolan años desde la vigencia actual de una página comercial.",
+      "No se crean candidatos integrables sin referencias OEM verificadas y aplicabilidad explícita."
+    ]
+  },
+  "sources": [
+    {
+      "id": "citroen-cl-modelos",
+      "title": "Todos los vehículos Citroën",
+      "publisher": "Citroën Chile",
+      "url": "https://www.citroen.cl/modelos.html"
+    },
+    {
+      "id": "citroen-cl-manuales",
+      "title": "Manuales de vehículos Citroën Chile",
+      "publisher": "Citroën Chile",
+      "url": "https://www.citroen.cl/servicios/manuales.html"
+    },
+    {
+      "id": "citroen-cl-cotizador",
+      "title": "Cotizador de autos nuevos Citroën Chile",
+      "publisher": "Citroën Chile",
+      "url": "https://cotizador.citroen.cl/index-rev.tpl"
+    },
+    {
+      "id": "citroen-cl-c3-aircross",
+      "title": "Citroën C3 Aircross",
+      "publisher": "Citroën Chile",
+      "url": "https://www.citroen.cl/modelos/pasajeros/c3-aircross.html"
+    },
+    {
+      "id": "citroen-cl-c4",
+      "title": "Citroën C4",
+      "publisher": "Citroën Chile",
+      "url": "https://www.citroen.cl/modelos/pasajeros/c4.html"
+    },
+    {
+      "id": "citroen-cl-berlingo",
+      "title": "Citroën Berlingo",
+      "publisher": "Citroën Chile",
+      "url": "https://www.citroen.cl/modelos/utilitarios/berlingo.html"
+    },
+    {
+      "id": "citroen-cl-berlingo-tech",
+      "title": "Especificaciones técnicas Nueva Berlingo MCA",
+      "publisher": "Citroën Chile",
+      "url": "https://www.citroen.cl/content/dam/citroen/chile/modelos/berlingo/Ficha%20T%C3%A9cnica%20Citro%C3%ABn%20Berlingo%20VAN%20MCA.pdf"
+    },
+    {
+      "id": "citroen-cl-jumpy-tech",
+      "title": "Ficha técnica Citroën Jumpy",
+      "publisher": "Citroën Chile Profesionales",
+      "url": "https://profesionales.citroen.cl/content/dam/citroen/chile/fichas-t%C3%A9cnicas/Ficha_Jumpy.pdf"
+    },
+    {
+      "id": "citroen-cl-jumper-catalog",
+      "title": "Catálogo Citroën Jumper",
+      "publisher": "Citroën Chile Profesionales",
+      "url": "https://profesionales.citroen.cl/content/dam/citroen/chile/cat%C3%A1logos/Catalogo_Jumper.pdf"
+    },
+    {
+      "id": "citroen-cl-basalt",
+      "title": "Citroën Basalt",
+      "publisher": "Citroën Chile",
+      "url": "https://www.citroen.cl/modelos/pasajeros/basalt.html"
+    },
+    {
+      "id": "anac-2025-12",
+      "title": "Informe sector automotor diciembre 2025",
+      "publisher": "ANAC A.G.",
+      "url": "https://www.anac.cl/wp-content/uploads/2026/01/12-ANAC-Mercado-Automotor-Diciembre-2025.pdf"
+    }
+  ],
+  "candidates": [],
+  "unresolved": [
+    {
+      "marca": "Citroën",
+      "modelo": "C3",
+      "alias": ["Citroen C3", "Nuevo C3"],
+      "años": [],
+      "motorVersion": null,
+      "prioridadChile": "alta",
+      "evidencia": [
+        {"sourceId": "citroen-cl-modelos", "detail": "La gama oficial chilena vigente incluye C3."},
+        {"sourceId": "citroen-cl-manuales", "detail": "Citroën Chile ofrece manual de propietario específico para C3."},
+        {"sourceId": "anac-2025-12", "detail": "Citroën registró 7.069 ventas de livianos y medianos en 2025; el bloque 1 ya documentó la prioridad comercial específica de C3."}
+      ],
+      "confidence": 0.72,
+      "notes": "Separar generaciones y motores comercializados en Chile antes de cargar años. No hay referencia OEM verificable en las fuentes consultadas.",
+      "parts": [],
+      "reason": "Faltan cortes de generación, motor por período y catálogo OEM por VIN."
+    },
+    {
+      "marca": "Citroën",
+      "modelo": "C4",
+      "alias": ["Nuevo C4"],
+      "años": [],
+      "motorVersion": "Oferta vigente híbrida; variantes históricas pendientes",
+      "prioridadChile": "media",
+      "evidencia": [
+        {"sourceId": "citroen-cl-c4", "detail": "La página oficial chilena confirma C4 en oferta y una variante híbrida vigente."},
+        {"sourceId": "citroen-cl-manuales", "detail": "La biblioteca oficial chilena contiene manual específico para C4."}
+      ],
+      "confidence": 0.7,
+      "notes": "No mezclar C4 hatch/sedán históricos, C4 Cactus y el C4 vigente; requieren registros separados.",
+      "parts": [],
+      "reason": "Sin años comerciales cerrados ni referencias OEM verificadas."
+    },
+    {
+      "marca": "Citroën",
+      "modelo": "C4 Cactus",
+      "alias": ["C4-Cactus", "Cactus"],
+      "años": [],
+      "motorVersion": null,
+      "prioridadChile": "media-alta",
+      "evidencia": [
+        {"sourceId": "citroen-cl-manuales", "detail": "La fuente oficial diferencia modelos actuales y anteriores, pero la evidencia recuperada no fija período ni motorización chilena del C4 Cactus."}
+      ],
+      "confidence": 0.35,
+      "notes": "Debe mantenerse separado de C4. Se requiere ficha chilena archivada por año y versión.",
+      "parts": [],
+      "reason": "Evidencia oficial insuficiente para años, motores y OEM."
+    },
+    {
+      "marca": "Citroën",
+      "modelo": "Berlingo",
+      "alias": ["Berlingo Van", "Nueva Berlingo", "Citroen Berlingo"],
+      "años": [],
+      "motorVersion": "MCA M y MCA XL, 1.5 BlueHDi DV5, diésel 100 HP, MT6",
+      "prioridadChile": "alta",
+      "evidencia": [
+        {"sourceId": "citroen-cl-berlingo", "detail": "La oferta oficial vigente distingue Berlingo Van MCA M y MCA XL diésel 100 HP MT."},
+        {"sourceId": "citroen-cl-berlingo-tech", "detail": "La ficha oficial identifica motor 1.5 BlueHDi familia DV5, 1.499 cm³, 100 HP y transmisión manual de 6 velocidades."},
+        {"sourceId": "anac-2025-12", "detail": "Citroën alcanzó 3.381 comerciales en 2025, 9,9% del segmento, justificando prioridad alta para su gama utilitaria."}
+      ],
+      "confidence": 0.9,
+      "notes": "Existe erróneamente bajo Peugeot en db-nav.json. Migrar marca solo después de mapear claves de db.json; no copiar referencias de Peugeot Partner.",
+      "parts": [],
+      "reason": "Modelo y motor verificados, pero faltan año inicial exacto de la configuración MCA y referencias OEM por VIN."
+    },
+    {
+      "marca": "Citroën",
+      "modelo": "Jumpy",
+      "alias": ["Nueva Jumpy", "Jumpy XL"],
+      "años": [],
+      "motorVersion": "BlueHDi 150 S&S BVM6 XL en ficha histórica; oferta vigente Nueva Jumpy pendiente de versionado",
+      "prioridadChile": "alta",
+      "evidencia": [
+        {"sourceId": "citroen-cl-jumpy-tech", "detail": "Ficha oficial confirma Jumpy XL 2.0 BlueHDi 150, 1.997 cm³, 16 válvulas y caja manual de 6 velocidades."},
+        {"sourceId": "citroen-cl-cotizador", "detail": "El cotizador oficial chileno mantiene Nueva Jumpy en la oferta vigente."},
+        {"sourceId": "anac-2025-12", "detail": "La participación de Citroën en comerciales determina prioridad alta para completar sus utilitarios."}
+      ],
+      "confidence": 0.82,
+      "notes": "No asumir que la ficha histórica 150 HP describe la Nueva Jumpy vigente; separar generaciones.",
+      "parts": [],
+      "reason": "Falta ficha vigente versionada, años por configuración y OEM por VIN."
+    },
+    {
+      "marca": "Citroën",
+      "modelo": "Jumper",
+      "alias": ["Nueva Jumper", "Jumper MCA"],
+      "años": [],
+      "motorVersion": null,
+      "prioridadChile": "alta",
+      "evidencia": [
+        {"sourceId": "citroen-cl-jumper-catalog", "detail": "Catálogo oficial chileno confirma la comercialización de Jumper como utilitario."},
+        {"sourceId": "citroen-cl-cotizador", "detail": "El cotizador oficial mantiene Nueva Jumper en la gama chilena vigente."},
+        {"sourceId": "citroen-cl-manuales", "detail": "La biblioteca oficial incluye manual específico para Jumper."}
+      ],
+      "confidence": 0.75,
+      "notes": "No derivar piezas desde Peugeot Boxer o Fiat Ducato pese al parentesco técnico.",
+      "parts": [],
+      "reason": "Faltan ficha vigente por variante, años comerciales y referencias OEM por VIN."
+    },
+    {
+      "marca": "Citroën",
+      "modelo": "C3 Aircross",
+      "alias": ["Nuevo C3 Aircross"],
+      "años": [],
+      "motorVersion": "Gasolina 96 HP MT5 o Turbo T200 125 HP AT7; 5 o 7 plazas según versión",
+      "prioridadChile": "media-alta",
+      "evidencia": [
+        {"sourceId": "citroen-cl-c3-aircross", "detail": "Página oficial chilena confirma versiones Feel Pack MT, Shine MT y Shine Turbo AT, con motores de 96 HP y Turbo 125 HP."},
+        {"sourceId": "citroen-cl-cotizador", "detail": "El cotizador oficial confirma C3 Aircross en oferta vigente."}
+      ],
+      "confidence": 0.88,
+      "notes": "No confundir con la generación europea anterior que usó el mismo nombre.",
+      "parts": [],
+      "reason": "Falta fijar año de introducción chileno por versión y referencias OEM."
+    },
+    {
+      "marca": "Citroën",
+      "modelo": "Basalt",
+      "alias": ["Nuevo Basalt"],
+      "años": [],
+      "motorVersion": "Shine Turbo AT; T200 120 HP con transmisión automática CVT de 7 marchas",
+      "prioridadChile": "media",
+      "evidencia": [
+        {"sourceId": "citroen-cl-basalt", "detail": "Página oficial chilena confirma Basalt Shine Turbo AT y motor T200 turbo de 120 HP con CVT de 7 marchas."},
+        {"sourceId": "citroen-cl-cotizador", "detail": "El cotizador oficial confirma Nuevo Basalt en oferta vigente."}
+      ],
+      "confidence": 0.9,
+      "notes": "Modelo reciente; no extrapolar referencias desde C3 o C3 Aircross aunque compartan componentes de plataforma.",
+      "parts": [],
+      "reason": "Falta año modelo chileno formal y catálogo OEM autorizado por VIN."
+    },
+    {
+      "marca": "Citroën",
+      "modelo": "C5 Aircross",
+      "alias": ["C5 Aircross"],
+      "años": [],
+      "motorVersion": null,
+      "prioridadChile": "media",
+      "evidencia": [
+        {"sourceId": "citroen-cl-modelos", "detail": "La gama oficial chilena vigente incluye C5 Aircross."},
+        {"sourceId": "citroen-cl-manuales", "detail": "La biblioteca oficial ofrece manual para C5 Aircross."}
+      ],
+      "confidence": 0.62,
+      "notes": "Se incluye como otro modelo relevante de la gama chilena; requiere segmentación por fase y motorización.",
+      "parts": [],
+      "reason": "Sin años, motores y referencias OEM suficientemente cerrados."
+    },
+    {
+      "marca": "Citroën",
+      "modelo": "Berlingo Multispace",
+      "alias": ["Berlingo pasajeros", "Berlingo Multispace"],
+      "años": [],
+      "motorVersion": null,
+      "prioridadChile": "media",
+      "evidencia": [
+        {"sourceId": "citroen-cl-modelos", "detail": "La gama oficial distingue Berlingo Multispace de Berlingo utilitario."},
+        {"sourceId": "citroen-cl-cotizador", "detail": "El cotizador oficial mantiene Berlingo Multispace como modelo separado."}
+      ],
+      "confidence": 0.68,
+      "notes": "No fusionar automáticamente con Berlingo Van; carrocería, equipamiento y posibles variantes pueden cambiar aplicabilidad.",
+      "parts": [],
+      "reason": "Falta ficha técnica versionada y referencias OEM por VIN."
+    }
+  ]
+}
