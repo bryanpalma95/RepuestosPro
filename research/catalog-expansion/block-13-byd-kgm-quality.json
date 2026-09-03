@@ -1,0 +1,129 @@
+{
+  "metadata": {
+    "block": 13,
+    "title": "BYD y KGM/SsangYong: cobertura y auditoría de calidad",
+    "generatedAt": "2026-09-03",
+    "market": "Chile",
+    "status": "research-unresolved-no-oem-parts",
+    "method": "Se contrastó el catálogo local con el sitio oficial chileno de BYD y el sitio oficial de transición KGM/SsangYong. Las fichas de producto sólo se usan para acreditar presencia o tren motriz; no se convierten en números de pieza. No se encontraron referencias OEM con aplicabilidad suficientemente precisa para publicar candidatos.",
+    "constraints": [
+      "No modifica db.json, db-nav.json ni db-compat.json.",
+      "No inferir repuestos por nombre internacional, medida de neumático, tipo de aceite o coincidencia de motor.",
+      "Para KGM/SsangYong, conservar el fabricante inscrito/histórico y resolver el alias comercial por VIN o documentación de venta."
+    ]
+  },
+  "sources": [
+    {
+      "id": "BYD-CL-LINEUP-2026",
+      "title": "BYD Chile — gama local",
+      "publisher": "BYD Auto Co., Ltd.",
+      "url": "https://www.byd.com/cl/index",
+      "evidence": "La página oficial enumera Song Plus DM-i, Yuan Plus, Song Pro, Dolphin Mini y Shark; no muestra números OEM de repuestos."
+    },
+    {
+      "id": "BYD-CL-SONG-PRO-FT",
+      "title": "BYD Song Pro — especificaciones y configuraciones",
+      "publisher": "BYD Auto Co., Ltd.",
+      "url": "https://www.byd.com/material/byd-site/cl/product-detail/BYD-SONG-PRO-CHILE.pdf",
+      "evidence": "Identifica versiones GL/GS, motor BYD472QA y transmisión DHT30, pero no referencias de servicio OEM."
+    },
+    {
+      "id": "BYD-CL-SHARK-FT",
+      "title": "Ficha técnica BYD Shark",
+      "publisher": "BYD Auto Chile",
+      "url": "https://www.byd.com/material/byd-site/cl/product-detail/byd-shark/Flyer-Shark-CL.pdf",
+      "evidence": "Acredita tren motriz PHEV AWD con 1.5T y dos motores eléctricos; no acredita piezas OEM."
+    },
+    {
+      "id": "KGM-CL-TRANSITION-2026",
+      "title": "KGM, nueva identidad de SsangYong",
+      "publisher": "KGM Chile / Astara",
+      "url": "https://www.ssangyong.cl/kgm/",
+      "evidence": "Declara que KGM es la nueva identidad de SsangYong, que los repuestos y postventa continúan, y que los documentos de vehículo se vinculan con VIN y patente."
+    },
+    {
+      "id": "KGM-CL-LINEUP-2026",
+      "title": "Modelos KGM/SsangYong en Chile",
+      "publisher": "KGM Chile / Astara",
+      "url": "https://www.ssangyong.cl/modelos/",
+      "evidence": "Enumera Rexton, Korando, Tivoli, Torres, Torres EVX, Musso Grand y Musso; no especifica corte por año-modelo ni números OEM."
+    }
+  ],
+  "candidates": [],
+  "unresolved": [
+    {
+      "marca": "BYD",
+      "modelo": "Song Pro",
+      "años": [],
+      "motorVersion": "PHEV; BYD472QA y DHT30 en las versiones GL/GS acreditadas por la ficha chilena",
+      "evidence": ["BYD-CL-LINEUP-2026", "BYD-CL-SONG-PRO-FT"],
+      "reason": "La configuración del vehículo está verificada, pero falta catálogo OEM por VIN y versión."
+    },
+    {
+      "marca": "BYD",
+      "modelo": "Shark",
+      "años": [],
+      "motorVersion": "PHEV AWD: motor 1.5T y dos motores eléctricos",
+      "evidence": ["BYD-CL-LINEUP-2026", "BYD-CL-SHARK-FT"],
+      "reason": "No extrapolar piezas desde Shark 6 u otros mercados; falta aplicabilidad OEM chilena por VIN."
+    },
+    {
+      "marca": "BYD",
+      "modelo": "Song Plus DM-i, Yuan Plus y Dolphin Mini",
+      "años": [],
+      "motorVersion": "Gama local acreditada; versiones y años-modelo no segmentados en la fuente consultada",
+      "evidence": ["BYD-CL-LINEUP-2026"],
+      "reason": "Sin referencias OEM autorizadas con aplicabilidad por versión/VIN."
+    },
+    {
+      "marca": "KGM/SsangYong",
+      "modelo": "Rexton, Korando, Tivoli, Torres, Torres EVX, Musso Grand y Musso",
+      "años": [],
+      "motorVersion": "La fuente oficial sólo acredita la gama, no un corte de años ni configuración de cada VIN",
+      "evidence": ["KGM-CL-TRANSITION-2026", "KGM-CL-LINEUP-2026"],
+      "reason": "Sin catálogo OEM chileno de consulta pública con aplicabilidad precisa; la identidad KGM/SsangYong debe resolverse por VIN."
+    }
+  ],
+  "auditFindings": [
+    {
+      "issueType": "brand-transition-canonicalization",
+      "scope": "db-nav.json y db.json: registros ssangyong-* 2012-2026",
+      "currentValue": "Todos los registros actuales usan SsangYong, aunque el sitio local declara que KGM es la nueva identidad de SsangYong.",
+      "proposedValue": "Conservar SsangYong para unidades históricas y añadir KGM como alias de búsqueda/postventa. No renombrar ni repartir años-modelo a KGM sin el VIN o un corte oficial de comercialización.",
+      "evidence": ["KGM-CL-TRANSITION-2026"],
+      "severity": "medium"
+    },
+    {
+      "issueType": "unsupported-powertrain-year-range",
+      "scope": "db.json: ssangyong-actyon-sports-2012..2018, ssangyong-korando-2012..2026 y ssangyong-rexton-2012..2026",
+      "currentValue": "Cada ficha agrupa motores D20DTF/D20DTR y D22DTF en todo su rango anual, sin generación, versión ni VIN.",
+      "proposedValue": "Separar por generación/motor cuando exista fuente primaria; mientras tanto, sustituir la afirmación de motor universal por aviso de validación VIN y evitar publicar referencias de piezas específicas.",
+      "evidence": ["KGM-CL-TRANSITION-2026", "KGM-CL-LINEUP-2026"],
+      "severity": "high"
+    },
+    {
+      "issueType": "non-part-search-link",
+      "scope": "db.json: filtros de ssangyong-actyon-sports-*, ssangyong-korando-* y ssangyong-rexton-*",
+      "currentValue": "Los enlaces Mercado Libre de filtro consultan medidas de neumático, por ejemplo 255/60 R18 o 225/60 R17, en vez de una referencia OEM o filtro del vehículo.",
+      "proposedValue": "Eliminar esos enlaces de evidencia de filtros; reemplazarlos sólo por catálogo OEM/distribuidor con referencia y VIN, o mantener el campo sin enlace.",
+      "evidence": ["Inspección directa de db.json; los URL contienen la medida de neumático."],
+      "severity": "high"
+    },
+    {
+      "issueType": "unverified-confirmed-fluid",
+      "scope": "db.json: entradas de aceite 5W-30 diesel y líquido DOT4 en registros ssangyong-*",
+      "currentValue": "El estado confirmed se respalda en búsquedas comerciales genéricas, no en una pauta oficial ni manual por motor.",
+      "proposedValue": "Cambiar a verify/candidate hasta obtener pauta oficial por VIN, motor y condición de servicio; no presentar viscosidad ni intervalo como confirmados para toda la familia.",
+      "evidence": ["Inspección directa de db.json; KGM-CL-TRANSITION-2026 confirma que las pautas dependen del modelo y la documentación del vehículo."],
+      "severity": "high"
+    },
+    {
+      "issueType": "overbroad-cross-compatibility",
+      "scope": "db.json: crossNote de registros ssangyong-*",
+      "currentValue": "Las fichas declaran compatibilidad entre Korando 2012-2026, Musso Grand 2018-2026 y Rexton 2012-2026 sin especificar pieza, generación o motor.",
+      "proposedValue": "Retirar la compatibilidad transversal. Registrar equivalencias sólo a nivel de número OEM y aplicación exacta validada por VIN.",
+      "evidence": ["Inspección directa de db.json; KGM-CL-TRANSITION-2026 indica que la identificación documental se vincula por VIN y patente."],
+      "severity": "high"
+    }
+  ]
+}
