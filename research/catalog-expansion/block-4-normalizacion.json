@@ -1,0 +1,422 @@
+{
+  "metadata": {
+    "block": 4,
+    "title": "Auditoría de normalización de marcas, modelos y alias",
+    "createdAt": "2026-09-02",
+    "scope": ["db-nav.json", "db.json"],
+    "catalogSnapshot": {
+      "brands": 43,
+      "models": 293,
+      "vehicleYearRecords": 3264
+    },
+    "method": "Comparación exacta y normalizada de marca/modelo, inspección de claves por año y contraste con sitios oficiales de fabricantes o representantes autorizados en Chile.",
+    "constraints": [
+      "No se modificaron db-nav.json, db.json ni db-compat.json.",
+      "No se investigaron repuestos ni se infirieron compatibilidades.",
+      "motorVersion es null cuando las fuentes revisadas no prueban una motorización común a todos los años auditados.",
+      "Los proposedValue son propuestas de taxonomía, no instrucciones de migración automática."
+    ]
+  },
+  "sources": [
+    {
+      "id": "SRC-KIA-CL-GARANTIA",
+      "type": "fabricante",
+      "title": "Libreta de garantía Kia Chile — modelos",
+      "url": "https://www.kia.cl/content/dam/indumotora/general/libretas-garantia/Libreta%20Garantia%205%20a%C3%B1os_Kia%20Modelos_Abril%202024.pdf",
+      "supports": "Carnival, Cerato, Morning, Rio, Seltos, Soluto, Sorento y Sportage pertenecen a Kia."
+    },
+    {
+      "id": "SRC-KIA-CL-SITIO",
+      "type": "fabricante",
+      "title": "Kia Chile — gama y promociones",
+      "url": "https://www.kia.cl/promociones/kia-seltos.html",
+      "supports": "La navegación oficial de Kia Chile incluye Morning, Soluto, Seltos, Sportage, Sorento, Carnival y Frontier."
+    },
+    {
+      "id": "SRC-JETOUR-CL",
+      "type": "representante_autorizado",
+      "title": "Jetour Chile — modelos",
+      "url": "https://jetourchile.cl/",
+      "supports": "Dashing y X70 se comercializan bajo la marca Jetour en Chile."
+    },
+    {
+      "id": "SRC-SUBARU-CL-CROSSTREK",
+      "type": "fabricante",
+      "title": "Subaru Chile — New XV ahora es New Crosstrek",
+      "url": "https://www.subaru.cl/blog/subaru-new-xv-ahora-es-new-crosstrek-un-suv-crossover-de-gran-rendimiento/",
+      "supports": "XV adopta el nombre Crosstrek desde la tercera generación; ambos nombres deben conservarse como alias históricos, no fusionarse ciegamente por año."
+    },
+    {
+      "id": "SRC-KGM-CL",
+      "type": "representante_autorizado",
+      "title": "KGM Chile — nueva identidad de SsangYong",
+      "url": "https://www.ssangyong.cl/kgm/",
+      "supports": "KGM es la nueva identidad de SsangYong y la transición es progresiva, manteniendo continuidad de modelos y posventa."
+    },
+    {
+      "id": "SRC-DODGE-JOURNEY",
+      "type": "fabricante",
+      "title": "Dodge — Journey",
+      "url": "https://www.dodge.com/journey.html",
+      "supports": "Journey es un modelo Dodge; la página oficial también identifica Durango como modelo Dodge."
+    },
+    {
+      "id": "SRC-GWM-CL-MANUALES",
+      "type": "fabricante",
+      "title": "GWM Chile — manuales de propietario",
+      "url": "https://www.gwm.cl/servicio-al-cliente/manual-propietarios/",
+      "supports": "La taxonomía comercial oficial usa POER, HAVAL DARGO y TANK 300 bajo el ecosistema GWM."
+    },
+    {
+      "id": "SRC-MAXUS-CL-GARANTIA",
+      "type": "representante_autorizado",
+      "title": "Maxus Chile — póliza de garantía",
+      "url": "https://maxus.cl/documents/d/nuevomaxus/maxus_poliza-de-garantia-no-electrica-nov-2025-",
+      "supports": "Los nombres comerciales usados por Maxus Chile son G10, T60 y V90 / Deliver 9, sin el prefijo '(SAIC)' en el modelo."
+    }
+  ],
+  "candidates": [
+    {
+      "marca": "Kia",
+      "modelo": "Carnival",
+      "alias": [],
+      "años": {"from": 2015, "to": 2026},
+      "motorVersion": null,
+      "prioridadChile": "alta",
+      "evidencia": ["SRC-KIA-CL-GARANTIA", "db-nav.json: Hyundai/Carnival", "db.json: 12 claves hyundai-carnival-*"],
+      "confidence": 1.0,
+      "notes": "Mover la rama completa; no mezclar motorizaciones entre años.",
+      "issueType": "wrongBrand",
+      "currentValue": {"marca": "Hyundai", "modelo": "Carnival"},
+      "proposedValue": {"marca": "Kia", "modelo": "Carnival"}
+    },
+    {
+      "marca": "Kia",
+      "modelo": "Cerato",
+      "alias": ["Forte"],
+      "años": {"from": 2011, "to": 2024},
+      "motorVersion": null,
+      "prioridadChile": "alta",
+      "evidencia": ["SRC-KIA-CL-GARANTIA", "db-nav.json: Hyundai/Cerato", "db.json: 14 claves hyundai-cerato-*"],
+      "confidence": 1.0,
+      "notes": "Forte se conserva solo como alias internacional; no se afirma equivalencia de piezas.",
+      "issueType": "wrongBrand",
+      "currentValue": {"marca": "Hyundai", "modelo": "Cerato"},
+      "proposedValue": {"marca": "Kia", "modelo": "Cerato"}
+    },
+    {
+      "marca": "Kia",
+      "modelo": "Frontier",
+      "alias": ["Kia Frontier"],
+      "años": {"from": 2014, "to": 2026},
+      "motorVersion": null,
+      "prioridadChile": "alta",
+      "evidencia": ["SRC-KIA-CL-SITIO", "db-nav.json contiene Hyundai/Kia Frontier y Kia/Frontier", "db.json: 13 claves hyundai-kia-frontier-*"],
+      "confidence": 1.0,
+      "notes": "Consolidar con la rama Kia/Frontier existente después de comparar por año; existe duplicación entre marcas.",
+      "issueType": "wrongBrandAndDuplicate",
+      "currentValue": {"marca": "Hyundai", "modelo": "Kia Frontier"},
+      "proposedValue": {"marca": "Kia", "modelo": "Frontier"}
+    },
+    {
+      "marca": "Kia",
+      "modelo": "Morning",
+      "alias": ["Picanto"],
+      "años": {"from": 2014, "to": 2026},
+      "motorVersion": null,
+      "prioridadChile": "alta",
+      "evidencia": ["SRC-KIA-CL-GARANTIA", "SRC-KIA-CL-SITIO", "db.json: 13 claves hyundai-morning-*"],
+      "confidence": 1.0,
+      "notes": "Morning es el nombre comercial chileno; Picanto se registra únicamente como alias de búsqueda.",
+      "issueType": "wrongBrand",
+      "currentValue": {"marca": "Hyundai", "modelo": "Morning"},
+      "proposedValue": {"marca": "Kia", "modelo": "Morning"}
+    },
+    {
+      "marca": "Kia",
+      "modelo": "Rio",
+      "alias": ["Rio 4", "Rio 5"],
+      "años": {"from": 2014, "to": 2024},
+      "motorVersion": null,
+      "prioridadChile": "alta",
+      "evidencia": ["SRC-KIA-CL-GARANTIA", "db.json: 11 claves hyundai-rio-*"],
+      "confidence": 1.0,
+      "notes": "Los alias de carrocería deben resolverse por generación antes de migrar aplicaciones.",
+      "issueType": "wrongBrand",
+      "currentValue": {"marca": "Hyundai", "modelo": "Rio"},
+      "proposedValue": {"marca": "Kia", "modelo": "Rio"}
+    },
+    {
+      "marca": "Kia",
+      "modelo": "Seltos",
+      "alias": [],
+      "años": {"from": 2020, "to": 2026},
+      "motorVersion": null,
+      "prioridadChile": "alta",
+      "evidencia": ["SRC-KIA-CL-GARANTIA", "SRC-KIA-CL-SITIO", "db.json: 7 claves hyundai-seltos-*"],
+      "confidence": 1.0,
+      "notes": "Corrección de marca inequívoca.",
+      "issueType": "wrongBrand",
+      "currentValue": {"marca": "Hyundai", "modelo": "Seltos"},
+      "proposedValue": {"marca": "Kia", "modelo": "Seltos"}
+    },
+    {
+      "marca": "Kia",
+      "modelo": "Soluto",
+      "alias": ["Pegas"],
+      "años": {"from": 2019, "to": 2026},
+      "motorVersion": null,
+      "prioridadChile": "alta",
+      "evidencia": ["SRC-KIA-CL-GARANTIA", "SRC-KIA-CL-SITIO", "db.json: 8 claves hyundai-soluto-*"],
+      "confidence": 1.0,
+      "notes": "Pegas se conserva solo como alias internacional.",
+      "issueType": "wrongBrand",
+      "currentValue": {"marca": "Hyundai", "modelo": "Soluto"},
+      "proposedValue": {"marca": "Kia", "modelo": "Soluto"}
+    },
+    {
+      "marca": "Kia",
+      "modelo": "Sorento",
+      "alias": [],
+      "años": {"from": 2010, "to": 2026},
+      "motorVersion": null,
+      "prioridadChile": "alta",
+      "evidencia": ["SRC-KIA-CL-GARANTIA", "SRC-KIA-CL-SITIO", "db.json: 17 claves hyundai-sorento-*"],
+      "confidence": 1.0,
+      "notes": "Separar generaciones al ejecutar una migración futura.",
+      "issueType": "wrongBrand",
+      "currentValue": {"marca": "Hyundai", "modelo": "Sorento"},
+      "proposedValue": {"marca": "Kia", "modelo": "Sorento"}
+    },
+    {
+      "marca": "Kia",
+      "modelo": "Sportage",
+      "alias": [],
+      "años": {"from": 2014, "to": 2026},
+      "motorVersion": null,
+      "prioridadChile": "alta",
+      "evidencia": ["SRC-KIA-CL-GARANTIA", "SRC-KIA-CL-SITIO", "db.json: 13 claves hyundai-sportage-*"],
+      "confidence": 1.0,
+      "notes": "Corrección de marca inequívoca.",
+      "issueType": "wrongBrand",
+      "currentValue": {"marca": "Hyundai", "modelo": "Sportage"},
+      "proposedValue": {"marca": "Kia", "modelo": "Sportage"}
+    },
+    {
+      "marca": "Kia",
+      "modelo": "Telluride",
+      "alias": [],
+      "años": {"from": 2020, "to": 2026},
+      "motorVersion": null,
+      "prioridadChile": "media",
+      "evidencia": ["db-nav.json contiene Hyundai/Telluride y Kia/Telluride con los mismos años", "db.json: 7 claves hyundai-telluride-* y 7 kia-telluride-*"],
+      "confidence": 1.0,
+      "notes": "Eliminar la rama Hyundai solo después de verificar si ambas copias contienen datos idénticos.",
+      "status": "unverified-local-audit",
+      "issueType": "wrongBrandAndDuplicate",
+      "currentValue": {"marca": "Hyundai", "modelo": "Telluride"},
+      "proposedValue": {"marca": "Kia", "modelo": "Telluride"}
+    },
+    {
+      "marca": "Jetour",
+      "modelo": "Dashing",
+      "alias": ["Jetour Dashing"],
+      "años": {"from": 2022, "to": 2026},
+      "motorVersion": null,
+      "prioridadChile": "alta",
+      "evidencia": ["SRC-JETOUR-CL", "db-nav.json contiene Chery/Jetour Dashing y Jetour/Dashing", "db.json contiene 5 registros en cada rama"],
+      "confidence": 1.0,
+      "notes": "Consolidar bajo Jetour y comparar contenido antes de deduplicar.",
+      "issueType": "wrongBrandAndDuplicate",
+      "currentValue": {"marca": "Chery", "modelo": "Jetour Dashing"},
+      "proposedValue": {"marca": "Jetour", "modelo": "Dashing"}
+    },
+    {
+      "marca": "Jetour",
+      "modelo": "X70",
+      "alias": ["Jetour X70"],
+      "años": {"from": 2020, "to": 2026},
+      "motorVersion": null,
+      "prioridadChile": "alta",
+      "evidencia": ["SRC-JETOUR-CL", "db-nav.json: Chery/Jetour X70; no existe Jetour/X70 en la instantánea"],
+      "confidence": 1.0,
+      "notes": "Mover a la marca Jetour; no confundir con X70 Plus.",
+      "issueType": "wrongBrand",
+      "currentValue": {"marca": "Chery", "modelo": "Jetour X70"},
+      "proposedValue": {"marca": "Jetour", "modelo": "X70"}
+    },
+    {
+      "marca": "Dodge",
+      "modelo": "Durango",
+      "alias": [],
+      "años": {"from": 2014, "to": 2026},
+      "motorVersion": null,
+      "prioridadChile": "media",
+      "evidencia": ["SRC-DODGE-JOURNEY", "db.json: 13 claves jeep-durango-*"],
+      "confidence": 1.0,
+      "notes": "Dodge y Jeep comparten grupo industrial, pero son marcas distintas.",
+      "issueType": "wrongBrand",
+      "currentValue": {"marca": "Jeep", "modelo": "Durango"},
+      "proposedValue": {"marca": "Dodge", "modelo": "Durango"}
+    },
+    {
+      "marca": "Dodge",
+      "modelo": "Journey",
+      "alias": [],
+      "años": {"from": 2014, "to": 2022},
+      "motorVersion": null,
+      "prioridadChile": "alta",
+      "evidencia": ["SRC-DODGE-JOURNEY", "db.json: 9 claves jeep-journey-*"],
+      "confidence": 1.0,
+      "notes": "La fuente oficial indica que Journey fue descontinuado en 2020; los años 2021-2022 del catálogo requieren revisión de año-modelo o remanentes en Chile.",
+      "issueType": "wrongBrand",
+      "currentValue": {"marca": "Jeep", "modelo": "Journey"},
+      "proposedValue": {"marca": "Dodge", "modelo": "Journey"}
+    },
+    {
+      "marca": "Chrysler",
+      "modelo": "Pacifica",
+      "alias": [],
+      "años": {"from": 2017, "to": 2026},
+      "motorVersion": null,
+      "prioridadChile": "baja",
+      "evidencia": ["db-nav.json: Jeep/Pacifica", "db.json: 10 claves jeep-pacifica-*"],
+      "confidence": 0.99,
+      "notes": "Marca inequívoca, pero falta incorporar una fuente oficial directa de Chrysler al expediente antes de migrar.",
+      "status": "unverified-local-audit",
+      "issueType": "wrongBrand",
+      "currentValue": {"marca": "Jeep", "modelo": "Pacifica"},
+      "proposedValue": {"marca": "Chrysler", "modelo": "Pacifica"}
+    },
+    {
+      "marca": "Maxus",
+      "modelo": "Deliver 9",
+      "alias": ["V90", "(SAIC) Deliver 9"],
+      "años": {"from": 2021, "to": 2026},
+      "motorVersion": null,
+      "prioridadChile": "alta",
+      "evidencia": ["SRC-MAXUS-CL-GARANTIA", "db-nav.json contiene dos nombres normalizables idénticos", "db.json contiene 6 registros por cada variante"],
+      "confidence": 1.0,
+      "notes": "Usar Deliver 9 como nombre visible actual y conservar V90 y el prefijo SAIC como alias; comparar objetos antes de eliminar duplicados.",
+      "issueType": "duplicateAndRedundantManufacturerPrefix",
+      "currentValue": ["(SAIC) Deliver 9", "Deliver 9"],
+      "proposedValue": {"marca": "Maxus", "modelo": "Deliver 9", "alias": ["V90", "(SAIC) Deliver 9"]}
+    },
+    {
+      "marca": "Maxus",
+      "modelo": "G10",
+      "alias": ["(SAIC) G10"],
+      "años": {"from": 2018, "to": 2026},
+      "motorVersion": null,
+      "prioridadChile": "alta",
+      "evidencia": ["SRC-MAXUS-CL-GARANTIA", "db-nav.json contiene (SAIC) G10 y G10", "db.json contiene ambas ramas"],
+      "confidence": 1.0,
+      "notes": "Eliminar el prefijo redundante solo tras comparar contenido por año.",
+      "issueType": "duplicateAndRedundantManufacturerPrefix",
+      "currentValue": ["(SAIC) G10", "G10"],
+      "proposedValue": {"marca": "Maxus", "modelo": "G10", "alias": ["(SAIC) G10"]}
+    },
+    {
+      "marca": "GWM",
+      "modelo": "Poer",
+      "alias": ["GWM Poer"],
+      "años": {"from": 2020, "to": 2026},
+      "motorVersion": null,
+      "prioridadChile": "alta",
+      "evidencia": ["SRC-GWM-CL-MANUALES", "db-nav.json ubica Poer bajo Haval"],
+      "confidence": 0.98,
+      "notes": "Poer es una línea de GWM y no un modelo Haval; definir si la capa de marca mostrará GWM o la submarca POER.",
+      "issueType": "wrongSubBrand",
+      "currentValue": {"marca": "Haval", "modelo": "Poer"},
+      "proposedValue": {"marca": "GWM", "modelo": "Poer"}
+    },
+    {
+      "marca": "GWM",
+      "modelo": "Dargo",
+      "alias": ["Haval Dargo", "GWM Haval Dargo"],
+      "años": {"from": 2022, "to": 2026},
+      "motorVersion": null,
+      "prioridadChile": "media",
+      "evidencia": ["SRC-GWM-CL-MANUALES", "db-nav.json y db.json duplican GWM/Dargo y Haval/Dargo para los mismos cinco años"],
+      "confidence": 0.97,
+      "notes": "Recomendación condicionada a adoptar GWM como marca raíz y Haval como submarca; no borrar ninguna rama sin comparar contenido.",
+      "issueType": "duplicateBrandArchitecture",
+      "currentValue": [{"marca": "GWM", "modelo": "Dargo"}, {"marca": "Haval", "modelo": "Dargo"}],
+      "proposedValue": {"marca": "GWM", "submarca": "Haval", "modelo": "Dargo"}
+    },
+    {
+      "marca": "GWM",
+      "modelo": "Tank 300",
+      "alias": ["TANK 300", "GWM Tank 300"],
+      "años": {"from": 2022, "to": 2026},
+      "motorVersion": null,
+      "prioridadChile": "media",
+      "evidencia": ["SRC-GWM-CL-MANUALES", "db-nav.json y db.json duplican GWM/Tank 300 y Haval/Tank 300"],
+      "confidence": 0.98,
+      "notes": "Tank no corresponde a Haval; decidir si TANK será submarca explícita o parte del nombre del modelo.",
+      "issueType": "duplicateAndWrongSubBrand",
+      "currentValue": [{"marca": "GWM", "modelo": "Tank 300"}, {"marca": "Haval", "modelo": "Tank 300"}],
+      "proposedValue": {"marca": "GWM", "submarca": "TANK", "modelo": "300"}
+    },
+    {
+      "marca": "Subaru",
+      "modelo": "Crosstrek",
+      "alias": ["XV", "Subaru XV"],
+      "años": {"from": 2012, "to": 2026},
+      "motorVersion": null,
+      "prioridadChile": "alta",
+      "evidencia": ["SRC-SUBARU-CL-CROSSTREK", "db-nav.json solo contiene Subaru/XV 2012-2024"],
+      "confidence": 0.97,
+      "notes": "Mantener XV como nombre canónico para generaciones históricas y usar Crosstrek desde tercera generación; resolver el año de corte chileno antes de migrar.",
+      "issueType": "generationRenameAndAlias",
+      "currentValue": {"marca": "Subaru", "modelo": "XV", "años": "2012-2024"},
+      "proposedValue": {"marca": "Subaru", "modelo": "Crosstrek", "alias": ["XV"], "policy": "canonicalByGeneration"}
+    },
+    {
+      "marca": "KGM",
+      "modelo": "Rexton",
+      "alias": ["SsangYong Rexton"],
+      "años": {"from": 2012, "to": 2026},
+      "motorVersion": null,
+      "prioridadChile": "alta",
+      "evidencia": ["SRC-KGM-CL", "db-nav.json usa únicamente la marca SsangYong para Rexton y otros modelos"],
+      "confidence": 0.96,
+      "notes": "Aplicar una política temporal: conservar SsangYong en vehículos matriculados históricamente y KGM para comercialización nueva; compartir alias de búsqueda, no reescribir todos los años como KGM.",
+      "issueType": "brandRenameAndHistoricalAlias",
+      "currentValue": {"marca": "SsangYong", "modelo": "Rexton"},
+      "proposedValue": {"marcaActual": "KGM", "marcaHistorica": "SsangYong", "modelo": "Rexton", "policy": "canonicalBrandByModelYear"}
+    }
+  ],
+  "unresolved": [
+    {
+      "topic": "KGM/SsangYong: año de corte",
+      "reason": "La fuente oficial confirma una transición progresiva y que los documentos históricos siguen ligados al VIN; falta definir el año-modelo exacto desde el cual el catálogo chileno debe mostrar KGM como marca canónica.",
+      "nextAction": "Revisar padrones/homologaciones chilenas por VIN y año-modelo antes de migrar Actyon Sports, Korando, Musso Grand y Rexton."
+    },
+    {
+      "topic": "Subaru XV/Crosstrek: corte generacional",
+      "reason": "La fuente confirma el cambio desde tercera generación, pero db-nav.json extiende XV hasta 2024 y no contiene Crosstrek.",
+      "nextAction": "Determinar con fichas Subaru Chile el primer año-modelo local de tercera generación y dividir la serie sin alterar vehículos históricos."
+    },
+    {
+      "topic": "Arquitectura GWM/Haval/TANK/POER",
+      "reason": "El catálogo mezcla marca corporativa y submarcas. La fuente oficial admite las líneas, pero la interfaz actual solo tiene dos niveles marca/modelo.",
+      "nextAction": "Decidir si se añade un campo submarca o si se normaliza todo bajo GWM con alias visibles antes de deduplicar Dargo y Tank 300."
+    },
+    {
+      "topic": "Chrysler Pacifica",
+      "reason": "La ubicación bajo Jeep es taxonómicamente incorrecta, pero este bloque no pudo incorporar una fuente oficial directa de Chrysler al conjunto de fuentes consultadas.",
+      "nextAction": "Agregar manual o ficha oficial Chrysler Pacifica y comprobar los años 2017-2026 presentes en Chile."
+    },
+    {
+      "topic": "MINI Cooper bajo BMW y Lexus NX con prefijo redundante",
+      "reason": "Se detectaron BMW/Mini Cooper y Lexus/Lexus NX, pero se priorizaron errores con evidencia oficial chilena ya recopilada.",
+      "nextAction": "Confirmar política de marcas independientes MINI y Lexus y luego proponer normalización de nombres sin inferir compatibilidades."
+    },
+    {
+      "topic": "Años futuros 2026",
+      "reason": "Numerosas ramas extienden automáticamente modelos hasta 2026; la existencia comercial de un nombre no confirma todas las generaciones, versiones o años del catálogo.",
+      "nextAction": "Auditar años contra homologaciones o fichas oficiales por modelo antes de considerar esos registros confirmados."
+    }
+  ]
+}

@@ -1,0 +1,441 @@
+{
+  "metadata": {
+    "block": 3,
+    "title": "Camionetas y vehículos comerciales livianos relevantes en Chile",
+    "createdAt": "2026-09-02",
+    "market": "Chile",
+    "scope": [
+      "camionetas",
+      "vehículos comerciales livianos"
+    ],
+    "excluded": [
+      "automóviles de pasajeros",
+      "SUV",
+      "camiones medianos y pesados",
+      "buses",
+      "compatibilidades y referencias de repuestos no verificadas"
+    ],
+    "catalogBaseline": "db-nav.json revisado el 2026-09-02",
+    "candidateCount": 24,
+    "methodology": "Se comparó db-nav.json con el ranking oficial de modelos de ANAC a julio de 2025 y con gamas/fichas técnicas de fabricantes o importadores oficiales en Chile. Los años se limitan a los períodos expresamente demostrados por las fuentes. La presencia en el ranking ANAC confirma comercialización durante 2025, pero no un rango histórico completo. No se infieren motores, versiones, compatibilidades ni referencias.",
+    "status": "research-only",
+    "safeToMergeAutomatically": false
+  },
+  "sources": [
+    {
+      "id": "ANAC-2025-07",
+      "publisher": "ANAC A.G.",
+      "title": "Informe Sector Automotor ANAC A.G. - Julio 2025",
+      "url": "https://www.anac.cl/wp-content/uploads/2025/08/07-ANAC-Mercado-Automotor-Julio-2025.pdf",
+      "type": "primary-market-report",
+      "relevance": "Página 13: ranking acumulado de camionetas y vehículos comerciales por modelo, elaborado por ANAC con fuente Registro Civil."
+    },
+    {
+      "id": "ANAC-2025-12",
+      "publisher": "ANAC A.G.",
+      "title": "Informe Mercado Automotor ANAC A.G. - Diciembre 2025",
+      "url": "https://www.anac.cl/wp-content/uploads/2026/01/12-ANAC-Mercado-Automotor-Diciembre-2025.pdf",
+      "type": "primary-market-report",
+      "relevance": "Confirma que en 2025 las camionetas representaron 20,4% y los comerciales 11% del mercado de livianos y medianos."
+    },
+    {
+      "id": "GWM-WINGLE7-FT-2025",
+      "publisher": "GWM Chile",
+      "title": "Ficha técnica Nueva Wingle 7",
+      "url": "https://www.gwm.cl/media/eogpyspo/ficha-t%C3%A9cnica-wingle-7_-010925_v1.pdf",
+      "type": "official-technical-sheet",
+      "relevance": "Confirma variantes gasolina 2.4 y diésel 2.0, tracción 4x2/4x4 y especificaciones de la oferta 2025."
+    },
+    {
+      "id": "GWM-RANGE",
+      "publisher": "GWM Chile",
+      "title": "Camionetas GWM Chile",
+      "url": "https://www.gwm.cl/camionetas/",
+      "type": "official-model-range",
+      "relevance": "Confirma oferta vigente de Wingle 7 y familia Poer."
+    },
+    {
+      "id": "MAXUS-T90-FT",
+      "publisher": "Maxus Chile / Andes Motor",
+      "title": "Ficha técnica Maxus T90",
+      "url": "https://maxus.cl/documents/8014255/8050581/FICHA%2BTECNICA%2BT90.pdf/d1bca4dd-0162-38d2-f8e8-b9aa52019fed?t=1709821226554",
+      "type": "official-technical-sheet",
+      "relevance": "Confirma T90 doble cabina 4x4 con motor D20 2.0 biturbo y transmisiones 6M/8AT."
+    },
+    {
+      "id": "MAXUS-T90EV-FT",
+      "publisher": "Maxus Chile / Andes Motor",
+      "title": "Ficha técnica Maxus T90 EV",
+      "url": "https://maxus.cl/documents/8014255/8050663/Ficha%2BT%C3%A9cnica%2BT90%2BEV.pdf/97dba5a0-d3ac-7443-f552-dd370020d61d?t=1700071438336",
+      "type": "official-technical-sheet",
+      "relevance": "Confirma la variante eléctrica T90 EV 4x2 y sus dimensiones/capacidades."
+    },
+    {
+      "id": "MAXUS-OFFICIAL",
+      "publisher": "Maxus Chile / Andes Motor",
+      "title": "Quiénes somos - Maxus Chile",
+      "url": "https://maxus.cl/quienes-somos",
+      "type": "official-importer",
+      "relevance": "Confirma representación oficial, presencia de T60/T90 y liderazgo de eDeliver 3 en comerciales eléctricos."
+    },
+    {
+      "id": "PEUGEOT-FT-RANGE",
+      "publisher": "Peugeot Chile",
+      "title": "Descarga de fichas técnicas Peugeot",
+      "url": "https://www.peugeot.cl/enlaces-utiles/descargar-fichas-tecnicas.html",
+      "type": "official-model-range",
+      "relevance": "Confirma oferta y fichas de Expert, Boxer y Boxer Chasis en Chile."
+    },
+    {
+      "id": "CITROEN-JUMPY",
+      "publisher": "Citroën Chile",
+      "title": "Nueva Jumpy",
+      "url": "https://profesionales.citroen.cl/modelos/nueva-jumpy.html",
+      "type": "official-model-page",
+      "relevance": "Confirma Jumpy XL diésel 145 HP MT en la gama profesional chilena."
+    },
+    {
+      "id": "CITROEN-JUMPER-FT",
+      "publisher": "Citroën Chile",
+      "title": "Ficha técnica Citroën Jumper MCA",
+      "url": "https://www.citroen.cl/content/dam/citroen/chile/modelos/jumper/Ficha%20T%C3%A9cnica%20Citro%C3%ABn%20Jumper%20MCA.pdf",
+      "type": "official-technical-sheet",
+      "relevance": "Confirma versiones L2H2/L3H2/L4H2 con motor B22LUE 2.184 cc diésel de 140 HP."
+    },
+    {
+      "id": "VW-COMMERCIAL-RANGE",
+      "publisher": "Volkswagen Chile",
+      "title": "Vehículos comerciales Volkswagen",
+      "url": "https://www.volkswagen.cl/vehiculos-comerciales",
+      "type": "official-model-range",
+      "relevance": "Confirma la gama comercial chilena y documentación de Caravelle y Transporter."
+    },
+    {
+      "id": "VW-WARRANTY-RANGE",
+      "publisher": "Volkswagen Chile",
+      "title": "Garantía vehículos comerciales",
+      "url": "https://www.volkswagen.cl/tengo-un-vw/garantia",
+      "type": "official-after-sales-document",
+      "relevance": "Confirma presencia oficial de Crafter, Caddy y Transporter en Chile."
+    },
+    {
+      "id": "RENAULT-CHILE",
+      "publisher": "Renault Chile / Astara",
+      "title": "Renault Chile",
+      "url": "https://www.renault.cl/",
+      "type": "official-model-range",
+      "relevance": "Confirma Master en la gama oficial chilena."
+    }
+  ],
+  "candidates": [
+    {
+      "marca": "Foton",
+      "modelo": "Tunland G7",
+      "alias": ["Foton G7", "Tunland G7"],
+      "años": {"confirmed": [2025], "rangeStatus": "partial"},
+      "motorVersion": null,
+      "prioridadChile": {"level": "alta", "basis": "12° camioneta más vendida a julio de 2025", "unitsJanJul2025": 839},
+      "evidencia": [{"sourceId": "ANAC-2025-07", "detail": "Ranking camionetas, página 13: FOTON G7, 839 unidades acumuladas."}],
+      "confidence": 0.97,
+      "notes": "Marca completa ausente de db-nav.json. Confirmar denominación canónica Tunland G7 y ficha técnica oficial antes de integrar motorizaciones."
+    },
+    {
+      "marca": "Ram",
+      "modelo": "700",
+      "alias": ["RAM 700", "Ram 700"],
+      "años": {"confirmed": [2025], "rangeStatus": "partial"},
+      "motorVersion": null,
+      "prioridadChile": {"level": "alta", "basis": "6° camioneta más vendida a julio de 2025", "unitsJanJul2025": 1415},
+      "evidencia": [{"sourceId": "ANAC-2025-07", "detail": "Ranking camionetas, página 13: RAM 700, 1.415 unidades acumuladas."}],
+      "confidence": 0.98,
+      "notes": "Ram existe en catálogo, pero 700 está ausente. No asumir equivalencia técnica con Fiat Strada sin evidencia OEM."
+    },
+    {
+      "marca": "JMC",
+      "modelo": "Grand Avenue",
+      "alias": ["Grand Avenue"],
+      "años": {"confirmed": [2025], "rangeStatus": "partial"},
+      "motorVersion": null,
+      "prioridadChile": {"level": "alta", "basis": "8° camioneta más vendida a julio de 2025", "unitsJanJul2025": 1047},
+      "evidencia": [{"sourceId": "ANAC-2025-07", "detail": "Ranking camionetas, página 13: GRAND AVENUE, 1.047 unidades acumuladas."}],
+      "confidence": 0.98,
+      "notes": "JMC ya contiene Vigus Pro; Grand Avenue es un modelo adicional, no un alias de Vigus."
+    },
+    {
+      "marca": "GWM",
+      "modelo": "Wingle 7",
+      "alias": ["Wingle 7", "Great Wall Wingle 7"],
+      "años": {"confirmed": [2023, 2025], "rangeStatus": "non-contiguous-evidence"},
+      "motorVersion": ["2.4 gasolina 148 HP, 4x2/4x4, MT5", "2.0 diésel VGT 161 HP, 4x2/4x4, MT6"],
+      "prioridadChile": {"level": "alta", "basis": "19° camioneta más vendida a julio de 2025", "unitsJanJul2025": 550},
+      "evidencia": [
+        {"sourceId": "ANAC-2025-07", "detail": "Ranking camionetas, página 13: WINGLE 7, 550 unidades acumuladas."},
+        {"sourceId": "GWM-WINGLE7-FT-2025", "detail": "Ficha oficial FUM 09/2025 confirma las cuatro combinaciones de combustible y tracción."},
+        {"sourceId": "GWM-RANGE", "detail": "Gama oficial vigente confirma Nueva Wingle 7 gasolina y diésel."}
+      ],
+      "confidence": 0.99,
+      "notes": "Ausente bajo GWM; no debe agregarse bajo Haval. El año 2024 no se declara confirmado solo por continuidad aparente."
+    },
+    {
+      "marca": "Ram",
+      "modelo": "Rampage",
+      "alias": ["RAM Rampage", "Rampage"],
+      "años": {"confirmed": [2025], "rangeStatus": "partial"},
+      "motorVersion": null,
+      "prioridadChile": {"level": "alta", "basis": "20° camioneta más vendida a julio de 2025", "unitsJanJul2025": 516},
+      "evidencia": [{"sourceId": "ANAC-2025-07", "detail": "Ranking camionetas, página 13: RAMPAGE, 516 unidades acumuladas."}],
+      "confidence": 0.97,
+      "notes": "Modelo ausente en la marca Ram del catálogo. Motorizaciones quedan pendientes de fuente oficial chilena directa."
+    },
+    {
+      "marca": "Maxus",
+      "modelo": "T90",
+      "alias": ["T-90", "T90"],
+      "años": {"confirmed": [2025], "rangeStatus": "current-offer-only"},
+      "motorVersion": ["D20 2.0 biturbo diésel 212 HP, 4x4, 6M", "D20 2.0 biturbo diésel 212 HP, 4x4, 8AT"],
+      "prioridadChile": {"level": "media-alta", "basis": "Modelo oficial de la marca líder indicada por el importador; ausente del catálogo"},
+      "evidencia": [
+        {"sourceId": "MAXUS-T90-FT", "detail": "Ficha oficial confirma nombre, doble cabina, motor, tracción y transmisiones."},
+        {"sourceId": "MAXUS-OFFICIAL", "detail": "Importador oficial declara liderazgo en pickups T60 y T90."}
+      ],
+      "confidence": 0.98,
+      "notes": "No confundir con T60 ya presente ni con la generación All New T90 2.5, que requiere registro separado o corte generacional."
+    },
+    {
+      "marca": "Maxus",
+      "modelo": "T90 EV",
+      "alias": ["eT90", "T90 EV"],
+      "años": {"confirmed": [2023], "rangeStatus": "partial"},
+      "motorVersion": ["Eléctrica 4x2, batería LFP CATL"],
+      "prioridadChile": {"level": "media", "basis": "Camioneta eléctrica oficial ausente; relevante para cobertura de nuevas energías"},
+      "evidencia": [{"sourceId": "MAXUS-T90EV-FT", "detail": "Ficha técnica oficial publicada para T90 EV 4x2."}],
+      "confidence": 0.95,
+      "notes": "Mantener separada de T90 diésel para evitar compatibilidades mecánicas falsas."
+    },
+    {
+      "marca": "Foton",
+      "modelo": "TM5",
+      "alias": ["TM5"],
+      "años": {"confirmed": [2025], "rangeStatus": "partial"},
+      "motorVersion": null,
+      "prioridadChile": {"level": "alta", "basis": "7° vehículo comercial más vendido a julio de 2025", "unitsJanJul2025": 638},
+      "evidencia": [{"sourceId": "ANAC-2025-07", "detail": "Ranking comerciales, página 13: TM5, 638 unidades acumuladas."}],
+      "confidence": 0.98,
+      "notes": "Marca y modelo ausentes. Pendiente confirmar carrocerías y motorización con ficha oficial local."
+    },
+    {
+      "marca": "Foton",
+      "modelo": "Midi",
+      "alias": ["MIDI", "Midi"],
+      "años": {"confirmed": [2025], "rangeStatus": "partial"},
+      "motorVersion": null,
+      "prioridadChile": {"level": "alta", "basis": "9° vehículo comercial más vendido a julio de 2025", "unitsJanJul2025": 612},
+      "evidencia": [{"sourceId": "ANAC-2025-07", "detail": "Ranking comerciales, página 13: MIDI, 612 unidades acumuladas."}],
+      "confidence": 0.98,
+      "notes": "No inferir que todas las variantes Midi comparten tren motriz o repuestos."
+    },
+    {
+      "marca": "Foton",
+      "modelo": "TM3",
+      "alias": ["TM3"],
+      "años": {"confirmed": [2025], "rangeStatus": "partial"},
+      "motorVersion": null,
+      "prioridadChile": {"level": "alta", "basis": "10° vehículo comercial más vendido a julio de 2025", "unitsJanJul2025": 610},
+      "evidencia": [{"sourceId": "ANAC-2025-07", "detail": "Ranking comerciales, página 13: TM3, 610 unidades acumuladas."}],
+      "confidence": 0.98,
+      "notes": "Ausente. Separar cabina simple, doble cabina y box solo cuando una ficha oficial permita hacerlo."
+    },
+    {
+      "marca": "Opel",
+      "modelo": "Combo L1",
+      "alias": ["Combo", "Combo L1"],
+      "años": {"confirmed": [2025], "rangeStatus": "partial"},
+      "motorVersion": null,
+      "prioridadChile": {"level": "alta", "basis": "11° vehículo comercial más vendido a julio de 2025", "unitsJanJul2025": 599},
+      "evidencia": [{"sourceId": "ANAC-2025-07", "detail": "Ranking comerciales, página 13: COMBO L1, 599 unidades acumuladas."}],
+      "confidence": 0.98,
+      "notes": "Opel solo contiene Corsa en db-nav.json. No copiar compatibilidades de Partner/Berlingo pese a parentesco de plataforma."
+    },
+    {
+      "marca": "Hyundai",
+      "modelo": "Staria",
+      "alias": ["Staria", "Staria Cargo"],
+      "años": {"confirmed": [2025], "rangeStatus": "partial"},
+      "motorVersion": null,
+      "prioridadChile": {"level": "alta", "basis": "12° vehículo comercial más vendido a julio de 2025", "unitsJanJul2025": 545},
+      "evidencia": [{"sourceId": "ANAC-2025-07", "detail": "Ranking comerciales, página 13: STARIA, 545 unidades acumuladas."}],
+      "confidence": 0.98,
+      "notes": "Ausente de Hyundai. Mantener H-1 como modelo distinto y confirmar si el registro comercial corresponde exclusivamente a Cargo."
+    },
+    {
+      "marca": "Peugeot",
+      "modelo": "Boxer",
+      "alias": ["Boxer", "Boxer Chasis"],
+      "años": {"confirmed": [2025, 2026], "rangeStatus": "current-offer-only"},
+      "motorVersion": null,
+      "prioridadChile": {"level": "alta", "basis": "13° vehículo comercial más vendido a julio de 2025", "unitsJanJul2025": 488},
+      "evidencia": [
+        {"sourceId": "ANAC-2025-07", "detail": "Ranking comerciales, página 13: BOXER, 488 unidades acumuladas."},
+        {"sourceId": "PEUGEOT-FT-RANGE", "detail": "Sitio oficial mantiene fichas para Boxer y Boxer Chasis."}
+      ],
+      "confidence": 0.99,
+      "notes": "Ausente en Peugeot. Las carrocerías furgón y chasis deben modelarse como versiones, no como compatibilidades automáticas."
+    },
+    {
+      "marca": "JAC",
+      "modelo": "Sunray",
+      "alias": ["Sunray"],
+      "años": {"confirmed": [2025], "rangeStatus": "partial"},
+      "motorVersion": null,
+      "prioridadChile": {"level": "alta", "basis": "14° vehículo comercial más vendido a julio de 2025", "unitsJanJul2025": 435},
+      "evidencia": [{"sourceId": "ANAC-2025-07", "detail": "Ranking comerciales, página 13: SUNRAY, 435 unidades acumuladas."}],
+      "confidence": 0.98,
+      "notes": "JAC ya existe con pickups T6/T8; Sunray es una línea comercial adicional."
+    },
+    {
+      "marca": "Changan",
+      "modelo": "MD301",
+      "alias": ["MD 301", "MD301"],
+      "años": {"confirmed": [2025], "rangeStatus": "partial"},
+      "motorVersion": null,
+      "prioridadChile": {"level": "media-alta", "basis": "17° vehículo comercial más vendido a julio de 2025", "unitsJanJul2025": 282},
+      "evidencia": [{"sourceId": "ANAC-2025-07", "detail": "Ranking comerciales, página 13: MD 301, 282 unidades acumuladas."}],
+      "confidence": 0.97,
+      "notes": "Ausente. Normalizar el espacio del nombre como alias, sin fusionarlo con MD201."
+    },
+    {
+      "marca": "Changan",
+      "modelo": "MD201",
+      "alias": ["MD 201", "MD201"],
+      "años": {"confirmed": [2025], "rangeStatus": "partial"},
+      "motorVersion": null,
+      "prioridadChile": {"level": "media-alta", "basis": "18° vehículo comercial más vendido a julio de 2025", "unitsJanJul2025": 262},
+      "evidencia": [{"sourceId": "ANAC-2025-07", "detail": "Ranking comerciales, página 13: MD201, 262 unidades acumuladas."}],
+      "confidence": 0.97,
+      "notes": "Ausente. No agrupar con MD301 o M201 sin taxonomía oficial."
+    },
+    {
+      "marca": "Changan",
+      "modelo": "M201",
+      "alias": ["M 201", "M201"],
+      "años": {"confirmed": [2025], "rangeStatus": "partial"},
+      "motorVersion": null,
+      "prioridadChile": {"level": "media", "basis": "19° vehículo comercial más vendido a julio de 2025", "unitsJanJul2025": 235},
+      "evidencia": [{"sourceId": "ANAC-2025-07", "detail": "Ranking comerciales, página 13: M201, 235 unidades acumuladas."}],
+      "confidence": 0.97,
+      "notes": "Ausente; requiere ficha oficial para distinguir configuraciones."
+    },
+    {
+      "marca": "Dongfeng",
+      "modelo": "DF-212",
+      "alias": ["DF 212", "DF-212"],
+      "años": {"confirmed": [2025], "rangeStatus": "partial"},
+      "motorVersion": null,
+      "prioridadChile": {"level": "media", "basis": "20° vehículo comercial más vendido a julio de 2025", "unitsJanJul2025": 204},
+      "evidencia": [{"sourceId": "ANAC-2025-07", "detail": "Ranking comerciales, página 13: DF-212 DONG FENG, 204 unidades acumuladas."}],
+      "confidence": 0.96,
+      "notes": "Usar Dongfeng como marca canónica ya presente; conservar Dong Feng como alias de marca en la futura normalización."
+    },
+    {
+      "marca": "Peugeot",
+      "modelo": "Expert",
+      "alias": ["Expert", "New Expert"],
+      "años": {"confirmed": [2026], "rangeStatus": "current-offer-only"},
+      "motorVersion": null,
+      "prioridadChile": {"level": "media-alta", "basis": "Utilitario vigente con ficha oficial y modelo ausente"},
+      "evidencia": [{"sourceId": "PEUGEOT-FT-RANGE", "detail": "Página oficial ofrece fichas separadas para New Expert y Expert."}],
+      "confidence": 0.95,
+      "notes": "Investigar corte generacional antes de asignar años anteriores o compatibilidades."
+    },
+    {
+      "marca": "Citroën",
+      "modelo": "Jumpy",
+      "alias": ["Jumpy", "Nueva Jumpy", "Jumpy XL"],
+      "años": {"confirmed": [2026], "rangeStatus": "current-offer-only"},
+      "motorVersion": ["XL diésel 145 HP, MT, 16 válvulas, 4 cilindros"],
+      "prioridadChile": {"level": "media-alta", "basis": "Utilitario vigente en gama profesional oficial; marca ausente del catálogo como entidad canónica"},
+      "evidencia": [{"sourceId": "CITROEN-JUMPY", "detail": "Página oficial confirma Nueva Jumpy XL, diésel 145 HP MT."}],
+      "confidence": 0.98,
+      "notes": "Actualmente existe el registro incorrecto 'Peugeot > Citroen Berlingo'; crear Citroën como marca canónica en una fase de limpieza separada."
+    },
+    {
+      "marca": "Citroën",
+      "modelo": "Jumper",
+      "alias": ["Jumper", "Jumper MCA"],
+      "años": {"confirmed": [2025, 2026], "rangeStatus": "current-generation-only"},
+      "motorVersion": ["B22LUE/B22 2.184 cc diésel 140 HP MT6 L2H2", "B22LUE/B22 2.184 cc diésel 140 HP MT6 L3H2", "B22LUE/B22 2.184 cc diésel 140 HP MT6 L4H2"],
+      "prioridadChile": {"level": "media-alta", "basis": "Utilitario grande vigente con ficha oficial; marca/modelo ausentes"},
+      "evidencia": [{"sourceId": "CITROEN-JUMPER-FT", "detail": "Ficha oficial confirma familia B22, cilindrada, potencia y tres largos."}],
+      "confidence": 0.99,
+      "notes": "No derivar referencias desde Peugeot Boxer aunque compartan arquitectura."
+    },
+    {
+      "marca": "Volkswagen",
+      "modelo": "Transporter",
+      "alias": ["Transporter", "Transporter Van"],
+      "años": {"confirmed": [2026], "rangeStatus": "current-offer-only"},
+      "motorVersion": null,
+      "prioridadChile": {"level": "media-alta", "basis": "Modelo comercial confirmado por fabricante y ausente del catálogo"},
+      "evidencia": [
+        {"sourceId": "VW-COMMERCIAL-RANGE", "detail": "Gama oficial chilena lista Transporter con ficha técnica."},
+        {"sourceId": "VW-WARRANTY-RANGE", "detail": "Documento oficial de garantía identifica Transporter como vehículo comercial."}
+      ],
+      "confidence": 0.97,
+      "notes": "Confirmar generación y motor antes de ampliar a años históricos."
+    },
+    {
+      "marca": "Volkswagen",
+      "modelo": "Crafter",
+      "alias": ["Crafter"],
+      "años": {"confirmed": [2026], "rangeStatus": "current-support-only"},
+      "motorVersion": null,
+      "prioridadChile": {"level": "media", "basis": "Comercial oficial con soporte/garantía local, ausente del catálogo"},
+      "evidencia": [{"sourceId": "VW-WARRANTY-RANGE", "detail": "Garantía oficial chilena identifica explícitamente Crafter."}],
+      "confidence": 0.93,
+      "notes": "La fuente confirma soporte oficial actual, no necesariamente inventario nuevo; verificar gama de venta y generación antes de integrar."
+    },
+    {
+      "marca": "Renault",
+      "modelo": "Master",
+      "alias": ["Master", "Master Cargo", "Nueva Master"],
+      "años": {"confirmed": [2026], "rangeStatus": "current-offer-only"},
+      "motorVersion": null,
+      "prioridadChile": {"level": "media-alta", "basis": "Furgón comercial vigente en tienda y gama oficial, ausente del catálogo"},
+      "evidencia": [{"sourceId": "RENAULT-CHILE", "detail": "Sitio oficial chileno lista Master y servicios para empresas/flotas."}],
+      "confidence": 0.96,
+      "notes": "Confirmar generación, largos y motor mediante ficha técnica antes de crear variantes."
+    }
+  ],
+  "unresolved": [
+    {
+      "topic": "Rangos históricos",
+      "items": ["Foton G7", "Ram 700", "JMC Grand Avenue", "Ram Rampage", "Foton TM5", "Foton Midi", "Foton TM3", "Opel Combo L1", "Hyundai Staria", "JAC Sunray", "Changan MD301", "Changan MD201", "Changan M201", "Dongfeng DF-212"],
+      "reason": "ANAC confirma venta en 2025, pero no el primer/último año ni cambios generacionales.",
+      "nextEvidenceNeeded": "Fichas técnicas históricas, homologaciones 3CV o catálogos oficiales fechados."
+    },
+    {
+      "topic": "Motorizaciones y versiones",
+      "items": ["Foton G7", "Ram 700", "JMC Grand Avenue", "Ram Rampage", "Foton TM5", "Foton Midi", "Foton TM3", "Opel Combo L1", "Hyundai Staria", "Peugeot Boxer", "JAC Sunray", "Changan MD301", "Changan MD201", "Changan M201", "Dongfeng DF-212", "Peugeot Expert", "Volkswagen Transporter", "Volkswagen Crafter", "Renault Master"],
+      "reason": "No se encontró en esta pasada una ficha técnica oficial chilena directa y fechada que permita cargar el dato sin inferencias.",
+      "nextEvidenceNeeded": "PDF oficial del fabricante/importador por año-modelo."
+    },
+    {
+      "topic": "Normalización de marcas",
+      "items": ["Citroën", "GWM", "KGM/SsangYong", "Dongfeng/Dong Feng"],
+      "reason": "El catálogo actual contiene 'Citroen Berlingo' bajo Peugeot, Poer bajo Haval y variaciones de nombres de marca.",
+      "nextEvidenceNeeded": "Política de alias y migración de claves antes de incorporar candidatos."
+    },
+    {
+      "topic": "Cortes generacionales",
+      "items": ["Maxus T90", "Maxus T90 EV", "Peugeot Expert", "Citroën Jumpy", "Citroën Jumper", "Volkswagen Transporter", "Volkswagen Crafter", "Renault Master"],
+      "reason": "Un mismo nombre comercial cubre generaciones o trenes motrices incompatibles.",
+      "nextEvidenceNeeded": "Código de generación/plataforma, año de introducción chileno y ficha por variante."
+    },
+    {
+      "topic": "Referencias y compatibilidades de artículos",
+      "items": ["todos los candidatos"],
+      "reason": "Este bloque solo valida candidatos vehiculares. Ninguna fuente consultada autoriza inferir referencias de repuestos.",
+      "nextEvidenceNeeded": "Catálogo OEM, TecDoc/licencia equivalente o ficha de fabricante de repuesto con aplicación explícita por motor/año."
+    }
+  ]
+}

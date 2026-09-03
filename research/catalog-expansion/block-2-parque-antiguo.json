@@ -1,0 +1,353 @@
+{
+  "metadata": {
+    "block": 2,
+    "title": "Parque antiguo: pasajeros y SUV relevantes en Chile (1990-2014)",
+    "createdAt": "2026-09-02",
+    "scope": {
+      "country": "Chile",
+      "vehicleTypes": ["pasajero", "SUV"],
+      "modelYears": { "from": 1990, "to": 2014 },
+      "excluded": ["modelos 2015 o posteriores", "camionetas", "vehículos comerciales"]
+    },
+    "catalogBaseline": "db-nav.json revisado el 2026-09-02; db.json y db-compat.json no fueron modificados",
+    "method": "Se compararon rangos del catálogo actual con antecedentes de comercialización y unidades en Chile publicados por SERNAC, además de estadísticas de parque y mercado de INE y ANAC. Solo se proponen años ausentes o modelos ausentes. Los motores se consignan únicamente cuando la fuente chilena los identifica expresamente.",
+    "limitations": "Las estadísticas públicas de parque consultadas no desagregan el stock circulante por marca, modelo, año y motor. La prioridad es una estimación documentada basada en unidades informadas por campañas, presencia comercial histórica y volumen de marca; no equivale a una medición exacta del parque vigente por modelo."
+  },
+  "sources": [
+    {
+      "id": "INE-AMBIENTE-2016",
+      "authority": "Instituto Nacional de Estadísticas de Chile (INE)",
+      "title": "Anuario de Medio Ambiente 2016, tabla 14.3: evolución del parque de vehículos motorizados 2011-2015",
+      "url": "https://www.ine.gob.cl/docs/default-source/variables-basicas-ambientales/publicaciones-y-anuarios/informe-anual-de-medio-ambiente/anuario-medio-ambiente-2016.pdf?sfvrsn=afd8c34_3",
+      "use": "Contexto del tamaño del parque: en 2014 registra 2.790.195 automóviles/station wagon y 100.027 todoterreno."
+    },
+    {
+      "id": "ANAC-2014-06",
+      "authority": "Asociación Nacional Automotriz de Chile A.G. (ANAC)",
+      "title": "Mercado automotor, junio 2014",
+      "url": "https://www.anac.cl/wp-content/uploads/2017/10/informe_mercado_automotor_junio_2014.pdf",
+      "use": "Prioridad por presencia de marca en pasajeros y SUV durante 2014; no se usa para inferir motores ni compatibilidades."
+    },
+    {
+      "id": "SERNAC-TOYOTA-YARIS-2005-2010",
+      "authority": "Servicio Nacional del Consumidor (SERNAC), información entregada por Toyota Chile S.A.",
+      "title": "Alerta Toyota Yaris, Yaris Sport y Urban Cruiser 2005-2010",
+      "url": "https://www.sernac.cl/portal/619/w3-article-3791.html",
+      "use": "Confirma comercialización chilena, carrocerías/motores declarados y 59.096 unidades afectas, 58.169 de ellas Yaris."
+    },
+    {
+      "id": "SERNAC-TOYOTA-2009-2014",
+      "authority": "Servicio Nacional del Consumidor (SERNAC), información entregada por Toyota Chile S.A.",
+      "title": "Ampliación Toyota Corolla, Yaris y Auris 2009-2014",
+      "url": "https://www.sernac.cl/portal/619/w3-article-55941.html",
+      "use": "Confirma comercialización en Chile entre noviembre de 2009 y abril de 2014 y 61.735 unidades agregadas en la campaña."
+    },
+    {
+      "id": "SERNAC-HYUNDAI-2007-2014",
+      "authority": "Servicio Nacional del Consumidor (SERNAC), información entregada por Automotores Gildemeister SpA",
+      "title": "Alerta Hyundai, varios modelos, años 2007-2014",
+      "url": "https://www.sernac.cl/portal/619/w3-article-86801.html",
+      "use": "Confirma códigos de modelo y periodos de comercialización en Chile para Accent RB, Tucson LM, i40 VF y Veracruz EN, entre otros."
+    },
+    {
+      "id": "SERNAC-MAZDA-2007-2010",
+      "authority": "Servicio Nacional del Consumidor (SERNAC), información entregada por Importadora y Distribuidora Alameda S.A.",
+      "title": "Alerta Mazda 2, Mazda 3 y Mazda 6, años 2007-2010",
+      "url": "https://www.sernac.cl/portal/618/w3-article-9022.html",
+      "use": "Confirma comercialización en Chile entre agosto de 2007 y diciembre de 2010 y 12.795 unidades involucradas."
+    },
+    {
+      "id": "SERNAC-MAZDA-2008-2016",
+      "authority": "Servicio Nacional del Consumidor (SERNAC), información entregada por Importadora y Distribuidora Alameda S.A.",
+      "title": "Alerta Mazda, varios modelos, años 2008-2016",
+      "url": "https://www.sernac.cl/portal/619/w3-article-5395.html",
+      "use": "Confirma presencia chilena de Mazda 3, Mazda 5 y Mazda 6 dentro del periodo marzo de 2008 a marzo de 2016, con 20.698 unidades agregadas."
+    },
+    {
+      "id": "SERNAC-CHEVROLET-SAIL-2010-2013",
+      "authority": "Servicio Nacional del Consumidor (SERNAC), información entregada por General Motors Chile",
+      "title": "Alerta Chevrolet Sail 2010-2013",
+      "url": "https://www.sernac.cl/portal/618/w3-article-3690.html",
+      "use": "Confirma 14.238 unidades en consumidores chilenos y versión sedán 1.4 L mecánica."
+    },
+    {
+      "id": "SERNAC-TOYOTA-CAMRY-2011-2014",
+      "authority": "Servicio Nacional del Consumidor (SERNAC), información entregada por Toyota Chile S.A.",
+      "title": "Archivo de alertas 2014: Toyota Camry 2011-2014",
+      "url": "https://www.sernac.cl/portal/619/w3-propertyvalue-8380.html",
+      "use": "Confirma comercialización en Chile del Camry comprendido por la alerta entre junio de 2011 y septiembre de 2014."
+    }
+  ],
+  "candidates": [
+    {
+      "marca": "Toyota",
+      "modelo": "Yaris",
+      "alias": ["Yaris Sedán", "Yaris Sedan"],
+      "años": { "from": 2005, "to": 2013 },
+      "motor/versión": ["1.5 DOHC sedán, transmisión mecánica o automática (confirmado para 2005-2010)"],
+      "prioridadChile": "muy alta",
+      "evidencia": [
+        { "sourceId": "SERNAC-TOYOTA-YARIS-2005-2010", "claim": "58.169 unidades Yaris afectas en Chile y versión 1.5 DOHC sedán identificada." },
+        { "sourceId": "SERNAC-TOYOTA-2009-2014", "claim": "Confirma continuidad de comercialización del Yaris en Chile hasta abril de 2014." }
+      ],
+      "confidence": "high",
+      "notes": "El catálogo actual comienza en 2014; agregar únicamente 2005-2013. No extrapolar el motor 1.5 a todos los años sin desagregar VIN/generación."
+    },
+    {
+      "marca": "Toyota",
+      "modelo": "Yaris Sport",
+      "alias": ["Yaris Hatchback", "Yaris HB"],
+      "años": { "from": 2003, "to": 2013 },
+      "motor/versión": ["1.3 hatchback 3 o 5 puertas, transmisión mecánica o automática (confirmado para 2005-2010)"],
+      "prioridadChile": "muy alta",
+      "evidencia": [
+        { "sourceId": "SERNAC-TOYOTA-YARIS-2005-2010", "claim": "Confirma Yaris Sport 1.3 HB en Chile entre 2005 y 2010." },
+        { "sourceId": "SERNAC-TOYOTA-2009-2014", "claim": "La campaña Yaris confirma continuidad de la familia dentro de 2009-2014; la separación Sport requiere validación por VIN." }
+      ],
+      "confidence": "high",
+      "notes": "El catálogo actual comienza en 2014. El año 2003 está respaldado por la alerta Yaris Sport 2003-2004 listada en el archivo oficial de SERNAC, pero la motorización de esos dos años queda sin confirmar."
+    },
+    {
+      "marca": "Toyota",
+      "modelo": "Corolla",
+      "alias": ["Corolla Sedán", "Corolla Sedan"],
+      "años": { "from": 2009, "to": 2013 },
+      "motor/versión": null,
+      "prioridadChile": "muy alta",
+      "evidencia": [
+        { "sourceId": "SERNAC-TOYOTA-2009-2014", "claim": "Corolla incluido en 61.735 unidades de campaña comercializadas en Chile entre noviembre de 2009 y abril de 2014." }
+      ],
+      "confidence": "high",
+      "notes": "El catálogo actual comienza en 2014; agregar únicamente 2009-2013. La fuente no separa unidades ni motores por modelo."
+    },
+    {
+      "marca": "Toyota",
+      "modelo": "Urban Cruiser",
+      "alias": ["Urban Cruiser 1.3"],
+      "años": { "from": 2005, "to": 2010 },
+      "motor/versión": ["1.3 hatchback 5 puertas, transmisión mecánica"],
+      "prioridadChile": "media",
+      "evidencia": [
+        { "sourceId": "SERNAC-TOYOTA-YARIS-2005-2010", "claim": "927 unidades Urban Cruiser afectas en Chile; versión 1.3 HB mecánica identificada." }
+      ],
+      "confidence": "high",
+      "notes": "Modelo ausente del catálogo actual. El periodo corresponde a unidades comprendidas por la campaña y no necesariamente a toda la comercialización nacional."
+    },
+    {
+      "marca": "Toyota",
+      "modelo": "Camry",
+      "alias": ["Camry Sedán", "Camry Sedan"],
+      "años": { "from": 2011, "to": 2014 },
+      "motor/versión": null,
+      "prioridadChile": "media",
+      "evidencia": [
+        { "sourceId": "SERNAC-TOYOTA-CAMRY-2011-2014", "claim": "SERNAC confirma unidades Camry comercializadas en Chile entre junio de 2011 y septiembre de 2014." }
+      ],
+      "confidence": "medium",
+      "notes": "Modelo ausente del catálogo. Mantener motor sin especificar hasta obtener ficha de homologación chilena por variante."
+    },
+    {
+      "marca": "Hyundai",
+      "modelo": "Accent",
+      "alias": ["Accent RB", "Hyundai RB"],
+      "años": { "from": 2010, "to": 2013 },
+      "motor/versión": ["RB (código de modelo confirmado); motor no confirmado"],
+      "prioridadChile": "muy alta",
+      "evidencia": [
+        { "sourceId": "SERNAC-HYUNDAI-2007-2014", "claim": "Confirma Accent RB comercializado en Chile en el periodo 2010-2014." },
+        { "sourceId": "ANAC-2014-06", "claim": "Hyundai fue segunda marca en pasajeros y SUV acumulados a junio de 2014, con 14.502 unidades." }
+      ],
+      "confidence": "high",
+      "notes": "El catálogo actual comienza en 2014; agregar 2010-2013 y mantener separado de la entrada anómala Verna/Accent hasta normalizar alias."
+    },
+    {
+      "marca": "Hyundai",
+      "modelo": "Tucson",
+      "alias": ["Tucson LM", "ix35"],
+      "años": { "from": 2009, "to": 2013 },
+      "motor/versión": ["LM (código de modelo confirmado); motor no confirmado"],
+      "prioridadChile": "alta",
+      "evidencia": [
+        { "sourceId": "SERNAC-HYUNDAI-2007-2014", "claim": "Confirma 654 Tucson LM en consumidores, comercializadas en Chile entre 2009 y 2013, dentro de esa campaña." }
+      ],
+      "confidence": "high",
+      "notes": "El catálogo actual comienza en 2014; agregar 2009-2013. Tratar ix35 como alias de mercado sujeto a validación por homologación, no como compatibilidad mecánica."
+    },
+    {
+      "marca": "Hyundai",
+      "modelo": "Veracruz",
+      "alias": ["Veracruz EN", "ix55"],
+      "años": { "from": 2009, "to": 2013 },
+      "motor/versión": ["EN (código de modelo confirmado); motor no confirmado"],
+      "prioridadChile": "media",
+      "evidencia": [
+        { "sourceId": "SERNAC-HYUNDAI-2007-2014", "claim": "Confirma 665 Veracruz EN en consumidores, comercializadas en Chile entre 2009 y 2013, dentro de esa campaña." }
+      ],
+      "confidence": "high",
+      "notes": "Modelo ausente del catálogo. La fuente oficial escribe también 'Verazruz' por error tipográfico; no conservar ese texto como alias."
+    },
+    {
+      "marca": "Hyundai",
+      "modelo": "i40",
+      "alias": ["i40 VF"],
+      "años": { "from": 2010, "to": 2014 },
+      "motor/versión": ["VF (código de modelo confirmado); motor no confirmado"],
+      "prioridadChile": "media",
+      "evidencia": [
+        { "sourceId": "SERNAC-HYUNDAI-2007-2014", "claim": "Confirma 125 i40 VF en consumidores, comercializados en Chile entre 2010 y 2014, dentro de esa campaña." }
+      ],
+      "confidence": "high",
+      "notes": "Modelo ausente del catálogo. Prioridad media por volumen de campaña acotado."
+    },
+    {
+      "marca": "Mazda",
+      "modelo": "Mazda 3",
+      "alias": ["Mazda3", "Mazda 3 sedán", "Mazda 3 hatchback"],
+      "años": { "from": 2007, "to": 2013 },
+      "motor/versión": null,
+      "prioridadChile": "muy alta",
+      "evidencia": [
+        { "sourceId": "SERNAC-MAZDA-2007-2010", "claim": "Mazda 3 incluido en 12.795 unidades comercializadas en Chile entre agosto de 2007 y diciembre de 2010." },
+        { "sourceId": "SERNAC-MAZDA-2008-2016", "claim": "Confirma continuidad de Mazda 3 en el conjunto de modelos comercializados entre marzo de 2008 y marzo de 2016." }
+      ],
+      "confidence": "high",
+      "notes": "El catálogo actual comienza en 2014; agregar únicamente 2007-2013. Las fuentes no separan el volumen ni la motorización de Mazda 3."
+    },
+    {
+      "marca": "Mazda",
+      "modelo": "Mazda 2",
+      "alias": ["Mazda2", "Demio"],
+      "años": { "from": 2007, "to": 2010 },
+      "motor/versión": ["hatchback y sedán confirmados; motor no confirmado"],
+      "prioridadChile": "alta",
+      "evidencia": [
+        { "sourceId": "SERNAC-MAZDA-2007-2010", "claim": "Confirma Mazda 2 HB y sedán comercializados en Chile entre agosto de 2007 y diciembre de 2010." }
+      ],
+      "confidence": "high",
+      "notes": "El catálogo actual comienza en 2011; agregar 2007-2010. 'Demio' se conserva solo como alias de búsqueda hasta validar su uso comercial en Chile."
+    },
+    {
+      "marca": "Mazda",
+      "modelo": "Mazda 6",
+      "alias": ["Mazda6"],
+      "años": { "from": 2007, "to": 2009 },
+      "motor/versión": null,
+      "prioridadChile": "alta",
+      "evidencia": [
+        { "sourceId": "SERNAC-MAZDA-2007-2010", "claim": "Confirma Mazda 6 comercializado en Chile entre agosto de 2007 y diciembre de 2010." }
+      ],
+      "confidence": "high",
+      "notes": "El catálogo actual comienza en 2010; agregar únicamente 2007-2009."
+    },
+    {
+      "marca": "Mazda",
+      "modelo": "Mazda 5",
+      "alias": ["Mazda5"],
+      "años": { "from": 2008, "to": 2014 },
+      "motor/versión": null,
+      "prioridadChile": "media",
+      "evidencia": [
+        { "sourceId": "SERNAC-MAZDA-2008-2016", "claim": "Confirma Mazda 5 dentro del conjunto de vehículos comercializados en Chile entre marzo de 2008 y marzo de 2016." }
+      ],
+      "confidence": "medium",
+      "notes": "Modelo ausente del catálogo. El rango por modelo no está desagregado en la fuente; validar años exactos por VIN u homologación antes de integrar."
+    },
+    {
+      "marca": "Chevrolet",
+      "modelo": "Sail",
+      "alias": ["Sail sedán", "Sail Sedan"],
+      "años": { "from": 2010, "to": 2013 },
+      "motor/versión": ["1.4 L sedán 4 puertas, transmisión mecánica"],
+      "prioridadChile": "muy alta",
+      "evidencia": [
+        { "sourceId": "SERNAC-CHEVROLET-SAIL-2010-2013", "claim": "14.238 unidades en consumidores chilenos; versión 1.4 L mecánica confirmada." },
+        { "sourceId": "ANAC-2014-06", "claim": "Chevrolet lideró pasajeros y SUV acumulados a junio de 2014 con 19.668 unidades." }
+      ],
+      "confidence": "high",
+      "notes": "El catálogo actual comienza en 2014; agregar 2010-2013. No aplicar la versión 1.4 mecánica a otras generaciones."
+    }
+  ],
+  "unresolved": [
+    {
+      "marca": "Kia",
+      "modelo": "Morning",
+      "alias": ["Picanto"],
+      "años": { "from": 2004, "to": 2013 },
+      "motor/versión": null,
+      "prioridadChile": "muy alta",
+      "evidencia": [],
+      "confidence": "low",
+      "notes": "El catálogo comienza en 2014 y el modelo es relevante, pero las fuentes primarias localizadas en esta ronda solo confirmaron 2014-2015. Falta fuente chilena autorizada para 2004-2013."
+    },
+    {
+      "marca": "Kia",
+      "modelo": "Rio",
+      "alias": ["Rio 3", "Rio 4", "Rio 5"],
+      "años": { "from": 2000, "to": 2013 },
+      "motor/versión": null,
+      "prioridadChile": "alta",
+      "evidencia": [],
+      "confidence": "low",
+      "notes": "El catálogo contiene erróneamente Rio bajo Hyundai desde 2014 y no posee entrada Kia Rio. Requiere homologaciones o material oficial Kia Chile por generación antes de integrar."
+    },
+    {
+      "marca": "Kia",
+      "modelo": "Cerato",
+      "alias": ["Forte", "Cerato Forte"],
+      "años": { "from": 2004, "to": 2014 },
+      "motor/versión": null,
+      "prioridadChile": "alta",
+      "evidencia": [],
+      "confidence": "low",
+      "notes": "El catálogo ubica Cerato bajo Hyundai, lo que exige corrección de marca y validación de rangos/alias antes de crear una entrada nueva."
+    },
+    {
+      "marca": "Suzuki",
+      "modelo": "Swift",
+      "alias": ["Swift Dzire"],
+      "años": { "from": 2005, "to": 2013 },
+      "motor/versión": null,
+      "prioridadChile": "alta",
+      "evidencia": [],
+      "confidence": "low",
+      "notes": "El catálogo comienza en 2014. ANAC respalda la relevancia de Suzuki como marca, pero no se localizó en esta ronda una fuente primaria chilena que delimite estas generaciones del Swift."
+    },
+    {
+      "marca": "Citroën",
+      "modelo": "C3",
+      "alias": ["Citroen C3"],
+      "años": { "from": 2003, "to": 2014 },
+      "motor/versión": null,
+      "prioridadChile": "alta",
+      "evidencia": [],
+      "confidence": "low",
+      "notes": "Marca/modelo ausente y ANAC registra presencia relevante de Citroën en 2014, pero falta una fuente oficial por modelo/año para Chile."
+    },
+    {
+      "marca": "Daihatsu",
+      "modelo": "Terios",
+      "alias": ["Terios J100", "Terios J200"],
+      "años": { "from": 1998, "to": 2014 },
+      "motor/versión": null,
+      "prioridadChile": "media",
+      "evidencia": [
+        { "sourceId": "ANAC-2014-06", "claim": "ANAC registra 695 pasajeros/SUV Daihatsu acumulados a junio de 2014, sin desglose por modelo." }
+      ],
+      "confidence": "low",
+      "notes": "No integrar hasta confirmar que el volumen corresponde a Terios y delimitar generaciones/años mediante fuente autorizada."
+    },
+    {
+      "marca": "Great Wall",
+      "modelo": "Florid",
+      "alias": ["Great Wall Florid"],
+      "años": { "from": 2010, "to": 2014 },
+      "motor/versión": null,
+      "prioridadChile": "media",
+      "evidencia": [
+        { "sourceId": "ANAC-2014-06", "claim": "ANAC registra 2.069 pasajeros/SUV Great Wall acumulados a junio de 2014, sin desglose por modelo." }
+      ],
+      "confidence": "low",
+      "notes": "Modelo propuesto para investigación, no para integración. Falta evidencia primaria que asigne años y volumen al Florid específicamente."
+    }
+  ]
+}

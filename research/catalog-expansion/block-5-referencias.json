@@ -1,0 +1,213 @@
+{
+  "metadata": {
+    "block": 5,
+    "title": "Artículos y referencias OEM para mantenimiento frecuente",
+    "generatedAt": "2026-09-02",
+    "market": "Chile",
+    "status": "research-candidates-only",
+    "method": "Auditoría de db.json, db-nav.json y db-compat.json; priorización por presencia en Chile; aceptación únicamente de referencias OEM con aplicabilidad explícita en catálogo genuino autorizado y contraste de versión/motor con fuente oficial de Kia Chile.",
+    "catalogAudit": {
+      "vehicleYearRecords": 3264,
+      "articleApplications": 54604,
+      "referenceOccurrences": 60601,
+      "uniqueReferenceStrings": 998,
+      "confirmedReferenceOccurrences": 23898,
+      "unconfirmedReferenceOccurrences": 36703,
+      "categoryLabels": 75,
+      "observations": [
+        "El 60.56% de las apariciones de referencias no está marcado como confirmed.",
+        "Kia Morning/Picanto no existe en db-nav.json ni como registro de vehículo-año en db.json.",
+        "Las cuatro referencias candidatas de este archivo no aparecen en db.json, db-nav.json ni db-compat.json al 2026-09-02.",
+        "La base actual agrupa con frecuencia varios motores bajo un mismo modelo-año; estas candidaturas mantienen la aplicabilidad separada por motor para evitar extrapolaciones."
+      ]
+    },
+    "constraints": [
+      "No modifica db.json, db-nav.json ni db-compat.json.",
+      "status=candidate no equivale a referencia confirmada en producción.",
+      "La aplicabilidad debe validarse por VIN antes de incorporarse a la base activa.",
+      "No se extrapolan referencias a años, motores, transmisiones o mercados no descritos por la evidencia."
+    ]
+  },
+  "sources": [
+    {
+      "id": "kia-cl-morning-2018",
+      "type": "manufacturer-official",
+      "publisher": "Kia Chile",
+      "title": "Ficha técnica Morning",
+      "url": "https://www.kia.com/content/dam/kwcms/cl/es/files/fichas-tecnicas/Ficha-T%C3%A9cnica-Morning-C.pdf",
+      "supports": "Oferta chilena Morning JA con motores gasolina MPI de 998 cc y 1.248 cc y sus versiones de transmisión."
+    },
+    {
+      "id": "kia-cl-morning-2022",
+      "type": "manufacturer-official",
+      "publisher": "Kia Chile",
+      "title": "Ficha técnica Morning 2022",
+      "url": "https://www.kia.com/content/dam/kwcms/cl/es/files/fichas-tecnicas/Fichas-Tecnicas-2022/Ficha-Tecnica-Morning.pdf",
+      "supports": "Continuidad en Chile de Morning 1.0 MPI y 1.2 MPI; no se usa para extender automáticamente las referencias de 2018 a 2022."
+    },
+    {
+      "id": "anac-2025-10",
+      "type": "industry-association-primary",
+      "publisher": "ANAC A.G.",
+      "title": "Informe sector automotor octubre 2025",
+      "url": "https://www.anac.cl/wp-content/uploads/2025/11/10-ANAC-Mercado-Automotor-Octubre-2025.pdf",
+      "supports": "Prioridad chilena: Morning figura entre los modelos de pasajeros más vendidos acumulados a octubre de 2025."
+    },
+    {
+      "id": "kia-epc-ja-2018-g3la-oil",
+      "type": "authorized-genuine-parts-catalog",
+      "publisher": "PartSouq Genuine Parts Catalogs",
+      "title": "Kia Morning/Picanto 2018 G3LA — Front case & oil filter",
+      "url": "https://partsouq.com/en/catalog/genuine/unit?c=Kia&cid=454417661&q=KNAB2511LJT246100&uid=791379661&vid=111441680",
+      "supports": "VIN de muestra KNAB2511LJT246100, año modelo 2018, mercado GEN, motor G3LA; filtro de aceite OEM 2630002503."
+    },
+    {
+      "id": "kia-epc-ja-2018-g3la-air",
+      "type": "authorized-genuine-parts-catalog",
+      "publisher": "PartSouq Genuine Parts Catalogs",
+      "title": "Kia Morning/Picanto 2018 G3LA — Air cleaner",
+      "url": "https://partsouq.com/en/catalog/genuine/unit?c=Kia&cid=1534377092&q=KNAB2511LJT257265&uid=976204814&vid=1345130664",
+      "supports": "VIN de muestra KNAB2511LJT257265, año modelo 2018, mercado GEN, motor G3LA; filtro de aire OEM 28113G6000."
+    },
+    {
+      "id": "kia-epc-ja-2018-g3la-spark",
+      "type": "authorized-genuine-parts-catalog",
+      "publisher": "PartSouq Genuine Parts Catalogs",
+      "title": "Kia Morning/Picanto 2018 G3LA — Spark plug & cable",
+      "url": "https://partsouq.com/en/catalog/genuine/unit?c=Kia&cid=2140188087&q=KNAB2511LJT257265&uid=1135199792&vid=1389395338",
+      "supports": "VIN de muestra KNAB2511LJT257265, año modelo 2018, mercado GEN, motor G3LA; bujía OEM 1884410060."
+    },
+    {
+      "id": "kia-epc-ja-2018-front-brake",
+      "type": "authorized-genuine-parts-catalog",
+      "publisher": "PartSouq Genuine Parts Catalogs",
+      "title": "Kia Morning/Picanto 2018 — Front wheel brake",
+      "url": "https://partsouq.com/en/catalog/genuine/parts?c=Kia&gid=546&q=KNAB2512AJT175492&vid=1014068215",
+      "supports": "VIN de muestra KNAB2512AJT175492, año modelo 2018; juego de pastillas delanteras OEM 58101G6A00."
+    }
+  ],
+  "candidates": [
+    {
+      "marca": "Kia",
+      "modelo": "Morning",
+      "alias": ["Picanto", "Morning/Picanto", "Picanto JA"],
+      "años": [2018],
+      "motor/versión": "G3LA, 1.0 MPI, 3 cilindros; generación JA; mercado GEN",
+      "prioridadChile": "alta",
+      "categoria": "Filtro de aceite",
+      "referenciaOEM": "2630002503",
+      "aplicabilidad": "Kia Morning/Picanto JA, año modelo 2018, motor G3LA 1.0 MPI. La evidencia EPC corresponde a VIN KNAB2511LJT246100; exigir verificación por VIN para cada vehículo chileno.",
+      "status": "candidate",
+      "evidencia": ["kia-cl-morning-2018", "anac-2025-10", "kia-epc-ja-2018-g3la-oil"],
+      "confidence": 0.94,
+      "notes": "No extender a 1.2 G4LA ni a otros años sin consulta EPC por VIN. Referencia ausente del catálogo local auditado."
+    },
+    {
+      "marca": "Kia",
+      "modelo": "Morning",
+      "alias": ["Picanto", "Morning/Picanto", "Picanto JA"],
+      "años": [2018],
+      "motor/versión": "G3LA, 1.0 MPI, 3 cilindros; generación JA; mercado GEN",
+      "prioridadChile": "alta",
+      "categoria": "Filtro de aire",
+      "referenciaOEM": "28113G6000",
+      "aplicabilidad": "Kia Morning/Picanto JA, año modelo 2018, motor G3LA 1.0 MPI. La misma referencia aparece en múltiples VIN G3LA 2018 del EPC; exigir verificación por VIN.",
+      "status": "candidate",
+      "evidencia": ["kia-cl-morning-2018", "anac-2025-10", "kia-epc-ja-2018-g3la-air"],
+      "confidence": 0.95,
+      "notes": "El EPC también muestra esta referencia en una muestra G4LA 2018, pero este candidato se mantiene deliberadamente restringido a G3LA."
+    },
+    {
+      "marca": "Kia",
+      "modelo": "Morning",
+      "alias": ["Picanto", "Morning/Picanto", "Picanto JA"],
+      "años": [2018],
+      "motor/versión": "G3LA, 1.0 MPI, 3 cilindros; generación JA; mercado GEN",
+      "prioridadChile": "alta",
+      "categoria": "Bujía",
+      "referenciaOEM": "1884410060",
+      "aplicabilidad": "Kia Morning/Picanto JA, año modelo 2018, motor G3LA 1.0 MPI. EPC confirmado en VIN KNAB2511LJT257265 y otras muestras G3LA 2018; cantidad por motor no inferida en este archivo.",
+      "status": "candidate",
+      "evidencia": ["kia-cl-morning-2018", "anac-2025-10", "kia-epc-ja-2018-g3la-spark"],
+      "confidence": 0.95,
+      "notes": "No aplicar a G4LA 1.2 sin evidencia separada. Referencia ausente del catálogo local auditado."
+    },
+    {
+      "marca": "Kia",
+      "modelo": "Morning",
+      "alias": ["Picanto", "Morning/Picanto", "Picanto JA"],
+      "años": [2018],
+      "motor/versión": "Generación JA; configuración exacta asociada al VIN de evidencia",
+      "prioridadChile": "alta",
+      "categoria": "Pastillas de freno delanteras",
+      "referenciaOEM": "58101G6A00",
+      "aplicabilidad": "Kia Morning/Picanto JA, año modelo 2018, conjunto de freno delantero mostrado para VIN KNAB2512AJT175492. Validar VIN, diámetro de disco y configuración de frenos antes de incorporar.",
+      "status": "candidate",
+      "evidencia": ["kia-cl-morning-2018", "anac-2025-10", "kia-epc-ja-2018-front-brake"],
+      "confidence": 0.86,
+      "notes": "Confianza menor porque la fuente visible no expone en el extracto todos los códigos de opción del sistema de frenos."
+    }
+  ],
+  "unresolved": [
+    {
+      "marca": "Kia",
+      "modelo": "Morning",
+      "alias": ["Picanto"],
+      "años": [2018, 2019, 2020, 2021, 2022],
+      "motor/versión": "G4LA 1.2 MPI y cambios por año",
+      "prioridadChile": "alta",
+      "evidencia": ["kia-cl-morning-2018", "kia-cl-morning-2022", "anac-2025-10"],
+      "confidence": 0.35,
+      "notes": "Falta cerrar por VIN referencias OEM separadas para filtro de aceite, bujías, correa y frenos del 1.2; no extrapolar las del G3LA.",
+      "reason": "Aplicabilidad OEM incompleta por motor/año."
+    },
+    {
+      "marca": "Suzuki",
+      "modelo": "S-Presso",
+      "alias": ["S Presso"],
+      "años": [],
+      "motor/versión": "Pendiente de catálogo oficial chileno y EPC por VIN",
+      "prioridadChile": "alta",
+      "evidencia": [],
+      "confidence": 0.0,
+      "notes": "Modelo ausente del catálogo actual; no se halló en esta pasada una fuente OEM directa suficiente para referencias y aplicabilidad exacta.",
+      "reason": "Sin evidencia OEM verificable suficiente."
+    },
+    {
+      "marca": "Kia",
+      "modelo": "Soluto",
+      "alias": ["Pegas"],
+      "años": [],
+      "motor/versión": "Pendiente de catálogo oficial chileno y EPC por VIN",
+      "prioridadChile": "alta",
+      "evidencia": [],
+      "confidence": 0.0,
+      "notes": "Modelo ausente del catálogo actual; el alias internacional no autoriza compartir piezas sin VIN.",
+      "reason": "Sin evidencia OEM verificable suficiente."
+    },
+    {
+      "marca": "GWM",
+      "modelo": "Poer",
+      "alias": ["P-Series", "Pao"],
+      "años": [],
+      "motor/versión": "Pendiente de separar gasolina y diésel comercializados en Chile",
+      "prioridadChile": "alta",
+      "evidencia": [],
+      "confidence": 0.0,
+      "notes": "No asignar filtros, correas ni frenos hasta contar con catálogo OEM por VIN y código de motor.",
+      "reason": "Variantes de motorización sin EPC autorizado accesible."
+    },
+    {
+      "marca": "Haval",
+      "modelo": "Jolion",
+      "alias": ["Jolion Pro"],
+      "años": [2021, 2022, 2023, 2024, 2025, 2026],
+      "motor/versión": "El catálogo local mezcla GW4B15, GW4C20 y GW4D20M en cada año",
+      "prioridadChile": "alta",
+      "evidencia": [],
+      "confidence": 0.0,
+      "notes": "Requiere corregir primero la segmentación por motor/versión; no se proponen nuevas referencias porque la aplicabilidad actual es demasiado amplia.",
+      "reason": "Registro local ambiguo y falta de evidencia OEM primaria por versión chilena."
+    }
+  ]
+}

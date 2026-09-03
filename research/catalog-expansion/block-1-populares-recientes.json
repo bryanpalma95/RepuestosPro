@@ -1,0 +1,267 @@
+{
+  "metadata": {
+    "block": 1,
+    "title": "Modelos populares recientes de pasajeros y SUV en Chile",
+    "createdAt": "2026-09-02",
+    "scope": "Vehículos de pasajeros y SUV con presencia destacada en rankings ANAC 2024-2025; excluye camionetas, comerciales y modelos anteriores a 2015.",
+    "catalogReviewed": [
+      "db-nav.json",
+      "db.json",
+      "db-compat.json"
+    ],
+    "catalogFilesModified": false,
+    "method": "Se contrastaron los rankings acumulados ANAC de diciembre de 2024 y 2025 con las marcas, modelos y años existentes en db-nav.json. Los motores y versiones solo se consignan cuando una fuente oficial de la marca los confirma. Esta salida propone altas o normalizaciones; no afirma compatibilidad de repuestos.",
+    "candidateCount": 9,
+    "confidenceScale": "high = identidad y datos principales respaldados por fuente primaria; medium = identidad respaldada pero rango histórico o equivalencia requiere validación adicional"
+  },
+  "sources": [
+    {
+      "id": "ANAC-2024-12",
+      "type": "primary-market-ranking",
+      "publisher": "Asociación Nacional Automotriz de Chile A.G. (ANAC)",
+      "title": "Informe del Mercado Automotor, diciembre 2024",
+      "url": "https://anac.cl/wp-content/uploads/2025/01/12-ANAC-Mercado-Automotor-Diciembre-2024.pdf",
+      "accessedAt": "2026-09-02"
+    },
+    {
+      "id": "ANAC-2025-12",
+      "type": "primary-market-ranking",
+      "publisher": "Asociación Nacional Automotriz de Chile A.G. (ANAC)",
+      "title": "Informe del Mercado Automotor, diciembre 2025",
+      "url": "https://www.anac.cl/wp-content/uploads/2026/01/12-ANAC-Mercado-Automotor-Diciembre-2025.pdf",
+      "accessedAt": "2026-09-02"
+    },
+    {
+      "id": "SUZUKI-SPRESSO-FT",
+      "type": "authorized-technical-sheet",
+      "publisher": "Suzuki Chile",
+      "title": "Nuevo S-Presso, ficha técnica",
+      "url": "https://www.suzuki.cl/media/0j4hrl1i/1691599862-qdavkb30hj.pdf",
+      "accessedAt": "2026-09-02"
+    },
+    {
+      "id": "TOYOTA-YARIS-CROSS",
+      "type": "manufacturer-model-page",
+      "publisher": "Toyota Chile",
+      "title": "Toyota Yaris Cross",
+      "url": "https://toyota.cl/modelos/suv/yaris-cross-hybrid/",
+      "accessedAt": "2026-09-02"
+    },
+    {
+      "id": "TOYOTA-COROLLA-CROSS",
+      "type": "manufacturer-model-page",
+      "publisher": "Toyota Chile",
+      "title": "Toyota Corolla Cross",
+      "url": "https://toyota.cl/modelos/suv/corolla-cross-hybrid/",
+      "accessedAt": "2026-09-02"
+    },
+    {
+      "id": "SUBARU-CROSSTREK-2023",
+      "type": "manufacturer-technical-sheet",
+      "publisher": "Subaru Chile",
+      "title": "All New Crosstrek, especificaciones 2023",
+      "url": "https://www.subaru.cl/media/uqtbtjdz/precio-y-especificaciones_all-new-crosstrek_especificaciones-tecnicas.pdf",
+      "accessedAt": "2026-09-02"
+    },
+    {
+      "id": "MG-ZX",
+      "type": "manufacturer-model-page",
+      "publisher": "MG Motor Chile",
+      "title": "MG ZX",
+      "url": "https://www.mgmotor.cl/model/MG-ZX",
+      "accessedAt": "2026-09-02"
+    },
+    {
+      "id": "CITROEN-C3-FT",
+      "type": "manufacturer-technical-sheet",
+      "publisher": "Citroën Chile",
+      "title": "Citroën C3, ficha técnica",
+      "url": "https://www.citroen.cl/content/dam/citroen/chile/modelos/c3/Ficha%20T%C3%A9cnica%20Citro%C3%ABn%20C3.pdf",
+      "accessedAt": "2026-09-02"
+    },
+    {
+      "id": "KIA-SOLUTO-FT-2026",
+      "type": "manufacturer-technical-sheet",
+      "publisher": "Kia Chile",
+      "title": "Kia Soluto, especificaciones técnicas 2026",
+      "url": "https://www.kia.cl/content/dam/indumotora/general/fichas-tecnicas/2026/Ficha-Tecnica-Kia-Soluto.pdf",
+      "accessedAt": "2026-09-02"
+    },
+    {
+      "id": "KIA-MORNING-FT-2026",
+      "type": "manufacturer-technical-sheet",
+      "publisher": "Kia Chile",
+      "title": "Kia Morning, especificaciones técnicas 2026",
+      "url": "https://www.kia.cl/content/dam/indumotora/general/fichas-tecnicas/2026/Ficha-Tecnica-Kia-Morning.pdf",
+      "accessedAt": "2026-09-02"
+    }
+  ],
+  "candidates": [
+    {
+      "marca": "Suzuki",
+      "modelo": "S-Presso",
+      "alias": ["S PRESSO", "SPRESSO", "Nuevo S-Presso"],
+      "años": [2024, 2025],
+      "motor/versión": ["1.0 GLX Plus 5MT", "1.0 AMT GLX Plus", "998 cc, 3 cilindros, 66 hp"],
+      "prioridadChile": "alta",
+      "evidencia": [
+        {"sourceId": "ANAC-2024-12", "detail": "12.º entre vehículos de pasajeros en 2024, 1.516 unidades acumuladas."},
+        {"sourceId": "ANAC-2025-12", "detail": "14.º entre vehículos de pasajeros en 2025, 1.071 unidades acumuladas."},
+        {"sourceId": "SUZUKI-SPRESSO-FT", "detail": "Ficha autorizada confirma versiones 1.0 MT y AMT, 998 cc, 3 cilindros."}
+      ],
+      "confidence": "high",
+      "notes": "Ausente en db-nav.json. Los años se limitan a los rankings examinados; confirmar por fuente histórica antes de ampliar a 2020-2023."
+    },
+    {
+      "marca": "Toyota",
+      "modelo": "Corolla Cross",
+      "alias": ["COROLLA CROSS", "Corolla Cross HV", "Corolla Cross HEV"],
+      "años": [2024, 2025, 2026],
+      "motor/versión": ["HEV 1.8L gasolina + eléctrico", "XEI HEV", "SEG HEV"],
+      "prioridadChile": "alta",
+      "evidencia": [
+        {"sourceId": "ANAC-2024-12", "detail": "10.º SUV en 2024, 2.858 unidades acumuladas."},
+        {"sourceId": "ANAC-2025-12", "detail": "20.º SUV en 2025, 2.358 unidades acumuladas."},
+        {"sourceId": "TOYOTA-COROLLA-CROSS", "detail": "Toyota Chile confirma Corolla Cross HEV con motor 1.8L y versiones híbridas."}
+      ],
+      "confidence": "high",
+      "notes": "Ausente en db-nav.json. No tratar como alias de Corolla sedán: es una línea SUV separada."
+    },
+    {
+      "marca": "Toyota",
+      "modelo": "Yaris Cross",
+      "alias": ["YARIS CROSS", "Yaris Cross Hybrid", "Yaris Cross HEV"],
+      "años": [2024, 2025, 2026],
+      "motor/versión": ["1.5L MT", "1.5L CVT", "1.5L híbrido según versión vigente"],
+      "prioridadChile": "alta",
+      "evidencia": [
+        {"sourceId": "ANAC-2024-12", "detail": "18.º SUV en 2024, 2.263 unidades acumuladas."},
+        {"sourceId": "ANAC-2025-12", "detail": "12.º SUV en 2025, 3.277 unidades acumuladas."},
+        {"sourceId": "TOYOTA-YARIS-CROSS", "detail": "Toyota Chile confirma la línea Yaris Cross y motorización 1.5L con MT/CVT; la oferta vigente también contempla híbrido."}
+      ],
+      "confidence": "high",
+      "notes": "Ausente en db-nav.json. Mantener separado de Yaris y Yaris Sport. Validar cada tren motriz por año antes de crear aplicaciones de repuestos."
+    },
+    {
+      "marca": "Subaru",
+      "modelo": "Crosstrek",
+      "alias": ["CROSSTREK", "All New Crosstrek", "XV Crosstrek"],
+      "años": [2023, 2024, 2025, 2026],
+      "motor/versión": ["2.0i AWD CVT, 1.995 cc, 156 CV", "2.0 e-Boxer Hybrid AWD CVT, 1.995 cc"],
+      "prioridadChile": "alta",
+      "evidencia": [
+        {"sourceId": "ANAC-2024-12", "detail": "14.º SUV en 2024, 2.521 unidades acumuladas."},
+        {"sourceId": "ANAC-2025-12", "detail": "15.º SUV en 2025, 2.910 unidades acumuladas."},
+        {"sourceId": "SUBARU-CROSSTREK-2023", "detail": "Ficha oficial 2023 confirma nombre Crosstrek, versiones 2.0 gasolina e híbrida y tracción AWD CVT."}
+      ],
+      "confidence": "high",
+      "notes": "db-nav.json solo contiene Subaru XV hasta 2024. Crear Crosstrek como denominación vigente y conservar XV como alias histórico; no asumir intercambiabilidad de piezas entre generaciones."
+    },
+    {
+      "marca": "MG",
+      "modelo": "MG ZX",
+      "alias": ["ZX", "MG ZX", "ZS/ZX (solo para búsqueda, no equivalencia técnica)"],
+      "años": [2024, 2025, 2026],
+      "motor/versión": ["1.5L MT COM", "1.5L MT DLX", "1.5L CVT COM"],
+      "prioridadChile": "alta",
+      "evidencia": [
+        {"sourceId": "ANAC-2024-12", "detail": "16.º SUV en 2024, 2.471 unidades acumuladas."},
+        {"sourceId": "ANAC-2025-12", "detail": "13.º SUV en 2025, 3.025 unidades acumuladas; MG ZS figura por separado en el mismo ranking."},
+        {"sourceId": "MG-ZX", "detail": "MG Motor Chile confirma versiones 1.5L manual y CVT."}
+      ],
+      "confidence": "high",
+      "notes": "Ausente en db-nav.json; sí existe (SAIC) MG ZS. No fusionar ZX con ZS sin VIN, generación y evidencia de aplicación."
+    },
+    {
+      "marca": "Citroën",
+      "modelo": "C3",
+      "alias": ["C3", "Citroen C3", "Citroën C3"],
+      "años": [2024, 2025],
+      "motor/versión": null,
+      "prioridadChile": "alta",
+      "evidencia": [
+        {"sourceId": "ANAC-2024-12", "detail": "11.º entre vehículos de pasajeros en 2024, 1.538 unidades acumuladas."},
+        {"sourceId": "ANAC-2025-12", "detail": "11.º entre vehículos de pasajeros en 2025, 1.360 unidades acumuladas."},
+        {"sourceId": "CITROEN-C3-FT", "detail": "Ficha oficial chilena confirma la línea C3, pero las variantes deben extraerse y versionarse por fecha antes de incorporarlas."}
+      ],
+      "confidence": "high",
+      "notes": "La marca y el modelo están ausentes en db-nav.json. Se omite motor/versión hasta separar con precisión las fichas y años comerciales chilenos."
+    },
+    {
+      "marca": "Kia",
+      "modelo": "Soluto",
+      "alias": ["SOLUTO", "Kia Pegas"],
+      "años": [2024, 2025, 2026],
+      "motor/versión": ["1.4L Kappa MPI 5MT", "1.4L Kappa MPI 4AT", "94 hp"],
+      "prioridadChile": "crítica",
+      "evidencia": [
+        {"sourceId": "ANAC-2024-12", "detail": "1.º entre vehículos de pasajeros en 2024, 5.176 unidades acumuladas."},
+        {"sourceId": "ANAC-2025-12", "detail": "2.º entre vehículos de pasajeros en 2025, 5.748 unidades acumuladas."},
+        {"sourceId": "KIA-SOLUTO-FT-2026", "detail": "Ficha oficial confirma marca Kia y versiones 1.4L 5MT/4AT."}
+      ],
+      "confidence": "high",
+      "notes": "No está bajo Kia en db-nav.json: aparece incorrectamente bajo Hyundai para 2019-2026. Reubicar sin duplicar y conservar alias solo para búsquedas."
+    },
+    {
+      "marca": "Kia",
+      "modelo": "Morning",
+      "alias": ["MORNING", "Picanto", "Kia Picanto"],
+      "años": [2024, 2025, 2026],
+      "motor/versión": ["1.0L 3 cilindros, 66 hp, 5MT", "1.2L 4 cilindros, 83 hp, 5MT/5AMT"],
+      "prioridadChile": "alta",
+      "evidencia": [
+        {"sourceId": "ANAC-2024-12", "detail": "8.º entre vehículos de pasajeros en 2024, 2.104 unidades acumuladas."},
+        {"sourceId": "ANAC-2025-12", "detail": "8.º entre vehículos de pasajeros en 2025, 1.863 unidades acumuladas."},
+        {"sourceId": "KIA-MORNING-FT-2026", "detail": "Ficha oficial confirma marca Kia, motores 1.0L/1.2L y transmisiones 5MT/5AMT."}
+      ],
+      "confidence": "high",
+      "notes": "No está bajo Kia en db-nav.json: aparece incorrectamente bajo Hyundai para 2014-2026. Reubicar, no duplicar. Picanto es alias internacional y no prueba compatibilidad por sí mismo."
+    },
+    {
+      "marca": "Omoda",
+      "modelo": "C5",
+      "alias": ["OMODA C5", "C5", "Chery Omoda C5"],
+      "años": [2023, 2024, 2025, 2026],
+      "motor/versión": null,
+      "prioridadChile": "alta",
+      "evidencia": [
+        {"sourceId": "ANAC-2024-12", "detail": "13.º SUV en 2024, 2.686 unidades acumuladas; ANAC registra la marca como OMODA y el modelo como C5."},
+        {"sourceId": "ANAC-2025-12", "detail": "2.º SUV en 2025, 4.758 unidades acumuladas; ANAC registra la marca como OMODA | JAECOO y el modelo como OMODA C5."}
+      ],
+      "confidence": "medium",
+      "notes": "db-nav.json contiene 'Chery > Omoda C5' para 2023-2026, mientras ANAC lo clasifica como 'Omoda > C5'. Normalizar marca/alias sin duplicar. Motor y versiones quedan pendientes de una ficha oficial chilena directa."
+    }
+  ],
+  "unresolved": [
+    {
+      "item": "Rangos históricos completos",
+      "reason": "Los rankings ANAC confirman presencia en 2024-2025 y las páginas vigentes confirman oferta actual, pero no bastan para extrapolar todos los años comerciales desde el lanzamiento.",
+      "nextStep": "Localizar fichas técnicas, listas de precios o homologaciones oficiales archivadas por año antes de extender los rangos."
+    },
+    {
+      "item": "Compatibilidad Crosstrek versus XV",
+      "reason": "El cambio de denominación comercial no demuestra que componentes de distintas generaciones sean intercambiables.",
+      "nextStep": "Separar por generación, código de chasis, motor y VIN usando catálogos autorizados."
+    },
+    {
+      "item": "MG ZX versus MG ZS",
+      "reason": "Ambos nombres aparecen en el mercado, pero no se debe inferir equivalencia técnica por parecido comercial.",
+      "nextStep": "Obtener códigos de plataforma/VIN y catálogos de partes autorizados por año."
+    },
+    {
+      "item": "Citroën C3 por generación",
+      "reason": "La ficha vigente no determina por sí sola todas las variantes vendidas durante 2024-2025.",
+      "nextStep": "Versionar fichas oficiales por fecha y asociar motor/transmisión únicamente al período respaldado."
+    },
+    {
+      "item": "Omoda C5 motorizaciones",
+      "reason": "ANAC confirma marca/modelo y prioridad, pero en esta revisión no se obtuvo una ficha técnica oficial chilena directa para fijar variantes.",
+      "nextStep": "Agregar motor/versión solo al obtener ficha oficial de Omoda Chile o documento de homologación."
+    },
+    {
+      "item": "GWM Jolion",
+      "reason": "El catálogo lo registra como Haval Jolion y ANAC 2024 lo reporta como GWM Jolion. No se incluyó como candidato porque falta resolver si la estructura debe usar marca corporativa o submarca de producto.",
+      "nextStep": "Definir política de marcas GWM/Haval y luego normalizar con alias, sin duplicar el vehículo."
+    }
+  ]
+}
