@@ -1,0 +1,317 @@
+{
+  "metadata": {
+    "block": 10,
+    "title": "BYD y KGM/SsangYong relevantes para Chile",
+    "generatedAt": "2026-09-03",
+    "market": "Chile",
+    "status": "research-unresolved-no-oem-parts",
+    "method": "Auditoría de db-nav.json, db.json y los bloques 1 a 5; contraste de presencia y versiones con sitios y fichas técnicas oficiales de BYD Chile y KGM/SsangYong Chile. Solo se aceptan candidatos integrables cuando existe una referencia OEM y una aplicabilidad verificable.",
+    "catalogAudit": {
+      "BYD": "Ausente de db-nav.json; no se encontraron registros BYD integrables en los bloques existentes.",
+      "KGM": "Ausente de db-nav.json como marca canónica.",
+      "SsangYong": "Presente en db-nav.json con Actyon Sports 2012-2018, Korando 2012-2026, Musso Grand 2018-2026 y Rexton 2012-2026.",
+      "brandPolicy": "Conservar SsangYong en registros históricos. No reasignar años a KGM hasta disponer de un corte oficial por año-modelo o VIN; KGM funciona mientras tanto como identidad actual y alias de búsqueda."
+    },
+    "constraints": [
+      "No modifica db.json, db-nav.json ni db-compat.json.",
+      "Una ficha técnica de vehículo acredita presencia y configuración, pero no acredita números OEM de repuestos.",
+      "No se usan medidas de neumáticos, especificaciones de fluidos ni códigos internos de versión como referencias OEM.",
+      "Todos los modelos quedan en unresolved porque no se obtuvo una referencia OEM autorizada con aplicabilidad suficiente."
+    ]
+  },
+  "sources": [
+    {
+      "id": "BYD-CL-LINEUP",
+      "title": "Autos eléctricos, sedán y SUV — gama BYD Chile",
+      "publisher": "BYD Auto Co., Ltd.",
+      "url": "https://www.byd.com/cl/index"
+    },
+    {
+      "id": "BYD-CL-SONG-PRO-FT",
+      "title": "BYD Song Pro — especificaciones y configuraciones",
+      "publisher": "BYD Auto Co., Ltd.",
+      "url": "https://www.byd.com/material/byd-site/cl/product-detail/BYD-SONG-PRO-CHILE.pdf"
+    },
+    {
+      "id": "BYD-CL-SHARK-FT",
+      "title": "Ficha técnica BYD Shark",
+      "publisher": "BYD Auto Chile",
+      "url": "https://www.byd.com/material/byd-site/cl/product-detail/byd-shark/Flyer-Shark-CL.pdf"
+    },
+    {
+      "id": "BYD-CL-YUAN-PRO-DMI-FT",
+      "title": "Ficha técnica BYD Yuan Pro DM-i",
+      "publisher": "BYD Auto Co., Ltd.",
+      "url": "https://www.byd.com/material/byd-site/cl/new-flyers/Ficha%20T%C3%A9cnica%20-%20YUAN%20PRO%20DMi%20-%202026.06.pdf"
+    },
+    {
+      "id": "KGM-CL-TRANSITION",
+      "title": "KGM, nueva identidad de SsangYong",
+      "publisher": "KGM Chile / Astara",
+      "url": "https://www.ssangyong.cl/kgm/"
+    },
+    {
+      "id": "KGM-CL-LINEUP",
+      "title": "Modelos SsangYong/KGM en Chile",
+      "publisher": "KGM Chile / Astara",
+      "url": "https://www.ssangyong.cl/modelos/"
+    },
+    {
+      "id": "KGM-CL-REXTON-GASOLINA-FT",
+      "title": "Ficha técnica Rexton gasolina",
+      "publisher": "SsangYong Motor Chile / KGM",
+      "url": "https://www.ssangyong.cl/content/uploads/2025/05/FICHA-TECNICA_REXTON_GASOLINA.pdf"
+    },
+    {
+      "id": "KGM-CL-REXTON-DIESEL-FT",
+      "title": "Ficha técnica Rexton diésel",
+      "publisher": "SsangYong Motor Chile / KGM",
+      "url": "https://www.ssangyong.cl/content/uploads/2025/03/FICHA-TECNICA_REXTON_DIESEL.pdf"
+    },
+    {
+      "id": "KGM-CL-MUSSO-FT",
+      "title": "Ficha técnica Musso",
+      "publisher": "SsangYong Motor Chile / KGM",
+      "url": "https://www.ssangyong.cl/content/uploads/2025/07/FICHA-TECNICA-MUSSO-0725_-1.pdf"
+    },
+    {
+      "id": "KGM-CL-MUSSO-GRAND-FT",
+      "title": "Ficha técnica Musso Grand",
+      "publisher": "SsangYong Motor Chile / KGM",
+      "url": "https://www.ssangyong.cl/content/uploads/2025/08/FICHA-TECNICA_MUSSO_GRAND_compressed-2.pdf"
+    }
+  ],
+  "candidates": [],
+  "unresolved": [
+    {
+      "marca": "BYD",
+      "modelo": "Song Plus DM-i",
+      "alias": ["Song Plus", "Seal U DM-i"],
+      "años": [],
+      "motorVersion": "Híbrido enchufable DM-i; versión chilena por precisar por año-modelo",
+      "prioridadChile": "alta",
+      "evidencia": [{"sourceId": "BYD-CL-LINEUP", "detail": "Figura en la gama oficial vigente de BYD Chile."}],
+      "confidence": 0.45,
+      "notes": "Falta catálogo OEM por VIN y separación exacta de generaciones/versiones comercializadas en Chile.",
+      "parts": [],
+      "reason": "Sin referencias OEM verificadas con aplicabilidad chilena."
+    },
+    {
+      "marca": "BYD",
+      "modelo": "Yuan Plus",
+      "alias": ["Atto 3"],
+      "años": [],
+      "motorVersion": "Eléctrico de batería; versión chilena por precisar por año-modelo",
+      "prioridadChile": "alta",
+      "evidencia": [{"sourceId": "BYD-CL-LINEUP", "detail": "Figura en la gama oficial vigente de BYD Chile."}],
+      "confidence": 0.45,
+      "notes": "No asumir equivalencia total de piezas con Atto 3 de otros mercados.",
+      "parts": [],
+      "reason": "Sin referencias OEM verificadas con aplicabilidad chilena."
+    },
+    {
+      "marca": "BYD",
+      "modelo": "Song Pro",
+      "alias": ["Song Pro DM-i"],
+      "años": [],
+      "motorVersion": "PHEV, motor BYD472QA y transmisión DHT30; versiones GL y GS",
+      "prioridadChile": "alta",
+      "evidencia": [
+        {"sourceId": "BYD-CL-LINEUP", "detail": "Figura en la gama oficial vigente de BYD Chile."},
+        {"sourceId": "BYD-CL-SONG-PRO-FT", "detail": "La ficha oficial identifica versiones GL/GS, motor BYD472QA y transmisión DHT30."}
+      ],
+      "confidence": 0.62,
+      "notes": "La configuración está acreditada, pero la ficha no contiene números OEM de servicio.",
+      "parts": [],
+      "reason": "Sin referencias OEM verificadas con aplicabilidad por versión."
+    },
+    {
+      "marca": "BYD",
+      "modelo": "Dolphin Mini",
+      "alias": ["Seagull", "Dolphin Surf", "Atto 1"],
+      "años": [],
+      "motorVersion": "Eléctrico de batería; versiones chilenas por precisar",
+      "prioridadChile": "alta",
+      "evidencia": [{"sourceId": "BYD-CL-LINEUP", "detail": "Figura en la gama oficial vigente de BYD Chile con el nombre Dolphin Mini."}],
+      "confidence": 0.45,
+      "notes": "Los alias internacionales se conservan solo para búsqueda; no autorizan compartir piezas.",
+      "parts": [],
+      "reason": "Sin referencias OEM verificadas con aplicabilidad chilena."
+    },
+    {
+      "marca": "BYD",
+      "modelo": "Shark",
+      "alias": ["Shark 6", "Shark DM-O"],
+      "años": [],
+      "motorVersion": "PHEV AWD, motor gasolina 1.5T y dos motores eléctricos",
+      "prioridadChile": "alta",
+      "evidencia": [
+        {"sourceId": "BYD-CL-LINEUP", "detail": "Figura en la gama oficial vigente de BYD Chile."},
+        {"sourceId": "BYD-CL-SHARK-FT", "detail": "La ficha chilena acredita el tren motriz PHEV AWD 1.5T más dos motores eléctricos."}
+      ],
+      "confidence": 0.6,
+      "notes": "No extrapolar repuestos desde Shark 6 de otros mercados sin VIN.",
+      "parts": [],
+      "reason": "Sin referencias OEM verificadas con aplicabilidad por versión."
+    },
+    {
+      "marca": "BYD",
+      "modelo": "Sealion 7",
+      "alias": ["Sea Lion 7"],
+      "años": [],
+      "motorVersion": "Eléctrico de batería; versión chilena por precisar",
+      "prioridadChile": "media",
+      "evidencia": [{"sourceId": "BYD-CL-LINEUP", "detail": "Figura en la gama oficial vigente de BYD Chile."}],
+      "confidence": 0.4,
+      "notes": "Pendiente identificar variantes y catálogo OEM por VIN.",
+      "parts": [],
+      "reason": "Sin referencias OEM verificadas con aplicabilidad chilena."
+    },
+    {
+      "marca": "BYD",
+      "modelo": "Yuan Pro DM-i",
+      "alias": ["Yuan Pro DMi"],
+      "años": [],
+      "motorVersion": "Híbrido enchufable DM-i; versiones GL y GS",
+      "prioridadChile": "media",
+      "evidencia": [
+        {"sourceId": "BYD-CL-LINEUP", "detail": "Figura en la gama oficial vigente de BYD Chile."},
+        {"sourceId": "BYD-CL-YUAN-PRO-DMI-FT", "detail": "La ficha técnica oficial chilena acredita versiones GL y GS, sin números OEM de piezas."}
+      ],
+      "confidence": 0.58,
+      "notes": "La ficha está fechada en 2026, pero no se asigna un rango de años-modelo sin documentación adicional.",
+      "parts": [],
+      "reason": "Sin referencias OEM verificadas con aplicabilidad por versión."
+    },
+    {
+      "marca": "BYD",
+      "modelo": "Tang",
+      "alias": ["Tang EV"],
+      "años": [],
+      "motorVersion": "Eléctrico de batería AWD; versión chilena por precisar",
+      "prioridadChile": "media",
+      "evidencia": [{"sourceId": "BYD-CL-LINEUP", "detail": "El sitio oficial chileno mantiene una página de producto Tang y lo vincula con la gama local."}],
+      "confidence": 0.38,
+      "notes": "Pendiente confirmar continuidad comercial y variantes por año-modelo.",
+      "parts": [],
+      "reason": "Sin referencias OEM verificadas con aplicabilidad chilena."
+    },
+    {
+      "marca": "SsangYong",
+      "modelo": "Rexton",
+      "alias": ["KGM Rexton"],
+      "años": [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026],
+      "motorVersion": "Histórico local heterogéneo; gama actual acreditada con 2.0T gasolina y 2.2TD diésel",
+      "prioridadChile": "alta",
+      "evidencia": [
+        {"sourceId": "KGM-CL-TRANSITION", "detail": "KGM declara continuidad del Rexton durante la transición de marca y mantiene documentos vinculados por VIN."},
+        {"sourceId": "KGM-CL-REXTON-GASOLINA-FT", "detail": "Ficha chilena actual para Rexton 2.0T gasolina."},
+        {"sourceId": "KGM-CL-REXTON-DIESEL-FT", "detail": "Ficha chilena actual para Rexton 2.2TD diésel."}
+      ],
+      "confidence": 0.68,
+      "notes": "Los años provienen del catálogo local auditado y conservan la marca histórica; deben segmentarse por generación, motor y VIN antes de enriquecer piezas.",
+      "parts": [],
+      "reason": "No hay referencia OEM nueva verificable para las variantes chilenas y falta el corte exacto SsangYong/KGM."
+    },
+    {
+      "marca": "SsangYong",
+      "modelo": "Musso Grand",
+      "alias": ["KGM Musso Grand", "Rexton Sports Khan"],
+      "años": [2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026],
+      "motorVersion": "Histórico local; gama actual 2.2TD con códigos de versión QL610, QL612, QL622, QL712, QL722 y QL723",
+      "prioridadChile": "alta",
+      "evidencia": [
+        {"sourceId": "KGM-CL-LINEUP", "detail": "Musso Grand figura en la gama oficial chilena."},
+        {"sourceId": "KGM-CL-MUSSO-GRAND-FT", "detail": "La ficha chilena identifica las versiones actuales 2.2TD y sus códigos comerciales."}
+      ],
+      "confidence": 0.65,
+      "notes": "Los años provienen del catálogo local; conservar SsangYong hasta establecer el corte oficial por año-modelo.",
+      "parts": [],
+      "reason": "Sin referencias OEM verificadas por versión/VIN."
+    },
+    {
+      "marca": "KGM",
+      "modelo": "Musso",
+      "alias": ["SsangYong Musso", "Musso Sports"],
+      "años": [],
+      "motorVersion": "2.2TD; versiones QS712, QS722 y QS723",
+      "prioridadChile": "alta",
+      "evidencia": [
+        {"sourceId": "KGM-CL-TRANSITION", "detail": "KGM confirma Musso dentro de la gama continuada durante la transición."},
+        {"sourceId": "KGM-CL-MUSSO-FT", "detail": "La ficha oficial chilena muestra motor 2.2TD y versiones QS712/QS722/QS723 bajo identidad KGM."}
+      ],
+      "confidence": 0.62,
+      "notes": "No asignar años porque el corte canónico KGM/SsangYong no está documentado por año-modelo.",
+      "parts": [],
+      "reason": "Sin referencias OEM verificadas por versión/VIN."
+    },
+    {
+      "marca": "SsangYong",
+      "modelo": "Korando",
+      "alias": ["KGM Korando"],
+      "años": [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026],
+      "motorVersion": "Histórico local con generaciones y motores pendientes de segmentar",
+      "prioridadChile": "alta",
+      "evidencia": [{"sourceId": "KGM-CL-LINEUP", "detail": "Korando figura en la gama oficial chilena bajo el sitio de transición SsangYong/KGM."}],
+      "confidence": 0.5,
+      "notes": "Los años son los existentes en db-nav.json, no una afirmación de continuidad de una sola generación.",
+      "parts": [],
+      "reason": "Sin referencias OEM verificadas y catálogo local demasiado amplio por año."
+    },
+    {
+      "marca": "KGM",
+      "modelo": "Torres",
+      "alias": ["SsangYong Torres"],
+      "años": [],
+      "motorVersion": "Gasolina; variantes exactas pendientes de segmentar",
+      "prioridadChile": "alta",
+      "evidencia": [
+        {"sourceId": "KGM-CL-TRANSITION", "detail": "KGM identifica Torres entre los modelos actuales de la transición en Chile."},
+        {"sourceId": "KGM-CL-LINEUP", "detail": "Torres figura en la gama SUV oficial chilena."}
+      ],
+      "confidence": 0.52,
+      "notes": "Modelo ausente de db-nav.json. No asignar años ni piezas hasta obtener documentación por año-modelo y VIN.",
+      "parts": [],
+      "reason": "Sin referencias OEM verificadas con aplicabilidad chilena."
+    },
+    {
+      "marca": "KGM",
+      "modelo": "Torres EVX",
+      "alias": ["SsangYong Torres EVX"],
+      "años": [],
+      "motorVersion": "Eléctrico de batería; versión chilena por precisar",
+      "prioridadChile": "media",
+      "evidencia": [{"sourceId": "KGM-CL-LINEUP", "detail": "Torres EVX figura en la gama SUV oficial chilena."}],
+      "confidence": 0.45,
+      "notes": "Modelo ausente de db-nav.json; requiere catálogo OEM específico EV por VIN.",
+      "parts": [],
+      "reason": "Sin referencias OEM verificadas con aplicabilidad chilena."
+    },
+    {
+      "marca": "KGM",
+      "modelo": "Tivoli",
+      "alias": ["SsangYong Tivoli"],
+      "años": [],
+      "motorVersion": "Versiones chilenas pendientes de segmentar",
+      "prioridadChile": "media",
+      "evidencia": [{"sourceId": "KGM-CL-LINEUP", "detail": "Tivoli figura en la gama SUV oficial chilena."}],
+      "confidence": 0.42,
+      "notes": "Modelo ausente de db-nav.json; preservar posibles unidades históricas como SsangYong según VIN y padrón.",
+      "parts": [],
+      "reason": "Sin referencias OEM verificadas con aplicabilidad chilena."
+    },
+    {
+      "marca": "SsangYong",
+      "modelo": "Actyon Sports",
+      "alias": ["Actyon Sport"],
+      "años": [2012, 2013, 2014, 2015, 2016, 2017, 2018],
+      "motorVersion": "Histórico local; motores y generaciones pendientes de segmentar",
+      "prioridadChile": "media",
+      "evidencia": [{"sourceId": "KGM-CL-TRANSITION", "detail": "La continuidad documental de unidades SsangYong se mantiene asociada a VIN y patente durante el cambio a KGM."}],
+      "confidence": 0.42,
+      "notes": "Los años provienen del catálogo local; mantener la marca histórica SsangYong.",
+      "parts": [],
+      "reason": "Sin referencia OEM autorizada y aplicabilidad suficientemente precisa en esta pasada."
+    }
+  ]
+}

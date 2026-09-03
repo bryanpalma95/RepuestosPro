@@ -9,7 +9,7 @@
     "start": "node server/src/main.js",
     "desktop": "electron .",
     "desktop:pack": "electron-packager . RepuestosPro --platform=win32 --arch=x64 --out=releases/v0.10.0-beta.2 --overwrite --prune=true --ignore=^/dist-desktop --ignore=^/dist-desktop-next --ignore=^/dist-desktop-fixed --ignore=^/releases --ignore=^/var --ignore=^/[.]git",
-    "test": "node --test server/test/*.test.js tools/backup/*.test.mjs tools/test_pending_parts.mjs",
+    "test": "node --test server/test/*.test.js tools/backup/*.test.mjs tools/test_pending_parts.mjs tools/test_catalog_expansion.mjs",
     "test:migration": "python tools/test_migrate_workshop.py",
     "backup": "node tools/backup/backup.mjs",
     "backup:verify": "node tools/backup/verify.mjs"

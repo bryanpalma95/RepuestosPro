@@ -1,0 +1,193 @@
+{
+  "metadata": {
+    "block": 6,
+    "title": "Ampliación de catálogo chileno — Geely",
+    "generatedAt": "2026-09-03",
+    "market": "Chile",
+    "status": "research-candidates-only",
+    "method": "Auditoría de db-nav.json, db.json y bloques 1 a 5; contraste de modelos y motorizaciones con documentación oficial de Geely Chile; aceptación de referencias OEM únicamente cuando un catálogo autorizado permite vincularlas con el mismo código de motor.",
+    "catalogAudit": {
+      "existingBrand": "Geely",
+      "existingModels": ["Coolray"],
+      "existingYears": {"Coolray": [2020, 2021, 2022, 2023, 2024, 2025, 2026]},
+      "requestedMissingModels": ["Emgrand", "GX3 Pro", "Azkarra", "Okavango"],
+      "observations": [
+        "Coolray ya existe en db-nav.json y db.json; no se replica como candidato nuevo.",
+        "La base local asigna JLH-3G15TD a Coolray 2020-2026, pero la ficha chilena 2024 identifica NordThor 1.5 turbo y la actualización 2025 cambia a cuatro cilindros; se requiere segmentar por generación y VIN antes de migrar referencias.",
+        "Okavango no existe en la base local y es el único modelo de esta pasada con coincidencia trazable entre motor chileno JLH-4G20TDJ y referencia OEM en catálogo autorizado.",
+        "Las referencias OEM propuestas no aparecen en db.json, db-nav.json, db-compat.json ni en los bloques de investigación existentes al momento de la auditoría."
+      ]
+    },
+    "constraints": [
+      "Este archivo no modifica las bases activas.",
+      "status=candidate no equivale a compatibilidad confirmada en producción.",
+      "Toda incorporación debe validarse por VIN, código de motor y mercado chileno.",
+      "No se extrapolan referencias entre Coolray, Coolray Lite y New Coolray ni entre Okavango y Okavango L sin validación de VIN."
+    ]
+  },
+  "sources": [
+    {
+      "id": "geely-cl-coolray-2024",
+      "title": "Ficha técnica Coolray",
+      "publisher": "Geely Chile",
+      "url": "https://geely.cl/content/uploads/2024/10/FICHA-TECNICA-COOLRAY-3.pdf"
+    },
+    {
+      "id": "geely-cl-new-coolray-2025",
+      "title": "New Coolray — ficha técnica",
+      "publisher": "Geely Chile",
+      "url": "https://geely.cl/content/uploads/2025/11/NEW-COOLRAY-FICHA-TECNICA.pdf"
+    },
+    {
+      "id": "geely-ksa-coolray-parts",
+      "title": "Coolray — listado de repuestos genuinos",
+      "publisher": "Geely KSA",
+      "url": "https://geelyksa.com/spare-parts/"
+    },
+    {
+      "id": "geely-cl-gx3pro-2024",
+      "title": "Ficha técnica GX3 Pro",
+      "publisher": "Geely Chile",
+      "url": "https://geely.cl/content/uploads/2024/10/FICHA-TECNICA-GX3-2.pdf"
+    },
+    {
+      "id": "geely-cl-okavango-2023",
+      "title": "Okavango — ficha técnica, información al 12 de abril de 2023",
+      "publisher": "Geely Chile",
+      "url": "https://geely.cl/content/uploads/2024/12/OKAVANGO-Ficha-Tecnica-final.pdf"
+    },
+    {
+      "id": "geely-cl-okavango-2025",
+      "title": "Okavango 2025 — ficha técnica",
+      "publisher": "Geely Chile",
+      "url": "https://www.geely.cl/content/uploads/2024/12/OKAVANGO-FICHA-TECNICA-2-1.pdf"
+    },
+    {
+      "id": "azumi-okavango-jlh4g20tdj",
+      "title": "Geely Okavango L VX11-A1 2.0 JLH-4G20TDJ — catálogo de filtración",
+      "publisher": "AZUMI Filter / Nippon Micro Filter Co., Ltd.",
+      "url": "https://www.azfilter.jp/catalogue/627376"
+    }
+  ],
+  "candidates": [
+    {
+      "marca": "Geely",
+      "modelo": "Okavango",
+      "alias": ["Haoyue", "Okavango VX11"],
+      "años": [2023],
+      "motorVersion": "JLH-4G20TDJ, gasolina 2.0 turbo, 1969 cc, 218 hp, 7DCT, FWD",
+      "prioridadChile": "alta",
+      "evidencia": [
+        {
+          "sourceId": "geely-cl-okavango-2023",
+          "detail": "La ficha oficial chilena, vigente al 12-04-2023, identifica expresamente el motor JLH-4G20TDJ de 1969 cc y la transmisión DCT de 7 velocidades."
+        },
+        {
+          "sourceId": "azumi-okavango-jlh4g20tdj",
+          "detail": "El catálogo autorizado identifica Okavango L VX11-A1 desde 12/2022 con motor JLH-4G20TDJ y cruza el filtro de aceite con números Geely."
+        }
+      ],
+      "confidence": 0.82,
+      "notes": "Candidato limitado al año 2023 y al motor exacto JLH-4G20TDJ. Aunque la mecánica coincide, el catálogo autorizado denomina la carrocería Okavango L VX11-A1; exigir VIN antes de integrar en Chile.",
+      "parts": [
+        {
+          "categoria": "Filtro de aceite",
+          "referenciaOEM": "1056025900",
+          "aplicabilidad": "Geely Okavango, año 2023, motor JLH-4G20TDJ 2.0T; coincidencia mecánica con Okavango L VX11-A1 desde 12/2022. Validar por VIN para la unidad chilena.",
+          "sourceId": "azumi-okavango-jlh4g20tdj",
+          "status": "candidate"
+        },
+        {
+          "categoria": "Filtro de aceite",
+          "referenciaOEM": "5511692378",
+          "aplicabilidad": "Referencia OEM alternativa listada para Geely Okavango L VX11-A1 con motor JLH-4G20TDJ; usar solo tras confirmar sustitución vigente por VIN.",
+          "sourceId": "azumi-okavango-jlh4g20tdj",
+          "status": "candidate"
+        },
+        {
+          "categoria": "Filtro de aceite",
+          "referenciaOEM": "8888843536",
+          "aplicabilidad": "Referencia OEM alternativa listada para Geely Okavango L VX11-A1 con motor JLH-4G20TDJ; usar solo tras confirmar sustitución vigente por VIN.",
+          "sourceId": "azumi-okavango-jlh4g20tdj",
+          "status": "candidate"
+        }
+      ]
+    }
+  ],
+  "unresolved": [
+    {
+      "marca": "Geely",
+      "modelo": "Coolray",
+      "alias": ["Binyue", "Coolray Pro", "New Coolray"],
+      "años": [2020, 2021, 2022, 2023, 2024, 2025, 2026],
+      "motorVersion": "La base local usa JLH-3G15TD 1.5T para todos los años; Geely Chile documenta NordThor 1.5T en 2024 y un 1.5T de cuatro cilindros para New Coolray 2025.",
+      "prioridadChile": "alta",
+      "evidencia": [
+        {"sourceId": "geely-cl-coolray-2024", "detail": "Ficha chilena de Coolray con motor NordThor 1.5 turbo."},
+        {"sourceId": "geely-cl-new-coolray-2025", "detail": "Ficha chilena de New Coolray con motor 1499 cc de cuatro cilindros."},
+        {"sourceId": "geely-ksa-coolray-parts", "detail": "Geely KSA publica referencias genuinas para Coolray, pero la página consultable no expone año, VIN ni código de motor suficientes para vincularlas a la variante chilena."}
+      ],
+      "confidence": 0.45,
+      "notes": "No agregar nuevas referencias todavía. Primero separar generaciones y motores en la base; después consultar EPC por VIN chileno.",
+      "parts": [],
+      "reason": "La fuente genuina de repuestos no identifica de forma suficiente la variante mecánica y el catálogo local mezcla generaciones."
+    },
+    {
+      "marca": "Geely",
+      "modelo": "GX3 Pro",
+      "alias": ["GX3", "Vision X3", "X3 Pro"],
+      "años": [],
+      "motorVersion": "1498 cc, 102 hp; transmisión manual de 5 velocidades o CVT según versión chilena.",
+      "prioridadChile": "alta",
+      "evidencia": [
+        {"sourceId": "geely-cl-gx3pro-2024", "detail": "Ficha oficial chilena que confirma modelo, cilindrada, potencia y transmisiones, pero no entrega código de motor ni referencias OEM."}
+      ],
+      "confidence": 0.48,
+      "notes": "La URL de carga no prueba por sí sola el primer o último año comercial. Se requiere ficha fechada o registro de homologación y EPC por VIN chileno.",
+      "parts": [],
+      "reason": "Sin referencia OEM trazable simultáneamente a código de motor, VIN y versión chilena."
+    },
+    {
+      "marca": "Geely",
+      "modelo": "Emgrand",
+      "alias": ["Emgrand 7", "EC7"],
+      "años": [],
+      "motorVersion": "Pendiente de separar generaciones y motorizaciones vendidas en Chile.",
+      "prioridadChile": "media-alta",
+      "evidencia": [],
+      "confidence": 0.0,
+      "notes": "No se encontró en esta pasada una ficha oficial chilena vigente o histórica con años y motor que pudiera cruzarse con un catálogo OEM autorizado.",
+      "parts": [],
+      "reason": "Evidencia primaria chilena y OEM insuficiente."
+    },
+    {
+      "marca": "Geely",
+      "modelo": "Azkarra",
+      "alias": ["Boyue Pro", "Proton X70"],
+      "años": [],
+      "motorVersion": "Pendiente de identificar con precisión las versiones gasolina y mild-hybrid comercializadas en Chile.",
+      "prioridadChile": "media",
+      "evidencia": [],
+      "confidence": 0.0,
+      "notes": "Los alias internacionales no autorizan compartir referencias. Falta documentación oficial chilena y EPC por VIN.",
+      "parts": [],
+      "reason": "Sin evidencia suficiente para años, motor y referencias OEM aplicables al mercado chileno."
+    },
+    {
+      "marca": "Geely",
+      "modelo": "Okavango",
+      "alias": ["Haoyue", "Okavango VX11"],
+      "años": [2024, 2025],
+      "motorVersion": "2.0 turbo; la ficha 2025 confirma 1969 cc y 218 hp, pero el texto extraído no permite cerrar sin ambigüedad el código de motor para todos los años.",
+      "prioridadChile": "alta",
+      "evidencia": [
+        {"sourceId": "geely-cl-okavango-2025", "detail": "Ficha oficial chilena del Okavango 2025 con mecánica 2.0T, 1969 cc, 218 hp y 7DCT."},
+        {"sourceId": "azumi-okavango-jlh4g20tdj", "detail": "Catálogo autorizado para Okavango L VX11-A1 JLH-4G20TDJ, cuya equivalencia exacta con cada unidad chilena 2024-2025 debe validarse por VIN."}
+      ],
+      "confidence": 0.55,
+      "notes": "No extrapolar automáticamente las referencias candidatas de 2023 a estos años.",
+      "parts": [],
+      "reason": "Falta confirmar continuidad exacta de código de motor y carrocería por VIN/año chileno."
+    }
+  ]
+}

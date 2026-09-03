@@ -1,0 +1,219 @@
+{
+  "metadata": {
+    "block": 9,
+    "title": "Foton Chile: Tunland G7 y comerciales livianos",
+    "generatedAt": "2026-09-03",
+    "market": "Chile",
+    "status": "research-candidates-only",
+    "method": "Auditoría de db-nav.json, db.json y los bloques existentes de research/catalog-expansion; contraste de versiones chilenas con el importador CIDEF y aceptación de referencias únicamente cuando un catálogo de repuestos autorizado identifica explícitamente el modelo Foton.",
+    "catalogAudit": {
+      "brandPresentInDbNav": false,
+      "brandPresentInDb": false,
+      "duplicateCandidatesFound": 0
+    },
+    "constraints": [
+      "No modifica db.json, db-nav.json ni db-compat.json.",
+      "Los candidatos no son referencias confirmadas para producción.",
+      "Toda referencia debe validarse por VIN antes de incorporarse al catálogo activo.",
+      "No se extrapolan referencias entre Tunland, Tunland G7, TM3, TM5, Midi ni variantes eléctricas.",
+      "Los años se restringen a los documentos fechados; no se infiere continuidad comercial."
+    ]
+  },
+  "sources": [
+    {
+      "id": "cidef-g7-2024",
+      "title": "FOTON G7 Euro 6 2024 — ficha técnica",
+      "publisher": "CIDEF / Foton Chile",
+      "url": "https://cidef.cl/wp-content/uploads/2022/09/FOTON_G7_Euro6_2024-1.pdf"
+    },
+    {
+      "id": "cidef-g7-current",
+      "title": "Foton G7 — versiones y especificaciones",
+      "publisher": "CIDEF / Foton Chile",
+      "url": "https://cidef.cl/modelo/fotong7-2/"
+    },
+    {
+      "id": "petromin-foton-parts-2025",
+      "title": "Foton Spare Part Price List",
+      "publisher": "Petromin Foton, distribuidor autorizado Foton",
+      "url": "https://petromin-foton.com/wp-content/uploads/2025/11/Part-Price-List-PDF.pdf"
+    },
+    {
+      "id": "cidef-tm3",
+      "title": "Ficha técnica Foton TM3 Más",
+      "publisher": "CIDEF / Foton Chile",
+      "url": "https://assets.ctfassets.net/8zlbnewncp6f/3GkVB7SCEDYBAzeIwf7WbR/d41528ffc8416c2831749084c07b242b/Ficha-Tecnica-Foton-TM3-MAS.pdf"
+    },
+    {
+      "id": "cidef-tm3-2024",
+      "title": "Foton TM3 Euro 6 abril 2024",
+      "publisher": "CIDEF / Foton Chile",
+      "url": "https://cidef.cl/wp-content/uploads/2021/01/FOTON_TM3_Euro6_Abr_2024.pdf"
+    },
+    {
+      "id": "cidef-tm5-2024",
+      "title": "Foton TM5 doble rodado 2024 — ficha técnica",
+      "publisher": "CIDEF / Foton Chile",
+      "url": "https://cidef.cl/wp-content/uploads/2023/04/Foton_TM5_Doble_Rodado_2024_updated.pdf"
+    },
+    {
+      "id": "cidef-midi-2026",
+      "title": "Ficha técnica Foton Midi 2026",
+      "publisher": "CIDEF / Foton Chile",
+      "url": "https://cidef.cl/wp-content/uploads/2021/01/Ficha-Midi-2026.pdf"
+    },
+    {
+      "id": "cidef-foton-range",
+      "title": "Gama Foton Chile",
+      "publisher": "CIDEF / Foton Chile",
+      "url": "https://cidef.cl/marca/foton/"
+    }
+  ],
+  "candidates": [
+    {
+      "marca": "Foton",
+      "modelo": "Tunland G7",
+      "alias": ["G7", "Foton G7", "Tunland G7"],
+      "años": [2024],
+      "motorVersion": "4F20TC2 2.0 turbodiésel common rail Euro 6; 160 hp; variantes Lite/Ultimate 4x2 y 4x4, MT y ZF 8AT según versión",
+      "prioridadChile": "alta",
+      "evidencia": [
+        {
+          "sourceId": "cidef-g7-2024",
+          "detail": "La ficha chilena 2024 identifica la G7, motor 4F20TC/4F20TC2 2.0 diésel Euro 6 y las variantes de tracción y transmisión."
+        },
+        {
+          "sourceId": "cidef-g7-current",
+          "detail": "El importador chileno mantiene G7 en su gama y describe las versiones Lite, Ultimate y automática."
+        },
+        {
+          "sourceId": "petromin-foton-parts-2025",
+          "detail": "El listado de repuestos del distribuidor Foton identifica explícitamente cuatro códigos para TUNLAN G7."
+        }
+      ],
+      "confidence": 0.86,
+      "notes": "Candidatura restringida al año 2024 acreditado por la ficha chilena. Aunque el listado autorizado identifica G7, no expone VIN ni código de motor junto a cada pieza; validar por VIN antes de integrar.",
+      "parts": [
+        {
+          "categoria": "Filtro de aceite",
+          "referenciaOEM": "PP10007597",
+          "aplicabilidad": "Foton Tunland G7; el catálogo autorizado lo describe como filtro de aceite con anillo de sellado. Validar por VIN para la G7 4F20TC2 chilena 2024.",
+          "sourceId": "petromin-foton-parts-2025",
+          "status": "candidate"
+        },
+        {
+          "categoria": "Filtro de combustible",
+          "referenciaOEM": "P111000000234",
+          "aplicabilidad": "Foton Tunland G7; elemento filtrante listado para G7. Validar etapa de filtración y VIN para la versión chilena.",
+          "sourceId": "petromin-foton-parts-2025",
+          "status": "candidate"
+        },
+        {
+          "categoria": "Filtro de aire",
+          "referenciaOEM": "P111900000016",
+          "aplicabilidad": "Foton Tunland G7; conjunto de elemento de filtro de aire listado para G7. Validar por VIN.",
+          "sourceId": "petromin-foton-parts-2025",
+          "status": "candidate"
+        },
+        {
+          "categoria": "Correa de distribución",
+          "referenciaOEM": "PV10001531",
+          "aplicabilidad": "Foton Tunland G7; correa de distribución listada para G7. No inferir intervalo ni compatibilidad con otras Tunland; validar por VIN.",
+          "sourceId": "petromin-foton-parts-2025",
+          "status": "candidate"
+        }
+      ]
+    }
+  ],
+  "unresolved": [
+    {
+      "marca": "Foton",
+      "modelo": "TM3",
+      "alias": ["TM3 Más", "TM3 MAS"],
+      "años": [2024],
+      "motorVersion": "DAM15R 1.5 gasolina Euro 5 y/o configuración Euro 6 documentada en ficha 2024; requiere separar revisión y variante",
+      "prioridadChile": "alta",
+      "evidencia": [
+        {
+          "sourceId": "cidef-tm3",
+          "detail": "Ficha chilena acredita TM3 Más con DAM15R 1.5 y carrocerías cabina simple, doble y Cargo Box."
+        },
+        {
+          "sourceId": "cidef-tm3-2024",
+          "detail": "Documento chileno fechado para la línea TM3 Euro 6 en 2024."
+        }
+      ],
+      "confidence": 0.42,
+      "notes": "La presencia y configuración chilena están documentadas, pero no hay una referencia OEM vinculada de forma inequívoca al motor y revisión local.",
+      "parts": [],
+      "reason": "Sin referencias OEM verificables en fuente autorizada para la variante chilena."
+    },
+    {
+      "marca": "Foton",
+      "modelo": "TM5",
+      "alias": ["TM5 Más", "TM5 MAS", "TM5 doble rodado"],
+      "años": [2024],
+      "motorVersion": "DAM16KL 1.6 gasolina Euro 6, 114 hp; cabina simple, doble y Cargo Box",
+      "prioridadChile": "alta",
+      "evidencia": [
+        {
+          "sourceId": "cidef-tm5-2024",
+          "detail": "Ficha chilena 2024 acredita TM5 doble rodado con motor DAM16KL 1.6 Euro 6 y sus carrocerías."
+        }
+      ],
+      "confidence": 0.45,
+      "notes": "Modelo relevante para carga urbana, pero no debe incorporarse sin al menos una referencia OEM explícitamente aplicable al DAM16KL chileno.",
+      "parts": [],
+      "reason": "Sin referencias OEM verificables en fuente autorizada para la variante chilena."
+    },
+    {
+      "marca": "Foton",
+      "modelo": "Midi",
+      "alias": ["MIDI", "Midi Pick-Up", "Midi Cabina Simple"],
+      "años": [2026],
+      "motorVersion": "Variante chilena 2026 documentada por CIDEF; código de motor y revisión deben extraerse y cotejarse antes de integrar",
+      "prioridadChile": "media-alta",
+      "evidencia": [
+        {
+          "sourceId": "cidef-midi-2026",
+          "detail": "Ficha oficial del importador acredita la oferta Midi 2026 en Chile."
+        }
+      ],
+      "confidence": 0.35,
+      "notes": "No se vincularon códigos de repuesto porque las fuentes halladas no demuestran aplicabilidad OEM exacta para la revisión chilena 2026.",
+      "parts": [],
+      "reason": "Sin referencias OEM verificables y sin segmentación cerrada de versión/motor."
+    },
+    {
+      "marca": "Foton",
+      "modelo": "Tunland",
+      "alias": ["Tunland clásica", "Tunland Cummins"],
+      "años": [],
+      "motorVersion": "Variantes históricas por determinar mediante ficha chilena y VIN",
+      "prioridadChile": "media-alta",
+      "evidencia": [],
+      "confidence": 0.0,
+      "notes": "Existen catálogos internacionales de la Tunland anterior, pero no se encontró en esta pasada una fuente chilena primaria que cierre años, motor y revisión; no confundir con G7.",
+      "parts": [],
+      "reason": "Falta evidencia primaria de años y motorizaciones chilenas asociable a referencias OEM."
+    },
+    {
+      "marca": "Foton",
+      "modelo": "G7 EV",
+      "alias": ["Tunland G7 EV", "eTunland G7"],
+      "años": [],
+      "motorVersion": "FTTB065E eléctrico; batería LiFePO4 de 88,02 kWh según ficha chilena",
+      "prioridadChile": "media",
+      "evidencia": [
+        {
+          "sourceId": "cidef-foton-range",
+          "detail": "La gama vigente de CIDEF acredita la presencia comercial de vehículos Foton en Chile; la variante eléctrica requiere catálogo de partes separado."
+        }
+      ],
+      "confidence": 0.2,
+      "notes": "No compartir filtros, correas ni otras referencias de la G7 diésel; la arquitectura eléctrica exige catálogo específico.",
+      "parts": [],
+      "reason": "Sin referencias OEM verificables para la variante eléctrica chilena."
+    }
+  ]
+}

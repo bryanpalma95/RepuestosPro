@@ -1,0 +1,248 @@
+{
+  "metadata": {
+    "block": 7,
+    "title": "Mahindra — presencia en Chile y referencias OEM verificables",
+    "generatedAt": "2026-09-03",
+    "market": "Chile",
+    "status": "research-candidates-only",
+    "method": "Auditoría de db-nav.json, db.json y los bloques existentes; contraste de presencia y configuración con fuentes oficiales de Mahindra Chile; incorporación exclusiva de referencias identificadas explícitamente por el fabricante para los modelos indicados.",
+    "catalogAudit": {
+      "mahindraPresentInDbNav": false,
+      "mahindraVehicleRecordsInDb": 0,
+      "duplicateCandidatesFound": 0
+    },
+    "constraints": [
+      "No se modifican db.json, db-nav.json ni db-compat.json.",
+      "Los candidatos no equivalen a compatibilidades confirmadas en producción.",
+      "La referencia debe verificarse por VIN antes de utilizarse o incorporarse al catálogo activo.",
+      "No se extrapolan piezas entre motores, generaciones o años no descritos por la evidencia."
+    ]
+  },
+  "sources": [
+    {
+      "id": "mahindra-global-pikup-chile-2007",
+      "title": "M&M launches Mahindra PikUp Double Cabin in Chile",
+      "publisher": "Mahindra & Mahindra",
+      "url": "https://www.mahindra.com/news-room/press-release/en/m-and-m-launches-mahindra-pikup-double-cabin-in-chile"
+    },
+    {
+      "id": "mahindra-cl-pikup-eurov",
+      "title": "Ficha técnica Nueva Pik Up",
+      "publisher": "Mahindra Chile",
+      "url": "https://www.mahindra.cl/content/uploads/2020/09/3.02-Ficha-tecnica-PikUp-Mahindra-Web.pdf"
+    },
+    {
+      "id": "mahindra-cl-pikup-eurovi",
+      "title": "Ficha técnica Pik Up Euro VI",
+      "publisher": "Mahindra Chile",
+      "url": "https://www.mahindra.cl/content/uploads/Ficha-tecnica-PikUp-Mahindra-21.6x27.9-web-1.pdf"
+    },
+    {
+      "id": "mahindra-cl-terms-postventa",
+      "title": "Términos y condiciones — campaña Economy Service Mahindra",
+      "publisher": "Mahindra Chile",
+      "url": "https://www.mahindra.cl/terminos-y-condiciones/"
+    },
+    {
+      "id": "mahindra-cl-kuv100-spec",
+      "title": "Ficha técnica KUV100",
+      "publisher": "Mahindra Chile",
+      "url": "https://www.mahindra.cl/content/uploads/2020/07/3.01-Ficha-Te%CC%81cnica-KUV100-Web.pdf"
+    },
+    {
+      "id": "mahindra-cl-current-models",
+      "title": "Modelos Mahindra disponibles en Chile",
+      "publisher": "Mahindra Chile",
+      "url": "https://www.mahindra.cl/modelos/"
+    }
+  ],
+  "candidates": [
+    {
+      "marca": "Mahindra",
+      "modelo": "Pik Up",
+      "alias": ["PikUp", "Pik-Up", "Scorpio Pik Up", "Scorpio Getaway"],
+      "años": [2022],
+      "motorVersion": "2.2L m_Hawk Common Rail Diesel; la referencia debe validarse por VIN y norma de emisiones",
+      "prioridadChile": "alta",
+      "evidencia": [
+        {
+          "sourceId": "mahindra-global-pikup-chile-2007",
+          "detail": "Mahindra documenta el lanzamiento oficial de PikUp doble cabina en Chile en 2007."
+        },
+        {
+          "sourceId": "mahindra-cl-pikup-eurov",
+          "detail": "La ficha chilena identifica Pik Up con motor m_Hawk diésel 2.2 de 2179 cc, en cabina simple/doble y tracción 4x2/4x4."
+        },
+        {
+          "sourceId": "mahindra-cl-terms-postventa",
+          "detail": "Mahindra Chile asigna explícitamente el filtro SKU 0303BC0071N a Pik Up de año modelo hasta 2022."
+        }
+      ],
+      "confidence": 0.93,
+      "notes": "El año candidato se restringe a 2022 para no inferir retrospectivamente la referencia en todas las Pik Up comercializadas desde 2007. La propia campaña admite unidades anteriores, pero cada extensión debe cerrarse por VIN.",
+      "parts": [
+        {
+          "categoria": "Filtro de aceite",
+          "referenciaOEM": "0303BC0071N",
+          "aplicabilidad": "Mahindra Pik Up, año modelo 2022; campaña oficial aplicable a modelos hasta 2022. Verificar VIN, motor y norma de emisiones.",
+          "sourceId": "mahindra-cl-terms-postventa",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "marca": "Mahindra",
+      "modelo": "Scorpio",
+      "alias": ["Scorpio SUV"],
+      "años": [2022],
+      "motorVersion": "No especificada por la fuente de la referencia; requiere validación por VIN",
+      "prioridadChile": "alta",
+      "evidencia": [
+        {
+          "sourceId": "mahindra-cl-terms-postventa",
+          "detail": "Mahindra Chile incluye Scorpio de año modelo hasta 2022 en su campaña oficial de cambio de aceite e identifica el filtro utilizado."
+        }
+      ],
+      "confidence": 0.88,
+      "notes": "No se asigna un código de motor porque la campaña oficial no lo publica. El candidato se limita a 2022 y exige verificación por VIN.",
+      "parts": [
+        {
+          "categoria": "Filtro de aceite",
+          "referenciaOEM": "0303BC0071N",
+          "aplicabilidad": "Mahindra Scorpio, año modelo 2022; campaña oficial aplicable a modelos hasta 2022. Verificar VIN y motorización.",
+          "sourceId": "mahindra-cl-terms-postventa",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "marca": "Mahindra",
+      "modelo": "XUV500",
+      "alias": ["XUV 500"],
+      "años": [2022],
+      "motorVersion": "No especificada por la fuente de la referencia; requiere validación por VIN",
+      "prioridadChile": "alta",
+      "evidencia": [
+        {
+          "sourceId": "mahindra-cl-terms-postventa",
+          "detail": "Mahindra Chile incluye XUV500 de año modelo hasta 2022 en su campaña oficial de cambio de aceite e identifica el filtro utilizado."
+        }
+      ],
+      "confidence": 0.88,
+      "notes": "No se extrapola la referencia a XUV700 ni a otros modelos XUV. El candidato se limita a 2022 y exige verificación por VIN.",
+      "parts": [
+        {
+          "categoria": "Filtro de aceite",
+          "referenciaOEM": "0303BC0071N",
+          "aplicabilidad": "Mahindra XUV500, año modelo 2022; campaña oficial aplicable a modelos hasta 2022. Verificar VIN y motorización.",
+          "sourceId": "mahindra-cl-terms-postventa",
+          "status": "candidate"
+        }
+      ]
+    }
+  ],
+  "unresolved": [
+    {
+      "marca": "Mahindra",
+      "modelo": "KUV100",
+      "alias": ["KUV 100", "KUV100 NXT"],
+      "años": [],
+      "motorVersion": "1.2 gasolina; variantes y años exactos pendientes de segmentación",
+      "prioridadChile": "media",
+      "evidencia": [
+        {
+          "sourceId": "mahindra-cl-kuv100-spec",
+          "detail": "La ficha técnica oficial demuestra que KUV100 fue ofrecido por Mahindra Chile."
+        },
+        {
+          "sourceId": "mahindra-cl-terms-postventa",
+          "detail": "La cobertura técnica y una campaña de cambio de aceite confirman parque KUV100 en Chile, pero la página no publica el SKU de su filtro."
+        }
+      ],
+      "confidence": 0.72,
+      "notes": "No se encontró una referencia OEM directa con aplicabilidad chilena verificable en las fuentes autorizadas consultadas.",
+      "parts": [],
+      "reason": "Presencia chilena comprobada, pero sin referencia OEM verificable para integración."
+    },
+    {
+      "marca": "Mahindra",
+      "modelo": "XUV700",
+      "alias": ["XUV 700"],
+      "años": [],
+      "motorVersion": "Sin configuración chilena oficial localizada",
+      "prioridadChile": "baja",
+      "evidencia": [
+        {
+          "sourceId": "mahindra-cl-current-models",
+          "detail": "La oferta oficial chilena vigente consultada no lista XUV700; actualmente muestra XUV 3XO."
+        }
+      ],
+      "confidence": 0.2,
+      "notes": "No se encontró evidencia oficial suficiente de comercialización de XUV700 en Chile ni referencias OEM aplicables al mercado local.",
+      "parts": [],
+      "reason": "Sin evidencia oficial chilena ni referencias OEM verificables."
+    },
+    {
+      "marca": "Mahindra",
+      "modelo": "Pik Up",
+      "alias": ["PikUp", "Pik-Up", "Scorpio Pik Up", "Scorpio Getaway"],
+      "años": [2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021],
+      "motorVersion": "Generaciones 2.6 y 2.2 m_Hawk; segmentación pendiente por VIN, motor y norma de emisiones",
+      "prioridadChile": "alta",
+      "evidencia": [
+        {
+          "sourceId": "mahindra-global-pikup-chile-2007",
+          "detail": "El lanzamiento oficial acredita presencia en Chile desde 2007."
+        },
+        {
+          "sourceId": "mahindra-cl-pikup-eurov",
+          "detail": "La ficha técnica oficial acredita una configuración chilena 2.2 m_Hawk Euro V."
+        },
+        {
+          "sourceId": "mahindra-cl-pikup-eurovi",
+          "detail": "La ficha posterior acredita la configuración 2.2 m_Hawk Euro VI, incluida transmisión automática en una versión."
+        }
+      ],
+      "confidence": 0.64,
+      "notes": "Aunque la campaña de postventa dice 'modelos hasta 2022', no se replica el filtro a todos los años porque coexistieron generaciones y motores distintos.",
+      "parts": [],
+      "reason": "Falta resolver la aplicabilidad OEM por generación, motor y año."
+    },
+    {
+      "marca": "Mahindra",
+      "modelo": "Scorpio",
+      "alias": ["Scorpio SUV"],
+      "años": [],
+      "motorVersion": "Generaciones y motores anteriores a 2022 pendientes de segmentación",
+      "prioridadChile": "alta",
+      "evidencia": [
+        {
+          "sourceId": "mahindra-cl-terms-postventa",
+          "detail": "La campaña oficial confirma unidades Scorpio de año modelo hasta 2022 en Chile."
+        }
+      ],
+      "confidence": 0.58,
+      "notes": "No se proponen años anteriores ni piezas adicionales sin documentación técnica oficial que separe generaciones y motorizaciones.",
+      "parts": [],
+      "reason": "Años, motores y aplicabilidad OEM histórica no resueltos."
+    },
+    {
+      "marca": "Mahindra",
+      "modelo": "XUV500",
+      "alias": ["XUV 500"],
+      "años": [],
+      "motorVersion": "Versiones anteriores a 2022 pendientes de segmentación",
+      "prioridadChile": "alta",
+      "evidencia": [
+        {
+          "sourceId": "mahindra-cl-terms-postventa",
+          "detail": "La campaña y la cobertura técnica oficial confirman XUV500 en el parque atendido por Mahindra Chile."
+        }
+      ],
+      "confidence": 0.58,
+      "notes": "No se extiende el candidato 2022 a años previos sin separar versión, combustible y tracción.",
+      "parts": [],
+      "reason": "Años, versiones y aplicabilidad OEM histórica no resueltos."
+    }
+  ]
+}

@@ -3,7 +3,7 @@ import path from 'node:path';
 
 const root = path.resolve('research/catalog-expansion');
 const files = fs.existsSync(root)
-  ? fs.readdirSync(root).filter((name) => /^block-[1-5].*\.json$/i.test(name)).sort()
+  ? fs.readdirSync(root).filter((name) => /^block-\d+.*\.json$/i.test(name)).sort()
   : [];
 
 if (!files.length) {
@@ -58,6 +58,26 @@ if (!files.length) {
           warnings += 1;
         } else {
           console.error(`${label}: ninguna evidencia apunta a un sourceId declarado.`);
+          errors += 1;
+        }
+      }
+
+      if (candidate?.parts !== undefined && !Array.isArray(candidate.parts)) {
+        console.error(`${label}: parts debe ser una lista.`);
+        errors += 1;
+      }
+      for (const [partIndex, part] of (candidate?.parts || []).entries()) {
+        const partLabel = `${label}.parts#${partIndex + 1}`;
+        if (!part?.categoria || !part?.referenciaOEM || !part?.aplicabilidad) {
+          console.error(`${partLabel}: faltan categoría, referencia OEM o aplicabilidad.`);
+          errors += 1;
+        }
+        if (part?.status !== 'candidate') {
+          console.error(`${partLabel}: status debe ser candidate.`);
+          errors += 1;
+        }
+        if (!sourceIds.has(part?.sourceId)) {
+          console.error(`${partLabel}: sourceId no declarado.`);
           errors += 1;
         }
       }
