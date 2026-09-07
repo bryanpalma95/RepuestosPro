@@ -1,0 +1,165 @@
+{
+  "metadata": {
+    "block": 11,
+    "title": "Citroën: corrección segura de Berlingo y cobertura prioritaria",
+    "generatedAt": "2026-09-03",
+    "market": "Chile",
+    "status": "research-and-migration-plan-only",
+    "catalogAudit": {
+      "wrongBrandRecords": {
+        "brand": "Peugeot",
+        "models": ["Berlingo", "Citroen Berlingo"],
+        "years": "2014-2026",
+        "keys": ["peugeot-berlingo-{year}", "peugeot-citroen-berlingo-{year}"],
+        "finding": "La documentación oficial de Citroën Chile identifica Berlingo como Citroën. Las dos series locales bajo Peugeot son, por tanto, errores de marca; además contienen motorizaciones distintas entre sí y no se pueden deduplicar ni mezclar por nombre/año."
+      },
+      "safeNormalizationPolicy": [
+        "Crear la marca canónica Citroën (con diéresis en etiqueta visible; clave técnica normalizada citroen) y el modelo canónico Berlingo.",
+        "Conservar un respaldo completo, por clave y por año, antes de cambiar navegación, identificadores o aplicaciones.",
+        "Reasignar solamente la identidad de marca de ambas series a Citroën; no transferir sus referencias a Peugeot Partner/Rifter ni inferir equivalencias por plataforma Stellantis.",
+        "No fusionar automáticamente las dos series fuente: para el mismo año tienen motorVersion y contenido de categorías diferentes. Conservar ambas procedencias como variantes legacy hasta validar VIN, generación, motor y referencia OEM.",
+        "Publicar una sola entrada Citroën Berlingo por año únicamente después de reconciliar cada artículo: deduplicar solo objetos idénticos (categoría, referencia, estado y aplicabilidad) y dejar en cuarentena cualquier conflicto.",
+        "Retirar Berlingo y Citroen Berlingo del menú Peugeot una vez que cada registro esté preservado y accesible bajo Citroën; nunca borrar claves de origen antes de una migración reversible y auditada."
+      ],
+      "notSafeToAssume": [
+        "Que los rangos locales 2014-2026 correspondan a una misma generación o motor.",
+        "Que 1.0/1.2T PureTech EB2 sea aplicable a Berlingo chilena: contradice la ficha local vigente de Berlingo MCA, que declara diésel DV5 1.5.",
+        "Que una referencia o intervalo de mantenimiento de Partner, Rifter o Peugeot Berlingo sea aplicable a Citroën Berlingo sin VIN."
+      ]
+    },
+    "constraints": [
+      "No modifica db.json, db-nav.json ni db-compat.json.",
+      "Los años 2026 de candidatos describen oferta oficial observada el 2026-09-03; no prueban inicio de comercialización ni deben extenderse a años anteriores.",
+      "No se halló un catálogo de piezas genuinas oficial chileno que publique números OEM con aplicabilidad verificable por VIN para estos modelos; por eso no se proponen partes.",
+      "Toda referencia futura debe cotejarse por VIN, versión, motor, transmisión y mercado chileno antes de ingresar a producción."
+    ]
+  },
+  "sources": [
+    {
+      "id": "CITROEN-CL-BERLINGO-MCA-FT",
+      "type": "manufacturer-official-technical-sheet",
+      "publisher": "Citroën Chile",
+      "title": "Nueva Citroën Berlingo MCA — especificaciones técnicas",
+      "url": "https://www.citroen.cl/content/dam/citroen/chile/modelos/berlingo/Ficha%20T%C3%A9cnica%20Citro%C3%ABn%20Berlingo%20VAN%20MCA.pdf",
+      "accessedAt": "2026-09-03",
+      "supports": "Identifica inequívocamente Nueva Citroën Berlingo MCA, M y XL, con motor 1.5 BlueHDi (DV5), 1.499 cc, 100 hp, manual de seis velocidades y Euro 6."
+    },
+    {
+      "id": "CITROEN-CL-C3-FT",
+      "type": "manufacturer-official-technical-sheet",
+      "publisher": "Citroën Chile",
+      "title": "Citroën C3 — ficha técnica",
+      "url": "https://www.citroen.cl/content/dam/citroen/chile/modelos/c3/Ficha%20T%C3%A9cnica%20Citro%C3%ABn%20C3.pdf",
+      "accessedAt": "2026-09-03",
+      "supports": "Documenta C3 con gasolina VTi EC5 1.587 cc/115 hp AT, T200 T3 999 cc/125 hp AT y PureTech EB2 1.199 cc/82 hp MT; el motor debe quedar separado por variante."
+    },
+    {
+      "id": "CITROEN-CL-JUMPY-PRO",
+      "type": "manufacturer-official-model-page",
+      "publisher": "Citroën Chile",
+      "title": "Nueva Jumpy",
+      "url": "https://profesionales.citroen.cl/modelos/nueva-jumpy.html",
+      "accessedAt": "2026-09-03",
+      "supports": "Oferta chilena observada de Jumpy XL con única motorización diésel 145 hp, manual, cuatro cilindros y 16 válvulas."
+    },
+    {
+      "id": "CITROEN-CL-JUMPY-COTIZADOR",
+      "type": "manufacturer-official-configurator",
+      "publisher": "Citroën Chile",
+      "title": "Cotizador Nueva Jumpy MCA XL Diesel 145HP MT",
+      "url": "https://cotizador.citroen.cl/datos-rev.tpl?ref_modelo=jumpy-mca-xl-diesel-145hp-mt",
+      "accessedAt": "2026-09-03",
+      "supports": "Confirma motor 2.0 diésel, transmisión manual y versión Jumpy MCA XL Diesel 145HP MT en la oferta vigente."
+    },
+    {
+      "id": "CITROEN-CL-JUMPER-PRO",
+      "type": "manufacturer-official-model-page",
+      "publisher": "Citroën Chile",
+      "title": "Nueva Jumper",
+      "url": "https://profesionales.citroen.cl/modelos/nueva-jumper.html",
+      "accessedAt": "2026-09-03",
+      "supports": "Oferta chilena observada de Jumper L2, L3 y L4 con motorización única diésel 140 hp y transmisión manual."
+    },
+    {
+      "id": "CITROEN-CL-JUMPER-COTIZADOR",
+      "type": "manufacturer-official-configurator",
+      "publisher": "Citroën Chile",
+      "title": "Cotizador Jumper MCA L2H2 Diesel 140HP MT",
+      "url": "https://cotizador.citroen.cl/datos-rev.tpl?ref_modelo=jumper-mca-l2h2-diesel-140hp-mt",
+      "accessedAt": "2026-09-03",
+      "supports": "Confirma Jumper MCA L2H2 con motor 2.2 diésel, 140 hp y transmisión manual en la oferta vigente."
+    },
+    {
+      "id": "CITROEN-CL-MANUALES",
+      "type": "manufacturer-official-service-page",
+      "publisher": "Citroën Chile",
+      "title": "Manuales de vehículos Citroën Chile",
+      "url": "https://www.citroen.cl/servicios/manuales.html",
+      "accessedAt": "2026-09-03",
+      "supports": "El portal oficial separa C3, Berlingo, Jumpy y Jumper como modelos Citroën, no Peugeot."
+    }
+  ],
+  "candidates": [
+    {
+      "marca": "Citroën",
+      "modelo": "Berlingo",
+      "alias": ["Citroen Berlingo", "Berlingo Van", "Nueva Berlingo MCA", "Berlingo M", "Berlingo XL"],
+      "años": [2026],
+      "motorVersion": "1.5 BlueHDi (DV5), turbodiésel, 1.499 cc, 100 hp, 6MT, Euro 6; versiones M y XL",
+      "prioridadChile": "alta",
+      "evidencia": [{"sourceId": "CITROEN-CL-BERLINGO-MCA-FT", "detail": "Ficha técnica oficial chilena identifica la marca, el modelo, M/XL y la motorización DV5."}, {"sourceId": "CITROEN-CL-MANUALES", "detail": "Portal de manuales oficial clasifica Berlingo como Citroën."}],
+      "confidence": "high",
+      "notes": "Candidato de identidad y oferta vigente. No mezclar con las dos series legacy bajo Peugeot hasta resolver cada año/VIN; no se incluyen partes OEM."
+    },
+    {
+      "marca": "Citroën",
+      "modelo": "C3",
+      "alias": ["Nuevo C3", "C3 VTi", "C3 T200", "C3 PureTech"],
+      "años": [2026],
+      "motorVersion": "Separar por variante: VTi EC5 gasolina 1.587 cc 115 hp 6AT; T200 T3 gasolina 999 cc 125 hp 7AT; PureTech EB2 gasolina 1.199 cc 82 hp 5MT",
+      "prioridadChile": "alta",
+      "evidencia": [{"sourceId": "CITROEN-CL-C3-FT", "detail": "Ficha oficial chilena declara las tres familias y cilindradas/potencias; no autoriza cruzar repuestos entre ellas."}, {"sourceId": "CITROEN-CL-MANUALES", "detail": "C3 figura en la lista oficial de modelos atendidos en Chile."}],
+      "confidence": "high",
+      "notes": "Alta segura solo por variante de motor. La ficha no fecha el año-modelo; 2026 representa el snapshot de disponibilidad documental, no un rango histórico. Sin partes OEM candidatas."
+    },
+    {
+      "marca": "Citroën",
+      "modelo": "Jumpy",
+      "alias": ["Nueva Jumpy", "Jumpy MCA", "Jumpy XL"],
+      "años": [2026],
+      "motorVersion": "Diésel 2.0, 145 hp, 4 cilindros, 16 válvulas, manual; configuración XL",
+      "prioridadChile": "alta",
+      "evidencia": [{"sourceId": "CITROEN-CL-JUMPY-PRO", "detail": "Página oficial chilena declara motorización única diésel 145 hp MT y talla XL."}, {"sourceId": "CITROEN-CL-JUMPY-COTIZADOR", "detail": "Cotizador oficial confirma 2.0 diésel para Jumpy MCA XL 145HP MT."}],
+      "confidence": "high",
+      "notes": "No extrapolar a la Jumpy previa de 150 hp/1.997 cc ni a otras longitudes; falta EPC OEM con aplicabilidad VIN."
+    },
+    {
+      "marca": "Citroën",
+      "modelo": "Jumper",
+      "alias": ["Nueva Jumper", "Jumper MCA", "Jumper L2H2", "Jumper L3H2", "Jumper L4H2"],
+      "años": [2026],
+      "motorVersion": "Diésel 2.2, 140 hp, manual; carrocerías L2H2, L3H2 y L4H2",
+      "prioridadChile": "alta",
+      "evidencia": [{"sourceId": "CITROEN-CL-JUMPER-PRO", "detail": "Página oficial identifica una motorización única diésel 140 hp MT y tres tamaños."}, {"sourceId": "CITROEN-CL-JUMPER-COTIZADOR", "detail": "Cotizador oficial confirma 2.2 diésel en Jumper MCA L2H2 140HP MT."}],
+      "confidence": "high",
+      "notes": "No mezclar con Jumper previa de 163 hp ni con otros motores históricos. Sin partes OEM candidatas."
+    }
+  ],
+  "unresolved": [
+    {
+      "subject": "Migración de los 26 pares Berlingo 2014-2026 desde Peugeot",
+      "reason": "La fuente oficial actual prueba la marca Citroën y el DV5 vigente, pero no acredita el rango histórico ni las motorizaciones asignadas actualmente a cada una de las dos series locales.",
+      "requiredEvidence": "EPC Stellantis/servicio autorizado por VIN o documentos oficiales chilenos por generación/año; inventario por clave de cada artículo para reconciliar conflictos sin pérdida."
+    },
+    {
+      "subject": "Referencias OEM de C3, Berlingo, Jumpy y Jumper",
+      "reason": "Las fichas y cotizadores oficiales verifican oferta y motores, no números OEM con aplicabilidad por VIN.",
+      "requiredEvidence": "Catálogo genuino autorizado o consulta de concesionario con VIN que vincule referencia, variante de motor/transmisión y mercado chileno."
+    },
+    {
+      "subject": "Años iniciales de C3, Jumpy y Jumper",
+      "reason": "La evidencia primaria vigente no publica un rango de años de comercialización para Chile.",
+      "requiredEvidence": "Fichas técnicas archivadas, campañas SERNAC o documentación de importador fechada por año-modelo."
+    }
+  ]
+}

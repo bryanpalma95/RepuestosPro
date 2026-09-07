@@ -1,0 +1,297 @@
+{
+  "metadata": {
+    "block": 12,
+    "title": "Cierre de pendientes: Geely, Mahindra y Foton",
+    "generatedAt": "2026-09-03",
+    "market": "Chile",
+    "status": "research-unresolved-only",
+    "method": "Revisión de los bloques 6, 7 y 9, contrastada con páginas y fichas técnicas oficiales del importador/fabricante en Chile. Una candidatura requiere conjuntamente años acotados, motor o versión identificable y una referencia OEM publicada con aplicabilidad para esa configuración. La existencia de un número de parte para una familia de modelos, sin corte de motor/generación, no cumple ese umbral.",
+    "catalogFilesModified": false,
+    "catalogAudit": {
+      "Geely": "GX3 Pro, Emgrand y Azkarra siguen fuera de la navegación activa; Coolray existe como un único rango 2020-2026 y mezcla configuraciones que la documentación oficial distingue.",
+      "Mahindra": "Las fichas de 2022 ya fueron integradas desde block-7. La campaña oficial de postventa confirma un filtro para modelos hasta 2022, pero no identifica motor, generación ni año inicial por modelo.",
+      "Foton": "TM3, TM5 y Midi tienen configuraciones chilenas documentadas, pero no referencias OEM publicadas con aplicabilidad por motor. Tunland G7 2024 ya tiene candidaturas en block-9 y no se duplican aquí."
+    },
+    "constraints": [
+      "No modifica db.json, db-nav.json ni db-compat.json.",
+      "No duplica candidates de Okavango 2023, Mahindra 2022 o Tunland G7 2024 ya documentados en los bloques 6, 7 y 9.",
+      "No se asume que una referencia de campaña aplicable a modelos hasta 2022 sea compatible con cada motor o generación previa.",
+      "Todos los registros permanecen en unresolved hasta consultar EPC por VIN chileno o una lista oficial de repuestos que exponga aplicación técnica."
+    ]
+  },
+  "sources": [
+    {
+      "id": "geely-cl-gx3pro-2024",
+      "title": "Ficha técnica GX3 Pro",
+      "publisher": "Geely Chile",
+      "url": "https://geely.cl/content/uploads/2024/10/FICHA-TECNICA-GX3-2.pdf",
+      "accessedAt": "2026-09-03"
+    },
+    {
+      "id": "geely-cl-gx3pro-warranty",
+      "title": "Manual de garantía Geely (incluye GX3 Pro)",
+      "publisher": "Geely Chile",
+      "url": "https://www.geely.cl/content/uploads/2024/12/Geely-Warranty-book-all-models-Spanish-V1.pdf",
+      "accessedAt": "2026-09-03"
+    },
+    {
+      "id": "geely-cl-coolray-2024",
+      "title": "Ficha técnica Coolray",
+      "publisher": "Geely Chile",
+      "url": "https://geely.cl/content/uploads/2024/10/FICHA-TECNICA-COOLRAY-3.pdf",
+      "accessedAt": "2026-09-03"
+    },
+    {
+      "id": "geely-cl-new-coolray-2025",
+      "title": "New Coolray — ficha técnica",
+      "publisher": "Geely Chile",
+      "url": "https://geely.cl/content/uploads/2025/11/NEW-COOLRAY-FICHA-TECNICA.pdf",
+      "accessedAt": "2026-09-03"
+    },
+    {
+      "id": "geely-cl-modelos-2026",
+      "title": "Modelos Geely en Chile",
+      "publisher": "Geely Chile",
+      "url": "https://www.geely.cl/modelos/",
+      "accessedAt": "2026-09-03"
+    },
+    {
+      "id": "mahindra-global-pikup-chile-2007",
+      "title": "M&M launches Mahindra PikUp Double Cabin in Chile",
+      "publisher": "Mahindra & Mahindra",
+      "url": "https://www.mahindra.com/news-room/press-release/en/m-and-m-launches-mahindra-pikup-double-cabin-in-chile",
+      "accessedAt": "2026-09-03"
+    },
+    {
+      "id": "mahindra-cl-pikup-eurov",
+      "title": "Ficha técnica Nueva Pik Up",
+      "publisher": "Mahindra Chile",
+      "url": "https://www.mahindra.cl/content/uploads/2020/09/3.02-Ficha-tecnica-PikUp-Mahindra-Web.pdf",
+      "accessedAt": "2026-09-03"
+    },
+    {
+      "id": "mahindra-cl-pikup-eurovi",
+      "title": "Ficha técnica Pik Up Euro VI",
+      "publisher": "Mahindra Chile",
+      "url": "https://www.mahindra.cl/content/uploads/Ficha-tecnica-PikUp-Mahindra-21.6x27.9-web-1.pdf",
+      "accessedAt": "2026-09-03"
+    },
+    {
+      "id": "mahindra-cl-terms-postventa",
+      "title": "Términos y condiciones — Economy Service",
+      "publisher": "Mahindra Chile",
+      "url": "https://www.mahindra.cl/terminos-y-condiciones/",
+      "accessedAt": "2026-09-03"
+    },
+    {
+      "id": "cidef-tm3-2024",
+      "title": "Foton TM3 Euro 6 — ficha técnica abril 2024",
+      "publisher": "CIDEF / Foton Chile",
+      "url": "https://cidef.cl/wp-content/uploads/2021/01/FOTON_TM3_Euro6_Abr_2024.pdf",
+      "accessedAt": "2026-09-03"
+    },
+    {
+      "id": "cidef-tm3-2026",
+      "title": "Foton TM3 Euro 6 — ficha técnica 2026",
+      "publisher": "CIDEF / Foton Chile",
+      "url": "https://cidef.cl/wp-content/uploads/2021/01/FOTON_TM3_Euro6_2026.pdf",
+      "accessedAt": "2026-09-03"
+    },
+    {
+      "id": "cidef-tm5-2024",
+      "title": "Foton TM5 doble rodado 2024 — ficha técnica",
+      "publisher": "CIDEF / Foton Chile",
+      "url": "https://cidef.cl/wp-content/uploads/2023/04/Foton_TM5_Doble_Rodado_2024_updated.pdf",
+      "accessedAt": "2026-09-03"
+    },
+    {
+      "id": "cidef-midi-2026",
+      "title": "Foton Midi 2026 — ficha técnica",
+      "publisher": "CIDEF / Foton Chile",
+      "url": "https://cidef.cl/wp-content/uploads/2021/01/Ficha-Midi-2026.pdf",
+      "accessedAt": "2026-09-03"
+    },
+    {
+      "id": "cidef-g7-2024",
+      "title": "Foton G7 Euro 6 2024 — ficha técnica",
+      "publisher": "CIDEF / Foton Chile",
+      "url": "https://cidef.cl/wp-content/uploads/2022/09/FOTON_G7_Euro6_2024-1.pdf",
+      "accessedAt": "2026-09-03"
+    }
+  ],
+  "candidates": [],
+  "unresolved": [
+    {
+      "marca": "Geely",
+      "modelo": "GX3 Pro",
+      "alias": ["GX3", "Vision X3", "X3 Pro"],
+      "años": [2024],
+      "motorVersion": "1.5 gasolina, 1498 cc, 102 hp; Comfort MT, Active MT y Elite CVT; código de motor no publicado en la ficha chilena.",
+      "prioridadChile": "alta",
+      "evidencia": [
+        {"sourceId": "geely-cl-gx3pro-2024", "detail": "Ficha oficial fechada al 01-02-2024 identifica cilindrada, potencia y las transmisiones MT/CVT."},
+        {"sourceId": "geely-cl-gx3pro-warranty", "detail": "Manual oficial de garantía identifica GX3 Pro como modelo con cobertura de conjunto motriz."}
+      ],
+      "confidence": 0.7,
+      "notes": "La evidencia mejora el corte 2024 y la configuración, pero no publica código de motor ni referencias OEM. No asociar catálogos de Vision X3 de otros mercados sin VIN.",
+      "parts": [],
+      "reason": "Falta una referencia OEM cuya aplicabilidad incluya GX3 Pro chileno 2024 y su motorización exacta."
+    },
+    {
+      "marca": "Geely",
+      "modelo": "Emgrand",
+      "alias": ["Emgrand 7", "EC7"],
+      "años": [],
+      "motorVersion": "Generación, años y motores chilenos no cerrados.",
+      "prioridadChile": "media-alta",
+      "evidencia": [
+        {"sourceId": "geely-cl-modelos-2026", "detail": "La gama chilena vigente no lista Emgrand; la comunicación global no permite inferir una configuración histórica chilena."}
+      ],
+      "confidence": 0.15,
+      "notes": "El nombre Emgrand abarca varias generaciones y motores internacionales. Una presencia global o comercial no demuestra la versión comercializada en Chile.",
+      "parts": [],
+      "reason": "Sin ficha chilena histórica ni referencia OEM aplicable por año, motor y VIN."
+    },
+    {
+      "marca": "Geely",
+      "modelo": "Azkarra",
+      "alias": ["Boyue Pro", "Proton X70"],
+      "años": [],
+      "motorVersion": "Versiones gasolina y/o mild-hybrid por determinar para Chile.",
+      "prioridadChile": "media",
+      "evidencia": [
+        {"sourceId": "geely-cl-modelos-2026", "detail": "La gama chilena vigente no lista Azkarra; no se halló ficha oficial chilena histórica que determine generación o motor."}
+      ],
+      "confidence": 0.1,
+      "notes": "Boyue Pro y Proton X70 son alias de mercado, no prueba de equivalencia de repuestos con unidades Azkarra chilenas.",
+      "parts": [],
+      "reason": "Sin evidencia primaria chilena para años/motor ni referencias OEM aplicables."
+    },
+    {
+      "marca": "Geely",
+      "modelo": "Coolray",
+      "alias": ["Binyue", "Coolray Pro", "New Coolray", "Coolray Lite"],
+      "años": [2020, 2021, 2022, 2023, 2024, 2025, 2026],
+      "motorVersion": "La ficha 2024 identifica NordThor 1.5 turbo; la ficha New Coolray 2025 identifica 1499 cc, cuatro cilindros. Coolray Lite debe mantenerse separada.",
+      "prioridadChile": "alta",
+      "evidencia": [
+        {"sourceId": "geely-cl-coolray-2024", "detail": "Ficha chilena confirma una configuración Coolray NordThor 1.5T en 2024."},
+        {"sourceId": "geely-cl-new-coolray-2025", "detail": "Ficha chilena de New Coolray confirma un motor 1.5T de cuatro cilindros en 2025."},
+        {"sourceId": "geely-cl-modelos-2026", "detail": "La gama actual enumera Coolray Lite y New Coolray como productos separados."}
+      ],
+      "confidence": 0.7,
+      "notes": "Antes de añadir referencias, dividir el rango activo al menos en la configuración pre-2025, New Coolray y Coolray Lite, y cerrar código de motor con VIN/EPC por cada unidad.",
+      "parts": [],
+      "reason": "No existe una referencia OEM publicada que conecte inequívocamente cada configuración chilena a sus años y motor."
+    },
+    {
+      "marca": "Mahindra",
+      "modelo": "Pik Up",
+      "alias": ["PikUp", "Pik-Up", "Scorpio Pik Up", "Scorpio Getaway"],
+      "años": [2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021],
+      "motorVersion": "Histórico por segmentar: Mahindra acredita presencia desde 2007; la ficha chilena disponible acredita 2.2 m_Hawk diésel Euro V y una posterior 2.2 m_Hawk Euro VI.",
+      "prioridadChile": "alta",
+      "evidencia": [
+        {"sourceId": "mahindra-global-pikup-chile-2007", "detail": "Lanzamiento oficial de PikUp doble cabina en Chile en 2007."},
+        {"sourceId": "mahindra-cl-pikup-eurov", "detail": "Ficha chilena identifica motor 2.2 m_Hawk diésel de 2179 cc Euro V."},
+        {"sourceId": "mahindra-cl-pikup-eurovi", "detail": "Ficha chilena posterior acredita 2.2 m_Hawk Euro VI, incluida una variante automática."},
+        {"sourceId": "mahindra-cl-terms-postventa", "detail": "La campaña asigna filtro 0303BC0071N a Pik Up modelos hasta 2022, sin identificar generación, motor o años de aplicación."}
+      ],
+      "confidence": 0.72,
+      "notes": "No reutilizar 0303BC0071N para 2007-2021: la campaña es evidencia de cobertura comercial, no una tabla de aplicabilidad técnica desagregada.",
+      "parts": [],
+      "reason": "Falta un EPC/catálogo OEM que cruce 0303BC0071N (u otra referencia) con año, motor y norma de emisiones."
+    },
+    {
+      "marca": "Mahindra",
+      "modelo": "Scorpio",
+      "alias": ["Scorpio SUV"],
+      "años": [],
+      "motorVersion": "Generaciones, combustible, motor y norma de emisiones anteriores a 2022 no publicados en la evidencia chilena localizada.",
+      "prioridadChile": "alta",
+      "evidencia": [
+        {"sourceId": "mahindra-cl-terms-postventa", "detail": "Mahindra Chile incluye Scorpio modelos hasta 2022 y cita el filtro 0303BC0071N, sin años inferiores ni identificación de motor."}
+      ],
+      "confidence": 0.45,
+      "notes": "La frase modelos hasta 2022 no autoriza inventar un inicio de rango ni aplicar un filtro a motores desconocidos.",
+      "parts": [],
+      "reason": "Faltan años, motor/norma y aplicabilidad OEM por generación."
+    },
+    {
+      "marca": "Mahindra",
+      "modelo": "XUV500",
+      "alias": ["XUV 500"],
+      "años": [],
+      "motorVersion": "Versiones y combustible anteriores a 2022 no identificados por la fuente chilena localizada.",
+      "prioridadChile": "alta",
+      "evidencia": [
+        {"sourceId": "mahindra-cl-terms-postventa", "detail": "Mahindra Chile incluye XUV500 modelos hasta 2022 y cita filtro 0303BC0071N, sin motor, año inicial ni tracción."}
+      ],
+      "confidence": 0.45,
+      "notes": "No extender la candidatura 2022 de block-7 a años anteriores ni a XUV700 por similitud de nombre.",
+      "parts": [],
+      "reason": "Faltan años, motor/norma y aplicabilidad OEM por generación."
+    },
+    {
+      "marca": "Foton",
+      "modelo": "TM3",
+      "alias": ["TM3 Más", "TM3 MAS"],
+      "años": [2024, 2026],
+      "motorVersion": "DAM16KR, 1.6 gasolina, 114 hp, inyección multipunto, Euro VI; cabina simple, doble, Cargo Box y Cargo Box Ref.",
+      "prioridadChile": "alta",
+      "evidencia": [
+        {"sourceId": "cidef-tm3-2024", "detail": "Ficha 2024 identifica DAM16KR 1.6, 114 hp y Euro VI."},
+        {"sourceId": "cidef-tm3-2026", "detail": "Ficha 2026 mantiene DAM16KR 1.6, 114 hp y Euro VI."}
+      ],
+      "confidence": 0.78,
+      "notes": "La continuidad de la configuración está documentada para los dos años de ficha, pero no se localizó un catálogo OEM que relacione partes al DAM16KR chileno.",
+      "parts": [],
+      "reason": "Sin referencias OEM publicadas con aplicabilidad a TM3 DAM16KR."
+    },
+    {
+      "marca": "Foton",
+      "modelo": "TM5",
+      "alias": ["TM5 Más", "TM5 MAS", "TM5 doble rodado"],
+      "años": [2024],
+      "motorVersion": "DAM16KL, 1.6 gasolina, 114 hp, inyección multipunto, Euro VI; cabina simple, doble y Cargo Box.",
+      "prioridadChile": "alta",
+      "evidencia": [
+        {"sourceId": "cidef-tm5-2024", "detail": "Ficha chilena 2024 identifica DAM16KL 1.6, 114 hp y Euro VI para TM5 doble rodado."}
+      ],
+      "confidence": 0.75,
+      "notes": "No intercambiar piezas con TM3: comparte cilindrada pero la documentación chilena declara otro código de motor.",
+      "parts": [],
+      "reason": "Sin referencias OEM publicadas con aplicabilidad a TM5 DAM16KL."
+    },
+    {
+      "marca": "Foton",
+      "modelo": "Midi",
+      "alias": ["MIDI", "Midi Pick-Up", "Midi Cabina Simple"],
+      "años": [2026],
+      "motorVersion": "Configuración chilena 2026 acreditada; el código de motor debe extraerse desde la ficha o EPC antes de vincular repuestos.",
+      "prioridadChile": "media-alta",
+      "evidencia": [
+        {"sourceId": "cidef-midi-2026", "detail": "Ficha oficial del importador acredita la oferta Foton Midi 2026 en Chile."}
+      ],
+      "confidence": 0.4,
+      "notes": "No se infiere equivalencia con TM3 ni TM5 por categoría comercial.",
+      "parts": [],
+      "reason": "Faltan código de motor y referencias OEM con aplicabilidad verificable."
+    },
+    {
+      "marca": "Foton",
+      "modelo": "Tunland G7",
+      "alias": ["G7", "Foton G7", "Tunland G7"],
+      "años": [2024],
+      "motorVersion": "4F20TC2, 2.0 turbodiésel common rail Euro 6; 160 hp; versiones 4x2/4x4, MT y AT.",
+      "prioridadChile": "alta",
+      "evidencia": [
+        {"sourceId": "cidef-g7-2024", "detail": "Ficha chilena identifica la G7 2024, motor 4F20TC/4F20TC2 2.0 diésel Euro 6 y variantes de tracción/transmisión."}
+      ],
+      "confidence": 0.85,
+      "notes": "No se duplica el candidato: las cuatro referencias OEM candidatas de filtro/correa ya están documentadas en block-9 y requieren VIN.",
+      "parts": [],
+      "reason": "Cobertura de investigación existente en block-9; este bloque no agrega una nueva referencia verificable."
+    }
+  ]
+}
