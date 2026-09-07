@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -8,112 +8,60 @@
   <title>Convenio Easy - Clinica Dental Santa Laura</title>
   <link rel="stylesheet" href="css/styles.css" />
   <style>
-    /* Estilos especificos de la tabla de aranceles */
     .tabla-section { margin-bottom: 1.25rem; }
-
     .tabla-section h3 {
-      font-size: 0.95rem;
-      color: var(--color-primary);
-      font-weight: 700;
-      margin-bottom: 0.6rem;
-      padding: 0.4rem 0.75rem;
-      background: var(--color-secondary);
-      border-radius: 6px;
+      font-size: 0.95rem; color: var(--color-primary); font-weight: 700;
+      margin-bottom: 0.6rem; padding: 0.4rem 0.75rem;
+      background: var(--color-secondary); border-radius: 6px;
       border-left: 4px solid var(--color-celeste);
     }
-
     .tabla-aranceles {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.855rem;
-      margin-bottom: 0.5rem;
+      width: 100%; border-collapse: collapse; font-size: 0.855rem; margin-bottom: 0.5rem;
     }
-
     .tabla-aranceles thead th {
-      background: var(--color-primary);
-      color: var(--color-white);
-      padding: 0.55rem 0.75rem;
-      text-align: left;
-      font-weight: 600;
-      font-size: 0.8rem;
+      background: var(--color-primary); color: var(--color-white);
+      padding: 0.55rem 0.75rem; text-align: left; font-weight: 600; font-size: 0.8rem;
     }
-
     .tabla-aranceles thead th:nth-child(2),
     .tabla-aranceles thead th:nth-child(3),
-    .tabla-aranceles thead th:nth-child(4) {
-      text-align: right;
-    }
-
-    .tabla-aranceles tbody tr:nth-child(even) {
-      background: var(--color-secondary);
-    }
-
-    .tabla-aranceles tbody tr:hover {
-      background: #e0f0fa;
-    }
-
+    .tabla-aranceles thead th:nth-child(4) { text-align: right; }
+    .tabla-aranceles tbody tr:nth-child(even) { background: var(--color-secondary); }
+    .tabla-aranceles tbody tr:hover { background: #e0f0fa; }
     .tabla-aranceles tbody td {
-      padding: 0.5rem 0.75rem;
-      color: var(--color-text);
-      border-bottom: 1px solid var(--color-border);
+      padding: 0.5rem 0.75rem; color: var(--color-text); border-bottom: 1px solid var(--color-border);
     }
-
     .tabla-aranceles tbody td:nth-child(2),
     .tabla-aranceles tbody td:nth-child(3),
-    .tabla-aranceles tbody td:nth-child(4) {
-      text-align: right;
-      white-space: nowrap;
-    }
-
-    .precio-descuento {
-      color: var(--color-primary);
-      font-weight: 700;
-    }
-
+    .tabla-aranceles tbody td:nth-child(4) { text-align: right; white-space: nowrap; }
+    .precio-descuento { color: var(--color-primary); font-weight: 700; }
     .descuento-badge {
-      display: inline-block;
-      background: #dcf0fb;
-      color: var(--color-primary);
-      font-size: 0.78rem;
-      font-weight: 600;
-      padding: 0.1rem 0.35rem;
-      border-radius: 4px;
+      display: inline-block; background: #dcf0fb; color: var(--color-primary);
+      font-size: 0.78rem; font-weight: 600; padding: 0.1rem 0.35rem; border-radius: 4px;
     }
-
-    .nota-laboratorio {
-      font-size: 0.82rem;
-      color: var(--color-text-soft);
-      font-style: italic;
-      margin-top: 0.4rem;
-    }
-
+    .nota-laboratorio { font-size: 0.82rem; color: var(--color-text-soft); font-style: italic; margin-top: 0.4rem; }
     .gratuito-badge {
-      display: inline-block;
-      background: #d4f5e2;
-      color: #1a7a3c;
-      font-size: 0.82rem;
-      font-weight: 700;
-      padding: 0.2rem 0.6rem;
-      border-radius: 20px;
+      display: inline-block; background: #d4f5e2; color: #1a7a3c;
+      font-size: 0.82rem; font-weight: 700; padding: 0.2rem 0.6rem; border-radius: 20px;
     }
-
-    /* Tabla responsive: scroll horizontal en movil */
-    .tabla-scroll {
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      border-radius: 8px;
+    .tabla-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 8px; }
+    .btn-descarga {
+      display: inline-block; background: var(--color-celeste); color: var(--color-white);
+      text-decoration: none; font-size: 0.95rem; font-weight: 700;
+      padding: 0.75rem 2rem; border-radius: 50px;
+      transition: background 0.2s, transform 0.15s;
+      box-shadow: 0 4px 14px rgba(42,178,219,0.30);
     }
-
+    .btn-descarga:hover, .btn-descarga:focus {
+      background: #1e90b8; transform: translateY(-2px); outline: none;
+    }
     @media (max-width: 500px) {
       .tabla-aranceles { font-size: 0.78rem; }
-      .tabla-aranceles tbody td,
-      .tabla-aranceles thead th { padding: 0.4rem 0.5rem; }
+      .tabla-aranceles tbody td, .tabla-aranceles thead th { padding: 0.4rem 0.5rem; }
     }
   </style>
 </head>
 <body class="convenio-page">
 
-  <!-- HEADER -->
   <header class="site-header" role="banner">
     <div class="container">
       <div class="logo-area">
@@ -126,11 +74,9 @@
     </div>
   </header>
 
-  <!-- CONTENIDO PRINCIPAL -->
   <main>
     <div class="container">
 
-      <!-- INTRO CONVENIO -->
       <section class="convenio-hero" aria-labelledby="titulo-convenio">
         <h1 id="titulo-convenio">Convenio Easy &times; Clinica Dental Santa Laura</h1>
         <p class="subtitle">
@@ -139,7 +85,6 @@
         </p>
       </section>
 
-      <!-- EVALUACION INICIAL -->
       <section class="card text-center" style="border-top: 4px solid #2AB2DB; padding: 1.5rem;">
         <div class="gratuito-badge" style="font-size:1rem; padding: 0.35rem 1rem;">
           Evaluacion inicial sin costo
@@ -149,229 +94,90 @@
         </p>
       </section>
 
-      <!-- TABLA DE ARANCELES -->
       <section class="card" aria-labelledby="titulo-aranceles">
         <h2 id="titulo-aranceles">
           <span aria-hidden="true">&#128181;</span> Aranceles con Descuento
         </h2>
 
-        <!-- Prestaciones generales -->
         <div class="tabla-section">
           <h3>Prestaciones Generales</h3>
           <div class="tabla-scroll">
             <table class="tabla-aranceles">
-              <thead>
-                <tr>
-                  <th>Prestacion</th>
-                  <th>Valor Normal</th>
-                  <th>Dcto.</th>
-                  <th>Tu precio</th>
-                </tr>
-              </thead>
+              <thead><tr><th>Prestacion</th><th>Valor Normal</th><th>Dcto.</th><th>Tu precio</th></tr></thead>
               <tbody>
-                <tr>
-                  <td>Destartraje supragingival por sesion</td>
-                  <td><s>$38.000</s></td>
-                  <td><span class="descuento-badge">34%</span></td>
-                  <td class="precio-descuento">$25.000</td>
-                </tr>
-                <tr>
-                  <td>Restauracion Simple</td>
-                  <td><s>$38.000</s></td>
-                  <td><span class="descuento-badge">20%</span></td>
-                  <td class="precio-descuento">$30.400</td>
-                </tr>
-                <tr>
-                  <td>Restauracion Compuesta</td>
-                  <td><s>$40.000</s></td>
-                  <td><span class="descuento-badge">20%</span></td>
-                  <td class="precio-descuento">$32.000</td>
-                </tr>
-                <tr>
-                  <td>Restauracion Compleja</td>
-                  <td><s>$45.000</s></td>
-                  <td><span class="descuento-badge">20%</span></td>
-                  <td class="precio-descuento">$36.000</td>
-                </tr>
-                <tr>
-                  <td>Restauracion cervical</td>
-                  <td><s>$28.000</s></td>
-                  <td><span class="descuento-badge">15%</span></td>
-                  <td class="precio-descuento">$23.800</td>
-                </tr>
-                <tr>
-                  <td>Fluor</td>
-                  <td><s>$30.000</s></td>
-                  <td><span class="descuento-badge">20%</span></td>
-                  <td class="precio-descuento">$24.000</td>
-                </tr>
-                <tr>
-                  <td>Blanqueamiento laser en consulta</td>
-                  <td><s>$150.000</s></td>
-                  <td><span class="descuento-badge">40%</span></td>
-                  <td class="precio-descuento">$90.000</td>
-                </tr>
-                <tr>
-                  <td>Sellante pieza permanente</td>
-                  <td><s>$20.000</s></td>
-                  <td><span class="descuento-badge">20%</span></td>
-                  <td class="precio-descuento">$16.000</td>
-                </tr>
-                <tr>
-                  <td>Exodoncia Simple</td>
-                  <td><s>$42.000</s></td>
-                  <td><span class="descuento-badge">15%</span></td>
-                  <td class="precio-descuento">$35.700</td>
-                </tr>
+                <tr><td>Destartraje supragingival por sesion</td><td><s>$38.000</s></td><td><span class="descuento-badge">34%</span></td><td class="precio-descuento">$25.000</td></tr>
+                <tr><td>Restauracion Simple</td><td><s>$38.000</s></td><td><span class="descuento-badge">20%</span></td><td class="precio-descuento">$30.400</td></tr>
+                <tr><td>Restauracion Compuesta</td><td><s>$40.000</s></td><td><span class="descuento-badge">20%</span></td><td class="precio-descuento">$32.000</td></tr>
+                <tr><td>Restauracion Compleja</td><td><s>$45.000</s></td><td><span class="descuento-badge">20%</span></td><td class="precio-descuento">$36.000</td></tr>
+                <tr><td>Restauracion cervical</td><td><s>$28.000</s></td><td><span class="descuento-badge">15%</span></td><td class="precio-descuento">$23.800</td></tr>
+                <tr><td>Fluor</td><td><s>$30.000</s></td><td><span class="descuento-badge">20%</span></td><td class="precio-descuento">$24.000</td></tr>
+                <tr><td>Blanqueamiento laser en consulta</td><td><s>$150.000</s></td><td><span class="descuento-badge">40%</span></td><td class="precio-descuento">$90.000</td></tr>
+                <tr><td>Sellante pieza permanente</td><td><s>$20.000</s></td><td><span class="descuento-badge">20%</span></td><td class="precio-descuento">$16.000</td></tr>
+                <tr><td>Exodoncia Simple</td><td><s>$42.000</s></td><td><span class="descuento-badge">15%</span></td><td class="precio-descuento">$35.700</td></tr>
               </tbody>
             </table>
           </div>
         </div>
 
-        <!-- Ortodoncia -->
         <div class="tabla-section">
           <h3>Instalacion de Ortodoncia (ambas arcadas)</h3>
           <div class="tabla-scroll">
             <table class="tabla-aranceles">
-              <thead>
-                <tr>
-                  <th>Prestacion</th>
-                  <th>Valor Normal</th>
-                  <th>Dcto.</th>
-                  <th>Tu precio</th>
-                </tr>
-              </thead>
+              <thead><tr><th>Prestacion</th><th>Valor Normal</th><th>Dcto.</th><th>Tu precio</th></tr></thead>
               <tbody>
-                <tr>
-                  <td>Instalacion ortodoncia</td>
-                  <td><s>$180.000</s></td>
-                  <td><span class="descuento-badge">44%</span></td>
-                  <td class="precio-descuento">$100.000</td>
-                </tr>
+                <tr><td>Instalacion ortodoncia</td><td><s>$180.000</s></td><td><span class="descuento-badge">44%</span></td><td class="precio-descuento">$100.000</td></tr>
               </tbody>
             </table>
           </div>
         </div>
 
-        <!-- Protesis parcial acrilica -->
         <div class="tabla-section">
           <h3>Protesis Parcial Acrilica (superior o inferior)</h3>
           <div class="tabla-scroll">
             <table class="tabla-aranceles">
-              <thead>
-                <tr>
-                  <th>Prestacion</th>
-                  <th>Valor Normal</th>
-                  <th>Dcto.</th>
-                  <th>Tu precio</th>
-                </tr>
-              </thead>
+              <thead><tr><th>Prestacion</th><th>Valor Normal</th><th>Dcto.</th><th>Tu precio</th></tr></thead>
               <tbody>
-                <tr>
-                  <td>Protesis Parcial Acrilica</td>
-                  <td><s>$145.000</s></td>
-                  <td><span class="descuento-badge">20%</span></td>
-                  <td class="precio-descuento">$116.000</td>
-                </tr>
-                <tr>
-                  <td>Protesis parcial Acrilica Laboratorio</td>
-                  <td>$65.000</td>
-                  <td>&#8212;</td>
-                  <td>$65.000</td>
-                </tr>
+                <tr><td>Protesis Parcial Acrilica</td><td><s>$145.000</s></td><td><span class="descuento-badge">20%</span></td><td class="precio-descuento">$116.000</td></tr>
+                <tr><td>Protesis parcial Acrilica Laboratorio</td><td>$65.000</td><td>&#8212;</td><td>$65.000</td></tr>
               </tbody>
             </table>
           </div>
         </div>
 
-        <!-- Protesis parcial base metalica -->
         <div class="tabla-section">
           <h3>Protesis Parcial Base Metalica</h3>
           <div class="tabla-scroll">
             <table class="tabla-aranceles">
-              <thead>
-                <tr>
-                  <th>Prestacion</th>
-                  <th>Valor Normal</th>
-                  <th>Dcto.</th>
-                  <th>Tu precio</th>
-                </tr>
-              </thead>
+              <thead><tr><th>Prestacion</th><th>Valor Normal</th><th>Dcto.</th><th>Tu precio</th></tr></thead>
               <tbody>
-                <tr>
-                  <td>Protesis parcial base metalica</td>
-                  <td><s>$215.000</s></td>
-                  <td><span class="descuento-badge">20%</span></td>
-                  <td class="precio-descuento">$172.000</td>
-                </tr>
-                <tr>
-                  <td>Base metalica laboratorio</td>
-                  <td>$130.000</td>
-                  <td>&#8212;</td>
-                  <td>$130.000</td>
-                </tr>
+                <tr><td>Protesis parcial base metalica</td><td><s>$215.000</s></td><td><span class="descuento-badge">20%</span></td><td class="precio-descuento">$172.000</td></tr>
+                <tr><td>Base metalica laboratorio</td><td>$130.000</td><td>&#8212;</td><td>$130.000</td></tr>
               </tbody>
             </table>
           </div>
         </div>
 
-        <!-- Protesis total superior -->
         <div class="tabla-section">
           <h3>Protesis Total Acrilica Superior</h3>
           <div class="tabla-scroll">
             <table class="tabla-aranceles">
-              <thead>
-                <tr>
-                  <th>Prestacion</th>
-                  <th>Valor Normal</th>
-                  <th>Dcto.</th>
-                  <th>Tu precio</th>
-                </tr>
-              </thead>
+              <thead><tr><th>Prestacion</th><th>Valor Normal</th><th>Dcto.</th><th>Tu precio</th></tr></thead>
               <tbody>
-                <tr>
-                  <td>Protesis total acrilica superior</td>
-                  <td><s>$215.000</s></td>
-                  <td><span class="descuento-badge">20%</span></td>
-                  <td class="precio-descuento">$172.000</td>
-                </tr>
-                <tr>
-                  <td>Protesis total acrilica con cubeta laboratorio</td>
-                  <td>$70.000</td>
-                  <td>&#8212;</td>
-                  <td>$70.000</td>
-                </tr>
+                <tr><td>Protesis total acrilica superior</td><td><s>$215.000</s></td><td><span class="descuento-badge">20%</span></td><td class="precio-descuento">$172.000</td></tr>
+                <tr><td>Protesis total acrilica con cubeta laboratorio</td><td>$70.000</td><td>&#8212;</td><td>$70.000</td></tr>
               </tbody>
             </table>
           </div>
         </div>
 
-        <!-- Protesis total inferior -->
         <div class="tabla-section">
           <h3>Protesis Total Acrilica Inferior</h3>
           <div class="tabla-scroll">
             <table class="tabla-aranceles">
-              <thead>
-                <tr>
-                  <th>Prestacion</th>
-                  <th>Valor Normal</th>
-                  <th>Dcto.</th>
-                  <th>Tu precio</th>
-                </tr>
-              </thead>
+              <thead><tr><th>Prestacion</th><th>Valor Normal</th><th>Dcto.</th><th>Tu precio</th></tr></thead>
               <tbody>
-                <tr>
-                  <td>Protesis total acrilica inferior</td>
-                  <td><s>$200.000</s></td>
-                  <td><span class="descuento-badge">20%</span></td>
-                  <td class="precio-descuento">$160.000</td>
-                </tr>
-                <tr>
-                  <td>Protesis total acrilica laboratorio</td>
-                  <td>$65.000</td>
-                  <td>&#8212;</td>
-                  <td>$65.000</td>
-                </tr>
+                <tr><td>Protesis total acrilica inferior</td><td><s>$200.000</s></td><td><span class="descuento-badge">20%</span></td><td class="precio-descuento">$160.000</td></tr>
+                <tr><td>Protesis total acrilica laboratorio</td><td>$65.000</td><td>&#8212;</td><td>$65.000</td></tr>
               </tbody>
             </table>
           </div>
@@ -380,7 +186,6 @@
         <p class="nota-laboratorio">* En aranceles de laboratorio no se aplica descuento.</p>
       </section>
 
-      <!-- PROCEDIMIENTO DE ATENCION -->
       <section class="card" aria-labelledby="titulo-atencion">
         <h2 id="titulo-atencion">
           <span aria-hidden="true">&#128196;</span> Como acceder al convenio
@@ -392,7 +197,6 @@
         </ul>
       </section>
 
-      <!-- FORMAS DE PAGO -->
       <section class="card" aria-labelledby="titulo-pago">
         <h2 id="titulo-pago">
           <span aria-hidden="true">&#128179;</span> Formas de Pago
@@ -404,7 +208,6 @@
         </ul>
       </section>
 
-      <!-- HORARIOS Y CONTACTO -->
       <section class="card" aria-labelledby="titulo-contacto">
         <h2 id="titulo-contacto">
           <span aria-hidden="true">&#128205;</span> Horario y Contacto &mdash; Villarrica
@@ -412,13 +215,11 @@
         <div class="contact-grid">
           <div class="contact-item">
             <strong>Lunes a Jueves</strong>
-            10:00 - 13:00 hrs<br>
-            15:00 - 18:30 hrs
+            10:00 - 13:00 hrs<br>15:00 - 18:30 hrs
           </div>
           <div class="contact-item">
             <strong>Viernes</strong>
-            09:00 - 13:30 hrs<br>
-            15:00 - 17:30 hrs
+            09:00 - 13:30 hrs<br>15:00 - 17:30 hrs
           </div>
           <div class="contact-item">
             <strong>Sabado</strong>
@@ -439,7 +240,22 @@
         </div>
       </section>
 
-      <!-- CTA AGENDAMIENTO -->
+      <section class="card" aria-labelledby="titulo-descarga" style="text-align:center; border-top: 4px solid var(--color-celeste);">
+        <h2 id="titulo-descarga" style="justify-content:center;">
+          <span aria-hidden="true">&#128196;</span> Documento del Convenio
+        </h2>
+        <p style="margin-bottom:1.25rem; font-size:0.9rem;">
+          Consulta o descarga el documento oficial del convenio Easy &times; Clinica Dental Santa Laura.
+        </p>
+        <a href="https://docs.google.com/document/d/1v1zXtJcRKxotNYmNzoi_sVqiNCk9YcN3/edit?usp=sharing"
+           class="btn-descarga"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Ver documento completo del convenio en Google Docs">
+          &#128196; Ver documento completo
+        </a>
+      </section>
+
       <section class="cta-section" aria-labelledby="titulo-cta">
         <h2 id="titulo-cta">Listo para agendar tu hora?</h2>
         <p>Reserva tu cita online en segundos. Tu evaluacion inicial es sin costo.</p>
@@ -455,7 +271,6 @@
     </div>
   </main>
 
-  <!-- FOOTER -->
   <footer class="site-footer" role="contentinfo">
     <div class="container">
       <p>Clinica Dental Santa Laura &mdash; Villarrica &mdash; Tel: 45 2726 371</p>
@@ -465,5 +280,3 @@
 
 </body>
 </html>
-
-
