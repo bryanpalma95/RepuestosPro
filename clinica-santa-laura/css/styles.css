@@ -1,0 +1,348 @@
+﻿/* ============================================
+   Clinica Dental Santa Laura
+   Proyecto: Flyer QR + Pagina de Convenio
+   Paleta: identidad oficial www.clinicasantalaura.cl
+   ============================================ */
+
+/* --- Reset & Base --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Paleta oficial Clinica Dental Santa Laura */
+  --color-primary:      #0B73B3;   /* Azul principal: botones, titulos */
+  --color-primary-dark: #085a8d;   /* Azul oscuro: hover */
+  --color-celeste:      #2AB2DB;   /* Celeste corporativo: iconos, detalles */
+  --color-accent:       #2FC1FF;   /* Celeste brillante: acento visual */
+  --color-interactive:  #08ACF2;   /* Azul cielo: enlaces, interactivos */
+  --color-secondary:    #F3F6F6;   /* Gris muy claro: fondos alternativos */
+  --color-text:         #101218;   /* Negro azulado: texto principal */
+  --color-text-light:   #4C5253;   /* Gris oscuro: texto secundario */
+  --color-text-soft:    #7A7A7A;   /* Gris medio: descripciones suaves */
+  --color-white:        #FFFFFF;
+  --color-border:       #cce3f4;   /* Azul muy claro: bordes */
+
+  --font-base: 'Segoe UI', Arial, sans-serif;
+  --radius:    10px;
+  --shadow:    0 4px 18px rgba(11,115,179,0.10);
+}
+
+body {
+  font-family: var(--font-base);
+  color: var(--color-text);
+  background: var(--color-secondary);
+  min-height: 100vh;
+  line-height: 1.65;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* --- Header compartido --- */
+.site-header {
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: 1.25rem 0;
+  text-align: center;
+}
+
+.site-header .logo-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* Reemplazar por <img src="img/logo.png"> cuando llegue el logo oficial */
+.logo-placeholder {
+  width: 50px;
+  height: 50px;
+  background: rgba(255,255,255,0.18);
+  border: 2px solid rgba(255,255,255,0.4);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--color-white);
+}
+
+.site-header .clinic-name {
+  font-size: 1.45rem;
+  font-weight: 700;
+}
+
+.site-header .clinic-tagline {
+  font-size: 0.82rem;
+  opacity: 0.85;
+  margin-top: 0.2rem;
+}
+
+/* --- Pagina Convenio --- */
+.convenio-page main {
+  padding: 2rem 0 3.5rem;
+}
+
+.convenio-hero {
+  background: var(--color-white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.75rem;
+  margin-bottom: 1.25rem;
+  border-left: 5px solid var(--color-primary);
+}
+
+.convenio-hero h1 {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  margin-bottom: 0.4rem;
+}
+
+.convenio-hero .subtitle {
+  color: var(--color-text-light);
+  font-size: 0.92rem;
+}
+
+/* Card generica de seccion */
+.card {
+  background: var(--color-white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.6rem 1.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.card h2 {
+  font-size: 1.1rem;
+  color: var(--color-primary);
+  margin-bottom: 0.9rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 2px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+/* Lista de beneficios */
+.benefits-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.benefits-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.94rem;
+  color: var(--color-text);
+}
+
+.benefits-list li::before {
+  content: "\2714";
+  color: var(--color-celeste);
+  font-weight: 900;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.card p, .card li {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  margin-bottom: 0.35rem;
+}
+
+.card ul { padding-left: 1.2rem; }
+
+/* Grid de contacto */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.contact-item {
+  background: var(--color-secondary);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 0.88rem;
+  color: var(--color-text);
+}
+
+.contact-item strong {
+  display: block;
+  color: var(--color-primary);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.15rem;
+}
+
+/* --- CTA Agendamiento --- */
+.cta-section {
+  background: var(--color-white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2rem 1.75rem;
+  text-align: center;
+  border-top: 4px solid var(--color-primary);
+  margin-bottom: 1.25rem;
+}
+
+.cta-section h2 {
+  font-size: 1.25rem;
+  color: var(--color-text);
+  margin-bottom: 0.4rem;
+}
+
+.cta-section p {
+  color: var(--color-text-light);
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+
+.btn-agendar {
+  display: inline-block;
+  background: var(--color-primary);
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 700;
+  padding: 0.85rem 2.25rem;
+  border-radius: 50px;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 4px 14px rgba(11,115,179,0.32);
+}
+
+.btn-agendar:hover, .btn-agendar:focus {
+  background: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(8,90,141,0.38);
+  outline: none;
+}
+
+.btn-agendar:active { transform: translateY(0); }
+
+/* --- Footer --- */
+.site-footer {
+  text-align: center;
+  font-size: 0.79rem;
+  color: var(--color-text-soft);
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--color-border);
+  background: var(--color-white);
+}
+
+/* --- Flyer --- */
+.flyer-page {
+  background: var(--color-secondary);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.flyer-card {
+  background: var(--color-white);
+  border-radius: 18px;
+  box-shadow: 0 8px 40px rgba(11,115,179,0.16);
+  max-width: 460px;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Header con degradado azul corporativo */
+.flyer-header {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-celeste) 100%);
+  color: var(--color-white);
+  padding: 2rem 1.5rem 1.75rem;
+}
+
+.flyer-header .logo-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.flyer-header .clinic-name {
+  font-size: 1.65rem;
+  font-weight: 800;
+}
+
+.flyer-header .clinic-sub {
+  font-size: 0.88rem;
+  opacity: 0.9;
+  margin-top: 0.2rem;
+}
+
+.flyer-body {
+  padding: 1.75rem 2rem 1.5rem;
+}
+
+.flyer-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0.35rem;
+}
+
+.flyer-desc {
+  font-size: 0.88rem;
+  color: var(--color-text-light);
+  margin-bottom: 1.6rem;
+  line-height: 1.5;
+}
+
+.qr-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-secondary);
+  border: 3px solid var(--color-primary);
+  border-radius: 14px;
+  padding: 1rem;
+  margin-bottom: 0.9rem;
+}
+
+.qr-wrapper canvas, .qr-wrapper img {
+  display: block;
+  width: 180px;
+  height: 180px;
+}
+
+.qr-instruction {
+  font-size: 0.83rem;
+  color: var(--color-text-light);
+  margin-bottom: 1.5rem;
+}
+
+.qr-instruction strong { color: var(--color-primary); }
+
+.flyer-footer {
+  background: var(--color-secondary);
+  padding: 0.9rem 1.5rem;
+  font-size: 0.78rem;
+  color: var(--color-text-soft);
+  border-top: 1px solid var(--color-border);
+}
+
+/* --- Responsive --- */
+@media (max-width: 500px) {
+  .convenio-hero h1 { font-size: 1.25rem; }
+  .btn-agendar { font-size: 0.95rem; padding: 0.75rem 1.75rem; }
+  .flyer-header .clinic-name { font-size: 1.35rem; }
+  .card { padding: 1.25rem; }
+}
