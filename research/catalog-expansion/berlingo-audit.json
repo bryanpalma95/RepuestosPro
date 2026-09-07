@@ -1,0 +1,870 @@
+{
+  "generatedAt": "2026-09-07T12:06:32.488Z",
+  "subject": "Citroën Berlingo incorrectly duplicated under Peugeot",
+  "source": {
+    "brand": "Peugeot",
+    "models": [
+      "Berlingo",
+      "Citroen Berlingo"
+    ]
+  },
+  "summary": {
+    "years": 13,
+    "recordsInspected": 26,
+    "blockedYears": [
+      "2014",
+      "2015",
+      "2016",
+      "2017",
+      "2018",
+      "2019",
+      "2020",
+      "2021",
+      "2022",
+      "2023",
+      "2024",
+      "2025",
+      "2026"
+    ],
+    "automaticMigrationAllowed": false
+  },
+  "requiredEvidence": [
+    "VIN de cada unidad o lote de unidades.",
+    "Consulta EPC Stellantis o concesionario autorizado que vincule VIN, motor y referencia OEM.",
+    "Regla de reconciliación aprobada para artículos contradictorios antes de crear una ficha Citroën Berlingo canónica."
+  ],
+  "records": [
+    {
+      "year": "2014",
+      "variants": [
+        {
+          "sourceModel": "Berlingo",
+          "key": "peugeot-berlingo-2014",
+          "presentInNavigation": true,
+          "vehicleFound": true,
+          "info": "1.6D DV6 HDi / 1.5D DV5 BlueHDi / 2.0D BlueHDi",
+          "partCount": 17,
+          "partSignatures": [
+            "{\"category\":\"Aceite\",\"references\":[{\"r\":\"5W-30 diesel (PSA B71 2290)\",\"s\":\"confirmed\"}],\"details\":\"furgon 1.6 HDi | HDi diesel\"}",
+            "{\"category\":\"Alternador\",\"references\":[{\"r\":\"Verificar OEM/amperaje\",\"s\":\"verify\"}],\"details\":\"Verificar OEM/amperaje HDi\"}",
+            "{\"category\":\"Bateria\",\"references\":[{\"r\":\"12V 70-80Ah CCA 640-720A\",\"s\":\"confirmed\"}],\"details\":\"CCA 640-720A | diesel/comercial\"}",
+            "{\"category\":\"Bomba Agua\",\"references\":[{\"r\":\"Verificar OEM (bomba agua HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Disco Del.\",\"references\":[{\"r\":\"Verificar OEM (diametro)\",\"s\":\"verify\"}],\"details\":\"Verificar diametro por modelo\"}",
+            "{\"category\":\"Filtro Aceite\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi 1.6/2.0 — verificar por motor\"}",
+            "{\"category\":\"Filtro Aire\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi diesel — verificar por motor\"}",
+            "{\"category\":\"Filtro Cabina\",\"references\":[{\"r\":\"Verificar OEM (filtro cabina)\",\"s\":\"verify\"}],\"details\":\"Verificar por modelo/ano\"}",
+            "{\"category\":\"Filtro Combustible\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi common-rail — verificar por motor\"}",
+            "{\"category\":\"Liquido Frenos\",\"references\":[{\"r\":\"DOT4 (PSA)\",\"s\":\"confirmed\"}],\"details\":\"Sistema hidraulico\"}",
+            "{\"category\":\"Neumatico\",\"references\":[{\"r\":\"195/65 R15\",\"s\":\"confirmed\"}],\"details\":\"Segun version/modelo\"}",
+            "{\"category\":\"Pastillas Del.\",\"references\":[{\"r\":\"Verificar OEM por modelo/ano\",\"s\":\"verify\"}],\"details\":\"Comercial/SUV — verificar por modelo\"}",
+            "{\"category\":\"Pastillas Tras.\",\"references\":[{\"r\":\"Verificar OEM (disco/tambor)\",\"s\":\"verify\"}],\"details\":\"Disco o tambor segun version\"}",
+            "{\"category\":\"Sensor Arbol Levas\",\"references\":[{\"r\":\"Verificar OEM (CMP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor Cigueñal\",\"references\":[{\"r\":\"Verificar OEM (CKP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor MAP/MAF\",\"references\":[{\"r\":\"Verificar OEM (MAF/MAP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi turbo — verificar OEM\"}",
+            "{\"category\":\"Termostato\",\"references\":[{\"r\":\"Verificar OEM (termostato HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}"
+          ]
+        },
+        {
+          "sourceModel": "Citroen Berlingo",
+          "key": "peugeot-citroen-berlingo-2014",
+          "presentInNavigation": true,
+          "vehicleFound": true,
+          "info": "1.0/1.2T PureTech (EB2)",
+          "partCount": 17,
+          "partSignatures": [
+            "{\"category\":\"Aceite\",\"references\":[{\"r\":\"5W-30 diesel (PSA B71 2290)\",\"s\":\"confirmed\"}],\"details\":\"furgon 1.6 HDi (Citroen) | HDi diesel\"}",
+            "{\"category\":\"Alternador\",\"references\":[{\"r\":\"Verificar OEM/amperaje\",\"s\":\"verify\"}],\"details\":\"Verificar OEM/amperaje HDi\"}",
+            "{\"category\":\"Bateria\",\"references\":[{\"r\":\"12V 70-80Ah CCA 640-720A\",\"s\":\"confirmed\"}],\"details\":\"CCA 640-720A | diesel/comercial\"}",
+            "{\"category\":\"Bomba Agua\",\"references\":[{\"r\":\"Verificar OEM (bomba agua HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Disco Del.\",\"references\":[{\"r\":\"Verificar OEM (diametro)\",\"s\":\"verify\"}],\"details\":\"Verificar diametro por modelo\"}",
+            "{\"category\":\"Filtro Aceite\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi 1.6/2.0 — verificar por motor\"}",
+            "{\"category\":\"Filtro Aire\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi diesel — verificar por motor\"}",
+            "{\"category\":\"Filtro Cabina\",\"references\":[{\"r\":\"Verificar OEM (filtro cabina)\",\"s\":\"verify\"}],\"details\":\"Verificar por modelo/ano\"}",
+            "{\"category\":\"Filtro Combustible\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi common-rail — verificar por motor\"}",
+            "{\"category\":\"Liquido Frenos\",\"references\":[{\"r\":\"DOT4 (PSA)\",\"s\":\"confirmed\"}],\"details\":\"Sistema hidraulico\"}",
+            "{\"category\":\"Neumatico\",\"references\":[{\"r\":\"195/65 R15\",\"s\":\"confirmed\"}],\"details\":\"Segun version/modelo\"}",
+            "{\"category\":\"Pastillas Del.\",\"references\":[{\"r\":\"Verificar OEM por modelo/ano\",\"s\":\"verify\"}],\"details\":\"Comercial/SUV — verificar por modelo\"}",
+            "{\"category\":\"Pastillas Tras.\",\"references\":[{\"r\":\"Verificar OEM (disco/tambor)\",\"s\":\"verify\"}],\"details\":\"Disco o tambor segun version\"}",
+            "{\"category\":\"Sensor Arbol Levas\",\"references\":[{\"r\":\"Verificar OEM (CMP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor Cigueñal\",\"references\":[{\"r\":\"Verificar OEM (CKP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor MAP/MAF\",\"references\":[{\"r\":\"Verificar OEM (MAF/MAP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi turbo — verificar OEM\"}",
+            "{\"category\":\"Termostato\",\"references\":[{\"r\":\"Verificar OEM (termostato HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}"
+          ]
+        }
+      ],
+      "conflicts": [
+        "motor-or-version",
+        "part-content"
+      ],
+      "migration": "blocked"
+    },
+    {
+      "year": "2015",
+      "variants": [
+        {
+          "sourceModel": "Berlingo",
+          "key": "peugeot-berlingo-2015",
+          "presentInNavigation": true,
+          "vehicleFound": true,
+          "info": "1.6D DV6 HDi / 1.5D DV5 BlueHDi / 2.0D BlueHDi",
+          "partCount": 17,
+          "partSignatures": [
+            "{\"category\":\"Aceite\",\"references\":[{\"r\":\"5W-30 diesel (PSA B71 2290)\",\"s\":\"confirmed\"}],\"details\":\"furgon 1.6 HDi | HDi diesel\"}",
+            "{\"category\":\"Alternador\",\"references\":[{\"r\":\"Verificar OEM/amperaje\",\"s\":\"verify\"}],\"details\":\"Verificar OEM/amperaje HDi\"}",
+            "{\"category\":\"Bateria\",\"references\":[{\"r\":\"12V 70-80Ah CCA 640-720A\",\"s\":\"confirmed\"}],\"details\":\"CCA 640-720A | diesel/comercial\"}",
+            "{\"category\":\"Bomba Agua\",\"references\":[{\"r\":\"Verificar OEM (bomba agua HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Disco Del.\",\"references\":[{\"r\":\"Verificar OEM (diametro)\",\"s\":\"verify\"}],\"details\":\"Verificar diametro por modelo\"}",
+            "{\"category\":\"Filtro Aceite\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi 1.6/2.0 — verificar por motor\"}",
+            "{\"category\":\"Filtro Aire\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi diesel — verificar por motor\"}",
+            "{\"category\":\"Filtro Cabina\",\"references\":[{\"r\":\"Verificar OEM (filtro cabina)\",\"s\":\"verify\"}],\"details\":\"Verificar por modelo/ano\"}",
+            "{\"category\":\"Filtro Combustible\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi common-rail — verificar por motor\"}",
+            "{\"category\":\"Liquido Frenos\",\"references\":[{\"r\":\"DOT4 (PSA)\",\"s\":\"confirmed\"}],\"details\":\"Sistema hidraulico\"}",
+            "{\"category\":\"Neumatico\",\"references\":[{\"r\":\"195/65 R15\",\"s\":\"confirmed\"}],\"details\":\"Segun version/modelo\"}",
+            "{\"category\":\"Pastillas Del.\",\"references\":[{\"r\":\"Verificar OEM por modelo/ano\",\"s\":\"verify\"}],\"details\":\"Comercial/SUV — verificar por modelo\"}",
+            "{\"category\":\"Pastillas Tras.\",\"references\":[{\"r\":\"Verificar OEM (disco/tambor)\",\"s\":\"verify\"}],\"details\":\"Disco o tambor segun version\"}",
+            "{\"category\":\"Sensor Arbol Levas\",\"references\":[{\"r\":\"Verificar OEM (CMP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor Cigueñal\",\"references\":[{\"r\":\"Verificar OEM (CKP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor MAP/MAF\",\"references\":[{\"r\":\"Verificar OEM (MAF/MAP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi turbo — verificar OEM\"}",
+            "{\"category\":\"Termostato\",\"references\":[{\"r\":\"Verificar OEM (termostato HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}"
+          ]
+        },
+        {
+          "sourceModel": "Citroen Berlingo",
+          "key": "peugeot-citroen-berlingo-2015",
+          "presentInNavigation": true,
+          "vehicleFound": true,
+          "info": "1.0/1.2T PureTech (EB2)",
+          "partCount": 17,
+          "partSignatures": [
+            "{\"category\":\"Aceite\",\"references\":[{\"r\":\"5W-30 diesel (PSA B71 2290)\",\"s\":\"confirmed\"}],\"details\":\"furgon 1.6 HDi (Citroen) | HDi diesel\"}",
+            "{\"category\":\"Alternador\",\"references\":[{\"r\":\"Verificar OEM/amperaje\",\"s\":\"verify\"}],\"details\":\"Verificar OEM/amperaje HDi\"}",
+            "{\"category\":\"Bateria\",\"references\":[{\"r\":\"12V 70-80Ah CCA 640-720A\",\"s\":\"confirmed\"}],\"details\":\"CCA 640-720A | diesel/comercial\"}",
+            "{\"category\":\"Bomba Agua\",\"references\":[{\"r\":\"Verificar OEM (bomba agua HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Disco Del.\",\"references\":[{\"r\":\"Verificar OEM (diametro)\",\"s\":\"verify\"}],\"details\":\"Verificar diametro por modelo\"}",
+            "{\"category\":\"Filtro Aceite\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi 1.6/2.0 — verificar por motor\"}",
+            "{\"category\":\"Filtro Aire\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi diesel — verificar por motor\"}",
+            "{\"category\":\"Filtro Cabina\",\"references\":[{\"r\":\"Verificar OEM (filtro cabina)\",\"s\":\"verify\"}],\"details\":\"Verificar por modelo/ano\"}",
+            "{\"category\":\"Filtro Combustible\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi common-rail — verificar por motor\"}",
+            "{\"category\":\"Liquido Frenos\",\"references\":[{\"r\":\"DOT4 (PSA)\",\"s\":\"confirmed\"}],\"details\":\"Sistema hidraulico\"}",
+            "{\"category\":\"Neumatico\",\"references\":[{\"r\":\"195/65 R15\",\"s\":\"confirmed\"}],\"details\":\"Segun version/modelo\"}",
+            "{\"category\":\"Pastillas Del.\",\"references\":[{\"r\":\"Verificar OEM por modelo/ano\",\"s\":\"verify\"}],\"details\":\"Comercial/SUV — verificar por modelo\"}",
+            "{\"category\":\"Pastillas Tras.\",\"references\":[{\"r\":\"Verificar OEM (disco/tambor)\",\"s\":\"verify\"}],\"details\":\"Disco o tambor segun version\"}",
+            "{\"category\":\"Sensor Arbol Levas\",\"references\":[{\"r\":\"Verificar OEM (CMP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor Cigueñal\",\"references\":[{\"r\":\"Verificar OEM (CKP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor MAP/MAF\",\"references\":[{\"r\":\"Verificar OEM (MAF/MAP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi turbo — verificar OEM\"}",
+            "{\"category\":\"Termostato\",\"references\":[{\"r\":\"Verificar OEM (termostato HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}"
+          ]
+        }
+      ],
+      "conflicts": [
+        "motor-or-version",
+        "part-content"
+      ],
+      "migration": "blocked"
+    },
+    {
+      "year": "2016",
+      "variants": [
+        {
+          "sourceModel": "Berlingo",
+          "key": "peugeot-berlingo-2016",
+          "presentInNavigation": true,
+          "vehicleFound": true,
+          "info": "1.6D DV6 HDi / 1.5D DV5 BlueHDi / 2.0D BlueHDi",
+          "partCount": 17,
+          "partSignatures": [
+            "{\"category\":\"Aceite\",\"references\":[{\"r\":\"5W-30 diesel (PSA B71 2290)\",\"s\":\"confirmed\"}],\"details\":\"furgon 1.6 HDi | HDi diesel\"}",
+            "{\"category\":\"Alternador\",\"references\":[{\"r\":\"Verificar OEM/amperaje\",\"s\":\"verify\"}],\"details\":\"Verificar OEM/amperaje HDi\"}",
+            "{\"category\":\"Bateria\",\"references\":[{\"r\":\"12V 70-80Ah CCA 640-720A\",\"s\":\"confirmed\"}],\"details\":\"CCA 640-720A | diesel/comercial\"}",
+            "{\"category\":\"Bomba Agua\",\"references\":[{\"r\":\"Verificar OEM (bomba agua HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Disco Del.\",\"references\":[{\"r\":\"Verificar OEM (diametro)\",\"s\":\"verify\"}],\"details\":\"Verificar diametro por modelo\"}",
+            "{\"category\":\"Filtro Aceite\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi 1.6/2.0 — verificar por motor\"}",
+            "{\"category\":\"Filtro Aire\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi diesel — verificar por motor\"}",
+            "{\"category\":\"Filtro Cabina\",\"references\":[{\"r\":\"Verificar OEM (filtro cabina)\",\"s\":\"verify\"}],\"details\":\"Verificar por modelo/ano\"}",
+            "{\"category\":\"Filtro Combustible\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi common-rail — verificar por motor\"}",
+            "{\"category\":\"Liquido Frenos\",\"references\":[{\"r\":\"DOT4 (PSA)\",\"s\":\"confirmed\"}],\"details\":\"Sistema hidraulico\"}",
+            "{\"category\":\"Neumatico\",\"references\":[{\"r\":\"195/65 R15\",\"s\":\"confirmed\"}],\"details\":\"Segun version/modelo\"}",
+            "{\"category\":\"Pastillas Del.\",\"references\":[{\"r\":\"Verificar OEM por modelo/ano\",\"s\":\"verify\"}],\"details\":\"Comercial/SUV — verificar por modelo\"}",
+            "{\"category\":\"Pastillas Tras.\",\"references\":[{\"r\":\"Verificar OEM (disco/tambor)\",\"s\":\"verify\"}],\"details\":\"Disco o tambor segun version\"}",
+            "{\"category\":\"Sensor Arbol Levas\",\"references\":[{\"r\":\"Verificar OEM (CMP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor Cigueñal\",\"references\":[{\"r\":\"Verificar OEM (CKP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor MAP/MAF\",\"references\":[{\"r\":\"Verificar OEM (MAF/MAP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi turbo — verificar OEM\"}",
+            "{\"category\":\"Termostato\",\"references\":[{\"r\":\"Verificar OEM (termostato HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}"
+          ]
+        },
+        {
+          "sourceModel": "Citroen Berlingo",
+          "key": "peugeot-citroen-berlingo-2016",
+          "presentInNavigation": true,
+          "vehicleFound": true,
+          "info": "1.0/1.2T PureTech (EB2)",
+          "partCount": 17,
+          "partSignatures": [
+            "{\"category\":\"Aceite\",\"references\":[{\"r\":\"5W-30 diesel (PSA B71 2290)\",\"s\":\"confirmed\"}],\"details\":\"furgon 1.6 HDi (Citroen) | HDi diesel\"}",
+            "{\"category\":\"Alternador\",\"references\":[{\"r\":\"Verificar OEM/amperaje\",\"s\":\"verify\"}],\"details\":\"Verificar OEM/amperaje HDi\"}",
+            "{\"category\":\"Bateria\",\"references\":[{\"r\":\"12V 70-80Ah CCA 640-720A\",\"s\":\"confirmed\"}],\"details\":\"CCA 640-720A | diesel/comercial\"}",
+            "{\"category\":\"Bomba Agua\",\"references\":[{\"r\":\"Verificar OEM (bomba agua HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Disco Del.\",\"references\":[{\"r\":\"Verificar OEM (diametro)\",\"s\":\"verify\"}],\"details\":\"Verificar diametro por modelo\"}",
+            "{\"category\":\"Filtro Aceite\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi 1.6/2.0 — verificar por motor\"}",
+            "{\"category\":\"Filtro Aire\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi diesel — verificar por motor\"}",
+            "{\"category\":\"Filtro Cabina\",\"references\":[{\"r\":\"Verificar OEM (filtro cabina)\",\"s\":\"verify\"}],\"details\":\"Verificar por modelo/ano\"}",
+            "{\"category\":\"Filtro Combustible\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi common-rail — verificar por motor\"}",
+            "{\"category\":\"Liquido Frenos\",\"references\":[{\"r\":\"DOT4 (PSA)\",\"s\":\"confirmed\"}],\"details\":\"Sistema hidraulico\"}",
+            "{\"category\":\"Neumatico\",\"references\":[{\"r\":\"195/65 R15\",\"s\":\"confirmed\"}],\"details\":\"Segun version/modelo\"}",
+            "{\"category\":\"Pastillas Del.\",\"references\":[{\"r\":\"Verificar OEM por modelo/ano\",\"s\":\"verify\"}],\"details\":\"Comercial/SUV — verificar por modelo\"}",
+            "{\"category\":\"Pastillas Tras.\",\"references\":[{\"r\":\"Verificar OEM (disco/tambor)\",\"s\":\"verify\"}],\"details\":\"Disco o tambor segun version\"}",
+            "{\"category\":\"Sensor Arbol Levas\",\"references\":[{\"r\":\"Verificar OEM (CMP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor Cigueñal\",\"references\":[{\"r\":\"Verificar OEM (CKP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor MAP/MAF\",\"references\":[{\"r\":\"Verificar OEM (MAF/MAP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi turbo — verificar OEM\"}",
+            "{\"category\":\"Termostato\",\"references\":[{\"r\":\"Verificar OEM (termostato HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}"
+          ]
+        }
+      ],
+      "conflicts": [
+        "motor-or-version",
+        "part-content"
+      ],
+      "migration": "blocked"
+    },
+    {
+      "year": "2017",
+      "variants": [
+        {
+          "sourceModel": "Berlingo",
+          "key": "peugeot-berlingo-2017",
+          "presentInNavigation": true,
+          "vehicleFound": true,
+          "info": "1.6D DV6 HDi / 1.5D DV5 BlueHDi / 2.0D BlueHDi",
+          "partCount": 17,
+          "partSignatures": [
+            "{\"category\":\"Aceite\",\"references\":[{\"r\":\"5W-30 diesel (PSA B71 2290)\",\"s\":\"confirmed\"}],\"details\":\"furgon 1.6 HDi | HDi diesel\"}",
+            "{\"category\":\"Alternador\",\"references\":[{\"r\":\"Verificar OEM/amperaje\",\"s\":\"verify\"}],\"details\":\"Verificar OEM/amperaje HDi\"}",
+            "{\"category\":\"Bateria\",\"references\":[{\"r\":\"12V 70-80Ah CCA 640-720A\",\"s\":\"confirmed\"}],\"details\":\"CCA 640-720A | diesel/comercial\"}",
+            "{\"category\":\"Bomba Agua\",\"references\":[{\"r\":\"Verificar OEM (bomba agua HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Disco Del.\",\"references\":[{\"r\":\"Verificar OEM (diametro)\",\"s\":\"verify\"}],\"details\":\"Verificar diametro por modelo\"}",
+            "{\"category\":\"Filtro Aceite\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi 1.6/2.0 — verificar por motor\"}",
+            "{\"category\":\"Filtro Aire\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi diesel — verificar por motor\"}",
+            "{\"category\":\"Filtro Cabina\",\"references\":[{\"r\":\"Verificar OEM (filtro cabina)\",\"s\":\"verify\"}],\"details\":\"Verificar por modelo/ano\"}",
+            "{\"category\":\"Filtro Combustible\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi common-rail — verificar por motor\"}",
+            "{\"category\":\"Liquido Frenos\",\"references\":[{\"r\":\"DOT4 (PSA)\",\"s\":\"confirmed\"}],\"details\":\"Sistema hidraulico\"}",
+            "{\"category\":\"Neumatico\",\"references\":[{\"r\":\"195/65 R15\",\"s\":\"confirmed\"}],\"details\":\"Segun version/modelo\"}",
+            "{\"category\":\"Pastillas Del.\",\"references\":[{\"r\":\"Verificar OEM por modelo/ano\",\"s\":\"verify\"}],\"details\":\"Comercial/SUV — verificar por modelo\"}",
+            "{\"category\":\"Pastillas Tras.\",\"references\":[{\"r\":\"Verificar OEM (disco/tambor)\",\"s\":\"verify\"}],\"details\":\"Disco o tambor segun version\"}",
+            "{\"category\":\"Sensor Arbol Levas\",\"references\":[{\"r\":\"Verificar OEM (CMP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor Cigueñal\",\"references\":[{\"r\":\"Verificar OEM (CKP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor MAP/MAF\",\"references\":[{\"r\":\"Verificar OEM (MAF/MAP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi turbo — verificar OEM\"}",
+            "{\"category\":\"Termostato\",\"references\":[{\"r\":\"Verificar OEM (termostato HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}"
+          ]
+        },
+        {
+          "sourceModel": "Citroen Berlingo",
+          "key": "peugeot-citroen-berlingo-2017",
+          "presentInNavigation": true,
+          "vehicleFound": true,
+          "info": "1.0/1.2T PureTech (EB2)",
+          "partCount": 17,
+          "partSignatures": [
+            "{\"category\":\"Aceite\",\"references\":[{\"r\":\"5W-30 diesel (PSA B71 2290)\",\"s\":\"confirmed\"}],\"details\":\"furgon 1.6 HDi (Citroen) | HDi diesel\"}",
+            "{\"category\":\"Alternador\",\"references\":[{\"r\":\"Verificar OEM/amperaje\",\"s\":\"verify\"}],\"details\":\"Verificar OEM/amperaje HDi\"}",
+            "{\"category\":\"Bateria\",\"references\":[{\"r\":\"12V 70-80Ah CCA 640-720A\",\"s\":\"confirmed\"}],\"details\":\"CCA 640-720A | diesel/comercial\"}",
+            "{\"category\":\"Bomba Agua\",\"references\":[{\"r\":\"Verificar OEM (bomba agua HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Disco Del.\",\"references\":[{\"r\":\"Verificar OEM (diametro)\",\"s\":\"verify\"}],\"details\":\"Verificar diametro por modelo\"}",
+            "{\"category\":\"Filtro Aceite\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi 1.6/2.0 — verificar por motor\"}",
+            "{\"category\":\"Filtro Aire\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi diesel — verificar por motor\"}",
+            "{\"category\":\"Filtro Cabina\",\"references\":[{\"r\":\"Verificar OEM (filtro cabina)\",\"s\":\"verify\"}],\"details\":\"Verificar por modelo/ano\"}",
+            "{\"category\":\"Filtro Combustible\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi common-rail — verificar por motor\"}",
+            "{\"category\":\"Liquido Frenos\",\"references\":[{\"r\":\"DOT4 (PSA)\",\"s\":\"confirmed\"}],\"details\":\"Sistema hidraulico\"}",
+            "{\"category\":\"Neumatico\",\"references\":[{\"r\":\"195/65 R15\",\"s\":\"confirmed\"}],\"details\":\"Segun version/modelo\"}",
+            "{\"category\":\"Pastillas Del.\",\"references\":[{\"r\":\"Verificar OEM por modelo/ano\",\"s\":\"verify\"}],\"details\":\"Comercial/SUV — verificar por modelo\"}",
+            "{\"category\":\"Pastillas Tras.\",\"references\":[{\"r\":\"Verificar OEM (disco/tambor)\",\"s\":\"verify\"}],\"details\":\"Disco o tambor segun version\"}",
+            "{\"category\":\"Sensor Arbol Levas\",\"references\":[{\"r\":\"Verificar OEM (CMP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor Cigueñal\",\"references\":[{\"r\":\"Verificar OEM (CKP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor MAP/MAF\",\"references\":[{\"r\":\"Verificar OEM (MAF/MAP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi turbo — verificar OEM\"}",
+            "{\"category\":\"Termostato\",\"references\":[{\"r\":\"Verificar OEM (termostato HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}"
+          ]
+        }
+      ],
+      "conflicts": [
+        "motor-or-version",
+        "part-content"
+      ],
+      "migration": "blocked"
+    },
+    {
+      "year": "2018",
+      "variants": [
+        {
+          "sourceModel": "Berlingo",
+          "key": "peugeot-berlingo-2018",
+          "presentInNavigation": true,
+          "vehicleFound": true,
+          "info": "1.6D DV6 HDi / 1.5D DV5 BlueHDi / 2.0D BlueHDi",
+          "partCount": 17,
+          "partSignatures": [
+            "{\"category\":\"Aceite\",\"references\":[{\"r\":\"5W-30 diesel (PSA B71 2290)\",\"s\":\"confirmed\"}],\"details\":\"furgon 1.6 HDi | HDi diesel\"}",
+            "{\"category\":\"Alternador\",\"references\":[{\"r\":\"Verificar OEM/amperaje\",\"s\":\"verify\"}],\"details\":\"Verificar OEM/amperaje HDi\"}",
+            "{\"category\":\"Bateria\",\"references\":[{\"r\":\"12V 70-80Ah CCA 640-720A\",\"s\":\"confirmed\"}],\"details\":\"CCA 640-720A | diesel/comercial\"}",
+            "{\"category\":\"Bomba Agua\",\"references\":[{\"r\":\"Verificar OEM (bomba agua HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Disco Del.\",\"references\":[{\"r\":\"Verificar OEM (diametro)\",\"s\":\"verify\"}],\"details\":\"Verificar diametro por modelo\"}",
+            "{\"category\":\"Filtro Aceite\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi 1.6/2.0 — verificar por motor\"}",
+            "{\"category\":\"Filtro Aire\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi diesel — verificar por motor\"}",
+            "{\"category\":\"Filtro Cabina\",\"references\":[{\"r\":\"Verificar OEM (filtro cabina)\",\"s\":\"verify\"}],\"details\":\"Verificar por modelo/ano\"}",
+            "{\"category\":\"Filtro Combustible\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi common-rail — verificar por motor\"}",
+            "{\"category\":\"Liquido Frenos\",\"references\":[{\"r\":\"DOT4 (PSA)\",\"s\":\"confirmed\"}],\"details\":\"Sistema hidraulico\"}",
+            "{\"category\":\"Neumatico\",\"references\":[{\"r\":\"195/65 R15\",\"s\":\"confirmed\"}],\"details\":\"Segun version/modelo\"}",
+            "{\"category\":\"Pastillas Del.\",\"references\":[{\"r\":\"Verificar OEM por modelo/ano\",\"s\":\"verify\"}],\"details\":\"Comercial/SUV — verificar por modelo\"}",
+            "{\"category\":\"Pastillas Tras.\",\"references\":[{\"r\":\"Verificar OEM (disco/tambor)\",\"s\":\"verify\"}],\"details\":\"Disco o tambor segun version\"}",
+            "{\"category\":\"Sensor Arbol Levas\",\"references\":[{\"r\":\"Verificar OEM (CMP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor Cigueñal\",\"references\":[{\"r\":\"Verificar OEM (CKP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor MAP/MAF\",\"references\":[{\"r\":\"Verificar OEM (MAF/MAP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi turbo — verificar OEM\"}",
+            "{\"category\":\"Termostato\",\"references\":[{\"r\":\"Verificar OEM (termostato HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}"
+          ]
+        },
+        {
+          "sourceModel": "Citroen Berlingo",
+          "key": "peugeot-citroen-berlingo-2018",
+          "presentInNavigation": true,
+          "vehicleFound": true,
+          "info": "1.0/1.2T PureTech (EB2)",
+          "partCount": 17,
+          "partSignatures": [
+            "{\"category\":\"Aceite\",\"references\":[{\"r\":\"5W-30 diesel (PSA B71 2290)\",\"s\":\"confirmed\"}],\"details\":\"furgon 1.6 HDi (Citroen) | HDi diesel\"}",
+            "{\"category\":\"Alternador\",\"references\":[{\"r\":\"Verificar OEM/amperaje\",\"s\":\"verify\"}],\"details\":\"Verificar OEM/amperaje HDi\"}",
+            "{\"category\":\"Bateria\",\"references\":[{\"r\":\"12V 70-80Ah CCA 640-720A\",\"s\":\"confirmed\"}],\"details\":\"CCA 640-720A | diesel/comercial\"}",
+            "{\"category\":\"Bomba Agua\",\"references\":[{\"r\":\"Verificar OEM (bomba agua HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Disco Del.\",\"references\":[{\"r\":\"Verificar OEM (diametro)\",\"s\":\"verify\"}],\"details\":\"Verificar diametro por modelo\"}",
+            "{\"category\":\"Filtro Aceite\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi 1.6/2.0 — verificar por motor\"}",
+            "{\"category\":\"Filtro Aire\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi diesel — verificar por motor\"}",
+            "{\"category\":\"Filtro Cabina\",\"references\":[{\"r\":\"Verificar OEM (filtro cabina)\",\"s\":\"verify\"}],\"details\":\"Verificar por modelo/ano\"}",
+            "{\"category\":\"Filtro Combustible\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi common-rail — verificar por motor\"}",
+            "{\"category\":\"Liquido Frenos\",\"references\":[{\"r\":\"DOT4 (PSA)\",\"s\":\"confirmed\"}],\"details\":\"Sistema hidraulico\"}",
+            "{\"category\":\"Neumatico\",\"references\":[{\"r\":\"195/65 R15\",\"s\":\"confirmed\"}],\"details\":\"Segun version/modelo\"}",
+            "{\"category\":\"Pastillas Del.\",\"references\":[{\"r\":\"Verificar OEM por modelo/ano\",\"s\":\"verify\"}],\"details\":\"Comercial/SUV — verificar por modelo\"}",
+            "{\"category\":\"Pastillas Tras.\",\"references\":[{\"r\":\"Verificar OEM (disco/tambor)\",\"s\":\"verify\"}],\"details\":\"Disco o tambor segun version\"}",
+            "{\"category\":\"Sensor Arbol Levas\",\"references\":[{\"r\":\"Verificar OEM (CMP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor Cigueñal\",\"references\":[{\"r\":\"Verificar OEM (CKP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor MAP/MAF\",\"references\":[{\"r\":\"Verificar OEM (MAF/MAP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi turbo — verificar OEM\"}",
+            "{\"category\":\"Termostato\",\"references\":[{\"r\":\"Verificar OEM (termostato HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}"
+          ]
+        }
+      ],
+      "conflicts": [
+        "motor-or-version",
+        "part-content"
+      ],
+      "migration": "blocked"
+    },
+    {
+      "year": "2019",
+      "variants": [
+        {
+          "sourceModel": "Berlingo",
+          "key": "peugeot-berlingo-2019",
+          "presentInNavigation": true,
+          "vehicleFound": true,
+          "info": "1.6D DV6 HDi / 1.5D DV5 BlueHDi / 2.0D BlueHDi",
+          "partCount": 17,
+          "partSignatures": [
+            "{\"category\":\"Aceite\",\"references\":[{\"r\":\"5W-30 diesel (PSA B71 2290)\",\"s\":\"confirmed\"}],\"details\":\"furgon 1.6 HDi | HDi diesel\"}",
+            "{\"category\":\"Alternador\",\"references\":[{\"r\":\"Verificar OEM/amperaje\",\"s\":\"verify\"}],\"details\":\"Verificar OEM/amperaje HDi\"}",
+            "{\"category\":\"Bateria\",\"references\":[{\"r\":\"12V 70-80Ah CCA 640-720A\",\"s\":\"confirmed\"}],\"details\":\"CCA 640-720A | diesel/comercial\"}",
+            "{\"category\":\"Bomba Agua\",\"references\":[{\"r\":\"Verificar OEM (bomba agua HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Disco Del.\",\"references\":[{\"r\":\"Verificar OEM (diametro)\",\"s\":\"verify\"}],\"details\":\"Verificar diametro por modelo\"}",
+            "{\"category\":\"Filtro Aceite\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi 1.6/2.0 — verificar por motor\"}",
+            "{\"category\":\"Filtro Aire\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi diesel — verificar por motor\"}",
+            "{\"category\":\"Filtro Cabina\",\"references\":[{\"r\":\"Verificar OEM (filtro cabina)\",\"s\":\"verify\"}],\"details\":\"Verificar por modelo/ano\"}",
+            "{\"category\":\"Filtro Combustible\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi common-rail — verificar por motor\"}",
+            "{\"category\":\"Liquido Frenos\",\"references\":[{\"r\":\"DOT4 (PSA)\",\"s\":\"confirmed\"}],\"details\":\"Sistema hidraulico\"}",
+            "{\"category\":\"Neumatico\",\"references\":[{\"r\":\"195/65 R15\",\"s\":\"confirmed\"}],\"details\":\"Segun version/modelo\"}",
+            "{\"category\":\"Pastillas Del.\",\"references\":[{\"r\":\"Verificar OEM por modelo/ano\",\"s\":\"verify\"}],\"details\":\"Comercial/SUV — verificar por modelo\"}",
+            "{\"category\":\"Pastillas Tras.\",\"references\":[{\"r\":\"Verificar OEM (disco/tambor)\",\"s\":\"verify\"}],\"details\":\"Disco o tambor segun version\"}",
+            "{\"category\":\"Sensor Arbol Levas\",\"references\":[{\"r\":\"Verificar OEM (CMP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor Cigueñal\",\"references\":[{\"r\":\"Verificar OEM (CKP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor MAP/MAF\",\"references\":[{\"r\":\"Verificar OEM (MAF/MAP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi turbo — verificar OEM\"}",
+            "{\"category\":\"Termostato\",\"references\":[{\"r\":\"Verificar OEM (termostato HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}"
+          ]
+        },
+        {
+          "sourceModel": "Citroen Berlingo",
+          "key": "peugeot-citroen-berlingo-2019",
+          "presentInNavigation": true,
+          "vehicleFound": true,
+          "info": "1.0/1.2T PureTech (EB2)",
+          "partCount": 17,
+          "partSignatures": [
+            "{\"category\":\"Aceite\",\"references\":[{\"r\":\"5W-30 diesel (PSA B71 2290)\",\"s\":\"confirmed\"}],\"details\":\"furgon 1.6 HDi (Citroen) | HDi diesel\"}",
+            "{\"category\":\"Alternador\",\"references\":[{\"r\":\"Verificar OEM/amperaje\",\"s\":\"verify\"}],\"details\":\"Verificar OEM/amperaje HDi\"}",
+            "{\"category\":\"Bateria\",\"references\":[{\"r\":\"12V 70-80Ah CCA 640-720A\",\"s\":\"confirmed\"}],\"details\":\"CCA 640-720A | diesel/comercial\"}",
+            "{\"category\":\"Bomba Agua\",\"references\":[{\"r\":\"Verificar OEM (bomba agua HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Disco Del.\",\"references\":[{\"r\":\"Verificar OEM (diametro)\",\"s\":\"verify\"}],\"details\":\"Verificar diametro por modelo\"}",
+            "{\"category\":\"Filtro Aceite\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi 1.6/2.0 — verificar por motor\"}",
+            "{\"category\":\"Filtro Aire\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi diesel — verificar por motor\"}",
+            "{\"category\":\"Filtro Cabina\",\"references\":[{\"r\":\"Verificar OEM (filtro cabina)\",\"s\":\"verify\"}],\"details\":\"Verificar por modelo/ano\"}",
+            "{\"category\":\"Filtro Combustible\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi common-rail — verificar por motor\"}",
+            "{\"category\":\"Liquido Frenos\",\"references\":[{\"r\":\"DOT4 (PSA)\",\"s\":\"confirmed\"}],\"details\":\"Sistema hidraulico\"}",
+            "{\"category\":\"Neumatico\",\"references\":[{\"r\":\"195/65 R15\",\"s\":\"confirmed\"}],\"details\":\"Segun version/modelo\"}",
+            "{\"category\":\"Pastillas Del.\",\"references\":[{\"r\":\"Verificar OEM por modelo/ano\",\"s\":\"verify\"}],\"details\":\"Comercial/SUV — verificar por modelo\"}",
+            "{\"category\":\"Pastillas Tras.\",\"references\":[{\"r\":\"Verificar OEM (disco/tambor)\",\"s\":\"verify\"}],\"details\":\"Disco o tambor segun version\"}",
+            "{\"category\":\"Sensor Arbol Levas\",\"references\":[{\"r\":\"Verificar OEM (CMP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor Cigueñal\",\"references\":[{\"r\":\"Verificar OEM (CKP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor MAP/MAF\",\"references\":[{\"r\":\"Verificar OEM (MAF/MAP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi turbo — verificar OEM\"}",
+            "{\"category\":\"Termostato\",\"references\":[{\"r\":\"Verificar OEM (termostato HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}"
+          ]
+        }
+      ],
+      "conflicts": [
+        "motor-or-version",
+        "part-content"
+      ],
+      "migration": "blocked"
+    },
+    {
+      "year": "2020",
+      "variants": [
+        {
+          "sourceModel": "Berlingo",
+          "key": "peugeot-berlingo-2020",
+          "presentInNavigation": true,
+          "vehicleFound": true,
+          "info": "1.6D DV6 HDi / 1.5D DV5 BlueHDi / 2.0D BlueHDi",
+          "partCount": 17,
+          "partSignatures": [
+            "{\"category\":\"Aceite\",\"references\":[{\"r\":\"5W-30 diesel (PSA B71 2290)\",\"s\":\"confirmed\"}],\"details\":\"furgon 1.6 HDi | HDi diesel\"}",
+            "{\"category\":\"Alternador\",\"references\":[{\"r\":\"Verificar OEM/amperaje\",\"s\":\"verify\"}],\"details\":\"Verificar OEM/amperaje HDi\"}",
+            "{\"category\":\"Bateria\",\"references\":[{\"r\":\"12V 70-80Ah CCA 640-720A\",\"s\":\"confirmed\"}],\"details\":\"CCA 640-720A | diesel/comercial\"}",
+            "{\"category\":\"Bomba Agua\",\"references\":[{\"r\":\"Verificar OEM (bomba agua HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Disco Del.\",\"references\":[{\"r\":\"Verificar OEM (diametro)\",\"s\":\"verify\"}],\"details\":\"Verificar diametro por modelo\"}",
+            "{\"category\":\"Filtro Aceite\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi 1.6/2.0 — verificar por motor\"}",
+            "{\"category\":\"Filtro Aire\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi diesel — verificar por motor\"}",
+            "{\"category\":\"Filtro Cabina\",\"references\":[{\"r\":\"Verificar OEM (filtro cabina)\",\"s\":\"verify\"}],\"details\":\"Verificar por modelo/ano\"}",
+            "{\"category\":\"Filtro Combustible\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi common-rail — verificar por motor\"}",
+            "{\"category\":\"Liquido Frenos\",\"references\":[{\"r\":\"DOT4 (PSA)\",\"s\":\"confirmed\"}],\"details\":\"Sistema hidraulico\"}",
+            "{\"category\":\"Neumatico\",\"references\":[{\"r\":\"195/65 R15\",\"s\":\"confirmed\"}],\"details\":\"Segun version/modelo\"}",
+            "{\"category\":\"Pastillas Del.\",\"references\":[{\"r\":\"Verificar OEM por modelo/ano\",\"s\":\"verify\"}],\"details\":\"Comercial/SUV — verificar por modelo\"}",
+            "{\"category\":\"Pastillas Tras.\",\"references\":[{\"r\":\"Verificar OEM (disco/tambor)\",\"s\":\"verify\"}],\"details\":\"Disco o tambor segun version\"}",
+            "{\"category\":\"Sensor Arbol Levas\",\"references\":[{\"r\":\"Verificar OEM (CMP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor Cigueñal\",\"references\":[{\"r\":\"Verificar OEM (CKP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor MAP/MAF\",\"references\":[{\"r\":\"Verificar OEM (MAF/MAP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi turbo — verificar OEM\"}",
+            "{\"category\":\"Termostato\",\"references\":[{\"r\":\"Verificar OEM (termostato HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}"
+          ]
+        },
+        {
+          "sourceModel": "Citroen Berlingo",
+          "key": "peugeot-citroen-berlingo-2020",
+          "presentInNavigation": true,
+          "vehicleFound": true,
+          "info": "1.0/1.2T PureTech (EB2)",
+          "partCount": 17,
+          "partSignatures": [
+            "{\"category\":\"Aceite\",\"references\":[{\"r\":\"5W-30 diesel (PSA B71 2290)\",\"s\":\"confirmed\"}],\"details\":\"furgon 1.6 HDi (Citroen) | HDi diesel\"}",
+            "{\"category\":\"Alternador\",\"references\":[{\"r\":\"Verificar OEM/amperaje\",\"s\":\"verify\"}],\"details\":\"Verificar OEM/amperaje HDi\"}",
+            "{\"category\":\"Bateria\",\"references\":[{\"r\":\"12V 70-80Ah CCA 640-720A\",\"s\":\"confirmed\"}],\"details\":\"CCA 640-720A | diesel/comercial\"}",
+            "{\"category\":\"Bomba Agua\",\"references\":[{\"r\":\"Verificar OEM (bomba agua HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Disco Del.\",\"references\":[{\"r\":\"Verificar OEM (diametro)\",\"s\":\"verify\"}],\"details\":\"Verificar diametro por modelo\"}",
+            "{\"category\":\"Filtro Aceite\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi 1.6/2.0 — verificar por motor\"}",
+            "{\"category\":\"Filtro Aire\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi diesel — verificar por motor\"}",
+            "{\"category\":\"Filtro Cabina\",\"references\":[{\"r\":\"Verificar OEM (filtro cabina)\",\"s\":\"verify\"}],\"details\":\"Verificar por modelo/ano\"}",
+            "{\"category\":\"Filtro Combustible\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi common-rail — verificar por motor\"}",
+            "{\"category\":\"Liquido Frenos\",\"references\":[{\"r\":\"DOT4 (PSA)\",\"s\":\"confirmed\"}],\"details\":\"Sistema hidraulico\"}",
+            "{\"category\":\"Neumatico\",\"references\":[{\"r\":\"195/65 R15\",\"s\":\"confirmed\"}],\"details\":\"Segun version/modelo\"}",
+            "{\"category\":\"Pastillas Del.\",\"references\":[{\"r\":\"Verificar OEM por modelo/ano\",\"s\":\"verify\"}],\"details\":\"Comercial/SUV — verificar por modelo\"}",
+            "{\"category\":\"Pastillas Tras.\",\"references\":[{\"r\":\"Verificar OEM (disco/tambor)\",\"s\":\"verify\"}],\"details\":\"Disco o tambor segun version\"}",
+            "{\"category\":\"Sensor Arbol Levas\",\"references\":[{\"r\":\"Verificar OEM (CMP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor Cigueñal\",\"references\":[{\"r\":\"Verificar OEM (CKP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor MAP/MAF\",\"references\":[{\"r\":\"Verificar OEM (MAF/MAP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi turbo — verificar OEM\"}",
+            "{\"category\":\"Termostato\",\"references\":[{\"r\":\"Verificar OEM (termostato HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}"
+          ]
+        }
+      ],
+      "conflicts": [
+        "motor-or-version",
+        "part-content"
+      ],
+      "migration": "blocked"
+    },
+    {
+      "year": "2021",
+      "variants": [
+        {
+          "sourceModel": "Berlingo",
+          "key": "peugeot-berlingo-2021",
+          "presentInNavigation": true,
+          "vehicleFound": true,
+          "info": "1.6D DV6 HDi / 1.5D DV5 BlueHDi / 2.0D BlueHDi",
+          "partCount": 17,
+          "partSignatures": [
+            "{\"category\":\"Aceite\",\"references\":[{\"r\":\"5W-30 diesel (PSA B71 2290)\",\"s\":\"confirmed\"}],\"details\":\"furgon 1.6 HDi | HDi diesel\"}",
+            "{\"category\":\"Alternador\",\"references\":[{\"r\":\"Verificar OEM/amperaje\",\"s\":\"verify\"}],\"details\":\"Verificar OEM/amperaje HDi\"}",
+            "{\"category\":\"Bateria\",\"references\":[{\"r\":\"12V 70-80Ah CCA 640-720A\",\"s\":\"confirmed\"}],\"details\":\"CCA 640-720A | diesel/comercial\"}",
+            "{\"category\":\"Bomba Agua\",\"references\":[{\"r\":\"Verificar OEM (bomba agua HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Disco Del.\",\"references\":[{\"r\":\"Verificar OEM (diametro)\",\"s\":\"verify\"}],\"details\":\"Verificar diametro por modelo\"}",
+            "{\"category\":\"Filtro Aceite\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi 1.6/2.0 — verificar por motor\"}",
+            "{\"category\":\"Filtro Aire\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi diesel — verificar por motor\"}",
+            "{\"category\":\"Filtro Cabina\",\"references\":[{\"r\":\"Verificar OEM (filtro cabina)\",\"s\":\"verify\"}],\"details\":\"Verificar por modelo/ano\"}",
+            "{\"category\":\"Filtro Combustible\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi common-rail — verificar por motor\"}",
+            "{\"category\":\"Liquido Frenos\",\"references\":[{\"r\":\"DOT4 (PSA)\",\"s\":\"confirmed\"}],\"details\":\"Sistema hidraulico\"}",
+            "{\"category\":\"Neumatico\",\"references\":[{\"r\":\"195/65 R15\",\"s\":\"confirmed\"}],\"details\":\"Segun version/modelo\"}",
+            "{\"category\":\"Pastillas Del.\",\"references\":[{\"r\":\"Verificar OEM por modelo/ano\",\"s\":\"verify\"}],\"details\":\"Comercial/SUV — verificar por modelo\"}",
+            "{\"category\":\"Pastillas Tras.\",\"references\":[{\"r\":\"Verificar OEM (disco/tambor)\",\"s\":\"verify\"}],\"details\":\"Disco o tambor segun version\"}",
+            "{\"category\":\"Sensor Arbol Levas\",\"references\":[{\"r\":\"Verificar OEM (CMP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor Cigueñal\",\"references\":[{\"r\":\"Verificar OEM (CKP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor MAP/MAF\",\"references\":[{\"r\":\"Verificar OEM (MAF/MAP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi turbo — verificar OEM\"}",
+            "{\"category\":\"Termostato\",\"references\":[{\"r\":\"Verificar OEM (termostato HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}"
+          ]
+        },
+        {
+          "sourceModel": "Citroen Berlingo",
+          "key": "peugeot-citroen-berlingo-2021",
+          "presentInNavigation": true,
+          "vehicleFound": true,
+          "info": "1.0/1.2T PureTech (EB2)",
+          "partCount": 17,
+          "partSignatures": [
+            "{\"category\":\"Aceite\",\"references\":[{\"r\":\"5W-30 diesel (PSA B71 2290)\",\"s\":\"confirmed\"}],\"details\":\"furgon 1.6 HDi (Citroen) | HDi diesel\"}",
+            "{\"category\":\"Alternador\",\"references\":[{\"r\":\"Verificar OEM/amperaje\",\"s\":\"verify\"}],\"details\":\"Verificar OEM/amperaje HDi\"}",
+            "{\"category\":\"Bateria\",\"references\":[{\"r\":\"12V 70-80Ah CCA 640-720A\",\"s\":\"confirmed\"}],\"details\":\"CCA 640-720A | diesel/comercial\"}",
+            "{\"category\":\"Bomba Agua\",\"references\":[{\"r\":\"Verificar OEM (bomba agua HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Disco Del.\",\"references\":[{\"r\":\"Verificar OEM (diametro)\",\"s\":\"verify\"}],\"details\":\"Verificar diametro por modelo\"}",
+            "{\"category\":\"Filtro Aceite\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi 1.6/2.0 — verificar por motor\"}",
+            "{\"category\":\"Filtro Aire\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi diesel — verificar por motor\"}",
+            "{\"category\":\"Filtro Cabina\",\"references\":[{\"r\":\"Verificar OEM (filtro cabina)\",\"s\":\"verify\"}],\"details\":\"Verificar por modelo/ano\"}",
+            "{\"category\":\"Filtro Combustible\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi common-rail — verificar por motor\"}",
+            "{\"category\":\"Liquido Frenos\",\"references\":[{\"r\":\"DOT4 (PSA)\",\"s\":\"confirmed\"}],\"details\":\"Sistema hidraulico\"}",
+            "{\"category\":\"Neumatico\",\"references\":[{\"r\":\"195/65 R15\",\"s\":\"confirmed\"}],\"details\":\"Segun version/modelo\"}",
+            "{\"category\":\"Pastillas Del.\",\"references\":[{\"r\":\"Verificar OEM por modelo/ano\",\"s\":\"verify\"}],\"details\":\"Comercial/SUV — verificar por modelo\"}",
+            "{\"category\":\"Pastillas Tras.\",\"references\":[{\"r\":\"Verificar OEM (disco/tambor)\",\"s\":\"verify\"}],\"details\":\"Disco o tambor segun version\"}",
+            "{\"category\":\"Sensor Arbol Levas\",\"references\":[{\"r\":\"Verificar OEM (CMP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor Cigueñal\",\"references\":[{\"r\":\"Verificar OEM (CKP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor MAP/MAF\",\"references\":[{\"r\":\"Verificar OEM (MAF/MAP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi turbo — verificar OEM\"}",
+            "{\"category\":\"Termostato\",\"references\":[{\"r\":\"Verificar OEM (termostato HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}"
+          ]
+        }
+      ],
+      "conflicts": [
+        "motor-or-version",
+        "part-content"
+      ],
+      "migration": "blocked"
+    },
+    {
+      "year": "2022",
+      "variants": [
+        {
+          "sourceModel": "Berlingo",
+          "key": "peugeot-berlingo-2022",
+          "presentInNavigation": true,
+          "vehicleFound": true,
+          "info": "1.6D DV6 HDi / 1.5D DV5 BlueHDi / 2.0D BlueHDi",
+          "partCount": 17,
+          "partSignatures": [
+            "{\"category\":\"Aceite\",\"references\":[{\"r\":\"5W-30 diesel (PSA B71 2290)\",\"s\":\"confirmed\"}],\"details\":\"furgon 1.6 HDi | HDi diesel\"}",
+            "{\"category\":\"Alternador\",\"references\":[{\"r\":\"Verificar OEM/amperaje\",\"s\":\"verify\"}],\"details\":\"Verificar OEM/amperaje HDi\"}",
+            "{\"category\":\"Bateria\",\"references\":[{\"r\":\"12V 70-80Ah CCA 640-720A\",\"s\":\"confirmed\"}],\"details\":\"CCA 640-720A | diesel/comercial\"}",
+            "{\"category\":\"Bomba Agua\",\"references\":[{\"r\":\"Verificar OEM (bomba agua HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Disco Del.\",\"references\":[{\"r\":\"Verificar OEM (diametro)\",\"s\":\"verify\"}],\"details\":\"Verificar diametro por modelo\"}",
+            "{\"category\":\"Filtro Aceite\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi 1.6/2.0 — verificar por motor\"}",
+            "{\"category\":\"Filtro Aire\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi diesel — verificar por motor\"}",
+            "{\"category\":\"Filtro Cabina\",\"references\":[{\"r\":\"Verificar OEM (filtro cabina)\",\"s\":\"verify\"}],\"details\":\"Verificar por modelo/ano\"}",
+            "{\"category\":\"Filtro Combustible\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi common-rail — verificar por motor\"}",
+            "{\"category\":\"Liquido Frenos\",\"references\":[{\"r\":\"DOT4 (PSA)\",\"s\":\"confirmed\"}],\"details\":\"Sistema hidraulico\"}",
+            "{\"category\":\"Neumatico\",\"references\":[{\"r\":\"195/65 R15\",\"s\":\"confirmed\"}],\"details\":\"Segun version/modelo\"}",
+            "{\"category\":\"Pastillas Del.\",\"references\":[{\"r\":\"Verificar OEM por modelo/ano\",\"s\":\"verify\"}],\"details\":\"Comercial/SUV — verificar por modelo\"}",
+            "{\"category\":\"Pastillas Tras.\",\"references\":[{\"r\":\"Verificar OEM (disco/tambor)\",\"s\":\"verify\"}],\"details\":\"Disco o tambor segun version\"}",
+            "{\"category\":\"Sensor Arbol Levas\",\"references\":[{\"r\":\"Verificar OEM (CMP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor Cigueñal\",\"references\":[{\"r\":\"Verificar OEM (CKP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor MAP/MAF\",\"references\":[{\"r\":\"Verificar OEM (MAF/MAP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi turbo — verificar OEM\"}",
+            "{\"category\":\"Termostato\",\"references\":[{\"r\":\"Verificar OEM (termostato HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}"
+          ]
+        },
+        {
+          "sourceModel": "Citroen Berlingo",
+          "key": "peugeot-citroen-berlingo-2022",
+          "presentInNavigation": true,
+          "vehicleFound": true,
+          "info": "1.0/1.2T PureTech (EB2)",
+          "partCount": 17,
+          "partSignatures": [
+            "{\"category\":\"Aceite\",\"references\":[{\"r\":\"5W-30 diesel (PSA B71 2290)\",\"s\":\"confirmed\"}],\"details\":\"furgon 1.6 HDi (Citroen) | HDi diesel\"}",
+            "{\"category\":\"Alternador\",\"references\":[{\"r\":\"Verificar OEM/amperaje\",\"s\":\"verify\"}],\"details\":\"Verificar OEM/amperaje HDi\"}",
+            "{\"category\":\"Bateria\",\"references\":[{\"r\":\"12V 70-80Ah CCA 640-720A\",\"s\":\"confirmed\"}],\"details\":\"CCA 640-720A | diesel/comercial\"}",
+            "{\"category\":\"Bomba Agua\",\"references\":[{\"r\":\"Verificar OEM (bomba agua HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Disco Del.\",\"references\":[{\"r\":\"Verificar OEM (diametro)\",\"s\":\"verify\"}],\"details\":\"Verificar diametro por modelo\"}",
+            "{\"category\":\"Filtro Aceite\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi 1.6/2.0 — verificar por motor\"}",
+            "{\"category\":\"Filtro Aire\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi diesel — verificar por motor\"}",
+            "{\"category\":\"Filtro Cabina\",\"references\":[{\"r\":\"Verificar OEM (filtro cabina)\",\"s\":\"verify\"}],\"details\":\"Verificar por modelo/ano\"}",
+            "{\"category\":\"Filtro Combustible\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi common-rail — verificar por motor\"}",
+            "{\"category\":\"Liquido Frenos\",\"references\":[{\"r\":\"DOT4 (PSA)\",\"s\":\"confirmed\"}],\"details\":\"Sistema hidraulico\"}",
+            "{\"category\":\"Neumatico\",\"references\":[{\"r\":\"195/65 R15\",\"s\":\"confirmed\"}],\"details\":\"Segun version/modelo\"}",
+            "{\"category\":\"Pastillas Del.\",\"references\":[{\"r\":\"Verificar OEM por modelo/ano\",\"s\":\"verify\"}],\"details\":\"Comercial/SUV — verificar por modelo\"}",
+            "{\"category\":\"Pastillas Tras.\",\"references\":[{\"r\":\"Verificar OEM (disco/tambor)\",\"s\":\"verify\"}],\"details\":\"Disco o tambor segun version\"}",
+            "{\"category\":\"Sensor Arbol Levas\",\"references\":[{\"r\":\"Verificar OEM (CMP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor Cigueñal\",\"references\":[{\"r\":\"Verificar OEM (CKP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor MAP/MAF\",\"references\":[{\"r\":\"Verificar OEM (MAF/MAP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi turbo — verificar OEM\"}",
+            "{\"category\":\"Termostato\",\"references\":[{\"r\":\"Verificar OEM (termostato HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}"
+          ]
+        }
+      ],
+      "conflicts": [
+        "motor-or-version",
+        "part-content"
+      ],
+      "migration": "blocked"
+    },
+    {
+      "year": "2023",
+      "variants": [
+        {
+          "sourceModel": "Berlingo",
+          "key": "peugeot-berlingo-2023",
+          "presentInNavigation": true,
+          "vehicleFound": true,
+          "info": "1.6D DV6 HDi / 1.5D DV5 BlueHDi / 2.0D BlueHDi",
+          "partCount": 17,
+          "partSignatures": [
+            "{\"category\":\"Aceite\",\"references\":[{\"r\":\"5W-30 diesel (PSA B71 2290)\",\"s\":\"confirmed\"}],\"details\":\"furgon 1.6 HDi | HDi diesel\"}",
+            "{\"category\":\"Alternador\",\"references\":[{\"r\":\"Verificar OEM/amperaje\",\"s\":\"verify\"}],\"details\":\"Verificar OEM/amperaje HDi\"}",
+            "{\"category\":\"Bateria\",\"references\":[{\"r\":\"12V 70-80Ah CCA 640-720A\",\"s\":\"confirmed\"}],\"details\":\"CCA 640-720A | diesel/comercial\"}",
+            "{\"category\":\"Bomba Agua\",\"references\":[{\"r\":\"Verificar OEM (bomba agua HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Disco Del.\",\"references\":[{\"r\":\"Verificar OEM (diametro)\",\"s\":\"verify\"}],\"details\":\"Verificar diametro por modelo\"}",
+            "{\"category\":\"Filtro Aceite\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi 1.6/2.0 — verificar por motor\"}",
+            "{\"category\":\"Filtro Aire\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi diesel — verificar por motor\"}",
+            "{\"category\":\"Filtro Cabina\",\"references\":[{\"r\":\"Verificar OEM (filtro cabina)\",\"s\":\"verify\"}],\"details\":\"Verificar por modelo/ano\"}",
+            "{\"category\":\"Filtro Combustible\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi common-rail — verificar por motor\"}",
+            "{\"category\":\"Liquido Frenos\",\"references\":[{\"r\":\"DOT4 (PSA)\",\"s\":\"confirmed\"}],\"details\":\"Sistema hidraulico\"}",
+            "{\"category\":\"Neumatico\",\"references\":[{\"r\":\"195/65 R15\",\"s\":\"confirmed\"}],\"details\":\"Segun version/modelo\"}",
+            "{\"category\":\"Pastillas Del.\",\"references\":[{\"r\":\"Verificar OEM por modelo/ano\",\"s\":\"verify\"}],\"details\":\"Comercial/SUV — verificar por modelo\"}",
+            "{\"category\":\"Pastillas Tras.\",\"references\":[{\"r\":\"Verificar OEM (disco/tambor)\",\"s\":\"verify\"}],\"details\":\"Disco o tambor segun version\"}",
+            "{\"category\":\"Sensor Arbol Levas\",\"references\":[{\"r\":\"Verificar OEM (CMP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor Cigueñal\",\"references\":[{\"r\":\"Verificar OEM (CKP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor MAP/MAF\",\"references\":[{\"r\":\"Verificar OEM (MAF/MAP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi turbo — verificar OEM\"}",
+            "{\"category\":\"Termostato\",\"references\":[{\"r\":\"Verificar OEM (termostato HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}"
+          ]
+        },
+        {
+          "sourceModel": "Citroen Berlingo",
+          "key": "peugeot-citroen-berlingo-2023",
+          "presentInNavigation": true,
+          "vehicleFound": true,
+          "info": "1.0/1.2T PureTech (EB2)",
+          "partCount": 17,
+          "partSignatures": [
+            "{\"category\":\"Aceite\",\"references\":[{\"r\":\"5W-30 diesel (PSA B71 2290)\",\"s\":\"confirmed\"}],\"details\":\"furgon 1.6 HDi (Citroen) | HDi diesel\"}",
+            "{\"category\":\"Alternador\",\"references\":[{\"r\":\"Verificar OEM/amperaje\",\"s\":\"verify\"}],\"details\":\"Verificar OEM/amperaje HDi\"}",
+            "{\"category\":\"Bateria\",\"references\":[{\"r\":\"12V 70-80Ah CCA 640-720A\",\"s\":\"confirmed\"}],\"details\":\"CCA 640-720A | diesel/comercial\"}",
+            "{\"category\":\"Bomba Agua\",\"references\":[{\"r\":\"Verificar OEM (bomba agua HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Disco Del.\",\"references\":[{\"r\":\"Verificar OEM (diametro)\",\"s\":\"verify\"}],\"details\":\"Verificar diametro por modelo\"}",
+            "{\"category\":\"Filtro Aceite\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi 1.6/2.0 — verificar por motor\"}",
+            "{\"category\":\"Filtro Aire\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi diesel — verificar por motor\"}",
+            "{\"category\":\"Filtro Cabina\",\"references\":[{\"r\":\"Verificar OEM (filtro cabina)\",\"s\":\"verify\"}],\"details\":\"Verificar por modelo/ano\"}",
+            "{\"category\":\"Filtro Combustible\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi common-rail — verificar por motor\"}",
+            "{\"category\":\"Liquido Frenos\",\"references\":[{\"r\":\"DOT4 (PSA)\",\"s\":\"confirmed\"}],\"details\":\"Sistema hidraulico\"}",
+            "{\"category\":\"Neumatico\",\"references\":[{\"r\":\"195/65 R15\",\"s\":\"confirmed\"}],\"details\":\"Segun version/modelo\"}",
+            "{\"category\":\"Pastillas Del.\",\"references\":[{\"r\":\"Verificar OEM por modelo/ano\",\"s\":\"verify\"}],\"details\":\"Comercial/SUV — verificar por modelo\"}",
+            "{\"category\":\"Pastillas Tras.\",\"references\":[{\"r\":\"Verificar OEM (disco/tambor)\",\"s\":\"verify\"}],\"details\":\"Disco o tambor segun version\"}",
+            "{\"category\":\"Sensor Arbol Levas\",\"references\":[{\"r\":\"Verificar OEM (CMP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor Cigueñal\",\"references\":[{\"r\":\"Verificar OEM (CKP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor MAP/MAF\",\"references\":[{\"r\":\"Verificar OEM (MAF/MAP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi turbo — verificar OEM\"}",
+            "{\"category\":\"Termostato\",\"references\":[{\"r\":\"Verificar OEM (termostato HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}"
+          ]
+        }
+      ],
+      "conflicts": [
+        "motor-or-version",
+        "part-content"
+      ],
+      "migration": "blocked"
+    },
+    {
+      "year": "2024",
+      "variants": [
+        {
+          "sourceModel": "Berlingo",
+          "key": "peugeot-berlingo-2024",
+          "presentInNavigation": true,
+          "vehicleFound": true,
+          "info": "1.6D DV6 HDi / 1.5D DV5 BlueHDi / 2.0D BlueHDi",
+          "partCount": 17,
+          "partSignatures": [
+            "{\"category\":\"Aceite\",\"references\":[{\"r\":\"5W-30 diesel (PSA B71 2290)\",\"s\":\"confirmed\"}],\"details\":\"furgon 1.6 HDi | HDi diesel\"}",
+            "{\"category\":\"Alternador\",\"references\":[{\"r\":\"Verificar OEM/amperaje\",\"s\":\"verify\"}],\"details\":\"Verificar OEM/amperaje HDi\"}",
+            "{\"category\":\"Bateria\",\"references\":[{\"r\":\"12V 70-80Ah CCA 640-720A\",\"s\":\"confirmed\"}],\"details\":\"CCA 640-720A | diesel/comercial\"}",
+            "{\"category\":\"Bomba Agua\",\"references\":[{\"r\":\"Verificar OEM (bomba agua HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Disco Del.\",\"references\":[{\"r\":\"Verificar OEM (diametro)\",\"s\":\"verify\"}],\"details\":\"Verificar diametro por modelo\"}",
+            "{\"category\":\"Filtro Aceite\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi 1.6/2.0 — verificar por motor\"}",
+            "{\"category\":\"Filtro Aire\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi diesel — verificar por motor\"}",
+            "{\"category\":\"Filtro Cabina\",\"references\":[{\"r\":\"Verificar OEM (filtro cabina)\",\"s\":\"verify\"}],\"details\":\"Verificar por modelo/ano\"}",
+            "{\"category\":\"Filtro Combustible\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi common-rail — verificar por motor\"}",
+            "{\"category\":\"Liquido Frenos\",\"references\":[{\"r\":\"DOT4 (PSA)\",\"s\":\"confirmed\"}],\"details\":\"Sistema hidraulico\"}",
+            "{\"category\":\"Neumatico\",\"references\":[{\"r\":\"195/65 R15\",\"s\":\"confirmed\"}],\"details\":\"Segun version/modelo\"}",
+            "{\"category\":\"Pastillas Del.\",\"references\":[{\"r\":\"Verificar OEM por modelo/ano\",\"s\":\"verify\"}],\"details\":\"Comercial/SUV — verificar por modelo\"}",
+            "{\"category\":\"Pastillas Tras.\",\"references\":[{\"r\":\"Verificar OEM (disco/tambor)\",\"s\":\"verify\"}],\"details\":\"Disco o tambor segun version\"}",
+            "{\"category\":\"Sensor Arbol Levas\",\"references\":[{\"r\":\"Verificar OEM (CMP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor Cigueñal\",\"references\":[{\"r\":\"Verificar OEM (CKP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor MAP/MAF\",\"references\":[{\"r\":\"Verificar OEM (MAF/MAP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi turbo — verificar OEM\"}",
+            "{\"category\":\"Termostato\",\"references\":[{\"r\":\"Verificar OEM (termostato HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}"
+          ]
+        },
+        {
+          "sourceModel": "Citroen Berlingo",
+          "key": "peugeot-citroen-berlingo-2024",
+          "presentInNavigation": true,
+          "vehicleFound": true,
+          "info": "1.0/1.2T PureTech (EB2)",
+          "partCount": 17,
+          "partSignatures": [
+            "{\"category\":\"Aceite\",\"references\":[{\"r\":\"5W-30 diesel (PSA B71 2290)\",\"s\":\"confirmed\"}],\"details\":\"furgon 1.6 HDi (Citroen) | HDi diesel\"}",
+            "{\"category\":\"Alternador\",\"references\":[{\"r\":\"Verificar OEM/amperaje\",\"s\":\"verify\"}],\"details\":\"Verificar OEM/amperaje HDi\"}",
+            "{\"category\":\"Bateria\",\"references\":[{\"r\":\"12V 70-80Ah CCA 640-720A\",\"s\":\"confirmed\"}],\"details\":\"CCA 640-720A | diesel/comercial\"}",
+            "{\"category\":\"Bomba Agua\",\"references\":[{\"r\":\"Verificar OEM (bomba agua HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Disco Del.\",\"references\":[{\"r\":\"Verificar OEM (diametro)\",\"s\":\"verify\"}],\"details\":\"Verificar diametro por modelo\"}",
+            "{\"category\":\"Filtro Aceite\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi 1.6/2.0 — verificar por motor\"}",
+            "{\"category\":\"Filtro Aire\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi diesel — verificar por motor\"}",
+            "{\"category\":\"Filtro Cabina\",\"references\":[{\"r\":\"Verificar OEM (filtro cabina)\",\"s\":\"verify\"}],\"details\":\"Verificar por modelo/ano\"}",
+            "{\"category\":\"Filtro Combustible\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi common-rail — verificar por motor\"}",
+            "{\"category\":\"Liquido Frenos\",\"references\":[{\"r\":\"DOT4 (PSA)\",\"s\":\"confirmed\"}],\"details\":\"Sistema hidraulico\"}",
+            "{\"category\":\"Neumatico\",\"references\":[{\"r\":\"195/65 R15\",\"s\":\"confirmed\"}],\"details\":\"Segun version/modelo\"}",
+            "{\"category\":\"Pastillas Del.\",\"references\":[{\"r\":\"Verificar OEM por modelo/ano\",\"s\":\"verify\"}],\"details\":\"Comercial/SUV — verificar por modelo\"}",
+            "{\"category\":\"Pastillas Tras.\",\"references\":[{\"r\":\"Verificar OEM (disco/tambor)\",\"s\":\"verify\"}],\"details\":\"Disco o tambor segun version\"}",
+            "{\"category\":\"Sensor Arbol Levas\",\"references\":[{\"r\":\"Verificar OEM (CMP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor Cigueñal\",\"references\":[{\"r\":\"Verificar OEM (CKP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor MAP/MAF\",\"references\":[{\"r\":\"Verificar OEM (MAF/MAP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi turbo — verificar OEM\"}",
+            "{\"category\":\"Termostato\",\"references\":[{\"r\":\"Verificar OEM (termostato HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}"
+          ]
+        }
+      ],
+      "conflicts": [
+        "motor-or-version",
+        "part-content"
+      ],
+      "migration": "blocked"
+    },
+    {
+      "year": "2025",
+      "variants": [
+        {
+          "sourceModel": "Berlingo",
+          "key": "peugeot-berlingo-2025",
+          "presentInNavigation": true,
+          "vehicleFound": true,
+          "info": "1.6D DV6 HDi / 1.5D DV5 BlueHDi / 2.0D BlueHDi",
+          "partCount": 17,
+          "partSignatures": [
+            "{\"category\":\"Aceite\",\"references\":[{\"r\":\"5W-30 diesel (PSA B71 2290)\",\"s\":\"confirmed\"}],\"details\":\"furgon 1.6 HDi | HDi diesel\"}",
+            "{\"category\":\"Alternador\",\"references\":[{\"r\":\"Verificar OEM/amperaje\",\"s\":\"verify\"}],\"details\":\"Verificar OEM/amperaje HDi\"}",
+            "{\"category\":\"Bateria\",\"references\":[{\"r\":\"12V 70-80Ah CCA 640-720A\",\"s\":\"confirmed\"}],\"details\":\"CCA 640-720A | diesel/comercial\"}",
+            "{\"category\":\"Bomba Agua\",\"references\":[{\"r\":\"Verificar OEM (bomba agua HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Disco Del.\",\"references\":[{\"r\":\"Verificar OEM (diametro)\",\"s\":\"verify\"}],\"details\":\"Verificar diametro por modelo\"}",
+            "{\"category\":\"Filtro Aceite\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi 1.6/2.0 — verificar por motor\"}",
+            "{\"category\":\"Filtro Aire\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi diesel — verificar por motor\"}",
+            "{\"category\":\"Filtro Cabina\",\"references\":[{\"r\":\"Verificar OEM (filtro cabina)\",\"s\":\"verify\"}],\"details\":\"Verificar por modelo/ano\"}",
+            "{\"category\":\"Filtro Combustible\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi common-rail — verificar por motor\"}",
+            "{\"category\":\"Liquido Frenos\",\"references\":[{\"r\":\"DOT4 (PSA)\",\"s\":\"confirmed\"}],\"details\":\"Sistema hidraulico\"}",
+            "{\"category\":\"Neumatico\",\"references\":[{\"r\":\"195/65 R15\",\"s\":\"confirmed\"}],\"details\":\"Segun version/modelo\"}",
+            "{\"category\":\"Pastillas Del.\",\"references\":[{\"r\":\"Verificar OEM por modelo/ano\",\"s\":\"verify\"}],\"details\":\"Comercial/SUV — verificar por modelo\"}",
+            "{\"category\":\"Pastillas Tras.\",\"references\":[{\"r\":\"Verificar OEM (disco/tambor)\",\"s\":\"verify\"}],\"details\":\"Disco o tambor segun version\"}",
+            "{\"category\":\"Sensor Arbol Levas\",\"references\":[{\"r\":\"Verificar OEM (CMP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor Cigueñal\",\"references\":[{\"r\":\"Verificar OEM (CKP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor MAP/MAF\",\"references\":[{\"r\":\"Verificar OEM (MAF/MAP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi turbo — verificar OEM\"}",
+            "{\"category\":\"Termostato\",\"references\":[{\"r\":\"Verificar OEM (termostato HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}"
+          ]
+        },
+        {
+          "sourceModel": "Citroen Berlingo",
+          "key": "peugeot-citroen-berlingo-2025",
+          "presentInNavigation": true,
+          "vehicleFound": true,
+          "info": "1.0/1.2T PureTech (EB2)",
+          "partCount": 17,
+          "partSignatures": [
+            "{\"category\":\"Aceite\",\"references\":[{\"r\":\"5W-30 diesel (PSA B71 2290)\",\"s\":\"confirmed\"}],\"details\":\"furgon 1.6 HDi (Citroen) | HDi diesel\"}",
+            "{\"category\":\"Alternador\",\"references\":[{\"r\":\"Verificar OEM/amperaje\",\"s\":\"verify\"}],\"details\":\"Verificar OEM/amperaje HDi\"}",
+            "{\"category\":\"Bateria\",\"references\":[{\"r\":\"12V 70-80Ah CCA 640-720A\",\"s\":\"confirmed\"}],\"details\":\"CCA 640-720A | diesel/comercial\"}",
+            "{\"category\":\"Bomba Agua\",\"references\":[{\"r\":\"Verificar OEM (bomba agua HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Disco Del.\",\"references\":[{\"r\":\"Verificar OEM (diametro)\",\"s\":\"verify\"}],\"details\":\"Verificar diametro por modelo\"}",
+            "{\"category\":\"Filtro Aceite\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi 1.6/2.0 — verificar por motor\"}",
+            "{\"category\":\"Filtro Aire\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi diesel — verificar por motor\"}",
+            "{\"category\":\"Filtro Cabina\",\"references\":[{\"r\":\"Verificar OEM (filtro cabina)\",\"s\":\"verify\"}],\"details\":\"Verificar por modelo/ano\"}",
+            "{\"category\":\"Filtro Combustible\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi common-rail — verificar por motor\"}",
+            "{\"category\":\"Liquido Frenos\",\"references\":[{\"r\":\"DOT4 (PSA)\",\"s\":\"confirmed\"}],\"details\":\"Sistema hidraulico\"}",
+            "{\"category\":\"Neumatico\",\"references\":[{\"r\":\"195/65 R15\",\"s\":\"confirmed\"}],\"details\":\"Segun version/modelo\"}",
+            "{\"category\":\"Pastillas Del.\",\"references\":[{\"r\":\"Verificar OEM por modelo/ano\",\"s\":\"verify\"}],\"details\":\"Comercial/SUV — verificar por modelo\"}",
+            "{\"category\":\"Pastillas Tras.\",\"references\":[{\"r\":\"Verificar OEM (disco/tambor)\",\"s\":\"verify\"}],\"details\":\"Disco o tambor segun version\"}",
+            "{\"category\":\"Sensor Arbol Levas\",\"references\":[{\"r\":\"Verificar OEM (CMP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor Cigueñal\",\"references\":[{\"r\":\"Verificar OEM (CKP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor MAP/MAF\",\"references\":[{\"r\":\"Verificar OEM (MAF/MAP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi turbo — verificar OEM\"}",
+            "{\"category\":\"Termostato\",\"references\":[{\"r\":\"Verificar OEM (termostato HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}"
+          ]
+        }
+      ],
+      "conflicts": [
+        "motor-or-version",
+        "part-content"
+      ],
+      "migration": "blocked"
+    },
+    {
+      "year": "2026",
+      "variants": [
+        {
+          "sourceModel": "Berlingo",
+          "key": "peugeot-berlingo-2026",
+          "presentInNavigation": true,
+          "vehicleFound": true,
+          "info": "1.6D DV6 HDi / 1.5D DV5 BlueHDi / 2.0D BlueHDi",
+          "partCount": 17,
+          "partSignatures": [
+            "{\"category\":\"Aceite\",\"references\":[{\"r\":\"5W-30 diesel (PSA B71 2290)\",\"s\":\"confirmed\"}],\"details\":\"furgon 1.6 HDi | HDi diesel\"}",
+            "{\"category\":\"Alternador\",\"references\":[{\"r\":\"Verificar OEM/amperaje\",\"s\":\"verify\"}],\"details\":\"Verificar OEM/amperaje HDi\"}",
+            "{\"category\":\"Bateria\",\"references\":[{\"r\":\"12V 70-80Ah CCA 640-720A\",\"s\":\"confirmed\"}],\"details\":\"CCA 640-720A | diesel/comercial\"}",
+            "{\"category\":\"Bomba Agua\",\"references\":[{\"r\":\"Verificar OEM (bomba agua HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Disco Del.\",\"references\":[{\"r\":\"Verificar OEM (diametro)\",\"s\":\"verify\"}],\"details\":\"Verificar diametro por modelo\"}",
+            "{\"category\":\"Filtro Aceite\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi 1.6/2.0 — verificar por motor\"}",
+            "{\"category\":\"Filtro Aire\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi diesel — verificar por motor\"}",
+            "{\"category\":\"Filtro Cabina\",\"references\":[{\"r\":\"Verificar OEM (filtro cabina)\",\"s\":\"verify\"}],\"details\":\"Verificar por modelo/ano\"}",
+            "{\"category\":\"Filtro Combustible\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi common-rail — verificar por motor\"}",
+            "{\"category\":\"Liquido Frenos\",\"references\":[{\"r\":\"DOT4 (PSA)\",\"s\":\"confirmed\"}],\"details\":\"Sistema hidraulico\"}",
+            "{\"category\":\"Neumatico\",\"references\":[{\"r\":\"195/65 R15\",\"s\":\"confirmed\"}],\"details\":\"Segun version/modelo\"}",
+            "{\"category\":\"Pastillas Del.\",\"references\":[{\"r\":\"Verificar OEM por modelo/ano\",\"s\":\"verify\"}],\"details\":\"Comercial/SUV — verificar por modelo\"}",
+            "{\"category\":\"Pastillas Tras.\",\"references\":[{\"r\":\"Verificar OEM (disco/tambor)\",\"s\":\"verify\"}],\"details\":\"Disco o tambor segun version\"}",
+            "{\"category\":\"Sensor Arbol Levas\",\"references\":[{\"r\":\"Verificar OEM (CMP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor Cigueñal\",\"references\":[{\"r\":\"Verificar OEM (CKP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor MAP/MAF\",\"references\":[{\"r\":\"Verificar OEM (MAF/MAP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi turbo — verificar OEM\"}",
+            "{\"category\":\"Termostato\",\"references\":[{\"r\":\"Verificar OEM (termostato HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}"
+          ]
+        },
+        {
+          "sourceModel": "Citroen Berlingo",
+          "key": "peugeot-citroen-berlingo-2026",
+          "presentInNavigation": true,
+          "vehicleFound": true,
+          "info": "1.0/1.2T PureTech (EB2)",
+          "partCount": 17,
+          "partSignatures": [
+            "{\"category\":\"Aceite\",\"references\":[{\"r\":\"5W-30 diesel (PSA B71 2290)\",\"s\":\"confirmed\"}],\"details\":\"furgon 1.6 HDi (Citroen) | HDi diesel\"}",
+            "{\"category\":\"Alternador\",\"references\":[{\"r\":\"Verificar OEM/amperaje\",\"s\":\"verify\"}],\"details\":\"Verificar OEM/amperaje HDi\"}",
+            "{\"category\":\"Bateria\",\"references\":[{\"r\":\"12V 70-80Ah CCA 640-720A\",\"s\":\"confirmed\"}],\"details\":\"CCA 640-720A | diesel/comercial\"}",
+            "{\"category\":\"Bomba Agua\",\"references\":[{\"r\":\"Verificar OEM (bomba agua HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Disco Del.\",\"references\":[{\"r\":\"Verificar OEM (diametro)\",\"s\":\"verify\"}],\"details\":\"Verificar diametro por modelo\"}",
+            "{\"category\":\"Filtro Aceite\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi 1.6/2.0 — verificar por motor\"}",
+            "{\"category\":\"Filtro Aire\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi diesel — verificar por motor\"}",
+            "{\"category\":\"Filtro Cabina\",\"references\":[{\"r\":\"Verificar OEM (filtro cabina)\",\"s\":\"verify\"}],\"details\":\"Verificar por modelo/ano\"}",
+            "{\"category\":\"Filtro Combustible\",\"references\":[{\"r\":\"Verificar OEM (HDi)\",\"s\":\"verify\"}],\"details\":\"HDi common-rail — verificar por motor\"}",
+            "{\"category\":\"Liquido Frenos\",\"references\":[{\"r\":\"DOT4 (PSA)\",\"s\":\"confirmed\"}],\"details\":\"Sistema hidraulico\"}",
+            "{\"category\":\"Neumatico\",\"references\":[{\"r\":\"195/65 R15\",\"s\":\"confirmed\"}],\"details\":\"Segun version/modelo\"}",
+            "{\"category\":\"Pastillas Del.\",\"references\":[{\"r\":\"Verificar OEM por modelo/ano\",\"s\":\"verify\"}],\"details\":\"Comercial/SUV — verificar por modelo\"}",
+            "{\"category\":\"Pastillas Tras.\",\"references\":[{\"r\":\"Verificar OEM (disco/tambor)\",\"s\":\"verify\"}],\"details\":\"Disco o tambor segun version\"}",
+            "{\"category\":\"Sensor Arbol Levas\",\"references\":[{\"r\":\"Verificar OEM (CMP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor Cigueñal\",\"references\":[{\"r\":\"Verificar OEM (CKP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}",
+            "{\"category\":\"Sensor MAP/MAF\",\"references\":[{\"r\":\"Verificar OEM (MAF/MAP HDi)\",\"s\":\"verify\"}],\"details\":\"HDi turbo — verificar OEM\"}",
+            "{\"category\":\"Termostato\",\"references\":[{\"r\":\"Verificar OEM (termostato HDi)\",\"s\":\"verify\"}],\"details\":\"HDi — verificar OEM\"}"
+          ]
+        }
+      ],
+      "conflicts": [
+        "motor-or-version",
+        "part-content"
+      ],
+      "migration": "blocked"
+    }
+  ]
+}
